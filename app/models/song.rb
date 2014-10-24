@@ -1,5 +1,6 @@
 class Song < ActiveRecord::Base
   has_many	:akas
+  accepts_nested_attributes_for :akas, :reject_if => :all_blank, :allow_destroy => true
 
   def self.autocomplete(q)
     #where("song_name LIKE ?", q).order(:song_name).limit(5)

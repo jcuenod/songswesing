@@ -17,5 +17,12 @@
 	<div class="form-group"><%= f.label :sample_url, raw("Sample&nbsp;URL"), class: "col-sm-4 control-label" %>
 		<div class="col-sm-8"><%= f.text_field :sample_url, class: "form-control" %></div>
 	</div>
+	<div style="border-top: 1px solid #ccc; margin: 5px 0"></div>
+	<div class="akas">
+		<%= f.fields_for :akas do |aka| %>
+      		<%= render 'aka_fields', :f => aka %>
+		<% end %>
+		<div class="links"><%= link_to_add_association 'Add Search Terms', f, :akas %></div>
+	</div>
     <%= f.submit class:"btn btn-primary btn-lg btn-block" %>
 <% end %></div>
