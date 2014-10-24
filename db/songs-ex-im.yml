@@ -1,0 +1,586 @@
+---
+songs:
+  columns:
+  - id
+  - song_name
+  - license
+  - writers
+  - lyrics_url
+  - sof_number
+  - sample_url
+  records: 
+  - - 1
+    - In Christ Alone
+    - Copyright © 2001 Thankyou Music
+    - Stuart Townend & Keith Getty
+    - 
+    - http://www.stuarttownend.co.uk/song/in-christ-alone/
+    - http://www.youtube.com/watch?v=RCeSOY5tisI
+  - - 2
+    - Abide With Me
+    - Public Domain
+    - Hen­ry F. Lyte
+    - 
+    - 
+    - http://cyberhymnal.org/htm/a/b/abidewme.htm
+  - - 3
+    - Speak, O Lord
+    - Copyright © 2005 Thankyou Music
+    - Keith Getty & Stuart Townend
+    - 
+    - http://www.gettymusic.com/hymns-speakolord.aspx
+    - https://www.youtube.com/watch?v=ckhjcIOfV88
+  - - 4
+    - How Deep
+    - © 2006 Sovereign Grace Praise (BMI)
+    - Stephen Altrogge
+    - 
+    - http://www.sovereigngracemusic.org/Songs/How_Deep/13
+    - http://www.sovereigngracemusic.org/Songs/How_Deep/13
+  - - 5
+    - Endless Praises
+    - © 2003 Sovereign Grace Praise (BMI)
+    - Stephen Altrogge
+    - 
+    - http://www.sovereigngracemusic.org/Songs/Endless_Praises/14
+    - http://www.sovereigngracemusic.org/Songs/Endless_Praises/14
+  - - 6
+    - 10,000 Reasons (Bless The Lord)
+    - Copyright © 2011 Thankyou Music (Admin. by EMI Christian Music Publishing)
+    - Matt Redman, Jonas Myrin
+    - 
+    - http://www.worshiptogether.com/songs/songdetail.aspx?iid=1849631
+    - http://www.worshiptogether.com/songs/songdetail.aspx?iid=1849631
+  - - 7
+    - God Immortal
+    - © 2008 Thankyou Music (Admin. by EMI Christian Music Publishing)
+    - Lou Fellingham, Mike Busbee, Nathan Fellingham
+    - 
+    - https://www.weareworship.com/uk/songs/song-library/showsong/806
+    - https://www.weareworship.com/uk/songs/song-library/showsong/806
+  - - 8
+    - How Deep The Father’s Love For Us
+    - Copyright © 1995 Thankyou Music
+    - Stuart Townend
+    - 
+    - http://www.stuarttownend.co.uk/song/how-deep-the-fathers-love-for-us/
+    - http://www.stuarttownend.co.uk/song/how-deep-the-fathers-love-for-us/
+  - - 9
+    - Cornerstone
+    - Copyright © 2011 Hillsong Music Publishing (Admin. by EMI Christian Music Publishing)
+    - Reuben Morgan, Edward Mote, Jonas Myrin, Eric Liljero, William Batchelder Bradbury
+    - 
+    - http://www.worshiptogether.com/songs/songdetail.aspx?iid=1908027
+    - http://www.worshiptogether.com/songs/songdetail.aspx?iid=1908027
+  - - 10
+    - Let Your Kingdom Come
+    - © 2006 Sovereign Grace Praise (BMI)
+    - Bob Kauflin
+    - 
+    - http://www.sovereigngracemusic.org/Songs/Let_Your_Kingdom_Come/13
+    - http://www.sovereigngracemusic.org/Songs/Let_Your_Kingdom_Come/13
+  - - 11
+    - Salvation Belongs to our God
+    - Copyright © 1985 Restoration Music Ltd
+    - Adrian Howard, Pat Turner
+    - 992
+    - 
+    - https://www.youtube.com/watch?v=RihfmBH8JbQ
+  - - 12
+    - Jesus is Lord
+    - Copyright © 2003 Thankyou Music
+    - Stuart Townend, Keith Getty
+    - 1387
+    - 
+    - http://www.stuarttownend.co.uk/song/jesus-is-lord/
+  - - 13
+    - Loved Before the Dawn of Time (Salvation's Song)
+    - Copyright © 2007 Thankyou Music
+    - Stuart Townend & Andrew Small
+    - 2434
+    - 
+    - http://www.stuarttownend.co.uk/song/salvations-song/
+  - - 14
+    - As the Deer
+    - Copyright © 1983 Restoration Music Ltd.
+    - Martin J. Nystrom
+    - 27
+    - 
+    - https://www.youtube.com/watch?v=l7Blrb88KWU
+  - - 15
+    - O Sacred King
+    - Copyright © 1999 Thankyou Music
+    - Matt Redman
+    - 1493
+    - 
+    - http://www.youtube.com/watch?v=xNSYwW3-RFg
+  - - 16
+    - Love Divine, All Loves Excelling
+    - Public Domain
+    - Charles Wesley
+    - 377
+    - 
+    - https://www.youtube.com/watch?v=JGGcqhKShQ8
+  - - 17
+    - Amazing Grace
+    - Public Domain
+    - John Newton
+    - 19
+    - 
+    - http://www.youtube.com/watch?v=CDdvReNKKuk
+  - - 18
+    - Your Blood Speaks a Better Word (Nothing But The Blood)
+    - Copyright © 2004 Thankyou Music
+    - Matt Redman
+    - 2178
+    - 
+    - http://worshiptogether.com/songs/songdetail.aspx?iid=563797
+  - - 19
+    - Light of the World (Here I Am To Worship)
+    - Copyright © 2001 Thankyou Music
+    - Tim Hughes
+    - 
+    - http://www.worshiptogether.com/songs/songdetail.aspx?iid=572962
+    - http://www.worshiptogether.com/songs/songdetail.aspx?iid=572962
+  - - 20
+    - We have seen your glory
+    - Public Domain
+    - Steph & David Ebert
+    - 
+    - 
+    - 
+  - - 21
+    - Create in me a clean heart, O God
+    - Public Domain
+    - Anonymous
+    - 
+    - https://www.hymnal.net/en/hymn/ns/51
+    - https://www.hymnal.net/en/hymn/ns/51
+  - - 22
+    - Blessing and Honour
+    - Copyright © 1992 Integrity’s Praise! Music
+    - Gary Sadler & Jamie Harvill
+    - 675
+    - 
+    - https://www.youtube.com/watch?v=5m04UJ6BCrI
+  - - 23
+    - Hark the Herald Angels Sing
+    - Public Domain
+    - Charles Wesley, William H. Cummings
+    - 
+    - http://www.carols.org.uk/hark_the_herald_angels_sing.htm
+    - https://www.youtube.com/watch?v=lCt1s44cfMM
+  - - 24
+    - O Lord, Our Lord (How Majestic is Your name)
+    - Copyright © 1981 Meadowgreen Music
+    - Michael W. Smith
+    - 962
+    - 
+    - https://www.youtube.com/watch?v=6h56LamYqyE
+  - - 25
+    - Father Into Your Courts I Will Enter
+    - Copyright © 2001 Parachute Music New Zealand
+    - Andrew Ulugia & Wayne Huirua
+    - 1230
+    - 
+    - https://www.youtube.com/watch?v=bo2bwXLwhVs
+  - - 26
+    - Standing in Your Presence
+    - Copyright © 1996 Darlene Zschech/Hillsongs Australia/Kingsway’s Thankyou Music
+    - Darlene Zschech
+    - 1011
+    - 
+    - https://www.youtube.com/watch?v=bK3mbyQvjDw
+  - - 27
+    - Beautiful Lord, Wonderful Saviour
+    - Copyright © 1997 Darlene Zschech/Hillsong Publishing/ Kingsway Music
+    - Darlene Zschech
+    - 
+    - Copyright © 1997 Darlene Zschech/Hillsong Publishing/ Kingsway Music
+    - https://www.youtube.com/watch?v=a5g5qXLG7w4
+  - - 28
+    - Your Will, Not Mine
+    - Copyright © 1991 Sovereign Lifestyle Music
+    - Dougie Brown
+    - 1149
+    - 
+    - 
+  - - 29
+    - Tell Out, My Soul
+    - Public Domain
+    - Timothy Dudley-Smith
+    - 
+    - http://www.oremus.org/hymnal/t/t036.html
+    - https://www.youtube.com/watch?v=s6ji4y9Q-K0
+  - - 30
+    - Be Still My Soul
+    - Public Domain
+    - Ka­tha­ri­na A. von Schle­gel, tr. Jane L. Borth­wick
+    - 
+    - http://cyberhymnal.org/htm/b/e/bestill.htm
+    - http://cyberhymnal.org/htm/b/e/bestill.htm
+  - - 31
+    - My Soul Finds Rest in God Alone (Psalm 62)
+    - Copyright © 2008 Thankyou Music
+    - Stuart Townend , Aaron Keyes
+    - 
+    - http://www.worshiptogether.com/songs/songdetail.aspx?iid=956127
+    - http://www.worshiptogether.com/songs/songdetail.aspx?iid=956127
+  - - 32
+    - Sing To The King
+    - Copyright © 2003 worshiptogether.com Songs
+    - Billy Foote
+    - 
+    - http://www.worshiptogether.com/songs/songdetail.aspx?iid=565142
+    - http://www.worshiptogether.com/songs/songdetail.aspx?iid=565142
+  - - 33
+    - How Firm a Foundation
+    - Copyright © 2003 songsfortoday.com
+    - Richard Simpkin
+    - 
+    - http://www.music-ministry.org/wp-content/uploads/2014/01/How-firm-a-foundation.pdf
+    - http://www.music-ministry.org/wp-content/uploads/2014/01/How-firm-a-foundation.pdf
+  - - 34
+    - You Alone Can Rescue (Who, oh Lord, could save themselves)
+    - Copyright © 2009 Thankyou Music
+    - Matt Redman, Jonas Myrin
+    - 
+    - http://www.worshiptogether.com/songs/songdetail.aspx?iid=1722527
+    - http://www.worshiptogether.com/songs/songdetail.aspx?iid=1722527
+  - - 35
+    - Before the Throne of God Above
+    - Public Domain
+    - Charitie L. Bancroft
+    - 1187
+    - 
+    - 
+  - - 36
+    - Come Thou Fount of Every Blessing
+    - Public Domain
+    - Robert Robinson
+    - 
+    - http://en.wikipedia.org/wiki/Come_Thou_Fount_of_Every_Blessing
+    - 
+  - - 37
+    - Jesus The Name High Over All
+    - Copyright © 2008 Thankyou Music
+    - Gareth Robinson , John Hartley , Chris Eaton
+    - 
+    - http://www.worshiptogether.com/songs/songdetail.aspx?iid=1011640
+    - http://www.worshiptogether.com/songs/songdetail.aspx?iid=1011640
+  - - 38
+    - Show Us Christ
+    - Copyright © 2011 Sovereign Grace Worship
+    - Doug Plank, Bob Kauflin
+    - 
+    - http://www.sovereigngracemusic.org/Songs/Show_Us_Christ/2
+    - http://www.sovereigngracemusic.org/Songs/Show_Us_Christ/2
+  - - 39
+    - For All You've Done (My Saviour, Redeemer)
+    - Copyright © 2004 Hillsong Music Publishing
+    - Reuben Morgan
+    - 
+    - http://www.worshiptogether.com/songs/songdetail.aspx?iid=1801896
+    - http://www.worshiptogether.com/songs/songdetail.aspx?iid=1801896
+  - - 40
+    - A Father to the Fatherless
+    - Copyright © 2003 Thankyou Music
+    - Paul Oakley
+    - 1691
+    - 
+    - 
+  - - 41
+    - Nothing in this World
+    - Copyright © 1998 Thankyou Music
+    - Tim Hughes
+    - 1465
+    - 
+    - 
+  - - 42
+    - Hungry, I Come to You
+    - Copyright © 1999 Vineyard Songs (UK/Eire)
+    - Kathryn Scott
+    - 1293
+    - 
+    - 
+  - - 43
+    - At The Foot of the Cross
+    - Copyright © 2003 Vertical Worship Songs
+    - Kathryn Scott
+    - 1719
+    - 
+    - 
+  - - 44
+    - Here I Am
+    - Copyright © 2003 Curious? Music UK/Bucks Music Ltd
+    - Martin Smith, Stuart Garrard
+    - 1827
+    - 
+    - 
+  - - 45
+    - Merciful God
+    - Copyright © 2006 Thankyou Music
+    - Keith & Kristyn Getty, Stuart Townend
+    - 1966
+    - 
+    - 
+  - - 46
+    - There is a Redeemer
+    - Copyright © 1982 Birdwing Music
+    - Melody Green
+    - 544
+    - 
+    - 
+  - - 47
+    - You are the Holy One
+    - Copyright © 1988 Mercy/Vineyard Publishing
+    - Andy Park
+    - 626
+    - 
+    - 
+  - - 48
+    - Jesus, God's Righteousness Revealed
+    - Copyright © 1995 Word Music Inc./Maranatha! Music
+    - Geoff Bullock
+    - 1383
+    - 
+    - 
+  - - 49
+    - You Laid Aside Your Majesty (I Really Want to Worship You My Lord)
+    - Copyright © 1985 Kingsway’s Thankyou Music
+    - Noel Richards
+    - 633
+    - 
+    - 
+  - - 50
+    - I Will Offer Up My Life
+    - Copyright © 1994 Kingsway’s Thankyou Music
+    - Matt Redman
+    - 851
+    - 
+    - 
+  - - 51
+    - No Eye Has Seen
+    - Copyright © 1990 Integrity’s Hosanna! Music/People of Destiny Int.
+    - Mark Altrogge
+    - 943
+    - 
+    - 
+  - - 52
+    - Lord, I Come to You
+    - Copyright © 1992 Word Music
+    - Geoff Bullock
+    - 895
+    - 
+    - 
+  - - 53
+    - Father Here I Am
+    - Copyright © 1989 Mercy/Vineyard Publishing
+    - Danny Daniels
+    - 94
+    - 
+    - 
+  - - 54
+    - Change My Heart, O God
+    - Copyright © 1982 Mercy/Vineyard Publishing
+    - Eddie Espinosa
+    - 58
+    - 
+    - 
+  - - 55
+    - Guide Me, O Thou Great Jehovah
+    - Public Domain
+    - William Williams, Tr. Peter Williams
+    - 148
+    - 
+    - 
+  - - 56
+    - Lord of the Church
+    - Copyright © Timothy Dudley-Smith
+    - Timothy Dudley-Smith
+    - 1433
+    - 
+    - 
+  - - 57
+    - Lord Reign in Me (Over all the Earth)
+    - Copyright © 1998 Vineyard Songs (UK/Eire)
+    - Brenton Brown
+    - 
+    - Over all the earth you reign on high // Every mountain stream, every sunset sky ...
+    - 
+  - - 58
+    - All My Shame (A Frame So Beautifully Formed)
+    - Copyright © 2007 Thankyou Music
+    - Ben Dunnett, Hannah Dunnett
+    - 
+    - 
+    - 
+  - - 59
+    - When I Survery
+    - Public Domain
+    - Isaac Watts
+    - 596
+    - 
+    - 
+  - - 60
+    - Be Thou My Vision
+    - Public Domain
+    - Tr. Eleanor Hull
+    - 
+    - http://en.wikipedia.org/wiki/Be_Thou_My_Vision
+    - 
+  - - 61
+    - Above All Powers
+    - Copyright © 1999 Lensongs Publishing/Integrity's Hosanna! Music/Sovereign Music UK
+    - Lenny LeBlanc, Paul Baloche
+    - 1151
+    - 
+    - 
+  - - 62
+    - Jesus, Thank You
+    - Copyright © 2003 Integrity’s Hosanna! Music (ASCAP)/Sovereign Grace Worship (ASCAP)
+    - Pat Sczebel
+    - 
+    - http://www.sovereigngracemusic.org/Songs/Jesus,_Thank_You/14
+    - http://www.sovereigngracemusic.org/Songs/Jesus,_Thank_You/14
+  - - 63
+    - With a Prayer (you fed the hungry)
+    - Copyright © 2002 Thankyou Music
+    - Stuart Townend
+    - 1627
+    - 
+    - 
+  - - 64
+    - Lord, You are the Author of my Life
+    - Copyright © 1985 Kingsway’s Thankyou Music
+    - Judy Pruett
+    - 910
+    - 
+    - 
+  - - 65
+    - Be Still (for the presence of the Lord)
+    - Copyright © 1986 Kingsway’s Thankyou Music
+    - David J. Evans
+    - 40
+    - 
+    - 
+  - - 66
+    - Holy Spirit, Living Breath of God
+    - Copyright © 2005 Thankyou Music
+    - Keith Getty, Stuart Townend
+    - 1850
+    - 
+    - 
+  - - 67
+    - Eagles' Wings (Call the Man)
+    - Copyright © 1979, 2003, OCP
+    - Michael Joncas
+    - 
+    - 
+    - 
+  - - 68
+    - Wonderful, Merciful Savior
+    - Copyright © 1989 Dayspring Music, LLC
+    - Dawn Rodgers, Eric Wyse
+    - 
+    - 
+    - 
+  - - 69
+    - Come People of the Risen King
+    - Copyright © 2007 Thankyou Music
+    - Keith & Kristyn Getty, Stuart Townend
+    - 224
+    - 
+    - 
+  - - 70
+    - I Cannot Tell
+    - Public Domain
+    - William Y. Fullerton
+    - 205
+    - 
+    - 
+  - - 71
+    - Rock of Ages
+    - Words in this version Copyright © 2001 Make Way Music
+    - Augustus M. Toplady (1740-78) adapt. by Graham Kendrick
+    - 1507
+    - 
+    - 
+  - - 72
+    - Take My Life and Let it Be
+    - Copyright © 2005 Thankyou Music
+    - Frances R. Havergal (1836 –1879) Adpt. & new music Paul Oakley
+    - 2037
+    - 
+    - 
+  - - 73
+    - The Whole Earth
+    - Copyright © 2005 Hillsong Publishing/kingswaysongs.com
+    - Reuben Morgan
+    - 2067
+    - 
+    - 
+  - - 74
+    - The Precious Blood
+    - Copyright © 2005 Sovereign Grace Worship (ASCAP)
+    - Peter Gagnon
+    - 
+    - http://sovereigngracemusic.org/Songs/The_Precious_Blood/13
+    - http://sovereigngracemusic.org/Songs/The_Precious_Blood/13
+  - - 75
+    - Healing To The Nations
+    - Copyright © 1982 Scripture In Song (Admin. by Maranatha! Music (Capitol CMG))
+    - Bob Fitts
+    - 
+    - 
+    - 
+  - - 76
+    - Name of All Majesty
+    - Copyright © 1979 Timothy Dudley-Smith
+    - Timothy Dudley-Smith
+    - 939
+    - 
+    - 
+  - - 77
+    - There is a Higher Throne
+    - Copyright © 2002 Thankyou Music
+    - Kristyn Lennox & Keith Getty
+    - 1541
+    - 
+    - 
+  - - 78
+    - We'll Walk the Land
+    - Copyright © 1989 Make Way Music
+    - Graham Kendrick
+    - 583
+    - 
+    - 
+  - - 79
+    - Jabulani Africa (Bayete iNkosi)
+    - Public Domain?
+    - Unknown
+    - 
+    -  
+    - 
+  - - 80
+    - Hosanna (Praise Is Rising)
+    - Copyright © 2005, 2006 Thankyou Music
+    - Brenton Brown, Paul Baloche
+    - 
+    - http://www.worshiptogether.com/songs/songdetail.aspx?iid=559270
+    - http://www.worshiptogether.com/songs/songdetail.aspx?iid=559270
+  - - 81
+    - By Faith
+    - Copyright © 2009 Thankyou Music
+    - Stuart Townend, Keith & Kristyn Getty 
+    - 2240
+    - 
+    - http://www.gettymusic.com/hymns-byfaith.aspx
+  - - 82
+    - O Church, Arise
+    - Copyright © 2005 Thankyou Music
+    - Stuart Townend, Keith Getty
+    - 1981
+    - 
+    - http://www.gettymusic.com/hymns-ochurcharise.aspx
+...

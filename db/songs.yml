@@ -1,0 +1,539 @@
+---
+songs:
+-
+  id: 1
+  song_name: "In Christ Alone"
+  license: "Copyright © 2001 Thankyou Music"
+  writers: "Stuart Townend & Keith Getty"
+  lyrics_url: "http://www.stuarttownend.co.uk/song/in-christ-alone/"
+  sample_url: "http://www.youtube.com/watch?v=RCeSOY5tisI"
+-
+  id: 2
+  song_name: "Abide With Me"
+  license: "Public Domain"
+  writers: "Hen­ry F. Lyte"
+  lyrics_url: "http://cyberhymnal.org/htm/a/b/abidewme.htm"
+-
+  id: 3
+  song_name: "Speak, O Lord"
+  license: "Copyright © 2005 Thankyou Music"
+  writers: "Keith Getty & Stuart Townend"
+  lyrics_url: "http://www.gettymusic.com/hymns-speakolord.aspx"
+  sample_url: "https://www.youtube.com/watch?v=ckhjcIOfV88"
+-
+  id: 4
+  song_name: "How Deep"
+  license: "© 2006 Sovereign Grace Praise (BMI)"
+  writers: "Stephen Altrogge"
+  lyrics_url: "http://www.sovereigngracemusic.org/Songs/How_Deep/13"
+  sample_url: "http://www.sovereigngracemusic.org/Songs/How_Deep/13"
+-
+  id: 5
+  song_name: "Endless Praises"
+  license: "© 2003 Sovereign Grace Praise (BMI)"
+  writers: "Stephen Altrogge"
+  lyrics_url: "http://www.sovereigngracemusic.org/Songs/Endless_Praises/14"
+  sample_url: "http://www.sovereigngracemusic.org/Songs/Endless_Praises/14"
+-
+  id: 6
+  song_name: "10,000 Reasons (Bless The Lord)"
+  license: "Copyright © 2011 Thankyou Music (Admin. by EMI Christian Music Publishing)"
+  writers: "Matt Redman, Jonas Myrin"
+  lyrics_url: "http://www.worshiptogether.com/songs/songdetail.aspx?iid=1849631"
+  sample_url: "http://www.worshiptogether.com/songs/songdetail.aspx?iid=1849631"
+-
+  id: 7
+  song_name: "God Immortal"
+  license: "© 2008 Thankyou Music (Admin. by EMI Christian Music Publishing)"
+  writers: "Lou Fellingham, Mike Busbee, Nathan Fellingham"
+  lyrics_url: "https://www.weareworship.com/uk/songs/song-library/showsong/806"
+  sample_url: "https://www.weareworship.com/uk/songs/song-library/showsong/806"
+-
+  id: 8
+  song_name: "How Deep The Father’s Love For Us"
+  license: "Copyright © 1995 Thankyou Music"
+  writers: "Stuart Townend"
+  lyrics_url: "http://www.stuarttownend.co.uk/song/how-deep-the-fathers-love-for-us/"
+  sample_url: "http://www.stuarttownend.co.uk/song/how-deep-the-fathers-love-for-us/"
+-
+  id: 9
+  song_name: "Cornerstone"
+  license: "Copyright © 2011 Hillsong Music Publishing (Admin. by EMI Christian Music Publishing)"
+  writers: "Reuben Morgan, Edward Mote, Jonas Myrin, Eric Liljero, William Batchelder Bradbury"
+  lyrics_url: "http://www.worshiptogether.com/songs/songdetail.aspx?iid=1908027"
+  sample_url: "http://www.worshiptogether.com/songs/songdetail.aspx?iid=1908027"
+-
+  id: 10
+  song_name: "Let Your Kingdom Come"
+  license: "© 2006 Sovereign Grace Praise (BMI)"
+  writers: "Bob Kauflin"
+  lyrics_url: "http://www.sovereigngracemusic.org/Songs/Let_Your_Kingdom_Come/13"
+  sample_url: "http://www.sovereigngracemusic.org/Songs/Let_Your_Kingdom_Come/13"
+-
+  id: 11
+  song_name: "Salvation Belongs to our God"
+  license: "Copyright © 1985 Restoration Music Ltd"
+  writers: "Adrian Howard, Pat Turner"
+  sof_number: 992
+  sample_url: "https://www.youtube.com/watch?v=RihfmBH8JbQ"
+-
+  id: 12
+  song_name: "Jesus is Lord"
+  license: "Copyright © 2003 Thankyou Music"
+  writers: "Stuart Townend, Keith Getty"
+  sof_number: 1387
+  sample_url: "http://www.stuarttownend.co.uk/song/jesus-is-lord/"
+-
+  id: 13
+  song_name: "Loved Before the Dawn of Time (Salvation's Song)"
+  license: "Copyright © 2007 Thankyou Music"
+  writers: "Stuart Townend & Andrew Small"
+  sof_number: 2434
+  sample_url: "http://www.stuarttownend.co.uk/song/salvations-song/"
+-
+  id: 14
+  song_name: "As the Deer"
+  license: "Copyright © 1983 Restoration Music Ltd."
+  writers: "Martin J. Nystrom"
+  sof_number: 27
+  sample_url: "https://www.youtube.com/watch?v=l7Blrb88KWU"
+-
+  id: 15
+  song_name: "O Sacred King"
+  license: "Copyright © 1999 Thankyou Music"
+  writers: "Matt Redman"
+  sof_number: 1493
+  sample_url: "http://www.youtube.com/watch?v=xNSYwW3-RFg"
+-
+  id: 16
+  song_name: "Love Divine, All Loves Excelling"
+  license: "Public Domain"
+  writers: "Charles Wesley"
+  sof_number: 377
+  sample_url: "https://www.youtube.com/watch?v=JGGcqhKShQ8"
+-
+  id: 17
+  song_name: "Amazing Grace"
+  license: "Public Domain"
+  writers: "John Newton"
+  sof_number: 19
+  sample_url: "http://www.youtube.com/watch?v=CDdvReNKKuk"
+-
+  id: 18
+  song_name: "Your Blood Speaks a Better Word (Nothing But The Blood)"
+  license: "Copyright © 2004 Thankyou Music"
+  writers: "Matt Redman"
+  sof_number: 2178
+  sample_url: "http://worshiptogether.com/songs/songdetail.aspx?iid=563797"
+-
+  id: 19
+  song_name: "Light of the World (Here I Am To Worship)"
+  license: "Copyright © 2001 Thankyou Music"
+  writers: "Tim Hughes"
+  lyrics_url: "http://www.worshiptogether.com/songs/songdetail.aspx?iid=572962"
+  sample_url: "http://www.worshiptogether.com/songs/songdetail.aspx?iid=572962"
+-
+  id: 20
+  song_name: "We have seen your glory"
+  license: "Public Domain"
+  writers: "Steph & David Ebert"
+-
+  id: 21
+  song_name: "Create in me a clean heart, O God"
+  license: "Public Domain"
+  writers: "Anonymous"
+  lyrics_url: "https://www.hymnal.net/en/hymn/ns/51"
+  sample_url: "https://www.hymnal.net/en/hymn/ns/51"
+-
+  id: 22
+  song_name: "Blessing and Honour"
+  license: "Copyright © 1992 Integrity’s Praise! Music"
+  writers: "Gary Sadler & Jamie Harvill"
+  sof_number: 675
+  sample_url: "https://www.youtube.com/watch?v=5m04UJ6BCrI"
+-
+  id: 23
+  song_name: "Hark the Herald Angels Sing"
+  license: "Public Domain"
+  writers: "Charles Wesley, William H. Cummings"
+  lyrics_url: "http://www.carols.org.uk/hark_the_herald_angels_sing.htm"
+  sample_url: "https://www.youtube.com/watch?v=lCt1s44cfMM"
+-
+  id: 24
+  song_name: "O Lord, Our Lord (How Majestic is Your name)"
+  license: "Copyright © 1981 Meadowgreen Music"
+  writers: "Michael W. Smith"
+  sof_number: 962
+  sample_url: "https://www.youtube.com/watch?v=6h56LamYqyE"
+-
+  id: 25
+  song_name: "Father Into Your Courts I Will Enter"
+  license: "Copyright © 2001 Parachute Music New Zealand"
+  writers: "Andrew Ulugia & Wayne Huirua"
+  sof_number: 1230
+  sample_url: "https://www.youtube.com/watch?v=bo2bwXLwhVs"
+-
+  id: 26
+  song_name: "Standing in Your Presence"
+  license: "Copyright © 1996 Darlene Zschech/Hillsongs Australia/Kingsway’s Thankyou Music"
+  writers: "Darlene Zschech"
+  sof_number: 1011
+  sample_url: "https://www.youtube.com/watch?v=bK3mbyQvjDw"
+-
+  id: 27
+  song_name: "Beautiful Lord, Wonderful Saviour"
+  license: "Copyright © 1997 Darlene Zschech/Hillsong Publishing/ Kingsway Music"
+  writers: "Darlene Zschech"
+  lyrics_url: "Copyright © 1997 Darlene Zschech/Hillsong Publishing/ Kingsway Music"
+  sample_url: "https://www.youtube.com/watch?v=a5g5qXLG7w4"
+-
+  id: 28
+  song_name: "Your Will, Not Mine"
+  license: "Copyright © 1991 Sovereign Lifestyle Music"
+  writers: "Dougie Brown"
+  sof_number: 1149
+-
+  id: 29
+  song_name: "Tell Out, My Soul"
+  license: "Public Domain"
+  writers: "Timothy Dudley-Smith"
+  lyrics_url: "http://www.oremus.org/hymnal/t/t036.html"
+  sample_url: "https://www.youtube.com/watch?v=s6ji4y9Q-K0"
+-
+  id: 30
+  song_name: "Be Still My Soul"
+  license: "Public Domain"
+  writers: "Ka­tha­ri­na A. von Schle­gel, tr. Jane L. Borth­wick"
+  lyrics_url: "http://cyberhymnal.org/htm/b/e/bestill.htm"
+  sample_url: "http://cyberhymnal.org/htm/b/e/bestill.htm"
+-
+  id: 31
+  song_name: "My Soul Finds Rest in God Alone (Psalm 62)"
+  license: "Copyright © 2008 Thankyou Music"
+  writers: "Stuart Townend , Aaron Keyes"
+  lyrics_url: "http://www.worshiptogether.com/songs/songdetail.aspx?iid=956127"
+  sample_url: "http://www.worshiptogether.com/songs/songdetail.aspx?iid=956127"
+-
+  id: 32
+  song_name: "Sing To The King"
+  license: "Copyright © 2003 worshiptogether.com Songs"
+  writers: "Billy Foote"
+  lyrics_url: "http://www.worshiptogether.com/songs/songdetail.aspx?iid=565142"
+  sample_url: "http://www.worshiptogether.com/songs/songdetail.aspx?iid=565142"
+-
+  id: 33
+  song_name: "How Firm a Foundation"
+  license: "Copyright © 2003 songsfortoday.com"
+  writers: "Richard Simpkin"
+  lyrics_url: "http://www.music-ministry.org/wp-content/uploads/2014/01/How-firm-a-foundation.pdf"
+  sample_url: "http://www.music-ministry.org/wp-content/uploads/2014/01/How-firm-a-foundation.pdf"
+-
+  id: 34
+  song_name: "You Alone Can Rescue (Who, oh Lord, could save themselves)"
+  license: "Copyright © 2009 Thankyou Music"
+  writers: "Matt Redman, Jonas Myrin"
+  lyrics_url: "http://www.worshiptogether.com/songs/songdetail.aspx?iid=1722527"
+  sample_url: "http://www.worshiptogether.com/songs/songdetail.aspx?iid=1722527"
+-
+  id: 35
+  song_name: "Before the Throne of God Above"
+  license: "Public Domain"
+  writers: "Charitie L. Bancroft"
+  sof_number: 1187
+-
+  id: 36
+  song_name: "Come Thou Fount of Every Blessing"
+  license: "Public Domain"
+  writers: "Robert Robinson"
+  lyrics_url: "http://en.wikipedia.org/wiki/Come_Thou_Fount_of_Every_Blessing"
+-
+  id: 37
+  song_name: "Jesus The Name High Over All"
+  license: "Copyright © 2008 Thankyou Music"
+  writers: "Gareth Robinson , John Hartley , Chris Eaton"
+  lyrics_url: "http://www.worshiptogether.com/songs/songdetail.aspx?iid=1011640"
+  sample_url: "http://www.worshiptogether.com/songs/songdetail.aspx?iid=1011640"
+-
+  id: 38
+  song_name: "Show Us Christ"
+  license: "Copyright © 2011 Sovereign Grace Worship"
+  writers: "Doug Plank, Bob Kauflin"
+  lyrics_url: "http://www.sovereigngracemusic.org/Songs/Show_Us_Christ/2"
+  sample_url: "http://www.sovereigngracemusic.org/Songs/Show_Us_Christ/2"
+-
+  id: 39
+  song_name: "For All You've Done (My Saviour, Redeemer)"
+  license: "Copyright © 2004 Hillsong Music Publishing"
+  writers: "Reuben Morgan"
+  lyrics_url: "http://www.worshiptogether.com/songs/songdetail.aspx?iid=1801896"
+  sample_url: "http://www.worshiptogether.com/songs/songdetail.aspx?iid=1801896"
+-
+  id: 40
+  song_name: "A Father to the Fatherless"
+  license: "Copyright © 2003 Thankyou Music"
+  writers: "Paul Oakley"
+  sof_number: 1691
+-
+  id: 41
+  song_name: "Nothing in this World"
+  license: "Copyright © 1998 Thankyou Music"
+  writers: "Tim Hughes"
+  sof_number: 1465
+-
+  id: 42
+  song_name: "Hungry, I Come to You"
+  license: "Copyright © 1999 Vineyard Songs (UK/Eire)"
+  writers: "Kathryn Scott"
+  sof_number: 1293
+-
+  id: 43
+  song_name: "At The Foot of the Cross"
+  license: "Copyright © 2003 Vertical Worship Songs"
+  writers: "Kathryn Scott"
+  sof_number: 1719
+-
+  id: 44
+  song_name: "Here I Am"
+  license: "Copyright © 2003 Curious? Music UK/Bucks Music Ltd"
+  writers: "Martin Smith, Stuart Garrard"
+  sof_number: 1827
+-
+  id: 45
+  song_name: "Merciful God"
+  license: "Copyright © 2006 Thankyou Music"
+  writers: "Keith & Kristyn Getty, Stuart Townend"
+  sof_number: 1966
+-
+  id: 46
+  song_name: "There is a Redeemer"
+  license: "Copyright © 1982 Birdwing Music"
+  writers: "Melody Green"
+  sof_number: 544
+-
+  id: 47
+  song_name: "You are the Holy One"
+  license: "Copyright © 1988 Mercy/Vineyard Publishing"
+  writers: "Andy Park"
+  sof_number: 626
+-
+  id: 48
+  song_name: "Jesus, God's Righteousness Revealed"
+  license: "Copyright © 1995 Word Music Inc./Maranatha! Music"
+  writers: "Geoff Bullock"
+  sof_number: 1383
+-
+  id: 49
+  song_name: "You Laid Aside Your Majesty (I Really Want to Worship You My Lord)"
+  license: "Copyright © 1985 Kingsway’s Thankyou Music"
+  writers: "Noel Richards"
+  sof_number: 633
+-
+  id: 50
+  song_name: "I Will Offer Up My Life"
+  license: "Copyright © 1994 Kingsway’s Thankyou Music"
+  writers: "Matt Redman"
+  sof_number: 851
+-
+  id: 51
+  song_name: "No Eye Has Seen"
+  license: "Copyright © 1990 Integrity’s Hosanna! Music/People of Destiny Int."
+  writers: "Mark Altrogge"
+  sof_number: 943
+-
+  id: 52
+  song_name: "Lord, I Come to You"
+  license: "Copyright © 1992 Word Music"
+  writers: "Geoff Bullock"
+  sof_number: 895
+-
+  id: 53
+  song_name: "Father Here I Am"
+  license: "Copyright © 1989 Mercy/Vineyard Publishing"
+  writers: "Danny Daniels"
+  sof_number: 94
+-
+  id: 54
+  song_name: "Change My Heart, O God"
+  license: "Copyright © 1982 Mercy/Vineyard Publishing"
+  writers: "Eddie Espinosa"
+  sof_number: 58
+-
+  id: 55
+  song_name: "Guide Me, O Thou Great Jehovah"
+  license: "Public Domain"
+  writers: "William Williams, Tr. Peter Williams"
+  sof_number: 148
+-
+  id: 56
+  song_name: "Lord of the Church"
+  license: "Copyright © Timothy Dudley-Smith"
+  writers: "Timothy Dudley-Smith"
+  sof_number: 1433
+-
+  id: 57
+  song_name: "Lord Reign in Me (Over all the Earth)"
+  license: "Copyright © 1998 Vineyard Songs (UK/Eire)"
+  writers: "Brenton Brown"
+  lyrics_url: "Over all the earth you reign on high // Every mountain stream, every sunset sky ..."
+-
+  id: 58
+  song_name: "All My Shame (A Frame So Beautifully Formed)"
+  license: "Copyright © 2007 Thankyou Music"
+  writers: "Ben Dunnett, Hannah Dunnett"
+  lyrics_url: "-"
+-
+  id: 59
+  song_name: "When I Survery"
+  license: "Public Domain"
+  writers: "Isaac Watts"
+  sof_number: 596
+-
+  id: 60
+  song_name: "Be Thou My Vision"
+  license: "Public Domain"
+  writers: "Tr. Eleanor Hull"
+  lyrics_url: "http://en.wikipedia.org/wiki/Be_Thou_My_Vision"
+-
+  id: 61
+  song_name: "Above All Powers"
+  license: "Copyright © 1999 Lensongs Publishing/Integrity's Hosanna! Music/Sovereign Music UK"
+  writers: "Lenny LeBlanc, Paul Baloche"
+  sof_number: 1151
+-
+  id: 62
+  song_name: "Jesus, Thank You"
+  license: "Copyright © 2003 Integrity’s Hosanna! Music (ASCAP)/Sovereign Grace Worship (ASCAP)"
+  writers: "Pat Sczebel"
+  lyrics_url: "http://www.sovereigngracemusic.org/Songs/Jesus,_Thank_You/14"
+  sample_url: "http://www.sovereigngracemusic.org/Songs/Jesus,_Thank_You/14"
+-
+  id: 63
+  song_name: "With a Prayer (you fed the hungry)"
+  license: "Copyright © 2002 Thankyou Music"
+  writers: "Stuart Townend"
+  sof_number: 1627
+-
+  id: 64
+  song_name: "Lord, You are the Author of my Life"
+  license: "Copyright © 1985 Kingsway’s Thankyou Music"
+  writers: "Judy Pruett"
+  sof_number: 910
+-
+  id: 65
+  song_name: "Be Still (for the presence of the Lord)"
+  license: "Copyright © 1986 Kingsway’s Thankyou Music"
+  writers: "David J. Evans"
+  sof_number: 40
+-
+  id: 66
+  song_name: "Holy Spirit, Living Breath of God"
+  license: "Copyright © 2005 Thankyou Music"
+  writers: "Keith Getty, Stuart Townend"
+  sof_number: 1850
+-
+  id: 67
+  song_name: "Eagles' Wings (Call the Man)"
+  license: "Copyright © 1979, 2003, OCP"
+  writers: "Michael Joncas"
+  lyrics_url: "-"
+-
+  id: 68
+  song_name: "Wonderful, Merciful Savior"
+  license: "Copyright © 1989 Dayspring Music, LLC"
+  writers: "Dawn Rodgers, Eric Wyse"
+  lyrics_url: "-"
+-
+  id: 69
+  song_name: "Come People of the Risen King"
+  license: "Copyright © 2007 Thankyou Music"
+  writers: "Keith & Kristyn Getty, Stuart Townend"
+  sof_number: 2249
+-
+  id: 70
+  song_name: "I Cannot Tell"
+  license: "Public Domain"
+  writers: "William Y. Fullerton"
+  sof_number: 205
+-
+  id: 71
+  song_name: "Rock of Ages"
+  license: "Words in this version Copyright © 2001 Make Way Music"
+  writers: "Augustus M. Toplady (1740-78) adapt. by Graham Kendrick"
+  sof_number: 1507
+-
+  id: 72
+  song_name: "Take My Life and Let it Be"
+  license: "Copyright © 2005 Thankyou Music"
+  writers: "Frances R. Havergal (1836 –1879) Adpt. & new music Paul Oakley"
+  sof_number: 2037
+-
+  id: 73
+  song_name: "The Whole Earth"
+  license: "Copyright © 2005 Hillsong Publishing/kingswaysongs.com"
+  writers: "Reuben Morgan"
+  sof_number: 2067
+-
+  id: 74
+  song_name: "Jesus is Lord"
+  license: "Copyright © 2003 Thankyou Music "
+  writers: "Stuart Townend, Keith Getty"
+  sof_number: 1387
+-
+  id: 75
+  song_name: "Healing To The Nations"
+  license: "Copyright © 1982 Scripture In Song (Admin. by Maranatha! Music (Capitol CMG))"
+  writers: "Bob Fitts"
+  lyrics_url: "-"
+-
+  id: 76
+  song_name: "Name of All Majesty"
+  license: "Copyright © 1979 Timothy Dudley-Smith"
+  writers: "Timothy Dudley-Smith"
+  sof_number: 939
+-
+  id: 77
+  song_name: "There is a Higher Throne"
+  license: "Copyright © 2002 Thankyou Music"
+  writers: "Kristyn Lennox & Keith Getty"
+  sof_number: 1541
+-
+  id: 78
+  song_name: "We'll Walk the Land"
+  license: "Copyright © 1989 Make Way Music"
+  writers: "Graham Kendrick"
+  sof_number: 583
+-
+  id: 79
+  song_name: "Jabulani Africa (Bayete iNkosi)"
+  license: "Public Domain?"
+  writers: "Unknown"
+  lyrics_url: "couldnt find"
+-
+  id: 80
+  song_name: "Hosanna (Praise Is Rising)"
+  license: "Copyright © 2005, 2006 Thankyou Music"
+  writers: "Brenton Brown, Paul Baloche"
+  lyrics_url: "http://www.worshiptogether.com/songs/songdetail.aspx?iid=559270"
+  sample_url: "http://www.worshiptogether.com/songs/songdetail.aspx?iid=559270"
+-
+  id: 81
+  song_name: "By Faith"
+  license: "Copyright © 2009 Thankyou Music"
+  writers: "Stuart Townend, Keith & Kristyn Getty "
+  sof_number: 2240
+  sample_url: "http://www.gettymusic.com/hymns-byfaith.aspx"
+-
+  id: 82
+  song_name: "O Church, Arise"
+  license: "Copyright © 2005 Thankyou Music"
+  writers: "Stuart Townend, Keith Getty"
+  sof_number: 1981
+  sample_url: "http://www.gettymusic.com/hymns-ochurcharise.aspx"
+-
+  id: 83
+  song_name: "The Precious Blood"
+  license: "Copyright © 2005 Sovereign Grace Worship (ASCAP)"
+  writers: "Peter Gagnon"
+  lyrics_url: "http://sovereigngracemusic.org/Songs/The_Precious_Blood/13"
+  sample_url: "http://sovereigngracemusic.org/Songs/The_Precious_Blood/13"
+...

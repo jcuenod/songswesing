@@ -1,0 +1,2 @@
+class AkasController < ApplicationController
+end

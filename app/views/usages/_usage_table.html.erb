@@ -1,0 +1,14 @@
+<table class="table table-bordered table-condensed table-hover table-striped">
+	<thead>
+		<th>Song</th>
+		<th>#</th>
+	</thead>
+	<tbody>
+	<% @usage_data.each do |s| %>
+		<tr>
+			<td><a class='unborderedanchor' onclick='songAnchorClicked(<%= s[0][0] %>)'><%= s[0][1] %></a></td>
+			<td><%= s[1] %></td>
+		</tr>
+	<% end %>
+	</tbody>
+</table>

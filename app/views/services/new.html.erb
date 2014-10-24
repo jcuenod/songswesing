@@ -1,0 +1,35 @@
+<%= form_for @service, :remote => true do |f| %>
+    <div style="margin:20px">
+        <table class="table table-bordered table-condensed table-hover table-striped">
+            <thead>
+                <th>Date</th>
+                <th>Service<a class="glyphicon glyphicon-plus-sign addnew" onclick="addnewAnchorClicked('service_types')"></a></th>
+                <th>Leader<a class="glyphicon glyphicon-plus-sign addnew" onclick="addnewAnchorClicked('leaders')"></a></th>
+                <th colspan="2">
+                    Songs
+                    <a class="songusageanchor" onclick="songUsageAnchorClicked()">usage summary</a>
+                    <a class="glyphicon glyphicon-plus-sign addnew" onclick="addnewAnchorClicked('songs')"></a>
+                </th>
+            </thead>
+                <tbody id="servicelist">
+                    <tr class="insertionForm">
+                    	<td width=1><%= f.date_field :date, class: 'form-control' %></td>
+                    	<td width=*><%= f.select :service_type_id, options_for_select(@service_types.map{ |s| [s.service_type, s.id] }), {}, class: 'form-control' %></td>
+                        <td width=*><%= f.select :leader_id, options_for_select(@leaders.map{ |l| [l.leader_name, l.id] }), {}, class: 'form-control' %></td>
+                        <td width=60%>
+                        	<ul name="service[songs][]" id="songList"></ul>
+                        </td>
+                        <td width=1><%= #f.submit value: "create", class: 'form-control'
+                        button_tag raw("<span class='glyphicon glyphicon-ok-circle'></span>"), :class => "btn btn-primary", :type => "submit"
+                        #link_to '', "#", :onclick => "$('#form_id').submit()", class: ' btn btn-primary' 
+                        %></td>
+                    </tr>
+                    <% @services.each do |s| %>
+                        <% @service = s %>
+                        <%= render "service_table_row" %>
+                    <% end %>
+                </tbody>
+        </table>
+    </div>
+<% end %>
+

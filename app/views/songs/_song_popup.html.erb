@@ -1,0 +1,21 @@
+<div><%= form_for @song, html: {class: "form-horizontal", id: "frm_create"}, remote: true do |f| %>
+	<div class="form-group"><%= f.label :song_name, raw("Song&nbsp;Name"), class: "col-sm-4 control-label" %>
+		<div class="col-sm-8"><%= f.text_field :song_name, class: "form-control", required:"required" %></div>
+	</div>
+	<div class="form-group"><%= f.label :license, class: "col-sm-4 control-label" %>
+		<div class="col-sm-8"><%= f.text_field :license, class: "form-control", required:"required" %></div>
+	</div>
+	<div class="form-group"><%= f.label :writers, class: "col-sm-4 control-label" %>
+		<div class="col-sm-8"><%= f.text_field :writers, class: "form-control", required:"required" %></div>
+	</div>
+	<div class="form-group"><%= f.label :lyrics_url, raw("Lyrics&nbsp;URL"), class: "col-sm-4 control-label" %>
+		<div class="col-sm-8"><%= f.text_field :lyrics_url, class: "form-control" %></div>
+	</div>
+	<div class="form-group"><%= f.label :sof_number, raw("SOF&nbsp;Number"), class: "col-sm-4 control-label" %>
+		<div class="col-sm-8"><%= f.number_field :sof_number, class: "form-control" %></div>
+	</div>
+	<div class="form-group"><%= f.label :sample_url, raw("Sample&nbsp;URL"), class: "col-sm-4 control-label" %>
+		<div class="col-sm-8"><%= f.text_field :sample_url, class: "form-control" %></div>
+	</div>
+    <%= f.submit class:"btn btn-primary btn-lg btn-block" %>
+<% end %></div>

@@ -1,0 +1,9 @@
+<%= form_for @song do |f| %>
+      <%= f.text_field :song_name %>
+      <%= f.text_field :license %>
+      <%= f.text_field :writers %>
+      <%= f.text_field :lyrics_url %>
+      <%= f.number_field :sof_number %>
+      <%= f.text_field :sample_url %>
+      <%= f.submit %>
+<% end %>

@@ -1,0 +1,103 @@
+
+.ui-datepicker-trigger {
+    float: left;
+    padding: 1px;
+    margin: 0 2px;
+}
+.ui-autocomplete-input {
+    min-width: 0 !important;
+}
+.tagit-autocomplete.ui-menu {
+    border-radius: 4px;
+    padding: 2px;
+    padding-right: 8px;
+}
+.tagit-autocomplete.ui-menu .ui-menu-item {
+    border-radius: 3px;
+    margin: 1px;
+}
+ul.tagit {
+    width: 100%;
+    background-color: #fff;
+    cursor: text;
+}
+select {
+    padding: 1.1em;
+}
+a.borderedanchor {
+    border: 1px solid #ddd;
+}
+a.borderedanchor, a.unborderedanchor {
+    padding: 1px 5px;
+    margin: 1px 2px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+}
+a.borderedanchor:hover, a.unborderedanchor:hover, a.songusageanchor:hover {
+    text-decoration: none;
+}
+a.borderedanchor:hover, a.unborderedanchor:hover {
+    background-color: #ddf;
+}
+a.songusageanchor {
+    cursor: pointer;
+}
+
+.breakdown_header:before {
+    content: "INFO: ";
+    font-size: 70%;
+    font-weight: normal;
+}
+.breakdown_header {
+    text-align: center;
+    font-size: 200%;
+    font-weight: bold;
+}
+h1 {
+    margin: 20px 30px 0px 40px;
+    font-family: "Open Sans Condensed";
+    font-size: 300%;
+}
+.spacer {
+    display: inline-block;
+    width: 4px;
+}
+.icontip {
+    margin: 2px;
+}
+.addnew {
+    position: absolute;
+    top: 8px;
+    right:5px;
+    cursor: pointer;
+}
+.addnew:hover {
+    text-decoration: none;
+}
+th {
+    position: relative;
+}
+
+td.date, th {
+    white-space: nowrap;
+}
+span.ui-button-text {
+    white-space: nowrap !important;
+}
+.ui-helper-hidden-accessible {
+    display: none;
+}
+.tagit-label {
+    vertical-align: middle;
+}
+#songList {
+    min-height: 32px;
+    margin: 1px;
+    border-radius: 3px;
+}
+#service_date
+{
+    min-width: 8em;
+}
+::-webkit-inner-spin-button { display: none; }
