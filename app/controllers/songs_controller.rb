@@ -8,10 +8,14 @@ class SongsController < ApplicationController
 
 	def create
 		@song = Song.create(song_params)
+		params[:song][:akas_attributes].each do |a|
+			Aka.create({:song_id => @song.id, :display_text => a[1][:display_text], :search_text => a[1][:search_text]})
+		end
+
 		render json: {
 			"what" => "created", 
 			"whatCreated" => "song", 
-			"tag" => {"id" => @song.id, "label" => @song.song_name}
+			"tag" => {"id" => @song.id, "label" => @song.song_name},
 		}
 	end
 

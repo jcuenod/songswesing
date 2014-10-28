@@ -82,6 +82,13 @@ $( document ).ready(function() {
         onSubmit: function() {
             //TODO: clear the stuff once it's submitted
         },
+        onTagClicked: function(evt, ui) {
+            songAnchorClicked(ui.tagLabel);
+        },
+        showAutocompleteOnFocus:true,
+        beforeTagAdded: function(event, ui) {
+            return $.isNumeric(ui.tag[0].children[2].defaultValue)
+        },
         fieldName: 'service[songs][]',
     });
 });

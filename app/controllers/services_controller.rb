@@ -6,7 +6,8 @@ class ServicesController < ApplicationController
 		@leaders = Leader.all
 		@service_types = ServiceType.all
 		@service = Service.new
-		@services = Service.limit(8).order(date: :desc).all
+		#@services = Service.limit(8).order(date: :desc).all
+		@services = Service.order(date: :desc).all
 	end
 	def create
 		unless params[:service][:songs].nil?

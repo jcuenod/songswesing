@@ -6,4 +6,8 @@ class Service < ActiveRecord::Base
   			:through => :usages
   accepts_nested_attributes_for :songs,
   			:reject_if => :all_blank
+
+  validates :date, presence: true
+  validates :leader, presence: true
+  validates :service_type, presence: true
 end
