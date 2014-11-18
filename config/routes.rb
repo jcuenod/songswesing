@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   root 'services#new'
   resources :songs
   resources :services
@@ -6,9 +7,12 @@ Rails.application.routes.draw do
   resources :service_types
   resources :usages
 
+  #post 'services/:offset/:limit' => 'services#index' (for loading older services)
+  #post 'services/:limit' => 'services#index' (for loading older services)
   post 'songs/list' => 'songs#list'
   post 'songs/data/:id' => 'songs#songdata'
   post 'usages/data/:limit' => 'usages#data'
+  post 'leaders/data/:id' => 'leaders#data'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

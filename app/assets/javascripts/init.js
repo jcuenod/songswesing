@@ -62,6 +62,7 @@ $( document ).ready(function() {
             $(".ui-autocomplete-input").autoGrow(8);
         },*/
         // autocomplete: {
+            // minLength: 2
         //     delay: 0,
             // source: function(request, response) {
 	           //  var term = $.ui.autocomplete.escapeRegex(request.term);
@@ -85,7 +86,7 @@ $( document ).ready(function() {
         onTagClicked: function(evt, ui) {
             songAnchorClicked(ui.tagLabel);
         },
-        showAutocompleteOnFocus:true,
+        showAutocompleteOnFocus:false,
         beforeTagAdded: function(event, ui) {
             return $.isNumeric(ui.tag[0].children[2].defaultValue)
         },
@@ -152,31 +153,20 @@ function songAnchorClicked(song_id)
 }
 function leaderAnchorClicked(el)
 {
-    /*var leader_name = $(el).html();
-    var jqxhr = $.post( "/leaders/:id" )
+    var leader_name = $(el).html();
+    var jqxhr = $.post( "/leaders/data/" + el )
         .done(function(data) {
             var arrlabel = new Array();
             var arrdata1 = new Array();
-            var arrdata2 = new Array();
-            for (d in data)
+            for (d in data.chart_data)
             {
-                arrlabel.push(data[d].song_name);
-                arrdata1.push(data[d].tally);
-                arrdata2.push(data[d].total);
+                arrlabel.push(d);
+                arrdata1.push(data.chart_data[d]);
             }
             var completedata = {
                 labels: arrlabel,
                 datasets: [
                     {
-                        label: "My First dataset",
-                        fillColor: "rgba(220,220,220,0.5)",
-                        strokeColor: "rgba(220,220,220,0.8)",
-                        highlightFill: "rgba(220,220,220,0.75)",
-                        highlightStroke: "rgba(220,220,220,1)",
-                        data: arrdata2
-                    },
-                    {
-                        label: "My Second dataset",
                         fillColor: "rgba(151,187,205,0.5)",
                         strokeColor: "rgba(151,187,205,0.8)",
                         highlightFill: "rgba(151,187,205,0.75)",
@@ -189,12 +179,12 @@ function leaderAnchorClicked(el)
             var mc = $("<canvas width=600 height=400>");
             var ctx = mc.get(0).getContext("2d");
             myLightboxChart = new Chart(ctx).Bar(completedata);
-            $.featherlight("<div class='breakdown_header'>" + leader_name + "</div><div id='feather'></div>");
+            $.featherlight("<div class='breakdown_header'>" + data.leader_name + "</div><div id='feather'></div>");
             $("#feather").html($(mc));
             //$.featherlight("<div>" + data + "</div>");
         })
         .fail(function(e) {
             console.log( "error" );
             console.dir(e);
-        });*/
+        });
 }

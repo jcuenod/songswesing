@@ -1,4 +1,12 @@
-
+.logout-link {
+    position: absolute;
+    right: 35px;
+    top: 20px;
+    font-weight: bold;
+}
+.logout-link a:hover {
+    text-decoration: none;
+}
 .ui-datepicker-trigger {
     float: left;
     padding: 1px;
@@ -58,6 +66,10 @@ h1 {
     margin: 20px 30px 0px 40px;
     font-family: "Open Sans Condensed";
     font-size: 300%;
+}
+.alert {
+    margin-bottom: 10px;
+    margin-top: 10px;
 }
 .spacer {
     display: inline-block;

@@ -1,13 +1,20 @@
 class ServicesController < ApplicationController
+	before_filter :authenticate_user!
 	def index
-	 	@services = Service.limit(8).order(:date).all
+		useroffset = params[:offset].nil? ? 0 : params[:offset]
+		userlimit = params[:limit].nil? ? 8 : params[:limit]
+		userlimit = userlimit > 100 ? 100 : userlimit
+
+	 	@services = Service.limit(userlimit).offset(useroffset).order(:date).all
+	 	render partial: "service_table_row"
 	end
 	def new
 		@leaders = Leader.all
 		@service_types = ServiceType.all
 		@service = Service.new
 		#@services = Service.limit(8).order(date: :desc).all
-		@services = Service.order(date: :desc).all
+		@services = Service.where(church_id: current_user.church_id).limit(8).order([:date => :desc, :service_type_id => :asc]).all
+		flash[:notice] = "Viewing services for " + Church.find_by_id(current_user.church_id).church_name
 	end
 	def create
 		unless params[:service][:songs].nil?

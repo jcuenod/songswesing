@@ -3,7 +3,7 @@ class Song < ActiveRecord::Base
   accepts_nested_attributes_for :akas, :reject_if => :all_blank, :allow_destroy => true
 
   def self.autocomplete(q)
-    q = q.gsub(/(?=\S)(\d|\W)/,"").squeeze(" ").downcase
+    q = q.gsub(/(?=\S)(\W)/,"").squeeze(" ").downcase
     #where("song_name LIKE ?", q).order(:song_name).limit(5)
     four = Aka.where("search_text LIKE ?", "%#{q}%").distinct(:song_id).order(:display_text)
     three = Aka.where("search_text LIKE ?", "% #{q}%").distinct(:song_id).order(:display_text)

@@ -170,6 +170,18 @@ services:
     - 2
     - '2014-10-22 08:23:41.474121'
     - '2014-10-22 08:23:41.474121'
+  - - 26
+    - '2014-10-26'
+    - 1
+    - 2
+    - '2014-10-27 20:13:06.064179'
+    - '2014-10-27 20:13:06.064179'
+  - - 27
+    - '2014-10-26'
+    - 3
+    - 1
+    - '2014-10-28 07:03:47.395244'
+    - '2014-10-28 07:03:47.395244'
 
 ---
 songs:
@@ -183,16 +195,18 @@ songs:
   - sample_url
   - created_at
   - updated_at
+  - ccli_number
   records: 
   - - 1
     - In Christ Alone
     - Copyright © 2001 Thankyou Music
     - Stuart Townend & Keith Getty
-    - 
-    - 
+    - ''
+    - 0
     - http://www.youtube.com/watch?v=RCeSOY5tisI
     - 
     - '2014-10-22 15:01:26.866295'
+    - 
   - - 2
     - Abide With Me
     - Public Domain
@@ -202,87 +216,97 @@ songs:
     - http://cyberhymnal.org/htm/a/b/abidewme.htm
     - 
     - '2014-10-22 14:54:29.888350'
+    - 
   - - 3
     - Speak, O Lord
     - Copyright © 2005 Thankyou Music
     - Keith Getty & Stuart Townend
-    - 
-    - 
+    - ''
+    - 0
     - https://www.youtube.com/watch?v=ckhjcIOfV88
     - 
     - '2014-10-22 15:01:26.935006'
+    - 
   - - 4
     - How Deep
     - © 2006 Sovereign Grace Praise (BMI)
     - Stephen Altrogge
     - http://www.sovereigngracemusic.org/Songs/How_Deep/13
-    - 
+    - 0
     - http://www.sovereigngracemusic.org/Songs/How_Deep/13
     - 
     - '2014-10-22 14:54:29.979639'
+    - 
   - - 5
     - Endless Praises
     - © 2003 Sovereign Grace Praise (BMI)
     - Stephen Altrogge
     - http://www.sovereigngracemusic.org/Songs/Endless_Praises/14
-    - 
+    - 0
     - http://www.sovereigngracemusic.org/Songs/Endless_Praises/14
     - 
     - '2014-10-22 14:54:30.001705'
+    - 
   - - 6
-    - 10,000 Reasons (Bless The Lord)
+    - 10,000 Reasons
     - Copyright © 2011 Thankyou Music (Admin. by EMI Christian Music Publishing)
     - Matt Redman, Jonas Myrin
     - http://www.worshiptogether.com/songs/songdetail.aspx?iid=1849631
-    - 
+    - 0
     - http://www.worshiptogether.com/songs/songdetail.aspx?iid=1849631
     - 
-    - '2014-10-22 14:54:30.023848'
+    - '2014-10-24 21:10:21.811202'
+    - 
   - - 7
     - God Immortal
     - © 2008 Thankyou Music (Admin. by EMI Christian Music Publishing)
     - Lou Fellingham, Mike Busbee, Nathan Fellingham
     - https://www.weareworship.com/uk/songs/song-library/showsong/806
-    - 
+    - 0
     - https://www.weareworship.com/uk/songs/song-library/showsong/806
     - 
     - '2014-10-22 14:54:30.047771'
+    - 
   - - 8
     - How Deep The Father’s Love For Us
     - Copyright © 1995 Thankyou Music
     - Stuart Townend
     - http://www.stuarttownend.co.uk/song/how-deep-the-fathers-love-for-us/
-    - 
+    - 0
     - http://www.stuarttownend.co.uk/song/how-deep-the-fathers-love-for-us/
     - 
     - '2014-10-22 14:54:30.071062'
+    - 
   - - 9
     - Cornerstone
     - Copyright © 2011 Hillsong Music Publishing (Admin. by EMI Christian Music Publishing)
     - Reuben Morgan, Edward Mote, Jonas Myrin, Eric Liljero, William Batchelder Bradbury
     - http://www.worshiptogether.com/songs/songdetail.aspx?iid=1908027
-    - 
+    - 0
     - http://www.worshiptogether.com/songs/songdetail.aspx?iid=1908027
     - 
     - '2014-10-22 14:54:30.096337'
+    - 
   - - 10
     - Let Your Kingdom Come
     - © 2006 Sovereign Grace Praise (BMI)
     - Bob Kauflin
     - http://www.sovereigngracemusic.org/Songs/Let_Your_Kingdom_Come/13
-    - 
+    - 0
     - http://www.sovereigngracemusic.org/Songs/Let_Your_Kingdom_Come/13
     - 
     - '2014-10-22 14:54:30.119173'
+    - 
   - - 11
     - Salvation Belongs to our God
     - Copyright © 1985 Restoration Music Ltd
     - Adrian Howard, Pat Turner
-    - 
+    - ''
     - 992
     - https://www.youtube.com/watch?v=RihfmBH8JbQ
     - 
     - '2014-10-22 15:01:26.949947'
+    - 
   - - 12
     - Jesus is Lord
     - Copyright © 2003 Thankyou Music
@@ -292,51 +316,57 @@ songs:
     - http://www.stuarttownend.co.uk/song/jesus-is-lord/
     - 
     - '2014-10-22 14:54:30.163275'
+    - 
   - - 13
-    - Loved Before the Dawn of Time (Salvation's Song)
+    - Salvation's Song
     - Copyright © 2007 Thankyou Music
     - Stuart Townend & Andrew Small
     - http://www.stuarttownend.co.uk/song/salvations-song/
     - 2434
     - http://www.stuarttownend.co.uk/song/salvations-song/
     - 
-    - '2014-10-22 14:54:30.183317'
+    - '2014-10-24 21:11:03.056978'
+    - 
   - - 14
     - As the Deer
     - Copyright © 1983 Restoration Music Ltd.
     - Martin J. Nystrom
-    - 
+    - ''
     - 27
     - https://www.youtube.com/watch?v=l7Blrb88KWU
     - 
     - '2014-10-22 15:01:26.962864'
+    - 
   - - 15
     - O Sacred King
     - Copyright © 1999 Thankyou Music
     - Matt Redman
-    - 
+    - ''
     - 1493
     - http://www.youtube.com/watch?v=xNSYwW3-RFg
     - 
     - '2014-10-22 15:01:26.974912'
+    - 
   - - 16
     - Love Divine, All Loves Excelling
     - Public Domain
     - Charles Wesley
-    - 
+    - ''
     - 377
     - https://www.youtube.com/watch?v=JGGcqhKShQ8
     - 
     - '2014-10-22 15:01:26.987344'
+    - 
   - - 17
     - Amazing Grace
     - Public Domain
     - John Newton
-    - 
+    - ''
     - 19
     - http://www.youtube.com/watch?v=CDdvReNKKuk
     - 
     - '2014-10-22 15:01:26.999627'
+    - 
   - - 18
     - Your Blood Speaks a Better Word (Nothing But The Blood)
     - Copyright © 2004 Thankyou Music
@@ -346,19 +376,22 @@ songs:
     - http://worshiptogether.com/songs/songdetail.aspx?iid=563797
     - 
     - '2014-10-22 14:54:30.297957'
+    - 
   - - 19
-    - Light of the World (Here I Am To Worship)
+    - Light of the World
     - Copyright © 2001 Thankyou Music
     - Tim Hughes
     - http://www.worshiptogether.com/songs/songdetail.aspx?iid=572962
-    - 
+    - 0
     - http://www.worshiptogether.com/songs/songdetail.aspx?iid=572962
     - 
-    - '2014-10-22 14:54:30.323154'
+    - '2014-10-24 21:12:20.849184'
+    - 
   - - 20
     - We have seen your glory
     - Public Domain
     - Steph & David Ebert
+    - 
     - 
     - 
     - 
@@ -369,141 +402,157 @@ songs:
     - Public Domain
     - Anonymous
     - https://www.hymnal.net/en/hymn/ns/51
-    - 
+    - 0
     - https://www.hymnal.net/en/hymn/ns/51
     - 
     - '2014-10-22 14:54:30.345438'
+    - 
   - - 22
     - Blessing and Honour
     - Copyright © 1992 Integrity’s Praise! Music
     - Gary Sadler & Jamie Harvill
-    - 
+    - ''
     - 675
     - https://www.youtube.com/watch?v=5m04UJ6BCrI
     - 
     - '2014-10-22 15:01:27.013477'
+    - 
   - - 23
     - Hark the Herald Angels Sing
     - Public Domain
     - Charles Wesley, William H. Cummings
-    - 
-    - 
+    - ''
+    - 0
     - https://www.youtube.com/watch?v=lCt1s44cfMM
     - 
     - '2014-10-22 15:01:27.025728'
+    - 
   - - 24
-    - O Lord, Our Lord (How Majestic is Your name)
+    - O Lord, Our Lord
     - Copyright © 1981 Meadowgreen Music
     - Michael W. Smith
-    - 
+    - ''
     - 962
     - https://www.youtube.com/watch?v=6h56LamYqyE
     - 
-    - '2014-10-22 15:01:27.037690'
+    - '2014-10-24 21:12:48.025151'
+    - 
   - - 25
     - Father Into Your Courts I Will Enter
     - Copyright © 2001 Parachute Music New Zealand
     - Andrew Ulugia & Wayne Huirua
-    - 
+    - ''
     - 1230
     - https://www.youtube.com/watch?v=bo2bwXLwhVs
     - 
     - '2014-10-22 15:01:27.051348'
+    - 
   - - 26
     - Standing in Your Presence
     - Copyright © 1996 Darlene Zschech/Hillsongs Australia/Kingsway’s Thankyou Music
     - Darlene Zschech
-    - 
+    - ''
     - 1011
     - https://www.youtube.com/watch?v=bK3mbyQvjDw
     - 
     - '2014-10-22 15:01:27.063817'
+    - 
   - - 27
     - Beautiful Lord, Wonderful Saviour
     - Copyright © 1997 Darlene Zschech/Hillsong Publishing/ Kingsway Music
     - Darlene Zschech
-    - 
-    - 
+    - ''
+    - 0
     - https://www.youtube.com/watch?v=a5g5qXLG7w4
     - 
     - '2014-10-22 15:01:27.076575'
+    - 
   - - 28
     - Your Will, Not Mine
     - Copyright © 1991 Sovereign Lifestyle Music
     - Dougie Brown
-    - 
+    - ''
     - 1149
     - 
     - 
     - '2014-10-22 14:45:48.279861'
+    - 
   - - 29
     - Tell Out, My Soul
     - Public Domain
     - Timothy Dudley-Smith
-    - 
-    - 
+    - ''
+    - 0
     - https://www.youtube.com/watch?v=s6ji4y9Q-K0
     - 
     - '2014-10-22 15:01:27.089195'
+    - 
   - - 30
     - Be Still My Soul
     - Public Domain
     - Ka­tha­ri­na A. von Schle­gel, tr. Jane L. Borth­wick
     - http://cyberhymnal.org/htm/b/e/bestill.htm
-    - 
+    - 0
     - http://cyberhymnal.org/htm/b/e/bestill.htm
     - 
     - '2014-10-22 14:54:30.536815'
+    - 
   - - 31
     - My Soul Finds Rest in God Alone (Psalm 62)
     - Copyright © 2008 Thankyou Music
     - Stuart Townend , Aaron Keyes
     - http://www.worshiptogether.com/songs/songdetail.aspx?iid=956127
-    - 
+    - 0
     - http://www.worshiptogether.com/songs/songdetail.aspx?iid=956127
     - 
     - '2014-10-22 14:54:30.564154'
+    - 
   - - 32
     - Sing To The King
     - Copyright © 2003 worshiptogether.com Songs
     - Billy Foote
     - http://www.worshiptogether.com/songs/songdetail.aspx?iid=565142
-    - 
+    - 0
     - http://www.worshiptogether.com/songs/songdetail.aspx?iid=565142
     - 
     - '2014-10-22 14:54:30.588576'
+    - 
   - - 33
     - How Firm a Foundation
     - Copyright © 2003 songsfortoday.com
     - Richard Simpkin
     - http://www.music-ministry.org/wp-content/uploads/2014/01/How-firm-a-foundation.pdf
-    - 
+    - 0
     - http://www.music-ministry.org/wp-content/uploads/2014/01/How-firm-a-foundation.pdf
     - 
     - '2014-10-22 14:54:30.616458'
+    - 
   - - 34
     - You Alone Can Rescue (Who, oh Lord, could save themselves)
     - Copyright © 2009 Thankyou Music
     - Matt Redman, Jonas Myrin
     - http://www.worshiptogether.com/songs/songdetail.aspx?iid=1722527
-    - 
+    - 0
     - http://www.worshiptogether.com/songs/songdetail.aspx?iid=1722527
     - 
     - '2014-10-22 14:54:30.641720'
+    - 
   - - 35
     - Before the Throne of God Above
     - Public Domain
     - Charitie L. Bancroft
-    - 
+    - ''
     - 1187
     - 
     - 
     - '2014-10-22 14:45:48.292239'
+    - 
   - - 36
     - Come Thou Fount of Every Blessing
     - Public Domain
     - Robert Robinson
     - 
+    - 0
     - 
     - 
     - 
@@ -513,186 +562,207 @@ songs:
     - Copyright © 2008 Thankyou Music
     - Gareth Robinson , John Hartley , Chris Eaton
     - http://www.worshiptogether.com/songs/songdetail.aspx?iid=1011640
-    - 
+    - 0
     - http://www.worshiptogether.com/songs/songdetail.aspx?iid=1011640
     - 
     - '2014-10-22 14:54:30.663844'
+    - 
   - - 38
     - Show Us Christ
     - Copyright © 2011 Sovereign Grace Worship
     - Doug Plank, Bob Kauflin
     - http://www.sovereigngracemusic.org/Songs/Show_Us_Christ/2
-    - 
+    - 0
     - http://www.sovereigngracemusic.org/Songs/Show_Us_Christ/2
     - 
     - '2014-10-22 14:54:30.692186'
+    - 
   - - 39
     - For All You've Done (My Saviour, Redeemer)
     - Copyright © 2004 Hillsong Music Publishing
     - Reuben Morgan
     - http://www.worshiptogether.com/songs/songdetail.aspx?iid=1801896
-    - 
+    - 0
     - http://www.worshiptogether.com/songs/songdetail.aspx?iid=1801896
     - 
     - '2014-10-22 14:54:30.717277'
+    - 
   - - 40
     - A Father to the Fatherless
     - Copyright © 2003 Thankyou Music
     - Paul Oakley
-    - 
+    - ''
     - 1691
     - 
     - 
     - '2014-10-22 14:45:48.304493'
+    - 
   - - 41
     - Nothing in this World
     - Copyright © 1998 Thankyou Music
     - Tim Hughes
-    - 
+    - ''
     - 1465
     - 
     - 
     - '2014-10-22 14:45:48.316370'
+    - 
   - - 42
     - Hungry, I Come to You
     - Copyright © 1999 Vineyard Songs (UK/Eire)
     - Kathryn Scott
-    - 
+    - ''
     - 1293
     - 
     - 
     - '2014-10-22 14:45:48.328664'
+    - 
   - - 43
     - At The Foot of the Cross
     - Copyright © 2003 Vertical Worship Songs
     - Kathryn Scott
-    - 
+    - ''
     - 1719
     - 
     - 
     - '2014-10-22 14:45:48.340899'
+    - 
   - - 44
     - Here I Am
     - Copyright © 2003 Curious? Music UK/Bucks Music Ltd
     - Martin Smith, Stuart Garrard
-    - 
+    - ''
     - 1827
     - 
     - 
     - '2014-10-22 14:45:48.352611'
+    - 
   - - 45
     - Merciful God
     - Copyright © 2006 Thankyou Music
     - Keith & Kristyn Getty, Stuart Townend
-    - 
+    - ''
     - 1966
     - 
     - 
     - '2014-10-22 14:45:48.365221'
+    - 
   - - 46
     - There is a Redeemer
     - Copyright © 1982 Birdwing Music
     - Melody Green
-    - 
+    - ''
     - 544
     - 
     - 
     - '2014-10-22 14:45:48.377722'
+    - 
   - - 47
     - You are the Holy One
     - Copyright © 1988 Mercy/Vineyard Publishing
     - Andy Park
-    - 
+    - ''
     - 626
     - 
     - 
     - '2014-10-22 14:45:48.389518'
+    - 
   - - 48
     - Jesus, God's Righteousness Revealed
     - Copyright © 1995 Word Music Inc./Maranatha! Music
     - Geoff Bullock
-    - 
+    - ''
     - 1383
     - 
     - 
     - '2014-10-22 14:45:48.401924'
+    - 
   - - 49
     - You Laid Aside Your Majesty (I Really Want to Worship You My Lord)
     - Copyright © 1985 Kingsway’s Thankyou Music
     - Noel Richards
-    - 
+    - ''
     - 633
     - 
     - 
     - '2014-10-22 14:45:48.414795'
+    - 
   - - 50
     - I Will Offer Up My Life
     - Copyright © 1994 Kingsway’s Thankyou Music
     - Matt Redman
-    - 
+    - ''
     - 851
     - 
     - 
     - '2014-10-22 14:45:48.426524'
+    - 
   - - 51
     - No Eye Has Seen
     - Copyright © 1990 Integrity’s Hosanna! Music/People of Destiny Int.
     - Mark Altrogge
-    - 
+    - ''
     - 943
     - 
     - 
     - '2014-10-22 14:45:48.438884'
+    - 
   - - 52
     - Lord, I Come to You
     - Copyright © 1992 Word Music
     - Geoff Bullock
-    - 
+    - ''
     - 895
     - 
     - 
     - '2014-10-22 14:45:48.450747'
+    - 
   - - 53
     - Father Here I Am
     - Copyright © 1989 Mercy/Vineyard Publishing
     - Danny Daniels
-    - 
+    - ''
     - 94
     - 
     - 
     - '2014-10-22 14:45:48.462817'
+    - 
   - - 54
     - Change My Heart, O God
     - Copyright © 1982 Mercy/Vineyard Publishing
     - Eddie Espinosa
-    - 
+    - ''
     - 58
     - 
     - 
     - '2014-10-22 14:45:48.474977'
+    - 
   - - 55
     - Guide Me, O Thou Great Jehovah
     - Public Domain
     - William Williams, Tr. Peter Williams
-    - 
+    - ''
     - 148
     - 
     - 
     - '2014-10-22 14:45:48.487180'
+    - 
   - - 56
     - Lord of the Church
     - Copyright © Timothy Dudley-Smith
     - Timothy Dudley-Smith
-    - 
+    - ''
     - 1433
     - 
     - 
     - '2014-10-22 14:45:48.499129'
+    - 
   - - 57
     - Lord Reign in Me (Over all the Earth)
     - Copyright © 1998 Vineyard Songs (UK/Eire)
     - Brenton Brown
     - 
+    - 0
     - 
     - 
     - 
@@ -706,20 +776,23 @@ songs:
     - 
     - 
     - 
+    - 
   - - 59
     - When I Survery
     - Public Domain
     - Isaac Watts
-    - 
+    - ''
     - 596
     - 
     - 
     - '2014-10-22 14:45:48.511142'
+    - 
   - - 60
     - Be Thou My Vision
     - Public Domain
     - Tr. Eleanor Hull
     - 
+    - 0
     - 
     - 
     - 
@@ -729,61 +802,68 @@ songs:
     - Copyright © 1999 Lensongs Publishing/Integrity's Hosanna! Music/Sovereign Music
       UK
     - Lenny LeBlanc, Paul Baloche
-    - 
+    - ''
     - 1151
     - 
     - 
     - '2014-10-22 14:45:48.523253'
+    - 
   - - 62
     - Jesus, Thank You
     - Copyright © 2003 Integrity’s Hosanna! Music (ASCAP)/Sovereign Grace Worship
       (ASCAP)
     - Pat Sczebel
     - http://www.sovereigngracemusic.org/Songs/Jesus,_Thank_You/14
-    - 
+    - 0
     - http://www.sovereigngracemusic.org/Songs/Jesus,_Thank_You/14
     - 
     - '2014-10-22 14:54:30.739103'
+    - 
   - - 63
-    - With a Prayer (you fed the hungry)
+    - With a Prayer
     - Copyright © 2002 Thankyou Music
     - Stuart Townend
-    - 
+    - ''
     - 1627
     - 
     - 
-    - '2014-10-22 14:45:48.535452'
+    - '2014-10-24 21:15:03.545815'
+    - 
   - - 64
     - Lord, You are the Author of my Life
     - Copyright © 1985 Kingsway’s Thankyou Music
     - Judy Pruett
-    - 
+    - ''
     - 910
     - 
     - 
     - '2014-10-22 14:45:48.547754'
+    - 
   - - 65
-    - Be Still (for the presence of the Lord)
+    - Be Still
     - Copyright © 1986 Kingsway’s Thankyou Music
     - David J. Evans
-    - 
+    - ''
     - 40
     - 
     - 
-    - '2014-10-22 14:45:48.559956'
+    - '2014-10-24 21:15:27.081556'
+    - 
   - - 66
     - Holy Spirit, Living Breath of God
     - Copyright © 2005 Thankyou Music
     - Keith Getty, Stuart Townend
-    - 
+    - ''
     - 1850
     - 
     - 
     - '2014-10-22 14:45:48.572113'
+    - 
   - - 67
     - Eagles' Wings (Call the Man)
     - Copyright © 1979, 2003, OCP
     - Michael Joncas
+    - 
     - 
     - 
     - 
@@ -798,60 +878,67 @@ songs:
     - 
     - 
     - 
+    - 
   - - 69
     - Come People of the Risen King
     - Copyright © 2007 Thankyou Music
     - Keith & Kristyn Getty, Stuart Townend
-    - 
+    - ''
     - 224
     - 
     - 
     - '2014-10-22 14:45:48.584434'
+    - 
   - - 70
     - I Cannot Tell
     - Public Domain
     - William Y. Fullerton
-    - 
+    - ''
     - 205
     - 
     - 
     - '2014-10-22 14:45:48.596725'
+    - 
   - - 71
     - Rock of Ages
     - Words in this version Copyright © 2001 Make Way Music
     - Augustus M. Toplady (1740-78) adapt. by Graham Kendrick
-    - 
+    - ''
     - 1507
     - 
     - 
     - '2014-10-22 14:45:48.609054'
+    - 
   - - 72
     - Take My Life and Let it Be
     - Copyright © 2005 Thankyou Music
     - Frances R. Havergal (1836 –1879) Adpt. & new music Paul Oakley
-    - 
+    - ''
     - 2037
     - 
     - 
     - '2014-10-22 14:45:48.621226'
+    - 
   - - 73
     - The Whole Earth
     - Copyright © 2005 Hillsong Publishing/kingswaysongs.com
     - Reuben Morgan
-    - 
+    - ''
     - 2067
     - 
     - 
     - '2014-10-22 14:45:48.633921'
+    - 
   - - 74
     - The Precious Blood
     - Copyright © 2005 Sovereign Grace Worship (ASCAP)
     - Peter Gagnon
     - http://sovereigngracemusic.org/Songs/The_Precious_Blood/13
-    - 
+    - 0
     - http://sovereigngracemusic.org/Songs/The_Precious_Blood/13
     - 
     - '2014-10-22 14:54:30.761084'
+    - 
   - - 75
     - Healing To The Nations
     - Copyright © 1982 Scripture In Song (Admin. by Maranatha! Music (Capitol CMG))
@@ -861,37 +948,42 @@ songs:
     - 
     - 
     - 
+    - 
   - - 76
     - Name of All Majesty
     - Copyright © 1979 Timothy Dudley-Smith
     - Timothy Dudley-Smith
-    - 
+    - ''
     - 939
     - 
     - 
     - '2014-10-22 14:45:48.646443'
+    - 
   - - 77
     - There is a Higher Throne
     - Copyright © 2002 Thankyou Music
     - Kristyn Lennox & Keith Getty
-    - 
+    - ''
     - 1541
     - 
     - 
     - '2014-10-22 14:45:48.658654'
+    - 
   - - 78
     - We'll Walk the Land
     - Copyright © 1989 Make Way Music
     - Graham Kendrick
-    - 
+    - ''
     - 583
     - 
     - 
     - '2014-10-22 14:45:48.670423'
+    - 
   - - 79
     - Jabulani Africa (Bayete iNkosi)
     - Public Domain?
     - Unknown
+    - 
     - 
     - 
     - 
@@ -902,10 +994,11 @@ songs:
     - Copyright © 2005, 2006 Thankyou Music
     - Brenton Brown, Paul Baloche
     - http://www.worshiptogether.com/songs/songdetail.aspx?iid=559270
-    - 
+    - 0
     - http://www.worshiptogether.com/songs/songdetail.aspx?iid=559270
     - 
     - '2014-10-22 14:54:30.788428'
+    - 
   - - 81
     - By Faith
     - Copyright © 2009 Thankyou Music
@@ -915,6 +1008,7 @@ songs:
     - http://www.gettymusic.com/hymns-byfaith.aspx
     - 
     - '2014-10-22 14:54:30.813625'
+    - 
   - - 82
     - O Church, Arise
     - Copyright © 2005 Thankyou Music
@@ -924,124 +1018,168 @@ songs:
     - http://www.gettymusic.com/hymns-ochurcharise.aspx
     - 
     - '2014-10-22 14:54:30.841800'
+    - 
   - - 83
     - I the Lord of sea and sky
     - Copyright © 1991 Daniel L. Schutte and New Dawn Music
     - Daniel L. Schutte
-    - 
+    - ''
     - 830
-    - 
+    - ''
     - '2014-10-22 07:50:58.670930'
     - '2014-10-22 14:45:48.706789'
+    - 
   - - 84
     - It is the Cry of My Heart
     - Copyright © 1991 Mercy/Vineyard Publishing/Adm. by CopyCare
     - Terry Butler
-    - 
+    - ''
     - 832
-    - 
+    - ''
     - '2014-10-22 07:51:41.317491'
     - '2014-10-22 14:45:48.719328'
+    - 
   - - 85
     - Jesus, What a Beautiful Name
     - Copyright © 1995 Tanya Riches/Hillsongs Australia/Kingsway’s Thankyou Music
     - Tanya Riches
-    - 
+    - ''
     - 877
-    - 
+    - ''
     - '2014-10-22 07:52:23.094152'
     - '2014-10-22 14:45:48.731927'
+    - 
   - - 86
     - Thank You for Saving Me
     - Copyright © 1993 Curious? Music UK/Adm. by Kingsway’s Thankyou Music
     - Martin Smith
-    - 
+    - ''
     - 1015
-    - 
+    - ''
     - '2014-10-22 07:55:39.111145'
     - '2014-10-22 14:45:48.744140'
+    - 
   - - 87
     - Father, Let Me Dedicate
     - Copyright © 2003 Thankyou Music/sixsteps Music/worshiptogether.com songs/kingswaysongs.com
     - 'Verses: Laurence Tuttiet (1825–1897) Adpt. Matt Redman/Chorus: Chris Tomlin,
       Louie Giglio & Jesse Reeves'
-    - 
+    - ''
     - 1760
-    - 
+    - ''
     - '2014-10-22 07:58:04.935405'
     - '2014-10-22 14:45:48.756306'
+    - 
   - - 88
     - Thou, Whose Almighty Word
     - Public Domain
     - John Marriott
-    - 
+    - ''
     - 557
-    - 
+    - ''
     - '2014-10-22 07:59:19.424620'
     - '2014-10-22 14:45:48.768656'
+    - 
   - - 89
-    - God of Grace (I turn my face)
+    - God of Grace
     - Copyright © 1990 Sovereign Lifestyle Music
     - Chris Bowater
-    - 
+    - ''
     - 138
-    - 
+    - ''
     - '2014-10-22 08:03:42.230573'
-    - '2014-10-22 14:45:48.780555'
+    - '2014-10-24 21:15:49.000872'
+    - 
   - - 90
-    - All My Days (I will sing this song of gladness)
+    - All My Days
     - Copyright © 1998 Thankyou Music
     - Stuart Townend
-    - 
+    - ''
     - 1158
-    - 
+    - ''
     - '2014-10-22 08:06:26.373263'
-    - '2014-10-22 14:45:48.792812'
+    - '2014-10-24 21:16:04.497950'
+    - 
   - - 91
     - And Can it Be
     - Public Domain
     - Charles Wesley
-    - 
+    - ''
     - 21
-    - 
+    - ''
     - '2014-10-22 08:07:03.876703'
     - '2014-10-22 14:45:48.804908'
+    - 
   - - 92
-    - I Lift My Hands (To the coming King)
+    - I Lift My Hands
     - Copyright © 1989 Kempen Music/Kingsway’s Thankyou Music
     - Andre Kempen
-    - 
+    - ''
     - 223
-    - 
+    - ''
     - '2014-10-22 08:20:32.915755'
-    - '2014-10-22 14:45:48.816954'
+    - '2014-10-24 21:16:26.785121'
+    - 
   - - 93
     - God Forgave My Sin
     - Copyright © 1972 Bud John Songs/EMI Christian Music Publishing/Adm. by CopyCare
     - Carol Owens
-    - 
+    - ''
     - 129
-    - 
+    - ''
     - '2014-10-22 08:21:29.525464'
     - '2014-10-22 14:45:48.829540'
+    - 
   - - 94
     - Set My Spirit Free
     - Public Domain
     - Unknown
-    - 
+    - ''
     - 494
-    - 
+    - ''
     - '2014-10-22 08:22:11.509669'
     - '2014-10-22 14:45:48.843013'
+    - 
   - - 95
     - Oh, to see the Dawn
     - Copyright © 2005 Thankyou Music
     - Keith Getty & Stuart Townend
-    - 
+    - ''
     - 1988
-    - 
+    - ''
     - '2014-10-22 08:23:13.947276'
     - '2014-10-22 14:45:48.855325'
+    - 
+  - - 96
+    - Draw Me Close to You
+    - Copyright © 1994 Mercy/Vineyard Publishing/Adm. by CopyCare
+    - Kelly Carpenter
+    - ''
+    - 1217
+    - ''
+    - '2014-10-27 20:01:23.944323'
+    - '2014-10-27 20:01:23.944323'
+    - 
+  - - 97
+    - King of Kings, Majesty
+    - Copyright © 1996 Sovereign Lifestyle Music
+    - Jarrod Cooper
+    - ''
+    - 1404
+    - ''
+    - '2014-10-28 06:59:12.047682'
+    - '2014-10-28 06:59:12.047682'
+    - 
+  - - 98
+    - Jesus is King
+    - Copyright © 1982 Word’s Spirit of Praise Music/Adm. by CopyCare
+    - Wendy Churchill
+    - ''
+    - 289
+    - ''
+    - '2014-10-28 07:03:43.547543'
+    - '2014-10-28 07:03:43.547543'
+    - 
 
 ---
 usages:
@@ -1172,11 +1310,6 @@ usages:
     - 5
     - '2014-10-21 21:42:28.857482'
     - '2014-10-21 21:42:28.857482'
-  - - 25
-    - 66
-    - 5
-    - '2014-10-21 21:42:28.871379'
-    - '2014-10-21 21:42:28.871379'
   - - 26
     - 62
     - 5
@@ -1572,3 +1705,754 @@ usages:
     - 18
     - '2014-10-22 08:23:41.560360'
     - '2014-10-22 08:23:41.560360'
+  - - 128
+    - 0
+    - 25
+    - '2014-10-27 20:09:03.760841'
+    - '2014-10-27 20:09:03.760841'
+  - - 129
+    - 80
+    - 26
+    - '2014-10-27 20:13:06.088404'
+    - '2014-10-27 20:13:06.088404'
+  - - 130
+    - 81
+    - 26
+    - '2014-10-27 20:13:06.106473'
+    - '2014-10-27 20:13:06.106473'
+  - - 131
+    - 44
+    - 26
+    - '2014-10-27 20:13:06.122282'
+    - '2014-10-27 20:13:06.122282'
+  - - 132
+    - 38
+    - 26
+    - '2014-10-27 20:13:06.137891'
+    - '2014-10-27 20:13:06.137891'
+  - - 133
+    - 96
+    - 26
+    - '2014-10-27 20:13:06.195119'
+    - '2014-10-27 20:13:06.195119'
+  - - 134
+    - 97
+    - 27
+    - '2014-10-28 07:03:47.414839'
+    - '2014-10-28 07:03:47.414839'
+  - - 135
+    - 35
+    - 27
+    - '2014-10-28 07:03:47.429116'
+    - '2014-10-28 07:03:47.429116'
+  - - 136
+    - 71
+    - 27
+    - '2014-10-28 07:03:47.442433'
+    - '2014-10-28 07:03:47.442433'
+  - - 137
+    - 98
+    - 27
+    - '2014-10-28 07:03:47.456009'
+    - '2014-10-28 07:03:47.456009'
+
+---
+akas:
+  columns:
+  - id
+  - song_id
+  - search_text
+  - display_text
+  - created_at
+  - updated_at
+  records: 
+  - - 1
+    - 1
+    - in christ alone
+    - In Christ Alone
+    - '2014-10-24 11:38:31.584035'
+    - '2014-10-24 11:38:31.584035'
+  - - 2
+    - 2
+    - abide with me
+    - Abide With Me
+    - '2014-10-24 11:38:31.603062'
+    - '2014-10-24 11:38:31.603062'
+  - - 3
+    - 3
+    - speak o lord
+    - Speak, O Lord
+    - '2014-10-24 11:38:31.619310'
+    - '2014-10-24 11:38:31.619310'
+  - - 4
+    - 4
+    - how deep
+    - How Deep
+    - '2014-10-24 11:38:31.635328'
+    - '2014-10-24 11:38:31.635328'
+  - - 5
+    - 5
+    - endless praises
+    - Endless Praises
+    - '2014-10-24 11:38:31.650914'
+    - '2014-10-24 11:38:31.650914'
+  - - 6
+    - 6
+    - 10000 reasons
+    - 10,000 Reasons
+    - '2014-10-24 11:38:31.664071'
+    - '2014-10-24 11:38:31.664071'
+  - - 7
+    - 6
+    - bless the lord oh my soul
+    - Bless the Lord (10,000 Reasons)
+    - '2014-10-24 11:38:31.676629'
+    - '2014-10-24 11:38:31.676629'
+  - - 8
+    - 7
+    - god immortal
+    - God Immortal
+    - '2014-10-24 11:38:31.689155'
+    - '2014-10-24 11:38:31.689155'
+  - - 9
+    - 8
+    - how deep the father’s love for us
+    - How Deep The Father’s Love For Us
+    - '2014-10-24 11:38:31.704121'
+    - '2014-10-24 11:38:31.704121'
+  - - 10
+    - 9
+    - cornerstone
+    - Cornerstone
+    - '2014-10-24 11:38:31.719031'
+    - '2014-10-24 11:38:31.719031'
+  - - 11
+    - 10
+    - let your kingdom come
+    - Let Your Kingdom Come
+    - '2014-10-24 11:38:31.732517'
+    - '2014-10-24 11:38:31.732517'
+  - - 12
+    - 11
+    - salvation belongs to our god
+    - Salvation Belongs to our God
+    - '2014-10-24 11:38:31.746513'
+    - '2014-10-24 11:38:31.746513'
+  - - 13
+    - 12
+    - jesus is lord
+    - Jesus is Lord
+    - '2014-10-24 11:38:31.759813'
+    - '2014-10-24 11:38:31.759813'
+  - - 14
+    - 13
+    - loved before the dawn of time
+    - Loved Before the Dawn of Time
+    - '2014-10-24 11:38:31.773140'
+    - '2014-10-24 11:38:31.773140'
+  - - 15
+    - 13
+    - salvations song
+    - Salvation's Song (Loved Before ...)
+    - '2014-10-24 11:38:31.788224'
+    - '2014-10-24 11:38:31.788224'
+  - - 16
+    - 14
+    - as the deer
+    - As the Deer
+    - '2014-10-24 11:38:31.804330'
+    - '2014-10-24 11:38:31.804330'
+  - - 17
+    - 15
+    - o sacred king
+    - O Sacred King
+    - '2014-10-24 11:38:31.820490'
+    - '2014-10-24 11:38:31.820490'
+  - - 18
+    - 16
+    - love divine all loves excelling
+    - Love Divine, All Loves Excelling
+    - '2014-10-24 11:38:31.835942'
+    - '2014-10-24 11:38:31.835942'
+  - - 19
+    - 17
+    - amazing grace
+    - Amazing Grace
+    - '2014-10-24 11:38:31.851959'
+    - '2014-10-24 11:38:31.851959'
+  - - 20
+    - 18
+    - your blood speaks a better word
+    - Your Blood Speaks a Better Word
+    - '2014-10-24 11:38:31.867495'
+    - '2014-10-24 11:38:31.867495'
+  - - 21
+    - 18
+    - nothing but the blood
+    - Nothing But th... (Your Blood Speaks ...)
+    - '2014-10-24 11:38:31.883580'
+    - '2014-10-24 11:38:31.883580'
+  - - 22
+    - 19
+    - here i am to worship
+    - Here I Am to Worship (Light of the W...)
+    - '2014-10-24 11:38:31.898506'
+    - '2014-10-24 11:38:31.898506'
+  - - 23
+    - 19
+    - light of the world
+    - Light of the World
+    - '2014-10-24 11:38:31.914086'
+    - '2014-10-24 11:38:31.914086'
+  - - 24
+    - 20
+    - we have seen your glory
+    - We have seen your glory
+    - '2014-10-24 11:38:31.929258'
+    - '2014-10-24 11:38:31.929258'
+  - - 25
+    - 21
+    - create in me a clean heart o god
+    - Create in me a clean heart, O God
+    - '2014-10-24 11:38:31.944491'
+    - '2014-10-24 11:38:31.944491'
+  - - 26
+    - 22
+    - blessing and honour
+    - Blessing and Honour
+    - '2014-10-24 11:38:31.960058'
+    - '2014-10-24 11:38:31.960058'
+  - - 27
+    - 23
+    - hark the herald angels sing
+    - Hark the Herald Angels Sing
+    - '2014-10-24 11:38:31.975633'
+    - '2014-10-24 11:38:31.975633'
+  - - 28
+    - 24
+    - o lord our lord how majestic
+    - O Lord, Our Lord (How Majestic is Yo...)
+    - '2014-10-24 11:38:31.991230'
+    - '2014-10-24 11:38:31.991230'
+  - - 29
+    - 24
+    - how majestic is your name
+    - How Majestic is Yo... (O Lord, Our Lord)
+    - '2014-10-24 11:38:32.006850'
+    - '2014-10-24 11:38:32.006850'
+  - - 30
+    - 25
+    - father into your courts i will enter
+    - Father Into Your Courts I Will Enter
+    - '2014-10-24 11:38:32.022613'
+    - '2014-10-24 11:38:32.022613'
+  - - 31
+    - 26
+    - standing in your presence
+    - Standing in Your Presence
+    - '2014-10-24 11:38:32.038444'
+    - '2014-10-24 11:38:32.038444'
+  - - 32
+    - 27
+    - beautiful lord wonderful saviour
+    - Beautiful Lord, Wonderful Saviour
+    - '2014-10-24 11:38:32.054968'
+    - '2014-10-24 11:38:32.054968'
+  - - 33
+    - 28
+    - your will not mine
+    - Your Will, Not Mine
+    - '2014-10-24 11:38:32.071475'
+    - '2014-10-24 11:38:32.071475'
+  - - 34
+    - 29
+    - tell out my soul
+    - Tell Out, My Soul
+    - '2014-10-24 11:38:32.087472'
+    - '2014-10-24 11:38:32.087472'
+  - - 35
+    - 30
+    - be still my soul
+    - Be Still My Soul
+    - '2014-10-24 11:38:32.103455'
+    - '2014-10-24 11:38:32.103455'
+  - - 36
+    - 31
+    - my soul finds rest in god alone
+    - My Soul Finds Rest in God Alone
+    - '2014-10-24 11:38:32.120896'
+    - '2014-10-24 11:38:32.120896'
+  - - 37
+    - 31
+    - psalm 62
+    - Psalm 62 (My Soul Finds Rest in God Alone)
+    - '2014-10-24 11:38:32.136906'
+    - '2014-10-24 11:38:32.136906'
+  - - 38
+    - 32
+    - sing to the king
+    - Sing To The King
+    - '2014-10-24 11:38:32.152830'
+    - '2014-10-24 11:38:32.152830'
+  - - 39
+    - 33
+    - how firm a foundation
+    - How Firm a Foundation
+    - '2014-10-24 11:38:32.169289'
+    - '2014-10-24 11:38:32.169289'
+  - - 40
+    - 34
+    - you alone can rescue
+    - You Alone Can Rescue
+    - '2014-10-24 11:38:32.188157'
+    - '2014-10-24 11:38:32.188157'
+  - - 41
+    - 34
+    - who o lord could save themselves
+    - Who, O Lord (You Alone Can Rescue)
+    - '2014-10-24 11:38:32.205181'
+    - '2014-10-24 11:38:32.205181'
+  - - 42
+    - 35
+    - before the throne of god above
+    - Before the Throne of God Above
+    - '2014-10-24 11:38:32.221472'
+    - '2014-10-24 11:38:32.221472'
+  - - 43
+    - 36
+    - come thou fount of every blessing
+    - Come Thou Fount of Every Blessing
+    - '2014-10-24 11:38:32.237273'
+    - '2014-10-24 11:38:32.237273'
+  - - 44
+    - 37
+    - jesus the name high over all
+    - Jesus The Name High Over All
+    - '2014-10-24 11:38:32.253391'
+    - '2014-10-24 11:38:32.253391'
+  - - 45
+    - 38
+    - show us christ
+    - Show Us Christ
+    - '2014-10-24 11:38:32.269286'
+    - '2014-10-24 11:38:32.269286'
+  - - 46
+    - 39
+    - for all youve done
+    - For All You've Done
+    - '2014-10-24 11:38:32.285252'
+    - '2014-10-24 11:38:32.285252'
+  - - 47
+    - 39
+    - my saviour redeemer
+    - My Saviour, Redeemer (For All You've...)
+    - '2014-10-24 11:38:32.300677'
+    - '2014-10-24 11:38:32.300677'
+  - - 48
+    - 40
+    - a father to the fatherless
+    - A Father to the Fatherless
+    - '2014-10-24 11:38:32.316453'
+    - '2014-10-24 11:38:32.316453'
+  - - 49
+    - 41
+    - nothing in this world
+    - Nothing in this World
+    - '2014-10-24 11:38:32.332216'
+    - '2014-10-24 11:38:32.332216'
+  - - 50
+    - 42
+    - hungry i come to you
+    - Hungry, I Come to You
+    - '2014-10-24 11:38:32.348449'
+    - '2014-10-24 11:38:32.348449'
+  - - 51
+    - 43
+    - at the foot of the cross
+    - At The Foot of the Cross
+    - '2014-10-24 11:38:32.365053'
+    - '2014-10-24 11:38:32.365053'
+  - - 52
+    - 44
+    - here i am
+    - Here I Am
+    - '2014-10-24 11:38:32.380905'
+    - '2014-10-24 11:38:32.380905'
+  - - 53
+    - 45
+    - merciful god
+    - Merciful God
+    - '2014-10-24 11:38:32.396431'
+    - '2014-10-24 11:38:32.396431'
+  - - 54
+    - 46
+    - there is a redeemer
+    - There is a Redeemer
+    - '2014-10-24 11:38:32.412583'
+    - '2014-10-24 11:38:32.412583'
+  - - 55
+    - 47
+    - you are the holy one
+    - You are the Holy One
+    - '2014-10-24 11:38:32.428460'
+    - '2014-10-24 11:38:32.428460'
+  - - 56
+    - 48
+    - jesus gods righteousness revealed
+    - Jesus, God's Righteousness Revealed
+    - '2014-10-24 11:38:32.444285'
+    - '2014-10-24 11:38:32.444285'
+  - - 57
+    - 49
+    - you laid aside your majesty
+    - You Laid Aside Your Majesty
+    - '2014-10-24 11:38:32.461248'
+    - '2014-10-24 11:38:32.461248'
+  - - 58
+    - 49
+    - i really want to worship you my lord
+    - I Really Want to W... (You Laid Asid...)
+    - '2014-10-24 11:38:32.476658'
+    - '2014-10-24 11:38:32.476658'
+  - - 59
+    - 50
+    - i will offer up my life
+    - I Will Offer Up My Life
+    - '2014-10-24 11:38:32.492135'
+    - '2014-10-24 11:38:32.492135'
+  - - 60
+    - 51
+    - no eye has seen
+    - No Eye Has Seen
+    - '2014-10-24 11:38:32.507588'
+    - '2014-10-24 11:38:32.507588'
+  - - 61
+    - 52
+    - lord i come to you
+    - Lord, I Come to You
+    - '2014-10-24 11:38:32.523038'
+    - '2014-10-24 11:38:32.523038'
+  - - 62
+    - 53
+    - father here i am
+    - Father Here I Am
+    - '2014-10-24 11:38:32.539011'
+    - '2014-10-24 11:38:32.539011'
+  - - 63
+    - 54
+    - change my heart o god
+    - Change My Heart, O God
+    - '2014-10-24 11:38:32.554898'
+    - '2014-10-24 11:38:32.554898'
+  - - 64
+    - 55
+    - guide me o thou great jehovah
+    - Guide Me, O Thou Great Jehovah
+    - '2014-10-24 11:38:32.572540'
+    - '2014-10-24 11:38:32.572540'
+  - - 65
+    - 56
+    - lord of the church
+    - Lord of the Church
+    - '2014-10-24 11:38:32.588798'
+    - '2014-10-24 11:38:32.588798'
+  - - 66
+    - 57
+    - lord reign in me
+    - Lord Reign in Me
+    - '2014-10-24 11:38:32.604789'
+    - '2014-10-24 11:38:32.604789'
+  - - 67
+    - 57
+    - over all the earth
+    - Over all the Earth (Lord Reign in Me)
+    - '2014-10-24 11:38:32.621368'
+    - '2014-10-24 11:38:32.621368'
+  - - 68
+    - 58
+    - a frame so beautifully formed
+    - A Frame So Beautifully... (All My Shame)
+    - '2014-10-24 11:38:32.637698'
+    - '2014-10-24 11:38:32.637698'
+  - - 69
+    - 58
+    - all my shame
+    - All My Shame
+    - '2014-10-24 11:38:32.654050'
+    - '2014-10-24 11:38:32.654050'
+  - - 70
+    - 59
+    - when i survery
+    - When I Survery
+    - '2014-10-24 11:38:32.670656'
+    - '2014-10-24 11:38:32.670656'
+  - - 71
+    - 60
+    - be thou my vision
+    - Be Thou My Vision
+    - '2014-10-24 11:38:32.686827'
+    - '2014-10-24 11:38:32.686827'
+  - - 72
+    - 61
+    - above all powers
+    - Above All Powers
+    - '2014-10-24 11:38:32.703055'
+    - '2014-10-24 11:38:32.703055'
+  - - 73
+    - 62
+    - jesus thank you
+    - Jesus, Thank You
+    - '2014-10-24 11:38:32.719367'
+    - '2014-10-24 11:38:32.719367'
+  - - 74
+    - 63
+    - with a prayer
+    - With a Prayer (You fed the Hungry)
+    - '2014-10-24 11:38:32.736243'
+    - '2014-10-24 11:38:32.736243'
+  - - 75
+    - 64
+    - lord you are the author of my life
+    - Lord, You are the Author of my Life
+    - '2014-10-24 11:38:32.753667'
+    - '2014-10-24 11:38:32.753667'
+  - - 76
+    - 65
+    - be still for the presence of the lord
+    - Be Still (for the presence of the Lord)
+    - '2014-10-24 11:38:32.771190'
+    - '2014-10-24 11:38:32.771190'
+  - - 77
+    - 66
+    - holy spirit living breath of god
+    - Holy Spirit, Living Breath of God
+    - '2014-10-24 11:38:32.787838'
+    - '2014-10-24 11:38:32.787838'
+  - - 78
+    - 67
+    - call the man
+    - Call the Man (Eagles' Wings)
+    - '2014-10-24 11:38:32.804417'
+    - '2014-10-24 11:38:32.804417'
+  - - 79
+    - 67
+    - eagles wings
+    - Eagles' Wings (Call the Man)
+    - '2014-10-24 11:38:32.820993'
+    - '2014-10-24 11:38:32.820993'
+  - - 80
+    - 68
+    - wonderful merciful savior
+    - Wonderful, Merciful Savior
+    - '2014-10-24 11:38:32.837343'
+    - '2014-10-24 11:38:32.837343'
+  - - 81
+    - 69
+    - come people of the risen king
+    - Come People of the Risen King
+    - '2014-10-24 11:38:32.896142'
+    - '2014-10-24 11:38:32.896142'
+  - - 82
+    - 70
+    - i cannot tell
+    - I Cannot Tell
+    - '2014-10-24 11:38:32.911549'
+    - '2014-10-24 11:38:32.911549'
+  - - 83
+    - 71
+    - rock of ages
+    - Rock of Ages
+    - '2014-10-24 11:38:32.928409'
+    - '2014-10-24 11:38:32.928409'
+  - - 84
+    - 72
+    - take my life and let it be
+    - Take My Life and Let it Be
+    - '2014-10-24 11:38:32.943888'
+    - '2014-10-24 11:38:32.943888'
+  - - 85
+    - 73
+    - the whole earth
+    - The Whole Earth
+    - '2014-10-24 11:38:32.959359'
+    - '2014-10-24 11:38:32.959359'
+  - - 86
+    - 74
+    - the precious blood
+    - The Precious Blood
+    - '2014-10-24 11:38:32.976461'
+    - '2014-10-24 11:38:32.976461'
+  - - 87
+    - 75
+    - healing to the nations
+    - Healing To The Nations
+    - '2014-10-24 11:38:32.991885'
+    - '2014-10-24 11:38:32.991885'
+  - - 88
+    - 76
+    - name of all majesty
+    - Name of All Majesty
+    - '2014-10-24 11:38:33.007236'
+    - '2014-10-24 11:38:33.007236'
+  - - 89
+    - 77
+    - there is a higher throne
+    - There is a Higher Throne
+    - '2014-10-24 11:38:33.022856'
+    - '2014-10-24 11:38:33.022856'
+  - - 90
+    - 78
+    - well walk the land
+    - We'll Walk the Land
+    - '2014-10-24 11:38:33.038657'
+    - '2014-10-24 11:38:33.038657'
+  - - 91
+    - 79
+    - bayete nkosi
+    - Bayete Nkosi (Jabulani Africa)
+    - '2014-10-24 11:38:33.054422'
+    - '2014-10-24 13:19:23.766908'
+  - - 92
+    - 79
+    - jabulani africa
+    - Jabulani Africa
+    - '2014-10-24 11:38:33.071117'
+    - '2014-10-24 11:38:33.071117'
+  - - 93
+    - 80
+    - hosanna
+    - Hosanna (Praise Is Rising)
+    - '2014-10-24 11:38:33.087210'
+    - '2014-10-24 11:38:33.087210'
+  - - 94
+    - 80
+    - praise is rising
+    - Praise is Rising (Hosanna)
+    - '2014-10-24 11:38:33.104329'
+    - '2014-10-24 11:38:33.104329'
+  - - 95
+    - 81
+    - by faith we see the hand of god
+    - By Faith (we see the hand of God)
+    - '2014-10-24 11:38:33.118254'
+    - '2014-10-28 09:37:04.888983'
+  - - 96
+    - 82
+    - o church arise
+    - O Church, Arise
+    - '2014-10-24 11:38:33.131834'
+    - '2014-10-24 11:38:33.131834'
+  - - 97
+    - 83
+    - i the lord of sea and sky
+    - I the Lord of sea and sky
+    - '2014-10-24 11:38:33.145612'
+    - '2014-10-24 11:38:33.145612'
+  - - 98
+    - 84
+    - it is the cry of my heart
+    - It is the Cry of My Heart
+    - '2014-10-24 11:38:33.161265'
+    - '2014-10-24 11:38:33.161265'
+  - - 99
+    - 85
+    - jesus what a beautiful name
+    - Jesus, What a Beautiful Name
+    - '2014-10-24 11:38:33.177986'
+    - '2014-10-24 11:38:33.177986'
+  - - 100
+    - 86
+    - thank you for saving me
+    - Thank You for Saving Me
+    - '2014-10-24 11:38:33.194901'
+    - '2014-10-24 11:38:33.194901'
+  - - 101
+    - 87
+    - father let me dedicate
+    - Father, Let Me Dedicate
+    - '2014-10-24 11:38:33.210481'
+    - '2014-10-24 11:38:33.210481'
+  - - 102
+    - 88
+    - thou whose almighty word
+    - Thou, Whose Almighty Word
+    - '2014-10-24 11:38:33.226266'
+    - '2014-10-24 11:38:33.226266'
+  - - 103
+    - 89
+    - god of grace i turn my face
+    - God of Grace (I turn my face)
+    - '2014-10-24 11:38:33.242451'
+    - '2014-10-24 11:38:33.242451'
+  - - 104
+    - 90
+    - all my days i will sing
+    - All My Days (I will sing this song...)
+    - '2014-10-24 11:38:33.258597'
+    - '2014-10-24 11:38:33.258597'
+  - - 105
+    - 91
+    - and can it be
+    - And Can it Be
+    - '2014-10-24 11:38:33.273204'
+    - '2014-10-24 11:38:33.273204'
+  - - 106
+    - 92
+    - i lift my hands to the coming king
+    - I Lift My Hands (To the coming King)
+    - '2014-10-24 11:38:33.286257'
+    - '2014-10-24 11:38:33.286257'
+  - - 107
+    - 93
+    - god forgave my sin
+    - God Forgave My Sin
+    - '2014-10-24 11:38:33.302835'
+    - '2014-10-24 11:38:33.302835'
+  - - 108
+    - 94
+    - set my spirit free
+    - Set My Spirit Free
+    - '2014-10-24 11:38:33.319230'
+    - '2014-10-24 11:38:33.319230'
+  - - 109
+    - 95
+    - oh to see the dawn
+    - Oh, to see the Dawn
+    - '2014-10-24 11:38:33.335773'
+    - '2014-10-24 11:38:33.335773'
+  - - 110
+    - 6
+    - ten thousand reasons
+    - 10,000 Reasons
+    - '2014-10-24 11:40:10.177799'
+    - '2014-10-24 11:40:10.177799'
+  - - 111
+    - 96
+    - draw me close to you
+    - Draw Me Close to You
+    - '2014-10-27 20:01:23.965751'
+    - '2014-10-27 20:12:28.265725'
+  - - 112
+    - 96
+    - youre all i want
+    - You're all I want (Draw me close to you)
+    - '2014-10-27 20:01:23.981819'
+    - '2014-10-27 20:11:37.155841'
+  - - 113
+    - 97
+    - king of kings
+    - King of Kings, Majesty
+    - '2014-10-28 06:59:12.071974'
+    - '2014-10-28 06:59:12.071974'
+  - - 114
+    - 97
+    - majesty
+    - Majesty (King of Kings)
+    - '2014-10-28 06:59:12.086755'
+    - '2014-10-28 06:59:12.086755'
+  - - 115
+    - 98
+    - jesus is king
+    - Jesus is King (and I will extol him)
+    - '2014-10-28 07:03:43.565369'
+    - '2014-10-28 07:03:43.565369'
