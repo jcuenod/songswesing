@@ -176,11 +176,13 @@ function leaderAnchorClicked(el)
                 ]
             };
             try {myLightboxChart.destroy(); }catch(e){console.log("something's gone wrong with the chart stuff: ");console.log(e);}
-            var mc = $("<canvas width=600 height=400>");
+            var mc = $("<canvas width=600 height=300>");
             var ctx = mc.get(0).getContext("2d");
             myLightboxChart = new Chart(ctx).Bar(completedata);
             $.featherlight("<div class='breakdown_header'>" + data.leader_name + "</div><div id='feather'></div>");
+
             $("#feather").html($(mc));
+            $("#feather").append(data.usage_table);
             //$.featherlight("<div>" + data + "</div>");
         })
         .fail(function(e) {

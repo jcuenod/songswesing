@@ -14,6 +14,7 @@
 		<%= raw(",\"Lyrics URL\": \"" + escape_javascript(link_to(@song.lyrics_url, @song.lyrics_url)) + "\"") unless @song.lyrics_url.blank? %>
 		<%= raw(",\"Hymnbook\": \"SOF #{@song.sof_number}\"") unless @song.sof_number.blank? || @song.sof_number < 1 %>
 		<%= raw(",\"Sample URL\": \"" + escape_javascript(link_to(@song.sample_url, @song.sample_url)) + "\"") unless @song.sample_url.blank? %>
+		<%= raw(",\"CCLI Number\": \"" + @song.ccli_number + "\"") unless @song.ccli_number.blank? %>
 	},
 	"song_name": "<%= @song.song_name %>",
 	"tally": <%= @song_usage.map{|x| x[1]}.sum %>

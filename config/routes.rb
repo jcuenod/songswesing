@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  devise_for :users
+  devise_for :users, controllers: {
+    registrations: "users/registrations"
+  }
   root 'services#new'
   resources :songs
   resources :services
@@ -10,7 +12,7 @@ Rails.application.routes.draw do
   #post 'services/:offset/:limit' => 'services#index' (for loading older services)
   #post 'services/:limit' => 'services#index' (for loading older services)
   post 'songs/list' => 'songs#list'
-  post 'songs/data/:id' => 'songs#songdata'
+  post 'songs/data/:id' => 'songs#data'
   post 'usages/data/:limit' => 'usages#data'
   post 'leaders/data/:id' => 'leaders#data'
 

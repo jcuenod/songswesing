@@ -7,7 +7,9 @@ class ServiceTypesController < ApplicationController
 		render partial: "service_type_popup"
 	end
 	def create
-		@service_type = ServiceType.create(service_type_params)
+		new_service_type_params = service_type_params
+		new_service_type_params[:church_id] = current_user.church_id
+		@service_type = ServiceType.create(new_service_type_params)
 		render json: {
 			"what" => "created", 
 			"whatCreated" => "service_type", 

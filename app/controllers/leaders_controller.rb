@@ -7,7 +7,9 @@ class LeadersController < ApplicationController
 		render partial: "leader_popup"
 	end
 	def create
-		@leader = Leader.create(leader_params)
+		new_leader_params = leader_params
+		new_leader_params[:church_id] = current_user.church_id
+		@leader = Leader.create(new_leader_params)
 		render json: {
 			"what" => "created", 
 			"whatCreated" => "leader", 
@@ -15,8 +17,8 @@ class LeadersController < ApplicationController
 		}
 	end
 	def data
-		usage_data = Usage.group(:song_id).joins(:service).where(:services => {leader_id: params[:id]}).count
-		times_used = usage_data.inject({}) do |used, (k,v)|
+		usage_stats = Usage.group(:song_id).joins(:service).where(:services => {leader_id: params[:id]}).count
+		times_used = usage_stats.inject({}) do |used, (k,v)|
 			title = "Used " + v.to_s + " " + (v > 1 ? "time".pluralize : "time")
 			if used[title].nil?
 		    	used[title] = 1
@@ -25,8 +27,12 @@ class LeadersController < ApplicationController
 		  	end
 		  	used
 		end
+
+		@usage_data = Usage.limit(5).group(:song_id, :song_name).joins(:song, :service).where(:services => {leader_id: params[:id]}).order("count_all DESC").count
+
 		return_data = Hash.new
 		return_data["leader_name"] = Leader.find_by_id(params[:id]).leader_name
+		return_data["usage_table"] = render_to_string(partial: "usage_table")
 		return_data["chart_data"] = Hash[times_used.sort]
 		render json: return_data
 	end

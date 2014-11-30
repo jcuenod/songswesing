@@ -62,6 +62,12 @@ a.songusageanchor {
     font-size: 200%;
     font-weight: bold;
 }
+.flash {
+    position: absolute;
+    z-index: 1;
+    width: 80%;
+    left: 10%;
+}
 h1 {
     margin: 20px 30px 0px 40px;
     font-family: "Open Sans Condensed";

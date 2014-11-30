@@ -24,7 +24,7 @@ class SongsController < ApplicationController
 	def list
 	    render json: Song.autocomplete_data(params[:term])
 	end
-	def songdata
+	def data
 		@song_usage = Service.joins(:leader, :usages).group(:leader_name).where(church_id: current_user.church_id, :usages => {:song_id => params[:id]}).count
 		@song = Song.find_by_id(params[:id])
 		@colours = ["#E8D0A9", "#B7AFA3", "#C1DAD6", "#D5DAFA", "#ACD1E9", "#6D929B"]

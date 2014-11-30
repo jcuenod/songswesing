@@ -23,3 +23,6 @@
 .form-signin .form-control:focus {
   z-index: 2;
 }
+.form-signin h2 {
+  margin-top: 10px;
+}

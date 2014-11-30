@@ -9,16 +9,17 @@ class ServicesController < ApplicationController
 	 	render partial: "service_table_row"
 	end
 	def new
-		@leaders = Leader.all
-		@service_types = ServiceType.all
+		@leaders = Leader.where(church_id: current_user.church_id)
+		@service_types = ServiceType.where(church_id: current_user.church_id)
 		@service = Service.new
-		#@services = Service.limit(8).order(date: :desc).all
 		@services = Service.where(church_id: current_user.church_id).limit(8).order([:date => :desc, :service_type_id => :asc]).all
 		flash[:notice] = "Viewing services for " + Church.find_by_id(current_user.church_id).church_name
 	end
 	def create
 		unless params[:service][:songs].nil?
-			@service = Service.create(service_params)
+			new_service_params = service_params
+			new_service_params[:church_id] = current_user.church_id
+			@service = Service.create(new_service_params)
 			params[:service][:songs].each do |song|
 				Usage.create([
 					:song_id => song,
