@@ -81,7 +81,7 @@ $( document ).ready(function() {
             // sortResults: false
         // },
         onSubmit: function() {
-            //TODO: clear the stuff once it's submitted
+            $('#songList').tagit('removeAll');
         },
         onTagClicked: function(evt, ui) {
             songAnchorClicked(ui.tagLabel);
