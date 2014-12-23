@@ -40,7 +40,7 @@ gem 'spring',        group: :development
 
 gem 'cocoon'
 gem 'devise'
-gem 'railties', '~> 4.0.0.beta'
+gem 'rails_12factor', group: :production
 
 
 group :development, :test do
