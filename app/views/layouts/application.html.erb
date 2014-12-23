@@ -2,13 +2,13 @@
 <html>
 <head>
   <title>Songs We Sing</title>
-  <link rel="icon" href="/assets/favicon.png" type="image/png">
+  <link rel="icon" href="<%= asset_path 'favicon.png' %>" type="image/png">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-<h1><img src="/assets/songswesing.png"></h1>
+<h1><img src="<%= asset_path 'songswesing.png' %>"></h1>
 <% if user_signed_in? %>
     <div class="logout-link"><%= link_to('Logout', destroy_user_session_path, :method => :delete) %></div>
 <% end %>
