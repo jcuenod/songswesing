@@ -22,6 +22,6 @@ test:
 
 production:
    adapter: postgresql
-   database: arcane-cliffs-8366
+   database: secret-thicket-3736
    pool: 5
    timeout: 5000
