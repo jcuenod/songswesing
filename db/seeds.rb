@@ -7,7 +7,7 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 User.create!([
-  {email: "j3frea@gmail.com", encrypted_password: "$2a$10$JOHXZLB5PtNekykyiT.oluRq/.336Pi2vDjwLhU3VHUzYfDq.MR/W", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, sign_in_count: 31, current_sign_in_at: "2014-12-08 06:23:49", last_sign_in_at: "2014-12-02 11:06:09", current_sign_in_ip: "127.0.0.1", last_sign_in_ip: "127.0.0.1", church_id: 1},
+  {email: "j3frea@gmail.com", password: "deliciousfish", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, sign_in_count: 31, current_sign_in_at: "2014-12-08 06:23:49", last_sign_in_at: "2014-12-02 11:06:09", current_sign_in_ip: "127.0.0.1", last_sign_in_ip: "127.0.0.1", church_id: 1},
 ])
 Aka.create!([
   {song_id: 1, search_text: "in christ alone", display_text: "In Christ Alone"},
