@@ -1,0 +1,4170 @@
+
+---
+leaders:
+  columns:
+  - id
+  - leader_name
+  - created_at
+  - updated_at
+  - church_id
+  records: 
+  - - 1
+    - James Cuénod
+    - '2014-10-21 21:37:38.486134'
+    - '2014-11-27 21:33:59.184389'
+    - 1
+  - - 2
+    - Caro Armstrong
+    - '2014-10-21 21:39:10.499512'
+    - '2014-11-27 21:34:04.798797'
+    - 1
+  - - 3
+    - Ali Gordijn
+    - '2014-10-21 21:40:25.778440'
+    - '2014-11-27 21:34:09.699764'
+    - 1
+  - - 4
+    - Dietrich Wichmann
+    - '2014-10-21 21:42:46.947204'
+    - '2014-11-27 21:34:14.960431'
+    - 1
+  - - 5
+    - Lydia Macintosh
+    - '2014-10-21 21:47:35.095570'
+    - '2014-11-27 21:34:20.383620'
+    - 1
+  - - 6
+    - Teannette van der Spuy
+    - '2014-10-21 21:57:40.382342'
+    - '2014-11-27 21:34:25.744344'
+    - 1
+  - - 7
+    - Mundles
+    - '2014-11-27 21:35:45.981508'
+    - '2014-11-27 21:35:45.981508'
+    - 2
+
+---
+service_types:
+  columns:
+  - id
+  - service_type
+  - weight
+  - created_at
+  - updated_at
+  - church_id
+  records: 
+  - - 1
+    - 9:00am
+    - 2
+    - '2014-10-21 21:37:16.116305'
+    - '2014-11-27 21:15:08.898162'
+    - 1
+  - - 2
+    - 6:00pm
+    - 3
+    - '2014-10-21 21:37:31.761904'
+    - '2014-11-27 21:15:27.046265'
+    - 1
+  - - 3
+    - 9:30am
+    - 1
+    - '2014-11-27 21:02:28.142515'
+    - '2014-11-27 21:02:28.142515'
+    - 3
+  - - 4
+    - 9:30am
+    - 1
+    - '2014-11-27 21:35:36.162605'
+    - '2014-11-27 21:35:36.162605'
+    - 2
+
+---
+services:
+  columns:
+  - id
+  - date
+  - leader_id
+  - service_type_id
+  - created_at
+  - updated_at
+  - church_id
+  records: 
+  - - 1
+    - '2014-08-24'
+    - 1
+    - 1
+    - '2014-10-21 21:38:20.532822'
+    - '2014-11-18 14:19:57.421895'
+    - 1
+  - - 2
+    - '2014-08-24'
+    - 1
+    - 2
+    - '2014-10-21 21:38:53.815955'
+    - '2014-11-18 14:19:57.442075'
+    - 1
+  - - 3
+    - '2014-08-31'
+    - 2
+    - 1
+    - '2014-10-21 21:40:11.133383'
+    - '2014-11-18 14:19:57.459613'
+    - 1
+  - - 4
+    - '2014-08-31'
+    - 3
+    - 2
+    - '2014-10-21 21:41:00.277788'
+    - '2014-11-18 14:19:57.477033'
+    - 1
+  - - 5
+    - '2014-09-07'
+    - 2
+    - 1
+    - '2014-10-21 21:42:28.814643'
+    - '2014-11-18 14:19:57.495089'
+    - 1
+  - - 6
+    - '2014-09-07'
+    - 4
+    - 2
+    - '2014-10-21 21:43:20.260819'
+    - '2014-11-18 14:19:57.513768'
+    - 1
+  - - 7
+    - '2014-09-14'
+    - 3
+    - 1
+    - '2014-10-21 21:45:02.320011'
+    - '2014-11-18 14:19:57.531490'
+    - 1
+  - - 8
+    - '2014-09-14'
+    - 1
+    - 2
+    - '2014-10-21 21:45:51.305002'
+    - '2014-11-18 14:19:57.548722'
+    - 1
+  - - 9
+    - '2014-09-21'
+    - 2
+    - 1
+    - '2014-10-21 21:47:20.688349'
+    - '2014-11-18 14:19:57.567005'
+    - 1
+  - - 10
+    - '2014-09-21'
+    - 5
+    - 2
+    - '2014-10-21 21:48:21.979134'
+    - '2014-11-18 14:19:57.586078'
+    - 1
+  - - 11
+    - '2014-09-28'
+    - 1
+    - 1
+    - '2014-10-21 21:49:58.706765'
+    - '2014-11-18 14:19:57.604890'
+    - 1
+  - - 12
+    - '2014-09-28'
+    - 4
+    - 2
+    - '2014-10-21 21:50:42.686808'
+    - '2014-11-18 14:19:57.623447'
+    - 1
+  - - 13
+    - '2014-10-05'
+    - 2
+    - 1
+    - '2014-10-21 21:55:39.450862'
+    - '2014-11-18 14:19:57.642179'
+    - 1
+  - - 14
+    - '2014-10-05'
+    - 1
+    - 2
+    - '2014-10-21 21:56:27.840781'
+    - '2014-11-18 14:19:57.660600'
+    - 1
+  - - 15
+    - '2014-10-12'
+    - 5
+    - 1
+    - '2014-10-21 21:57:19.361822'
+    - '2014-11-18 14:19:57.678472'
+    - 1
+  - - 16
+    - '2014-10-12'
+    - 6
+    - 2
+    - '2014-10-21 21:58:20.544091'
+    - '2014-11-18 14:19:57.696252'
+    - 1
+  - - 17
+    - '2014-10-19'
+    - 2
+    - 1
+    - '2014-10-22 08:04:10.132463'
+    - '2014-11-18 14:19:57.714440'
+    - 1
+  - - 18
+    - '2014-10-19'
+    - 3
+    - 2
+    - '2014-10-22 08:23:41.474121'
+    - '2014-11-18 14:19:57.774116'
+    - 1
+  - - 26
+    - '2014-10-26'
+    - 1
+    - 2
+    - '2014-10-27 20:13:06.064179'
+    - '2014-11-18 14:19:57.791599'
+    - 1
+  - - 27
+    - '2014-10-26'
+    - 3
+    - 1
+    - '2014-10-28 07:03:47.395244'
+    - '2014-11-18 14:19:57.808747'
+    - 1
+  - - 28
+    - '2014-11-09'
+    - 3
+    - 1
+    - '2014-11-14 09:41:04.618872'
+    - '2014-11-18 14:19:57.827683'
+    - 1
+  - - 29
+    - '2014-11-09'
+    - 5
+    - 2
+    - '2014-11-14 09:50:55.594068'
+    - '2014-11-18 14:19:57.847697'
+    - 1
+  - - 30
+    - '2014-11-02'
+    - 2
+    - 1
+    - '2014-11-14 10:02:07.612838'
+    - '2014-11-18 14:19:57.870107'
+    - 1
+  - - 31
+    - '2014-11-02'
+    - 4
+    - 2
+    - '2014-11-14 10:07:14.411348'
+    - '2014-11-18 14:19:57.889733'
+    - 1
+  - - 32
+    - '2014-08-17'
+    - 5
+    - 1
+    - '2014-11-14 10:11:53.307219'
+    - '2014-11-18 14:19:57.908008'
+    - 1
+  - - 33
+    - '2014-08-17'
+    - 1
+    - 2
+    - '2014-11-14 10:14:12.725423'
+    - '2014-11-18 14:19:57.925878'
+    - 1
+  - - 34
+    - '2014-08-10'
+    - 2
+    - 1
+    - '2014-11-14 10:22:40.128972'
+    - '2014-11-18 14:19:57.944373'
+    - 1
+  - - 35
+    - '2014-08-10'
+    - 4
+    - 2
+    - '2014-11-14 10:28:18.513923'
+    - '2014-11-18 14:19:57.961970'
+    - 1
+  - - 36
+    - '2014-08-03'
+    - 3
+    - 1
+    - '2014-11-14 10:40:15.954094'
+    - '2014-11-18 14:19:57.980328'
+    - 1
+  - - 37
+    - '2014-08-03'
+    - 6
+    - 2
+    - '2014-11-14 10:47:01.064047'
+    - '2014-11-18 14:19:57.997888'
+    - 1
+  - - 38
+    - '2014-11-16'
+    - 1
+    - 2
+    - '2014-11-16 18:49:48.729243'
+    - '2014-11-18 14:19:58.015907'
+    - 1
+  - - 39
+    - '2014-11-16'
+    - 1
+    - 1
+    - '2014-11-17 09:28:14.709724'
+    - '2014-11-18 14:19:58.035076'
+    - 1
+  - - 40
+    - '2014-11-23'
+    - 7
+    - 4
+    - '2014-11-27 21:36:12.260686'
+    - '2014-11-27 21:36:12.260686'
+    - 
+  - - 41
+    - '2014-11-23'
+    - 7
+    - 4
+    - '2014-11-27 21:36:19.673473'
+    - '2014-11-27 21:36:19.673473'
+    - 
+  - - 42
+    - '2014-11-23'
+    - 7
+    - 4
+    - '2014-11-27 21:47:10.565016'
+    - '2014-11-27 21:47:10.565016'
+    - 2
+  - - 43
+    - '2014-11-30'
+    - 5
+    - 1
+    - '2014-12-02 07:03:20.883747'
+    - '2014-12-02 07:03:20.883747'
+    - 1
+  - - 44
+    - '2014-11-23'
+    - 2
+    - 1
+    - '2014-12-02 07:20:57.786574'
+    - '2014-12-02 07:20:57.786574'
+    - 1
+  - - 45
+    - '2014-11-23'
+    - 3
+    - 2
+    - '2014-12-02 09:08:48.673526'
+    - '2014-12-02 09:08:48.673526'
+    - 1
+  - - 46
+    - '2014-12-07'
+    - 1
+    - 1
+    - '2014-12-15 07:48:28.776732'
+    - '2014-12-15 07:48:28.776732'
+    - 1
+  - - 47
+    - '2014-12-07'
+    - 5
+    - 2
+    - '2014-12-15 08:16:00.193981'
+    - '2014-12-15 08:16:00.193981'
+    - 1
+  - - 48
+    - '2014-12-14'
+    - 5
+    - 1
+    - '2014-12-15 08:55:54.101504'
+    - '2014-12-15 08:55:54.101504'
+    - 1
+  - - 49
+    - '2014-12-14'
+    - 6
+    - 2
+    - '2014-12-15 09:32:23.076286'
+    - '2014-12-15 09:32:23.076286'
+    - 1
+
+---
+songs:
+  columns:
+  - id
+  - song_name
+  - license
+  - writers
+  - lyrics_url
+  - sof_number
+  - sample_url
+  - created_at
+  - updated_at
+  - ccli_number
+  records: 
+  - - 1
+    - In Christ Alone
+    - Copyright © 2001 Thankyou Music
+    - Stuart Townend & Keith Getty
+    - ''
+    - 0
+    - http://www.youtube.com/watch?v=RCeSOY5tisI
+    - 
+    - '2014-10-22 15:01:26.866295'
+    - 
+  - - 2
+    - Abide With Me
+    - Public Domain
+    - Hen­ry F. Lyte
+    - http://cyberhymnal.org/htm/a/b/abidewme.htm
+    - 
+    - http://cyberhymnal.org/htm/a/b/abidewme.htm
+    - 
+    - '2014-10-22 14:54:29.888350'
+    - 
+  - - 3
+    - Speak, O Lord
+    - Copyright © 2005 Thankyou Music
+    - Keith Getty & Stuart Townend
+    - ''
+    - 0
+    - https://www.youtube.com/watch?v=ckhjcIOfV88
+    - 
+    - '2014-10-22 15:01:26.935006'
+    - 
+  - - 4
+    - How Deep
+    - "© 2006 Sovereign Grace Praise (BMI)"
+    - Stephen Altrogge
+    - http://www.sovereigngracemusic.org/Songs/How_Deep/13
+    - 0
+    - http://www.sovereigngracemusic.org/Songs/How_Deep/13
+    - 
+    - '2014-10-22 14:54:29.979639'
+    - 
+  - - 5
+    - Endless Praises
+    - "© 2003 Sovereign Grace Praise (BMI)"
+    - Stephen Altrogge
+    - http://www.sovereigngracemusic.org/Songs/Endless_Praises/14
+    - 0
+    - http://www.sovereigngracemusic.org/Songs/Endless_Praises/14
+    - 
+    - '2014-10-22 14:54:30.001705'
+    - 
+  - - 6
+    - 10,000 Reasons
+    - Copyright © 2011 Thankyou Music (Admin. by EMI Christian Music Publishing)
+    - Matt Redman, Jonas Myrin
+    - http://www.worshiptogether.com/songs/songdetail.aspx?iid=1849631
+    - 0
+    - http://www.worshiptogether.com/songs/songdetail.aspx?iid=1849631
+    - 
+    - '2014-10-24 21:10:21.811202'
+    - 
+  - - 7
+    - God Immortal
+    - "© 2008 Thankyou Music (Admin. by EMI Christian Music Publishing)"
+    - Lou Fellingham, Mike Busbee, Nathan Fellingham
+    - https://www.weareworship.com/uk/songs/song-library/showsong/806
+    - 0
+    - https://www.weareworship.com/uk/songs/song-library/showsong/806
+    - 
+    - '2014-10-22 14:54:30.047771'
+    - 
+  - - 8
+    - How Deep The Father’s Love For Us
+    - Copyright © 1995 Thankyou Music
+    - Stuart Townend
+    - http://www.stuarttownend.co.uk/song/how-deep-the-fathers-love-for-us/
+    - 0
+    - http://www.stuarttownend.co.uk/song/how-deep-the-fathers-love-for-us/
+    - 
+    - '2014-10-22 14:54:30.071062'
+    - 
+  - - 9
+    - Cornerstone
+    - Copyright © 2011 Hillsong Music Publishing (Admin. by EMI Christian Music Publishing)
+    - Reuben Morgan, Edward Mote, Jonas Myrin, Eric Liljero, William Batchelder Bradbury
+    - http://www.worshiptogether.com/songs/songdetail.aspx?iid=1908027
+    - 0
+    - http://www.worshiptogether.com/songs/songdetail.aspx?iid=1908027
+    - 
+    - '2014-10-22 14:54:30.096337'
+    - 
+  - - 10
+    - Let Your Kingdom Come
+    - "© 2006 Sovereign Grace Praise (BMI)"
+    - Bob Kauflin
+    - http://www.sovereigngracemusic.org/Songs/Let_Your_Kingdom_Come/13
+    - 0
+    - http://www.sovereigngracemusic.org/Songs/Let_Your_Kingdom_Come/13
+    - 
+    - '2014-10-22 14:54:30.119173'
+    - 
+  - - 11
+    - Salvation Belongs to our God
+    - Copyright © 1985 Restoration Music Ltd
+    - Adrian Howard, Pat Turner
+    - ''
+    - 992
+    - https://www.youtube.com/watch?v=RihfmBH8JbQ
+    - 
+    - '2014-10-22 15:01:26.949947'
+    - 
+  - - 12
+    - Jesus is Lord
+    - Copyright © 2003 Thankyou Music
+    - Stuart Townend, Keith Getty
+    - http://www.stuarttownend.co.uk/song/jesus-is-lord/
+    - 1387
+    - http://www.stuarttownend.co.uk/song/jesus-is-lord/
+    - 
+    - '2014-10-22 14:54:30.163275'
+    - 
+  - - 13
+    - Salvation's Song
+    - Copyright © 2007 Thankyou Music
+    - Stuart Townend & Andrew Small
+    - http://www.stuarttownend.co.uk/song/salvations-song/
+    - 2434
+    - http://www.stuarttownend.co.uk/song/salvations-song/
+    - 
+    - '2014-10-24 21:11:03.056978'
+    - 
+  - - 14
+    - As the Deer
+    - Copyright © 1983 Restoration Music Ltd.
+    - Martin J. Nystrom
+    - ''
+    - 27
+    - https://www.youtube.com/watch?v=l7Blrb88KWU
+    - 
+    - '2014-10-22 15:01:26.962864'
+    - 
+  - - 15
+    - O Sacred King
+    - Copyright © 1999 Thankyou Music
+    - Matt Redman
+    - ''
+    - 1493
+    - http://www.youtube.com/watch?v=xNSYwW3-RFg
+    - 
+    - '2014-10-22 15:01:26.974912'
+    - 
+  - - 16
+    - Love Divine
+    - 'Words: Public Domain, Music: Copyright © 2007 Thankyou Music (Admin. by Capitol
+      CMG Publishing)'
+    - Charles Wesley, Chris Eaton, John Hartley
+    - ''
+    - 2436
+    - https://www.youtube.com/watch?v=JGGcqhKShQ8
+    - 
+    - '2014-12-15 08:36:30.902329'
+    - '4928685'
+  - - 17
+    - Amazing Grace
+    - Public Domain
+    - John Newton
+    - ''
+    - 19
+    - http://www.youtube.com/watch?v=CDdvReNKKuk
+    - 
+    - '2014-10-22 15:01:26.999627'
+    - 
+  - - 18
+    - Your Blood Speaks a Better Word (Nothing But The Blood)
+    - Copyright © 2004 Thankyou Music
+    - Matt Redman
+    - http://worshiptogether.com/songs/songdetail.aspx?iid=563797
+    - 2178
+    - http://worshiptogether.com/songs/songdetail.aspx?iid=563797
+    - 
+    - '2014-10-22 14:54:30.297957'
+    - 
+  - - 19
+    - Light of the World
+    - Copyright © 2001 Thankyou Music
+    - Tim Hughes
+    - http://www.worshiptogether.com/songs/songdetail.aspx?iid=572962
+    - 0
+    - http://www.worshiptogether.com/songs/songdetail.aspx?iid=572962
+    - 
+    - '2014-10-24 21:12:20.849184'
+    - 
+  - - 20
+    - We have seen your glory
+    - Public Domain
+    - Steph & David Ebert
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+  - - 21
+    - Create in me a clean heart, O God
+    - Public Domain
+    - Anonymous
+    - https://www.hymnal.net/en/hymn/ns/51
+    - 0
+    - https://www.hymnal.net/en/hymn/ns/51
+    - 
+    - '2014-10-22 14:54:30.345438'
+    - 
+  - - 22
+    - Blessing and Honour
+    - Copyright © 1992 Integrity’s Praise! Music
+    - Gary Sadler & Jamie Harvill
+    - ''
+    - 675
+    - https://www.youtube.com/watch?v=5m04UJ6BCrI
+    - 
+    - '2014-10-22 15:01:27.013477'
+    - 
+  - - 23
+    - Hark the Herald Angels Sing
+    - Public Domain
+    - Charles Wesley, William H. Cummings
+    - ''
+    - 0
+    - https://www.youtube.com/watch?v=lCt1s44cfMM
+    - 
+    - '2014-10-22 15:01:27.025728'
+    - 
+  - - 24
+    - O Lord, Our Lord
+    - Copyright © 1981 Meadowgreen Music
+    - Michael W. Smith
+    - ''
+    - 962
+    - https://www.youtube.com/watch?v=6h56LamYqyE
+    - 
+    - '2014-10-24 21:12:48.025151'
+    - 
+  - - 25
+    - Father Into Your Courts I Will Enter
+    - Copyright © 2001 Parachute Music New Zealand
+    - Andrew Ulugia & Wayne Huirua
+    - ''
+    - 1230
+    - https://www.youtube.com/watch?v=bo2bwXLwhVs
+    - 
+    - '2014-10-22 15:01:27.051348'
+    - 
+  - - 26
+    - Standing in Your Presence
+    - Copyright © 1996 Darlene Zschech/Hillsongs Australia/Kingsway’s Thankyou Music
+    - Darlene Zschech
+    - ''
+    - 1011
+    - https://www.youtube.com/watch?v=bK3mbyQvjDw
+    - 
+    - '2014-10-22 15:01:27.063817'
+    - 
+  - - 27
+    - Beautiful Lord, Wonderful Saviour
+    - Copyright © 1997 Darlene Zschech/Hillsong Publishing/ Kingsway Music
+    - Darlene Zschech
+    - ''
+    - 0
+    - https://www.youtube.com/watch?v=a5g5qXLG7w4
+    - 
+    - '2014-10-22 15:01:27.076575'
+    - 
+  - - 28
+    - Your Will, Not Mine
+    - Copyright © 1991 Sovereign Lifestyle Music
+    - Dougie Brown
+    - ''
+    - 1149
+    - 
+    - 
+    - '2014-10-22 14:45:48.279861'
+    - 
+  - - 29
+    - Tell Out, My Soul
+    - Public Domain
+    - Timothy Dudley-Smith
+    - ''
+    - 0
+    - https://www.youtube.com/watch?v=s6ji4y9Q-K0
+    - 
+    - '2014-10-22 15:01:27.089195'
+    - 
+  - - 30
+    - Be Still My Soul
+    - Public Domain
+    - Ka­tha­ri­na A. von Schle­gel, tr. Jane L. Borth­wick
+    - http://cyberhymnal.org/htm/b/e/bestill.htm
+    - 0
+    - http://cyberhymnal.org/htm/b/e/bestill.htm
+    - 
+    - '2014-10-22 14:54:30.536815'
+    - 
+  - - 31
+    - My Soul Finds Rest in God Alone (Psalm 62)
+    - Copyright © 2008 Thankyou Music
+    - Stuart Townend , Aaron Keyes
+    - http://www.worshiptogether.com/songs/songdetail.aspx?iid=956127
+    - 0
+    - http://www.worshiptogether.com/songs/songdetail.aspx?iid=956127
+    - 
+    - '2014-10-22 14:54:30.564154'
+    - 
+  - - 32
+    - Sing To The King
+    - Copyright © 2003 worshiptogether.com Songs
+    - Billy Foote
+    - http://www.worshiptogether.com/songs/songdetail.aspx?iid=565142
+    - 0
+    - http://www.worshiptogether.com/songs/songdetail.aspx?iid=565142
+    - 
+    - '2014-10-22 14:54:30.588576'
+    - 
+  - - 33
+    - How Firm a Foundation
+    - Copyright © 2003 songsfortoday.com
+    - Richard Simpkin
+    - http://www.music-ministry.org/wp-content/uploads/2014/01/How-firm-a-foundation.pdf
+    - 0
+    - http://www.music-ministry.org/wp-content/uploads/2014/01/How-firm-a-foundation.pdf
+    - 
+    - '2014-10-22 14:54:30.616458'
+    - 
+  - - 34
+    - You Alone Can Rescue (Who, oh Lord, could save themselves)
+    - Copyright © 2009 Thankyou Music
+    - Matt Redman, Jonas Myrin
+    - http://www.worshiptogether.com/songs/songdetail.aspx?iid=1722527
+    - 0
+    - http://www.worshiptogether.com/songs/songdetail.aspx?iid=1722527
+    - 
+    - '2014-10-22 14:54:30.641720'
+    - 
+  - - 35
+    - Before the Throne of God Above
+    - Public Domain
+    - Charitie L. Bancroft
+    - ''
+    - 1187
+    - 
+    - 
+    - '2014-10-22 14:45:48.292239'
+    - 
+  - - 36
+    - Come Thou Fount of Every Blessing
+    - Public Domain
+    - Robert Robinson
+    - 
+    - 0
+    - 
+    - 
+    - 
+    - 
+  - - 37
+    - Jesus The Name High Over All
+    - Copyright © 2008 Thankyou Music
+    - Gareth Robinson , John Hartley , Chris Eaton
+    - http://www.worshiptogether.com/songs/songdetail.aspx?iid=1011640
+    - 0
+    - http://www.worshiptogether.com/songs/songdetail.aspx?iid=1011640
+    - 
+    - '2014-10-22 14:54:30.663844'
+    - 
+  - - 38
+    - Show Us Christ
+    - Copyright © 2011 Sovereign Grace Worship
+    - Doug Plank, Bob Kauflin
+    - http://www.sovereigngracemusic.org/Songs/Show_Us_Christ/2
+    - 0
+    - http://www.sovereigngracemusic.org/Songs/Show_Us_Christ/2
+    - 
+    - '2014-10-22 14:54:30.692186'
+    - 
+  - - 39
+    - For All You've Done (My Saviour, Redeemer)
+    - Copyright © 2004 Hillsong Music Publishing
+    - Reuben Morgan
+    - http://www.worshiptogether.com/songs/songdetail.aspx?iid=1801896
+    - 0
+    - http://www.worshiptogether.com/songs/songdetail.aspx?iid=1801896
+    - 
+    - '2014-10-22 14:54:30.717277'
+    - 
+  - - 40
+    - A Father to the Fatherless
+    - Copyright © 2003 Thankyou Music
+    - Paul Oakley
+    - ''
+    - 1691
+    - 
+    - 
+    - '2014-10-22 14:45:48.304493'
+    - 
+  - - 41
+    - Nothing in this World
+    - Copyright © 1998 Thankyou Music
+    - Tim Hughes
+    - ''
+    - 1465
+    - 
+    - 
+    - '2014-10-22 14:45:48.316370'
+    - 
+  - - 42
+    - Hungry, I Come to You
+    - Copyright © 1999 Vineyard Songs (UK/Eire)
+    - Kathryn Scott
+    - ''
+    - 1293
+    - 
+    - 
+    - '2014-10-22 14:45:48.328664'
+    - 
+  - - 43
+    - At The Foot of the Cross
+    - Copyright © 2003 Vertical Worship Songs
+    - Kathryn Scott
+    - ''
+    - 1719
+    - 
+    - 
+    - '2014-10-22 14:45:48.340899'
+    - 
+  - - 44
+    - Here I Am
+    - Copyright © 2003 Curious? Music UK/Bucks Music Ltd
+    - Martin Smith, Stuart Garrard
+    - ''
+    - 1827
+    - 
+    - 
+    - '2014-10-22 14:45:48.352611'
+    - 
+  - - 45
+    - Merciful God
+    - Copyright © 2006 Thankyou Music
+    - Keith & Kristyn Getty, Stuart Townend
+    - ''
+    - 1966
+    - 
+    - 
+    - '2014-10-22 14:45:48.365221'
+    - 
+  - - 46
+    - There is a Redeemer
+    - Copyright © 1982 Birdwing Music
+    - Melody Green
+    - ''
+    - 544
+    - 
+    - 
+    - '2014-10-22 14:45:48.377722'
+    - 
+  - - 47
+    - You are the Holy One
+    - Copyright © 1988 Mercy/Vineyard Publishing
+    - Andy Park
+    - ''
+    - 626
+    - 
+    - 
+    - '2014-10-22 14:45:48.389518'
+    - 
+  - - 48
+    - Jesus, God's Righteousness Revealed
+    - Copyright © 1995 Word Music Inc./Maranatha! Music
+    - Geoff Bullock
+    - ''
+    - 1383
+    - 
+    - 
+    - '2014-10-22 14:45:48.401924'
+    - 
+  - - 49
+    - You Laid Aside Your Majesty (I Really Want to Worship You My Lord)
+    - Copyright © 1985 Kingsway’s Thankyou Music
+    - Noel Richards
+    - ''
+    - 633
+    - 
+    - 
+    - '2014-10-22 14:45:48.414795'
+    - 
+  - - 50
+    - I Will Offer Up My Life
+    - Copyright © 1994 Kingsway’s Thankyou Music
+    - Matt Redman
+    - ''
+    - 851
+    - 
+    - 
+    - '2014-10-22 14:45:48.426524'
+    - 
+  - - 51
+    - No Eye Has Seen
+    - Copyright © 1990 Integrity’s Hosanna! Music/People of Destiny Int.
+    - Mark Altrogge
+    - ''
+    - 943
+    - 
+    - 
+    - '2014-10-22 14:45:48.438884'
+    - 
+  - - 52
+    - Lord, I Come to You
+    - Copyright © 1992 Word Music
+    - Geoff Bullock
+    - ''
+    - 895
+    - 
+    - 
+    - '2014-10-22 14:45:48.450747'
+    - 
+  - - 53
+    - Father Here I Am
+    - Copyright © 1989 Mercy/Vineyard Publishing
+    - Danny Daniels
+    - ''
+    - 94
+    - 
+    - 
+    - '2014-10-22 14:45:48.462817'
+    - 
+  - - 54
+    - Change My Heart, O God
+    - Copyright © 1982 Mercy/Vineyard Publishing
+    - Eddie Espinosa
+    - ''
+    - 58
+    - 
+    - 
+    - '2014-10-22 14:45:48.474977'
+    - 
+  - - 55
+    - Guide Me, O Thou Great Jehovah
+    - Public Domain
+    - William Williams, Tr. Peter Williams
+    - ''
+    - 148
+    - 
+    - 
+    - '2014-10-22 14:45:48.487180'
+    - 
+  - - 56
+    - Lord of the Church
+    - Copyright © Timothy Dudley-Smith
+    - Timothy Dudley-Smith
+    - ''
+    - 1433
+    - 
+    - 
+    - '2014-10-22 14:45:48.499129'
+    - 
+  - - 57
+    - Lord Reign in Me (Over all the Earth)
+    - Copyright © 1998 Vineyard Songs (UK/Eire)
+    - Brenton Brown
+    - 
+    - 0
+    - 
+    - 
+    - 
+    - 
+  - - 58
+    - All My Shame (A Frame So Beautifully Formed)
+    - Copyright © 2007 Thankyou Music
+    - Ben Dunnett, Hannah Dunnett
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+  - - 59
+    - When I Survery
+    - Public Domain
+    - Isaac Watts
+    - ''
+    - 596
+    - 
+    - 
+    - '2014-10-22 14:45:48.511142'
+    - 
+  - - 60
+    - Be Thou My Vision
+    - Public Domain
+    - Tr. Eleanor Hull
+    - 
+    - 0
+    - 
+    - 
+    - 
+    - 
+  - - 61
+    - Above All Powers
+    - Copyright © 1999 Lensongs Publishing/Integrity's Hosanna! Music/Sovereign Music
+      UK
+    - Lenny LeBlanc, Paul Baloche
+    - ''
+    - 1151
+    - 
+    - 
+    - '2014-10-22 14:45:48.523253'
+    - 
+  - - 62
+    - Jesus, Thank You
+    - Copyright © 2003 Integrity’s Hosanna! Music (ASCAP)/Sovereign Grace Worship
+      (ASCAP)
+    - Pat Sczebel
+    - http://www.sovereigngracemusic.org/Songs/Jesus,_Thank_You/14
+    - 0
+    - http://www.sovereigngracemusic.org/Songs/Jesus,_Thank_You/14
+    - 
+    - '2014-10-22 14:54:30.739103'
+    - 
+  - - 63
+    - With a Prayer
+    - Copyright © 2002 Thankyou Music
+    - Stuart Townend
+    - ''
+    - 1627
+    - 
+    - 
+    - '2014-10-24 21:15:03.545815'
+    - 
+  - - 64
+    - Lord, You are the Author of my Life
+    - Copyright © 1985 Kingsway’s Thankyou Music
+    - Judy Pruett
+    - ''
+    - 910
+    - 
+    - 
+    - '2014-10-22 14:45:48.547754'
+    - 
+  - - 65
+    - Be Still
+    - Copyright © 1986 Kingsway’s Thankyou Music
+    - David J. Evans
+    - ''
+    - 40
+    - 
+    - 
+    - '2014-10-24 21:15:27.081556'
+    - 
+  - - 66
+    - Holy Spirit, Living Breath of God
+    - Copyright © 2005 Thankyou Music
+    - Keith Getty, Stuart Townend
+    - ''
+    - 1850
+    - 
+    - 
+    - '2014-10-22 14:45:48.572113'
+    - 
+  - - 67
+    - Eagles' Wings (Call the Man)
+    - Copyright © 1979, 2003, OCP
+    - Michael Joncas
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+  - - 68
+    - Wonderful, Merciful Savior
+    - Copyright © 1989 Dayspring Music, LLC
+    - Dawn Rodgers, Eric Wyse
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+  - - 69
+    - Come People of the Risen King
+    - Copyright © 2007 Thankyou Music
+    - Keith & Kristyn Getty, Stuart Townend
+    - ''
+    - 224
+    - 
+    - 
+    - '2014-10-22 14:45:48.584434'
+    - 
+  - - 70
+    - I Cannot Tell
+    - Public Domain
+    - William Y. Fullerton
+    - ''
+    - 205
+    - 
+    - 
+    - '2014-10-22 14:45:48.596725'
+    - 
+  - - 71
+    - Rock of Ages
+    - Words in this version Copyright © 2001 Make Way Music
+    - Augustus M. Toplady (1740-78) adapt. by Graham Kendrick
+    - ''
+    - 1507
+    - 
+    - 
+    - '2014-10-22 14:45:48.609054'
+    - 
+  - - 72
+    - Take My Life and Let it Be
+    - Copyright © 2005 Thankyou Music
+    - Frances R. Havergal (1836 –1879) Adpt. & new music Paul Oakley
+    - ''
+    - 2037
+    - 
+    - 
+    - '2014-10-22 14:45:48.621226'
+    - 
+  - - 73
+    - The Whole Earth
+    - Copyright © 2005 Hillsong Publishing/kingswaysongs.com
+    - Reuben Morgan
+    - ''
+    - 2067
+    - 
+    - 
+    - '2014-10-22 14:45:48.633921'
+    - 
+  - - 74
+    - The Precious Blood
+    - Copyright © 2005 Sovereign Grace Worship (ASCAP)
+    - Peter Gagnon
+    - http://sovereigngracemusic.org/Songs/The_Precious_Blood/13
+    - 0
+    - http://sovereigngracemusic.org/Songs/The_Precious_Blood/13
+    - 
+    - '2014-10-22 14:54:30.761084'
+    - 
+  - - 75
+    - Healing To The Nations
+    - Copyright © 1982 Scripture In Song (Admin. by Maranatha! Music (Capitol CMG))
+    - Bob Fitts
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+  - - 76
+    - Name of All Majesty
+    - Copyright © 1979 Timothy Dudley-Smith
+    - Timothy Dudley-Smith
+    - ''
+    - 939
+    - 
+    - 
+    - '2014-10-22 14:45:48.646443'
+    - 
+  - - 77
+    - There is a Higher Throne
+    - Copyright © 2002 Thankyou Music
+    - Kristyn Lennox & Keith Getty
+    - ''
+    - 1541
+    - 
+    - 
+    - '2014-10-22 14:45:48.658654'
+    - 
+  - - 78
+    - We'll Walk the Land
+    - Copyright © 1989 Make Way Music
+    - Graham Kendrick
+    - ''
+    - 583
+    - 
+    - 
+    - '2014-10-22 14:45:48.670423'
+    - 
+  - - 79
+    - Jabulani Africa (Bayete iNkosi)
+    - Public Domain?
+    - Unknown
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+  - - 80
+    - Hosanna (Praise Is Rising)
+    - Copyright © 2005, 2006 Thankyou Music
+    - Brenton Brown, Paul Baloche
+    - http://www.worshiptogether.com/songs/songdetail.aspx?iid=559270
+    - 0
+    - http://www.worshiptogether.com/songs/songdetail.aspx?iid=559270
+    - 
+    - '2014-10-22 14:54:30.788428'
+    - 
+  - - 81
+    - By Faith
+    - Copyright © 2009 Thankyou Music
+    - Stuart Townend, Keith & Kristyn Getty
+    - http://www.gettymusic.com/hymns-byfaith.aspx
+    - 2240
+    - http://www.gettymusic.com/hymns-byfaith.aspx
+    - 
+    - '2014-10-22 14:54:30.813625'
+    - 
+  - - 82
+    - O Church, Arise
+    - Copyright © 2005 Thankyou Music
+    - Stuart Townend, Keith Getty
+    - http://www.gettymusic.com/hymns-ochurcharise.aspx
+    - 1981
+    - http://www.gettymusic.com/hymns-ochurcharise.aspx
+    - 
+    - '2014-10-22 14:54:30.841800'
+    - 
+  - - 83
+    - I the Lord of sea and sky
+    - Copyright © 1991 Daniel L. Schutte and New Dawn Music
+    - Daniel L. Schutte
+    - ''
+    - 830
+    - ''
+    - '2014-10-22 07:50:58.670930'
+    - '2014-10-22 14:45:48.706789'
+    - 
+  - - 84
+    - It is the Cry of My Heart
+    - Copyright © 1991 Mercy/Vineyard Publishing/Adm. by CopyCare
+    - Terry Butler
+    - ''
+    - 832
+    - ''
+    - '2014-10-22 07:51:41.317491'
+    - '2014-10-22 14:45:48.719328'
+    - 
+  - - 85
+    - Jesus, What a Beautiful Name
+    - Copyright © 1995 Tanya Riches/Hillsongs Australia/Kingsway’s Thankyou Music
+    - Tanya Riches
+    - ''
+    - 877
+    - ''
+    - '2014-10-22 07:52:23.094152'
+    - '2014-10-22 14:45:48.731927'
+    - 
+  - - 86
+    - Thank You for Saving Me
+    - Copyright © 1993 Curious? Music UK/Adm. by Kingsway’s Thankyou Music
+    - Martin Smith
+    - ''
+    - 1015
+    - ''
+    - '2014-10-22 07:55:39.111145'
+    - '2014-10-22 14:45:48.744140'
+    - 
+  - - 87
+    - Father, Let Me Dedicate
+    - Copyright © 2003 Thankyou Music/sixsteps Music/worshiptogether.com songs/kingswaysongs.com
+    - 'Verses: Laurence Tuttiet (1825–1897) Adpt. Matt Redman/Chorus: Chris Tomlin,
+      Louie Giglio & Jesse Reeves'
+    - ''
+    - 1760
+    - ''
+    - '2014-10-22 07:58:04.935405'
+    - '2014-10-22 14:45:48.756306'
+    - 
+  - - 88
+    - Thou, Whose Almighty Word
+    - Public Domain
+    - John Marriott
+    - ''
+    - 557
+    - ''
+    - '2014-10-22 07:59:19.424620'
+    - '2014-10-22 14:45:48.768656'
+    - 
+  - - 89
+    - God of Grace
+    - Copyright © 1990 Sovereign Lifestyle Music
+    - Chris Bowater
+    - ''
+    - 138
+    - ''
+    - '2014-10-22 08:03:42.230573'
+    - '2014-10-24 21:15:49.000872'
+    - 
+  - - 90
+    - All My Days
+    - Copyright © 1998 Thankyou Music
+    - Stuart Townend
+    - ''
+    - 1158
+    - ''
+    - '2014-10-22 08:06:26.373263'
+    - '2014-10-24 21:16:04.497950'
+    - 
+  - - 91
+    - And Can it Be
+    - Public Domain
+    - Charles Wesley
+    - ''
+    - 21
+    - ''
+    - '2014-10-22 08:07:03.876703'
+    - '2014-10-22 14:45:48.804908'
+    - 
+  - - 92
+    - I Lift My Hands
+    - Copyright © 1989 Kempen Music/Kingsway’s Thankyou Music
+    - Andre Kempen
+    - ''
+    - 223
+    - ''
+    - '2014-10-22 08:20:32.915755'
+    - '2014-10-24 21:16:26.785121'
+    - 
+  - - 93
+    - God Forgave My Sin
+    - Copyright © 1972 Bud John Songs/EMI Christian Music Publishing/Adm. by CopyCare
+    - Carol Owens
+    - ''
+    - 129
+    - ''
+    - '2014-10-22 08:21:29.525464'
+    - '2014-10-22 14:45:48.829540'
+    - 
+  - - 94
+    - Set My Spirit Free
+    - Public Domain
+    - Unknown
+    - ''
+    - 494
+    - ''
+    - '2014-10-22 08:22:11.509669'
+    - '2014-10-22 14:45:48.843013'
+    - 
+  - - 95
+    - Oh, to see the Dawn
+    - Copyright © 2005 Thankyou Music
+    - Keith Getty & Stuart Townend
+    - ''
+    - 1988
+    - ''
+    - '2014-10-22 08:23:13.947276'
+    - '2014-10-22 14:45:48.855325'
+    - 
+  - - 96
+    - Draw Me Close to You
+    - Copyright © 1994 Mercy/Vineyard Publishing/Adm. by CopyCare
+    - Kelly Carpenter
+    - ''
+    - 1217
+    - ''
+    - '2014-10-27 20:01:23.944323'
+    - '2014-10-27 20:01:23.944323'
+    - 
+  - - 97
+    - King of Kings, Majesty
+    - Copyright © 1996 Sovereign Lifestyle Music
+    - Jarrod Cooper
+    - ''
+    - 1404
+    - ''
+    - '2014-10-28 06:59:12.047682'
+    - '2014-10-28 06:59:12.047682'
+    - 
+  - - 98
+    - Jesus is King
+    - Copyright © 1982 Word’s Spirit of Praise Music/Adm. by CopyCare
+    - Wendy Churchill
+    - ''
+    - 289
+    - ''
+    - '2014-10-28 07:03:43.547543'
+    - '2014-10-28 07:03:43.547543'
+    - 
+  - - 99
+    - Come, Now Is The Time To Worship
+    - Copyright © 1998 Vineyard Songs (UK/Eire)
+    - Brian Doerksen
+    - 
+    - 1205
+    - http://www.youtube.com/watch?v=NPWq8eM4lu8
+    - '2014-11-14 09:37:11.519875'
+    - '2014-11-19 12:59:03.332053'
+    - '2430948'
+  - - 100
+    - Open The Eyes Of My Heart
+    - Copyright © 1997 Integrity Hosanna! Music/Sovereign Music UK
+    - Paul Baloche
+    - ''
+    - 1490
+    - ''
+    - '2014-11-14 09:39:07.476344'
+    - '2014-11-14 09:39:07.476344'
+    - 
+  - - 102
+    - Across The Lands (You're The Author Of Creation)
+    - Copyright © 2002 Thankyou Music
+    - Stuart Townend & Keith Getty
+    - ''
+    - 1669
+    - ''
+    - '2014-11-14 09:48:27.083166'
+    - '2014-11-14 09:48:27.083166'
+    - 
+  - - 103
+    - There is No Other Name
+    - Copyright © 1999 Integrity’s Hosanna! Music/Sovereign Music UK
+    - Robin Mark
+    - ''
+    - 1546
+    - ''
+    - '2014-11-14 09:50:17.930139'
+    - '2014-11-14 09:50:17.930139'
+    - 
+  - - 104
+    - At Your Feet We Fall
+    - Copyright © 1982 Kingsway’s Thankyou Music
+    - David Fellingham
+    - ''
+    - 34
+    - ''
+    - '2014-11-14 09:56:03.075715'
+    - '2014-11-14 09:56:03.075715'
+    - 
+  - - 105
+    - All Hail King Jesus
+    - Copyright © 1984 Glory Alleluia Music/Tempo Music Publications/Adm. by CopyCare
+    - Dave Moody
+    - ''
+    - 7
+    - ''
+    - '2014-11-14 09:57:24.378471'
+    - '2014-11-14 09:57:24.378471'
+    - 
+  - - 106
+    - Blessed Be Your Name
+    - Copyright © 2002 Thankyou Music
+    - Matt Redman, Beth Redman
+    - ''
+    - 1193
+    - ''
+    - '2014-11-14 09:59:28.213739'
+    - '2014-11-14 09:59:28.213739'
+    - 
+  - - 107
+    - O Jesus, I Have Promised
+    - Public Domain
+    - John Ernest Bode
+    - ''
+    - 418
+    - ''
+    - '2014-11-14 10:00:48.501586'
+    - '2014-11-14 10:00:48.501586'
+    - 
+  - - 108
+    - All Heaven Declares
+    - Copyright © 1987 Kingsway’s Thankyou Music
+    - Noel and Tricia Richards
+    - ''
+    - 10
+    - ''
+    - '2014-11-14 10:04:49.342743'
+    - '2014-11-14 10:04:49.342743'
+    - 
+  - - 109
+    - All I Once Held Dear (Knowing You)
+    - Copyright © 1993 Make Way Music
+    - Graham Kendrick
+    - ''
+    - 646
+    - ''
+    - '2014-11-14 10:06:56.284017'
+    - '2014-11-14 10:06:56.284017'
+    - 
+  - - 110
+    - Jesus Is The Name We Honour
+    - Copyright © 1991 Kingsway’s Thankyou Music
+    - Phil Lawson Johnston
+    - ''
+    - 870
+    - ''
+    - '2014-11-14 10:09:49.293415'
+    - '2014-11-14 10:09:49.293415'
+    - 
+  - - 111
+    - My Lord, What Love Is This
+    - Copyright © 1989 Make Way Music
+    - Graham Kendrick
+    - ''
+    - 398
+    - ''
+    - '2014-11-14 10:11:09.693539'
+    - '2014-11-14 10:11:09.693539'
+    - 
+  - - 112
+    - Thy Word
+    - Copyright © 1983 Bug & Bear Music/LCS Music Group Inc./Meadowgreen Music/EMI
+      Christian Music Publishing/Adm. by CopyCare
+    - Amy Grant & Michael W. Smith
+    - ''
+    - 1066
+    - ''
+    - '2014-11-14 10:13:55.679791'
+    - '2014-11-14 10:13:55.679791'
+    - 
+  - - 113
+    - My Jesus My Saviour
+    - Copyright © 1993 Darlene Zschech/Hillsongs Australia/Kingsway’s Thankyou Music
+    - Darlene Zschech
+    - ''
+    - 935
+    - ''
+    - '2014-11-14 10:16:49.310812'
+    - '2014-11-14 10:16:49.310812'
+    - 
+  - - 114
+    - Consider Christ
+    - Copyright © 1996 Bryson Smith & Philip Percival
+    - Bryson Smith, Philip Percival
+    - http://us.emumusic.com/consider-christ.html
+    - 
+    - http://us.emumusic.com/consider-christ.html
+    - '2014-11-14 10:20:23.003642'
+    - '2014-11-14 10:20:23.003642'
+    - 
+  - - 115
+    - Jesus, Lover Of My Soul
+    - Copyright © 1992 Ezzy, Grul, McPherson/Hillsongs Australia/Kingsway’s Thankyou
+      Music
+    - Daniel Grul, John Ezzy, Steve McPherson
+    - ''
+    - 874
+    - ''
+    - '2014-11-14 10:22:25.338169'
+    - '2014-11-14 10:22:25.338169'
+    - 
+  - - 116
+    - Crown Him With Many Crowns
+    - Public Domain
+    - Matthew Bridges & Godfrey Thring
+    - ''
+    - 77
+    - ''
+    - '2014-11-14 10:25:10.418829'
+    - '2014-11-14 10:25:10.418829'
+    - 
+  - - 117
+    - Purify My Heart (Refiner's Fire)
+    - Copyright © 1990 Mercy/Vineyard Publishing/Adm. by CopyCare
+    - Brian Doerksen
+    - ''
+    - 475
+    - ''
+    - '2014-11-14 10:27:51.245599'
+    - '2014-11-14 10:27:51.245599'
+    - 
+  - - 118
+    - There's A Sound On The Wind
+    - Copyright © 1978 Kingsway’s Thankyou Music
+    - Graham Kendrick
+    - ''
+    - 547
+    - ''
+    - '2014-11-14 10:31:45.550331'
+    - '2014-11-14 10:31:45.550331'
+    - 
+  - - 119
+    - Thank You For The Cross, Lord
+    - Copyright © 2000 Darlene Zschech/Hillsong Publishing/Kingsway Music
+    - Darlene Zschech
+    - ''
+    - 1528
+    - ''
+    - '2014-11-14 10:38:10.339122'
+    - '2014-11-14 10:38:10.339122'
+    - 
+  - - 120
+    - There is a Hope
+    - Copyright © 2007 Thankyou Music
+    - Stuart Townend & Mark Edwards
+    - ''
+    - 2558
+    - ''
+    - '2014-11-14 10:39:31.122985'
+    - '2014-11-14 10:39:31.122985'
+    - 
+  - - 121
+    - How Great Is Our God
+    - Copyright © 2004 sixsteps Music/worshiptogether.com songs/kingswaysongs.com/Alletrop
+      Music/CopyCare
+    - Chris Tomlin, Jesse Reeves & Ed Cash
+    - ''
+    - 2065
+    - ''
+    - '2014-11-14 10:42:18.986281'
+    - '2014-11-14 10:49:29.658857'
+    - 
+  - - 122
+    - Pour Out My Heart
+    - Copyright © 1994 Mercy/Vineyard Publishing/Adm. by CopyCare
+    - Craig Musseau
+    - ''
+    - 759
+    - ''
+    - '2014-11-14 10:44:17.664721'
+    - '2014-11-14 10:44:17.664721'
+    - 
+  - - 123
+    - I Will Sing Your Praises
+    - Copyright © 1984 Kingsway’s Thankyou Music
+    - Ian Smale
+    - ''
+    - 92
+    - ''
+    - '2014-11-14 10:46:35.332825'
+    - '2014-11-14 10:46:35.332825'
+    - 
+  - - 124
+    - Great In Power
+    - Copyright © 1998 Russell Fragar/Hillsong Publishing/Kingsway Music
+    - Russell Fragar
+    - http://www.worshiptogether.com/songs/songdetail.aspx?iid=1802603
+    - 1501
+    - http://www.worshiptogether.com/songs/songdetail.aspx?iid=1802603
+    - '2014-11-17 09:22:24.868289'
+    - '2014-11-17 09:22:24.868289'
+    - '2582339'
+  - - 125
+    - Lord Jesus, Here I Stand
+    - Copyright © 1990 Kingsway’s Thankyou Music
+    - Rae Ranford
+    - ''
+    - 358
+    - ''
+    - '2014-12-02 07:02:56.127503'
+    - '2014-12-02 07:02:56.127503'
+    - ''
+  - - 126
+    - Hosanna (I See The King Of Glory)
+    - Copyright © 2006 Hillsong Publishing/kingswaysongs.com
+    - Brooke Ligertwood (Brooke Fraser)
+    - ''
+    - 1900
+    - ''
+    - '2014-12-02 07:12:46.781027'
+    - '2014-12-03 07:25:34.388283'
+    - '4785835'
+  - - 127
+    - Still (Hide Me Now)
+    - Copyright © 2002 Hillsong Publishing/kingswaysongs.com
+    - Reuben Morgan
+    - ''
+    - 1837
+    - ''
+    - '2014-12-02 07:14:41.744561'
+    - '2014-12-02 07:14:41.744561'
+    - '3940963'
+  - - 128
+    - I Surrender
+    - Copyright © 1988 Word’s Spirit of Praise Music/Adm. by CopyCare
+    - Sue Rinaldi, Steve Bassett
+    - ''
+    - 1069
+    - ''
+    - '2014-12-02 07:17:09.992449'
+    - '2014-12-02 07:17:09.992449'
+    - '471793'
+  - - 129
+    - I Know Whom I Have Believed
+    - Public Domain
+    - Daniel Webster Whittle
+    - ''
+    - 220
+    - ''
+    - '2014-12-02 07:20:12.623952'
+    - '2014-12-02 07:20:12.623952'
+    - '2648060'
+  - - 130
+    - No Other God
+    - Copyright © 2006 Thankyou Music
+    - Paul Oakley
+    - ''
+    - 1962
+    - ''
+    - '2014-12-02 07:23:20.086164'
+    - '2014-12-02 07:23:20.086164'
+    - '4803078'
+  - - 131
+    - Faithful One
+    - Copyright © 1989 Mercy/Vineyard Publishing/Adm. by CopyCare
+    - Brian Doerksen
+    - ''
+    - 89
+    - ''
+    - '2014-12-02 07:25:14.185074'
+    - '2014-12-02 07:25:14.185074'
+    - '465840'
+  - - 132
+    - May The Mind Of Christ My Saviour
+    - Public Domain
+    - Kate Barclay Wilkinson
+    - ''
+    - 1448
+    - ''
+    - '2014-12-02 09:08:26.971789'
+    - '2014-12-02 09:08:26.971789'
+    - '2561484'
+  - - 133
+    - Look to the Skies
+    - Copyright © 1984 Thankyou Music
+    - Graham Kendrick
+    - ''
+    - 1422
+    - ''
+    - '2014-12-08 10:39:24.446980'
+    - '2014-12-08 10:39:24.446980'
+    - ''
+  - - 134
+    - Behold the Lamb
+    - Copyright © 2007 Thankyou Music
+    - Keith &  Kristyn Getty & Stuart Townend
+    - ''
+    - 1724
+    - ''
+    - '2014-12-08 10:41:09.196957'
+    - '2014-12-08 10:41:09.196957'
+    - ''
+  - - 135
+    - Alleluia Praise Ye The Lord
+    - Copyright © 1989 GMH Publishing
+    - Michael Carreira, Richard C. Miller
+    - ''
+    - 
+    - ''
+    - '2014-12-15 07:38:10.231691'
+    - '2014-12-15 07:38:10.231691'
+    - '217751'
+  - - 136
+    - Hope Was Born This Night
+    - Copyright © 2010 Dayspring Music, LLC (BMI) All rights reserved
+    - Ben McDonald, Dave Fry, Sidewalk Prophets
+    - ''
+    - 
+    - ''
+    - '2014-12-15 07:46:48.594864'
+    - '2014-12-15 07:46:48.594864'
+    - ''
+  - - 137
+    - Days of Elijah
+    - Copyright © 1997 Daybreak Music Ltd
+    - Robin Mark
+    - ''
+    - 1047
+    - ''
+    - '2014-12-15 07:51:00.672660'
+    - '2014-12-15 07:51:00.672660'
+    - '1537904'
+  - - 138
+    - What Can I Do
+    - 'Copyright © 2005 Integrity’s Hosanna! Music/Sovereign Music UK/Make Way Music '
+    - Graham Kendrick, Paul Baloche
+    - ''
+    - 2131
+    - ''
+    - '2014-12-15 07:52:35.096013'
+    - '2014-12-15 07:52:35.096013'
+    - '4554279'
+  - - 139
+    - All For You
+    - Copyright © 2008 Leadworship Songs/Integrity Worship Music/Make Way Music
+    - Paul Baloche, Graham Kendrick
+    - ''
+    - 2409
+    - ''
+    - '2014-12-15 07:53:58.326620'
+    - '2014-12-15 07:53:58.326620'
+    - '5490208'
+  - - 140
+    - Meekness And Majesty
+    - Copyright © 1986 Kingsway’s Thankyou Music
+    - Graham Kendrick
+    - ''
+    - 390
+    - ''
+    - '2014-12-15 08:48:00.295375'
+    - '2014-12-15 08:48:00.295375'
+    - '1400'
+  - - 141
+    - We Three Kings
+    - Public Domain
+    - John Henry Hopkins Jr.
+    - ''
+    - 
+    - ''
+    - '2014-12-15 09:22:43.696908'
+    - '2014-12-15 09:22:43.696908'
+    - '38002'
+  - - 142
+    - The Heart of Worship
+    - Copyright © 1997 Kingsway’s Thankyou Music
+    - Matt Redman
+    - ''
+    - 1113
+    - ''
+    - '2014-12-15 09:31:39.030396'
+    - '2014-12-15 09:31:39.030396'
+    - '2296522'
+
+---
+usages:
+  columns:
+  - id
+  - song_id
+  - service_id
+  - created_at
+  - updated_at
+  records: 
+  - - 1
+    - 30
+    - 1
+    - '2014-10-21 21:38:20.551005'
+    - '2014-10-21 21:38:20.551005'
+  - - 2
+    - 81
+    - 1
+    - '2014-10-21 21:38:20.564844'
+    - '2014-10-21 21:38:20.564844'
+  - - 3
+    - 80
+    - 1
+    - '2014-10-21 21:38:20.577998'
+    - '2014-10-21 21:38:20.577998'
+  - - 4
+    - 82
+    - 1
+    - '2014-10-21 21:38:20.591383'
+    - '2014-10-21 21:38:20.591383'
+  - - 5
+    - 74
+    - 1
+    - '2014-10-21 21:38:20.604611'
+    - '2014-10-21 21:38:20.604611'
+  - - 6
+    - 61
+    - 2
+    - '2014-10-21 21:38:53.829051'
+    - '2014-10-21 21:38:53.829051'
+  - - 7
+    - 60
+    - 2
+    - '2014-10-21 21:38:53.842489'
+    - '2014-10-21 21:38:53.842489'
+  - - 8
+    - 7
+    - 2
+    - '2014-10-21 21:38:53.856187'
+    - '2014-10-21 21:38:53.856187'
+  - - 9
+    - 74
+    - 2
+    - '2014-10-21 21:38:53.869375'
+    - '2014-10-21 21:38:53.869375'
+  - - 10
+    - 75
+    - 3
+    - '2014-10-21 21:40:11.146899'
+    - '2014-10-21 21:40:11.146899'
+  - - 11
+    - 79
+    - 3
+    - '2014-10-21 21:40:11.160036'
+    - '2014-10-21 21:40:11.160036'
+  - - 12
+    - 12
+    - 3
+    - '2014-10-21 21:40:11.173641'
+    - '2014-10-21 21:40:11.173641'
+  - - 13
+    - 76
+    - 3
+    - '2014-10-21 21:40:11.186938'
+    - '2014-10-21 21:40:11.186938'
+  - - 14
+    - 73
+    - 3
+    - '2014-10-21 21:40:11.202695'
+    - '2014-10-21 21:40:11.202695'
+  - - 15
+    - 77
+    - 3
+    - '2014-10-21 21:40:11.215512'
+    - '2014-10-21 21:40:11.215512'
+  - - 16
+    - 78
+    - 3
+    - '2014-10-21 21:40:11.229295'
+    - '2014-10-21 21:40:11.229295'
+  - - 17
+    - 69
+    - 4
+    - '2014-10-21 21:41:00.290756'
+    - '2014-10-21 21:41:00.290756'
+  - - 18
+    - 8
+    - 4
+    - '2014-10-21 21:41:00.305051'
+    - '2014-10-21 21:41:00.305051'
+  - - 19
+    - 70
+    - 4
+    - '2014-10-21 21:41:00.319233'
+    - '2014-10-21 21:41:00.319233'
+  - - 20
+    - 71
+    - 4
+    - '2014-10-21 21:41:00.332992'
+    - '2014-10-21 21:41:00.332992'
+  - - 21
+    - 72
+    - 4
+    - '2014-10-21 21:41:00.346963'
+    - '2014-10-21 21:41:00.346963'
+  - - 22
+    - 61
+    - 5
+    - '2014-10-21 21:42:28.828719'
+    - '2014-10-21 21:42:28.828719'
+  - - 23
+    - 65
+    - 5
+    - '2014-10-21 21:42:28.843392'
+    - '2014-10-21 21:42:28.843392'
+  - - 24
+    - 67
+    - 5
+    - '2014-10-21 21:42:28.857482'
+    - '2014-10-21 21:42:28.857482'
+  - - 26
+    - 62
+    - 5
+    - '2014-10-21 21:42:28.885907'
+    - '2014-10-21 21:42:28.885907'
+  - - 27
+    - 64
+    - 5
+    - '2014-10-21 21:42:28.899658'
+    - '2014-10-21 21:42:28.899658'
+  - - 28
+    - 63
+    - 5
+    - '2014-10-21 21:42:28.914290'
+    - '2014-10-21 21:42:28.914290'
+  - - 29
+    - 68
+    - 5
+    - '2014-10-21 21:42:28.928250'
+    - '2014-10-21 21:42:28.928250'
+  - - 30
+    - 60
+    - 6
+    - '2014-10-21 21:43:20.276164'
+    - '2014-10-21 21:43:20.276164'
+  - - 31
+    - 35
+    - 6
+    - '2014-10-21 21:43:20.291206'
+    - '2014-10-21 21:43:20.291206'
+  - - 32
+    - 36
+    - 6
+    - '2014-10-21 21:43:20.308675'
+    - '2014-10-21 21:43:20.308675'
+  - - 33
+    - 3
+    - 6
+    - '2014-10-21 21:43:20.324113'
+    - '2014-10-21 21:43:20.324113'
+  - - 34
+    - 54
+    - 7
+    - '2014-10-21 21:45:02.340541'
+    - '2014-10-21 21:45:02.340541'
+  - - 35
+    - 53
+    - 7
+    - '2014-10-21 21:45:02.354901'
+    - '2014-10-21 21:45:02.354901'
+  - - 36
+    - 55
+    - 7
+    - '2014-10-21 21:45:02.368904'
+    - '2014-10-21 21:45:02.368904'
+  - - 37
+    - 56
+    - 7
+    - '2014-10-21 21:45:02.383035'
+    - '2014-10-21 21:45:02.383035'
+  - - 38
+    - 52
+    - 7
+    - '2014-10-21 21:45:02.397755'
+    - '2014-10-21 21:45:02.397755'
+  - - 39
+    - 51
+    - 7
+    - '2014-10-21 21:45:02.411486'
+    - '2014-10-21 21:45:02.411486'
+  - - 40
+    - 58
+    - 8
+    - '2014-10-21 21:45:51.323784'
+    - '2014-10-21 21:45:51.323784'
+  - - 41
+    - 57
+    - 8
+    - '2014-10-21 21:45:51.338073'
+    - '2014-10-21 21:45:51.338073'
+  - - 42
+    - 13
+    - 8
+    - '2014-10-21 21:45:51.352061'
+    - '2014-10-21 21:45:51.352061'
+  - - 43
+    - 32
+    - 8
+    - '2014-10-21 21:45:51.365950'
+    - '2014-10-21 21:45:51.365950'
+  - - 44
+    - 59
+    - 8
+    - '2014-10-21 21:45:51.379875'
+    - '2014-10-21 21:45:51.379875'
+  - - 45
+    - 40
+    - 9
+    - '2014-10-21 21:47:20.710580'
+    - '2014-10-21 21:47:20.710580'
+  - - 46
+    - 43
+    - 9
+    - '2014-10-21 21:47:20.725676'
+    - '2014-10-21 21:47:20.725676'
+  - - 47
+    - 39
+    - 9
+    - '2014-10-21 21:47:20.741313'
+    - '2014-10-21 21:47:20.741313'
+  - - 48
+    - 44
+    - 9
+    - '2014-10-21 21:47:20.755756'
+    - '2014-10-21 21:47:20.755756'
+  - - 49
+    - 42
+    - 9
+    - '2014-10-21 21:47:20.769583'
+    - '2014-10-21 21:47:20.769583'
+  - - 50
+    - 45
+    - 9
+    - '2014-10-21 21:47:20.783522'
+    - '2014-10-21 21:47:20.783522'
+  - - 51
+    - 41
+    - 9
+    - '2014-10-21 21:47:20.797631'
+    - '2014-10-21 21:47:20.797631'
+  - - 52
+    - 50
+    - 10
+    - '2014-10-21 21:48:21.995504'
+    - '2014-10-21 21:48:21.995504'
+  - - 53
+    - 48
+    - 10
+    - '2014-10-21 21:48:22.012958'
+    - '2014-10-21 21:48:22.012958'
+  - - 54
+    - 19
+    - 10
+    - '2014-10-21 21:48:22.029337'
+    - '2014-10-21 21:48:22.029337'
+  - - 55
+    - 46
+    - 10
+    - '2014-10-21 21:48:22.043625'
+    - '2014-10-21 21:48:22.043625'
+  - - 56
+    - 49
+    - 10
+    - '2014-10-21 21:48:22.057973'
+    - '2014-10-21 21:48:22.057973'
+  - - 57
+    - 47
+    - 10
+    - '2014-10-21 21:48:22.073052'
+    - '2014-10-21 21:48:22.073052'
+  - - 58
+    - 4
+    - 11
+    - '2014-10-21 21:49:58.727507'
+    - '2014-10-21 21:49:58.727507'
+  - - 59
+    - 33
+    - 11
+    - '2014-10-21 21:49:58.741516'
+    - '2014-10-21 21:49:58.741516'
+  - - 60
+    - 10
+    - 11
+    - '2014-10-21 21:49:58.755452'
+    - '2014-10-21 21:49:58.755452'
+  - - 61
+    - 31
+    - 11
+    - '2014-10-21 21:49:58.769734'
+    - '2014-10-21 21:49:58.769734'
+  - - 62
+    - 32
+    - 11
+    - '2014-10-21 21:49:58.783785'
+    - '2014-10-21 21:49:58.783785'
+  - - 63
+    - 34
+    - 11
+    - '2014-10-21 21:49:58.797684'
+    - '2014-10-21 21:49:58.797684'
+  - - 64
+    - 35
+    - 12
+    - '2014-10-21 21:50:42.732884'
+    - '2014-10-21 21:50:42.732884'
+  - - 65
+    - 36
+    - 12
+    - '2014-10-21 21:50:42.747090'
+    - '2014-10-21 21:50:42.747090'
+  - - 66
+    - 37
+    - 12
+    - '2014-10-21 21:50:42.760652'
+    - '2014-10-21 21:50:42.760652'
+  - - 67
+    - 38
+    - 12
+    - '2014-10-21 21:50:42.774075'
+    - '2014-10-21 21:50:42.774075'
+  - - 68
+    - 17
+    - 13
+    - '2014-10-21 21:55:39.475310'
+    - '2014-10-21 21:55:39.475310'
+  - - 69
+    - 14
+    - 13
+    - '2014-10-21 21:55:39.489543'
+    - '2014-10-21 21:55:39.489543'
+  - - 70
+    - 12
+    - 13
+    - '2014-10-21 21:55:39.504120'
+    - '2014-10-21 21:55:39.504120'
+  - - 71
+    - 16
+    - 13
+    - '2014-10-21 21:55:39.518459'
+    - '2014-10-21 21:55:39.518459'
+  - - 72
+    - 13
+    - 13
+    - '2014-10-21 21:55:39.532548'
+    - '2014-10-21 21:55:39.532548'
+  - - 73
+    - 15
+    - 13
+    - '2014-10-21 21:55:39.545950'
+    - '2014-10-21 21:55:39.545950'
+  - - 74
+    - 11
+    - 13
+    - '2014-10-21 21:55:39.560435'
+    - '2014-10-21 21:55:39.560435'
+  - - 75
+    - 9
+    - 14
+    - '2014-10-21 21:56:27.854814'
+    - '2014-10-21 21:56:27.854814'
+  - - 76
+    - 5
+    - 14
+    - '2014-10-21 21:56:27.869792'
+    - '2014-10-21 21:56:27.869792'
+  - - 77
+    - 19
+    - 14
+    - '2014-10-21 21:56:27.883651'
+    - '2014-10-21 21:56:27.883651'
+  - - 78
+    - 20
+    - 14
+    - '2014-10-21 21:56:27.897128'
+    - '2014-10-21 21:56:27.897128'
+  - - 79
+    - 18
+    - 14
+    - '2014-10-21 21:56:27.911068'
+    - '2014-10-21 21:56:27.911068'
+  - - 80
+    - 27
+    - 15
+    - '2014-10-21 21:57:19.376412'
+    - '2014-10-21 21:57:19.376412'
+  - - 81
+    - 25
+    - 15
+    - '2014-10-21 21:57:19.391056'
+    - '2014-10-21 21:57:19.391056'
+  - - 82
+    - 24
+    - 15
+    - '2014-10-21 21:57:19.407161'
+    - '2014-10-21 21:57:19.407161'
+  - - 83
+    - 26
+    - 15
+    - '2014-10-21 21:57:19.421022'
+    - '2014-10-21 21:57:19.421022'
+  - - 84
+    - 29
+    - 15
+    - '2014-10-21 21:57:19.435058'
+    - '2014-10-21 21:57:19.435058'
+  - - 85
+    - 28
+    - 15
+    - '2014-10-21 21:57:19.449109'
+    - '2014-10-21 21:57:19.449109'
+  - - 86
+    - 6
+    - 16
+    - '2014-10-21 21:58:20.558961'
+    - '2014-10-21 21:58:20.558961'
+  - - 87
+    - 22
+    - 16
+    - '2014-10-21 21:58:20.574425'
+    - '2014-10-21 21:58:20.574425'
+  - - 88
+    - 21
+    - 16
+    - '2014-10-21 21:58:20.588207'
+    - '2014-10-21 21:58:20.588207'
+  - - 89
+    - 23
+    - 16
+    - '2014-10-21 21:58:20.603121'
+    - '2014-10-21 21:58:20.603121'
+  - - 90
+    - 1
+    - 16
+    - '2014-10-21 21:58:20.617368'
+    - '2014-10-21 21:58:20.617368'
+  - - 91
+    - 4
+    - 17
+    - '2014-10-22 08:04:10.152269'
+    - '2014-10-22 08:04:10.152269'
+  - - 92
+    - 83
+    - 17
+    - '2014-10-22 08:04:10.167672'
+    - '2014-10-22 08:04:10.167672'
+  - - 93
+    - 84
+    - 17
+    - '2014-10-22 08:04:10.181490'
+    - '2014-10-22 08:04:10.181490'
+  - - 94
+    - 85
+    - 17
+    - '2014-10-22 08:04:10.195710'
+    - '2014-10-22 08:04:10.195710'
+  - - 95
+    - 86
+    - 17
+    - '2014-10-22 08:04:10.210076'
+    - '2014-10-22 08:04:10.210076'
+  - - 96
+    - 87
+    - 17
+    - '2014-10-22 08:04:10.224423'
+    - '2014-10-22 08:04:10.224423'
+  - - 97
+    - 88
+    - 17
+    - '2014-10-22 08:04:10.238380'
+    - '2014-10-22 08:04:10.238380'
+  - - 98
+    - 89
+    - 17
+    - '2014-10-22 08:04:10.252299'
+    - '2014-10-22 08:04:10.252299'
+  - - 99
+    - 92
+    - 18
+    - '2014-10-22 08:23:41.488278'
+    - '2014-10-22 08:23:41.488278'
+  - - 100
+    - 90
+    - 18
+    - '2014-10-22 08:23:41.503847'
+    - '2014-10-22 08:23:41.503847'
+  - - 101
+    - 91
+    - 18
+    - '2014-10-22 08:23:41.518592'
+    - '2014-10-22 08:23:41.518592'
+  - - 102
+    - 93
+    - 18
+    - '2014-10-22 08:23:41.532220'
+    - '2014-10-22 08:23:41.532220'
+  - - 103
+    - 94
+    - 18
+    - '2014-10-22 08:23:41.546397'
+    - '2014-10-22 08:23:41.546397'
+  - - 104
+    - 95
+    - 18
+    - '2014-10-22 08:23:41.560360'
+    - '2014-10-22 08:23:41.560360'
+  - - 128
+    - 0
+    - 25
+    - '2014-10-27 20:09:03.760841'
+    - '2014-10-27 20:09:03.760841'
+  - - 129
+    - 80
+    - 26
+    - '2014-10-27 20:13:06.088404'
+    - '2014-10-27 20:13:06.088404'
+  - - 130
+    - 81
+    - 26
+    - '2014-10-27 20:13:06.106473'
+    - '2014-10-27 20:13:06.106473'
+  - - 131
+    - 44
+    - 26
+    - '2014-10-27 20:13:06.122282'
+    - '2014-10-27 20:13:06.122282'
+  - - 132
+    - 38
+    - 26
+    - '2014-10-27 20:13:06.137891'
+    - '2014-10-27 20:13:06.137891'
+  - - 133
+    - 96
+    - 26
+    - '2014-10-27 20:13:06.195119'
+    - '2014-10-27 20:13:06.195119'
+  - - 134
+    - 97
+    - 27
+    - '2014-10-28 07:03:47.414839'
+    - '2014-10-28 07:03:47.414839'
+  - - 135
+    - 35
+    - 27
+    - '2014-10-28 07:03:47.429116'
+    - '2014-10-28 07:03:47.429116'
+  - - 136
+    - 71
+    - 27
+    - '2014-10-28 07:03:47.442433'
+    - '2014-10-28 07:03:47.442433'
+  - - 137
+    - 98
+    - 27
+    - '2014-10-28 07:03:47.456009'
+    - '2014-10-28 07:03:47.456009'
+  - - 138
+    - 99
+    - 28
+    - '2014-11-14 09:41:04.644340'
+    - '2014-11-14 09:41:04.644340'
+  - - 139
+    - 90
+    - 28
+    - '2014-11-14 09:41:04.660062'
+    - '2014-11-14 09:41:04.660062'
+  - - 140
+    - 100
+    - 28
+    - '2014-11-14 09:41:04.675995'
+    - '2014-11-14 09:41:04.675995'
+  - - 141
+    - 41
+    - 28
+    - '2014-11-14 09:41:04.690664'
+    - '2014-12-02 07:47:30.737359'
+  - - 142
+    - 77
+    - 28
+    - '2014-11-14 09:41:04.705310'
+    - '2014-11-14 09:41:04.705310'
+  - - 143
+    - 98
+    - 29
+    - '2014-11-14 09:50:55.610493'
+    - '2014-11-14 09:50:55.610493'
+  - - 144
+    - 102
+    - 29
+    - '2014-11-14 09:50:55.626034'
+    - '2014-11-14 09:50:55.626034'
+  - - 145
+    - 35
+    - 29
+    - '2014-11-14 09:50:55.642111'
+    - '2014-11-14 09:50:55.642111'
+  - - 146
+    - 103
+    - 29
+    - '2014-11-14 09:50:55.657354'
+    - '2014-11-14 09:50:55.657354'
+  - - 147
+    - 76
+    - 29
+    - '2014-11-14 09:50:55.672429'
+    - '2014-11-14 09:50:55.672429'
+  - - 148
+    - 47
+    - 29
+    - '2014-11-14 09:50:55.687262'
+    - '2014-11-14 09:50:55.687262'
+  - - 149
+    - 69
+    - 30
+    - '2014-11-14 10:02:07.632420'
+    - '2014-11-14 10:02:07.632420'
+  - - 150
+    - 104
+    - 30
+    - '2014-11-14 10:02:07.647994'
+    - '2014-11-14 10:02:07.647994'
+  - - 151
+    - 105
+    - 30
+    - '2014-11-14 10:02:07.664247'
+    - '2014-11-14 10:02:07.664247'
+  - - 152
+    - 106
+    - 30
+    - '2014-11-14 10:02:07.679873'
+    - '2014-11-14 10:02:07.679873'
+  - - 153
+    - 6
+    - 30
+    - '2014-11-14 10:02:07.695502'
+    - '2014-11-14 10:02:07.695502'
+  - - 154
+    - 107
+    - 30
+    - '2014-11-14 10:02:07.710935'
+    - '2014-11-14 10:02:07.710935'
+  - - 155
+    - 3
+    - 30
+    - '2014-11-14 10:02:07.726328'
+    - '2014-11-14 10:02:07.726328'
+  - - 156
+    - 108
+    - 31
+    - '2014-11-14 10:07:14.426310'
+    - '2014-11-14 10:07:14.426310'
+  - - 157
+    - 97
+    - 31
+    - '2014-11-14 10:07:14.438582'
+    - '2014-11-14 10:07:14.438582'
+  - - 158
+    - 35
+    - 31
+    - '2014-11-14 10:07:14.453316'
+    - '2014-11-14 10:07:14.453316'
+  - - 159
+    - 85
+    - 31
+    - '2014-11-14 10:07:14.465999'
+    - '2014-11-14 10:07:14.465999'
+  - - 160
+    - 109
+    - 31
+    - '2014-11-14 10:07:14.478666'
+    - '2014-11-14 10:07:14.478666'
+  - - 161
+    - 72
+    - 31
+    - '2014-11-14 10:07:14.630842'
+    - '2014-11-14 10:07:14.630842'
+  - - 162
+    - 110
+    - 32
+    - '2014-11-14 10:11:53.323652'
+    - '2014-11-14 10:11:53.323652'
+  - - 163
+    - 6
+    - 32
+    - '2014-11-14 10:11:53.338161'
+    - '2014-11-14 10:11:53.338161'
+  - - 164
+    - 111
+    - 32
+    - '2014-11-14 10:11:53.352032'
+    - '2014-11-14 10:11:53.352032'
+  - - 165
+    - 103
+    - 32
+    - '2014-11-14 10:11:53.365571'
+    - '2014-11-14 10:11:53.365571'
+  - - 166
+    - 4
+    - 32
+    - '2014-11-14 10:11:53.378903'
+    - '2014-11-14 10:11:53.378903'
+  - - 167
+    - 10
+    - 33
+    - '2014-11-14 10:14:12.740913'
+    - '2014-11-14 10:14:12.740913'
+  - - 168
+    - 8
+    - 33
+    - '2014-11-14 10:14:12.754741'
+    - '2014-11-14 10:14:12.754741'
+  - - 169
+    - 112
+    - 33
+    - '2014-11-14 10:14:12.768578'
+    - '2014-11-14 10:14:12.768578'
+  - - 170
+    - 3
+    - 33
+    - '2014-11-14 10:14:12.782423'
+    - '2014-11-14 10:14:12.782423'
+  - - 171
+    - 81
+    - 33
+    - '2014-11-14 10:14:12.797363'
+    - '2014-11-14 10:14:12.797363'
+  - - 172
+    - 69
+    - 34
+    - '2014-11-14 10:22:40.146415'
+    - '2014-11-14 10:22:40.146415'
+  - - 173
+    - 5
+    - 34
+    - '2014-11-14 10:22:40.163235'
+    - '2014-11-14 10:22:40.163235'
+  - - 174
+    - 44
+    - 34
+    - '2014-11-14 10:22:40.179558'
+    - '2014-11-14 10:22:40.179558'
+  - - 175
+    - 113
+    - 34
+    - '2014-11-14 10:22:40.195667'
+    - '2014-11-14 10:22:40.195667'
+  - - 176
+    - 62
+    - 34
+    - '2014-11-14 10:22:40.212309'
+    - '2014-11-14 10:22:40.212309'
+  - - 177
+    - 114
+    - 34
+    - '2014-11-14 10:22:40.228444'
+    - '2014-11-14 10:22:40.228444'
+  - - 178
+    - 115
+    - 34
+    - '2014-11-14 10:22:40.244597'
+    - '2014-11-14 10:22:40.244597'
+  - - 179
+    - 89
+    - 35
+    - '2014-11-14 10:28:18.530442'
+    - '2014-11-14 10:28:18.530442'
+  - - 180
+    - 37
+    - 35
+    - '2014-11-14 10:28:18.546422'
+    - '2014-11-14 10:28:18.546422'
+  - - 181
+    - 46
+    - 35
+    - '2014-11-14 10:28:18.561696'
+    - '2014-11-14 10:28:18.561696'
+  - - 182
+    - 116
+    - 35
+    - '2014-11-14 10:28:18.577053'
+    - '2014-11-14 10:28:18.577053'
+  - - 183
+    - 117
+    - 35
+    - '2014-11-14 10:28:18.592879'
+    - '2014-11-14 10:28:18.592879'
+  - - 184
+    - 118
+    - 36
+    - '2014-11-14 10:40:15.970846'
+    - '2014-11-14 10:40:15.970846'
+  - - 185
+    - 1
+    - 36
+    - '2014-11-14 10:40:15.987628'
+    - '2014-11-14 10:40:15.987628'
+  - - 186
+    - 119
+    - 36
+    - '2014-11-14 10:40:16.003802'
+    - '2014-11-14 10:40:16.003802'
+  - - 187
+    - 60
+    - 36
+    - '2014-11-14 10:40:16.020072'
+    - '2014-11-14 10:40:16.020072'
+  - - 188
+    - 120
+    - 36
+    - '2014-11-14 10:40:16.036547'
+    - '2014-11-14 10:40:16.036547'
+  - - 189
+    - 108
+    - 37
+    - '2014-11-14 10:47:01.080461'
+    - '2014-11-14 10:47:01.080461'
+  - - 190
+    - 121
+    - 37
+    - '2014-11-14 10:47:01.096575'
+    - '2014-11-14 10:47:01.096575'
+  - - 191
+    - 22
+    - 37
+    - '2014-11-14 10:47:01.112416'
+    - '2014-11-14 10:47:01.112416'
+  - - 192
+    - 122
+    - 37
+    - '2014-11-14 10:47:01.128585'
+    - '2014-11-14 10:47:01.128585'
+  - - 193
+    - 19
+    - 37
+    - '2014-11-14 10:47:01.144827'
+    - '2014-11-14 10:47:01.144827'
+  - - 194
+    - 123
+    - 37
+    - '2014-11-14 10:47:01.161045'
+    - '2014-11-14 10:47:01.161045'
+  - - 195
+    - 6
+    - 38
+    - '2014-11-16 18:49:48.755005'
+    - '2014-11-16 18:49:48.755005'
+  - - 196
+    - 121
+    - 38
+    - '2014-11-16 18:49:48.768466'
+    - '2014-11-16 18:49:48.768466'
+  - - 197
+    - 1
+    - 38
+    - '2014-11-16 18:49:48.824768'
+    - '2014-11-16 18:49:48.824768'
+  - - 198
+    - 38
+    - 38
+    - '2014-11-16 18:49:48.837587'
+    - '2014-11-16 18:49:48.837587'
+  - - 199
+    - 124
+    - 39
+    - '2014-11-17 09:28:14.725031'
+    - '2014-11-17 09:28:14.725031'
+  - - 200
+    - 121
+    - 39
+    - '2014-11-17 09:28:14.738569'
+    - '2014-11-17 09:28:14.738569'
+  - - 201
+    - 38
+    - 39
+    - '2014-11-17 09:28:14.751781'
+    - '2014-11-17 09:28:14.751781'
+  - - 202
+    - 57
+    - 39
+    - '2014-11-17 09:28:14.765611'
+    - '2014-11-17 09:28:14.765611'
+  - - 203
+    - 3
+    - 39
+    - '2014-11-17 09:28:14.781638'
+    - '2014-11-17 09:28:14.781638'
+  - - 204
+    - 70
+    - 39
+    - '2014-11-17 09:28:14.796123'
+    - '2014-11-17 09:28:14.796123'
+  - - 205
+    - 33
+    - 42
+    - '2014-11-27 21:47:10.591696'
+    - '2014-11-27 21:47:10.591696'
+  - - 206
+    - 4
+    - 42
+    - '2014-11-27 21:47:10.605613'
+    - '2014-11-27 21:47:10.605613'
+  - - 207
+    - 121
+    - 42
+    - '2014-11-27 21:47:10.618816'
+    - '2014-11-27 21:47:10.618816'
+  - - 208
+    - 24
+    - 42
+    - '2014-11-27 21:47:10.631813'
+    - '2014-11-27 21:47:10.631813'
+  - - 209
+    - 106
+    - 43
+    - '2014-12-02 07:03:20.903770'
+    - '2014-12-02 07:03:20.903770'
+  - - 210
+    - 104
+    - 43
+    - '2014-12-02 07:03:20.920375'
+    - '2014-12-02 07:03:20.920375'
+  - - 211
+    - 65
+    - 43
+    - '2014-12-02 07:03:20.936822'
+    - '2014-12-02 07:03:20.936822'
+  - - 212
+    - 48
+    - 43
+    - '2014-12-02 07:03:20.953175'
+    - '2014-12-02 07:03:20.953175'
+  - - 213
+    - 29
+    - 43
+    - '2014-12-02 07:03:20.969434'
+    - '2014-12-02 07:03:20.969434'
+  - - 214
+    - 125
+    - 43
+    - '2014-12-02 07:03:20.985913'
+    - '2014-12-02 07:03:20.985913'
+  - - 215
+    - 126
+    - 44
+    - '2014-12-02 07:20:57.804236'
+    - '2014-12-02 07:20:57.804236'
+  - - 216
+    - 45
+    - 44
+    - '2014-12-02 07:20:57.820500'
+    - '2014-12-02 07:20:57.820500'
+  - - 217
+    - 77
+    - 44
+    - '2014-12-02 07:20:57.836951'
+    - '2014-12-02 07:20:57.836951'
+  - - 218
+    - 127
+    - 44
+    - '2014-12-02 07:20:57.851434'
+    - '2014-12-02 07:20:57.851434'
+  - - 219
+    - 128
+    - 44
+    - '2014-12-02 07:20:57.864759'
+    - '2014-12-02 07:20:57.864759'
+  - - 220
+    - 129
+    - 44
+    - '2014-12-02 07:20:57.878059'
+    - '2014-12-02 07:20:57.878059'
+  - - 221
+    - 5
+    - 44
+    - '2014-12-02 07:20:57.891592'
+    - '2014-12-02 07:20:57.891592'
+  - - 222
+    - 130
+    - 45
+    - '2014-12-02 09:08:48.688051'
+    - '2014-12-02 09:08:48.688051'
+  - - 223
+    - 131
+    - 45
+    - '2014-12-02 09:08:48.703656'
+    - '2014-12-02 09:08:48.703656'
+  - - 224
+    - 53
+    - 45
+    - '2014-12-02 09:08:48.719177'
+    - '2014-12-02 09:08:48.719177'
+  - - 225
+    - 65
+    - 45
+    - '2014-12-02 09:08:48.732740'
+    - '2014-12-02 09:08:48.732740'
+  - - 226
+    - 45
+    - 45
+    - '2014-12-02 09:08:48.745863'
+    - '2014-12-02 09:08:48.745863'
+  - - 227
+    - 41
+    - 45
+    - '2014-12-02 09:08:48.761731'
+    - '2014-12-02 09:08:48.761731'
+  - - 228
+    - 132
+    - 45
+    - '2014-12-02 09:08:48.777499'
+    - '2014-12-02 09:08:48.777499'
+  - - 229
+    - 32
+    - 46
+    - '2014-12-15 07:48:28.793823'
+    - '2014-12-15 07:48:28.793823'
+  - - 230
+    - 68
+    - 46
+    - '2014-12-15 07:48:28.808908'
+    - '2014-12-15 07:48:28.808908'
+  - - 231
+    - 136
+    - 46
+    - '2014-12-15 07:48:28.822149'
+    - '2014-12-15 07:48:28.822149'
+  - - 232
+    - 134
+    - 46
+    - '2014-12-15 07:48:28.836041'
+    - '2014-12-15 07:48:28.836041'
+  - - 233
+    - 133
+    - 46
+    - '2014-12-15 07:48:28.849993'
+    - '2014-12-15 07:48:28.849993'
+  - - 234
+    - 72
+    - 46
+    - '2014-12-15 07:48:28.863522'
+    - '2014-12-15 07:48:28.863522'
+  - - 235
+    - 137
+    - 47
+    - '2014-12-15 08:16:00.208711'
+    - '2014-12-15 08:16:00.208711'
+  - - 236
+    - 138
+    - 47
+    - '2014-12-15 08:16:00.222954'
+    - '2014-12-15 08:16:00.222954'
+  - - 237
+    - 139
+    - 47
+    - '2014-12-15 08:16:00.238778'
+    - '2014-12-15 08:16:00.238778'
+  - - 238
+    - 42
+    - 47
+    - '2014-12-15 08:16:00.253497'
+    - '2014-12-15 08:16:00.253497'
+  - - 239
+    - 16
+    - 47
+    - '2014-12-15 08:16:00.267833'
+    - '2014-12-15 08:16:00.267833'
+  - - 240
+    - 126
+    - 47
+    - '2014-12-15 08:16:00.282273'
+    - '2014-12-15 08:16:00.282273'
+  - - 241
+    - 137
+    - 48
+    - '2014-12-15 08:55:54.115703'
+    - '2014-12-15 08:55:54.115703'
+  - - 242
+    - 44
+    - 48
+    - '2014-12-15 08:55:54.130787'
+    - '2014-12-15 08:55:54.130787'
+  - - 243
+    - 7
+    - 48
+    - '2014-12-15 08:55:54.144928'
+    - '2014-12-15 08:55:54.144928'
+  - - 244
+    - 52
+    - 48
+    - '2014-12-15 08:55:54.157987'
+    - '2014-12-15 08:55:54.157987'
+  - - 245
+    - 140
+    - 48
+    - '2014-12-15 08:55:54.172250'
+    - '2014-12-15 08:55:54.172250'
+  - - 246
+    - 102
+    - 48
+    - '2014-12-15 08:55:54.185603'
+    - '2014-12-15 08:55:54.185603'
+  - - 247
+    - 22
+    - 49
+    - '2014-12-15 09:32:23.091420'
+    - '2014-12-15 09:32:23.091420'
+  - - 248
+    - 141
+    - 49
+    - '2014-12-15 09:32:23.106176'
+    - '2014-12-15 09:32:23.106176'
+  - - 249
+    - 113
+    - 49
+    - '2014-12-15 09:32:23.119646'
+    - '2014-12-15 09:32:23.119646'
+  - - 250
+    - 19
+    - 49
+    - '2014-12-15 09:32:23.134406'
+    - '2014-12-15 09:32:23.134406'
+  - - 251
+    - 142
+    - 49
+    - '2014-12-15 09:32:23.148176'
+    - '2014-12-15 09:32:23.148176'
+
+---
+akas:
+  columns:
+  - id
+  - song_id
+  - search_text
+  - display_text
+  - created_at
+  - updated_at
+  records: 
+  - - 1
+    - 1
+    - in christ alone
+    - In Christ Alone
+    - '2014-10-24 11:38:31.584035'
+    - '2014-10-24 11:38:31.584035'
+  - - 2
+    - 2
+    - abide with me
+    - Abide With Me
+    - '2014-10-24 11:38:31.603062'
+    - '2014-10-24 11:38:31.603062'
+  - - 3
+    - 3
+    - speak o lord
+    - Speak, O Lord
+    - '2014-10-24 11:38:31.619310'
+    - '2014-10-24 11:38:31.619310'
+  - - 4
+    - 4
+    - how deep
+    - How Deep
+    - '2014-10-24 11:38:31.635328'
+    - '2014-10-24 11:38:31.635328'
+  - - 5
+    - 5
+    - endless praises
+    - Endless Praises
+    - '2014-10-24 11:38:31.650914'
+    - '2014-10-24 11:38:31.650914'
+  - - 6
+    - 6
+    - 10000 reasons
+    - 10,000 Reasons
+    - '2014-10-24 11:38:31.664071'
+    - '2014-10-24 11:38:31.664071'
+  - - 7
+    - 6
+    - bless the lord oh my soul
+    - Bless the Lord (10,000 Reasons)
+    - '2014-10-24 11:38:31.676629'
+    - '2014-10-24 11:38:31.676629'
+  - - 8
+    - 7
+    - god immortal
+    - God Immortal
+    - '2014-10-24 11:38:31.689155'
+    - '2014-10-24 11:38:31.689155'
+  - - 9
+    - 8
+    - how deep the father’s love for us
+    - How Deep The Father’s Love For Us
+    - '2014-10-24 11:38:31.704121'
+    - '2014-10-24 11:38:31.704121'
+  - - 10
+    - 9
+    - cornerstone
+    - Cornerstone
+    - '2014-10-24 11:38:31.719031'
+    - '2014-10-24 11:38:31.719031'
+  - - 11
+    - 10
+    - let your kingdom come
+    - Let Your Kingdom Come
+    - '2014-10-24 11:38:31.732517'
+    - '2014-10-24 11:38:31.732517'
+  - - 12
+    - 11
+    - salvation belongs to our god
+    - Salvation Belongs to our God
+    - '2014-10-24 11:38:31.746513'
+    - '2014-10-24 11:38:31.746513'
+  - - 13
+    - 12
+    - jesus is lord
+    - Jesus is Lord
+    - '2014-10-24 11:38:31.759813'
+    - '2014-10-24 11:38:31.759813'
+  - - 14
+    - 13
+    - loved before the dawn of time
+    - Loved Before the Dawn of Time
+    - '2014-10-24 11:38:31.773140'
+    - '2014-10-24 11:38:31.773140'
+  - - 15
+    - 13
+    - salvations song
+    - Salvation's Song (Loved Before ...)
+    - '2014-10-24 11:38:31.788224'
+    - '2014-10-24 11:38:31.788224'
+  - - 16
+    - 14
+    - as the deer
+    - As the Deer
+    - '2014-10-24 11:38:31.804330'
+    - '2014-10-24 11:38:31.804330'
+  - - 17
+    - 15
+    - o sacred king
+    - O Sacred King
+    - '2014-10-24 11:38:31.820490'
+    - '2014-10-24 11:38:31.820490'
+  - - 18
+    - 16
+    - love divine all loves excelling
+    - Love Divine, All Loves Excelling
+    - '2014-10-24 11:38:31.835942'
+    - '2014-10-24 11:38:31.835942'
+  - - 19
+    - 17
+    - amazing grace
+    - Amazing Grace
+    - '2014-10-24 11:38:31.851959'
+    - '2014-10-24 11:38:31.851959'
+  - - 20
+    - 18
+    - your blood speaks a better word
+    - Your Blood Speaks a Better Word
+    - '2014-10-24 11:38:31.867495'
+    - '2014-10-24 11:38:31.867495'
+  - - 21
+    - 18
+    - nothing but the blood
+    - Nothing But th... (Your Blood Speaks ...)
+    - '2014-10-24 11:38:31.883580'
+    - '2014-10-24 11:38:31.883580'
+  - - 22
+    - 19
+    - here i am to worship
+    - Here I Am to Worship (Light of the W...)
+    - '2014-10-24 11:38:31.898506'
+    - '2014-10-24 11:38:31.898506'
+  - - 23
+    - 19
+    - light of the world
+    - Light of the World
+    - '2014-10-24 11:38:31.914086'
+    - '2014-10-24 11:38:31.914086'
+  - - 24
+    - 20
+    - we have seen your glory
+    - We have seen your glory
+    - '2014-10-24 11:38:31.929258'
+    - '2014-10-24 11:38:31.929258'
+  - - 25
+    - 21
+    - create in me a clean heart o god
+    - Create in me a clean heart, O God
+    - '2014-10-24 11:38:31.944491'
+    - '2014-10-24 11:38:31.944491'
+  - - 26
+    - 22
+    - blessing and honour
+    - Blessing and Honour
+    - '2014-10-24 11:38:31.960058'
+    - '2014-10-24 11:38:31.960058'
+  - - 27
+    - 23
+    - hark the herald angels sing
+    - Hark the Herald Angels Sing
+    - '2014-10-24 11:38:31.975633'
+    - '2014-10-24 11:38:31.975633'
+  - - 28
+    - 24
+    - o lord our lord how majestic
+    - O Lord, Our Lord (How Majestic is Yo...)
+    - '2014-10-24 11:38:31.991230'
+    - '2014-10-24 11:38:31.991230'
+  - - 29
+    - 24
+    - how majestic is your name
+    - How Majestic is Yo... (O Lord, Our Lord)
+    - '2014-10-24 11:38:32.006850'
+    - '2014-10-24 11:38:32.006850'
+  - - 30
+    - 25
+    - father into your courts i will enter
+    - Father Into Your Courts I Will Enter
+    - '2014-10-24 11:38:32.022613'
+    - '2014-10-24 11:38:32.022613'
+  - - 31
+    - 26
+    - standing in your presence
+    - Standing in Your Presence
+    - '2014-10-24 11:38:32.038444'
+    - '2014-10-24 11:38:32.038444'
+  - - 32
+    - 27
+    - beautiful lord wonderful saviour
+    - Beautiful Lord, Wonderful Saviour
+    - '2014-10-24 11:38:32.054968'
+    - '2014-10-24 11:38:32.054968'
+  - - 33
+    - 28
+    - your will not mine
+    - Your Will, Not Mine
+    - '2014-10-24 11:38:32.071475'
+    - '2014-10-24 11:38:32.071475'
+  - - 34
+    - 29
+    - tell out my soul
+    - Tell Out, My Soul
+    - '2014-10-24 11:38:32.087472'
+    - '2014-10-24 11:38:32.087472'
+  - - 35
+    - 30
+    - be still my soul
+    - Be Still My Soul
+    - '2014-10-24 11:38:32.103455'
+    - '2014-10-24 11:38:32.103455'
+  - - 36
+    - 31
+    - my soul finds rest in god alone
+    - My Soul Finds Rest in God Alone
+    - '2014-10-24 11:38:32.120896'
+    - '2014-10-24 11:38:32.120896'
+  - - 37
+    - 31
+    - psalm 62
+    - Psalm 62 (My Soul Finds Rest in God Alone)
+    - '2014-10-24 11:38:32.136906'
+    - '2014-10-24 11:38:32.136906'
+  - - 38
+    - 32
+    - sing to the king
+    - Sing To The King
+    - '2014-10-24 11:38:32.152830'
+    - '2014-10-24 11:38:32.152830'
+  - - 39
+    - 33
+    - how firm a foundation
+    - How Firm a Foundation
+    - '2014-10-24 11:38:32.169289'
+    - '2014-10-24 11:38:32.169289'
+  - - 40
+    - 34
+    - you alone can rescue
+    - You Alone Can Rescue
+    - '2014-10-24 11:38:32.188157'
+    - '2014-10-24 11:38:32.188157'
+  - - 41
+    - 34
+    - who o lord could save themselves
+    - Who, O Lord (You Alone Can Rescue)
+    - '2014-10-24 11:38:32.205181'
+    - '2014-10-24 11:38:32.205181'
+  - - 42
+    - 35
+    - before the throne of god above
+    - Before the Throne of God Above
+    - '2014-10-24 11:38:32.221472'
+    - '2014-10-24 11:38:32.221472'
+  - - 43
+    - 36
+    - come thou fount of every blessing
+    - Come Thou Fount of Every Blessing
+    - '2014-10-24 11:38:32.237273'
+    - '2014-10-24 11:38:32.237273'
+  - - 44
+    - 37
+    - jesus the name high over all
+    - Jesus The Name High Over All
+    - '2014-10-24 11:38:32.253391'
+    - '2014-10-24 11:38:32.253391'
+  - - 45
+    - 38
+    - show us christ
+    - Show Us Christ
+    - '2014-10-24 11:38:32.269286'
+    - '2014-10-24 11:38:32.269286'
+  - - 46
+    - 39
+    - for all youve done
+    - For All You've Done
+    - '2014-10-24 11:38:32.285252'
+    - '2014-10-24 11:38:32.285252'
+  - - 47
+    - 39
+    - my saviour redeemer
+    - My Saviour, Redeemer (For All You've...)
+    - '2014-10-24 11:38:32.300677'
+    - '2014-10-24 11:38:32.300677'
+  - - 48
+    - 40
+    - a father to the fatherless
+    - A Father to the Fatherless
+    - '2014-10-24 11:38:32.316453'
+    - '2014-10-24 11:38:32.316453'
+  - - 49
+    - 41
+    - nothing in this world
+    - Nothing in this World
+    - '2014-10-24 11:38:32.332216'
+    - '2014-10-24 11:38:32.332216'
+  - - 50
+    - 42
+    - hungry i come to you
+    - Hungry, I Come to You
+    - '2014-10-24 11:38:32.348449'
+    - '2014-10-24 11:38:32.348449'
+  - - 51
+    - 43
+    - at the foot of the cross
+    - At The Foot of the Cross
+    - '2014-10-24 11:38:32.365053'
+    - '2014-10-24 11:38:32.365053'
+  - - 52
+    - 44
+    - here i am majesty
+    - Here I Am (Majesty)
+    - '2014-10-24 11:38:32.380905'
+    - '2014-12-15 08:41:54.403445'
+  - - 53
+    - 45
+    - merciful god
+    - Merciful God
+    - '2014-10-24 11:38:32.396431'
+    - '2014-10-24 11:38:32.396431'
+  - - 54
+    - 46
+    - there is a redeemer
+    - There is a Redeemer
+    - '2014-10-24 11:38:32.412583'
+    - '2014-10-24 11:38:32.412583'
+  - - 55
+    - 47
+    - you are the holy one
+    - You are the Holy One
+    - '2014-10-24 11:38:32.428460'
+    - '2014-10-24 11:38:32.428460'
+  - - 56
+    - 48
+    - jesus gods righteousness revealed
+    - Jesus, God's Righteousness Revealed
+    - '2014-10-24 11:38:32.444285'
+    - '2014-10-24 11:38:32.444285'
+  - - 57
+    - 49
+    - you laid aside your majesty
+    - You Laid Aside Your Majesty
+    - '2014-10-24 11:38:32.461248'
+    - '2014-10-24 11:38:32.461248'
+  - - 58
+    - 49
+    - i really want to worship you my lord
+    - I Really Want to W... (You Laid Asid...)
+    - '2014-10-24 11:38:32.476658'
+    - '2014-10-24 11:38:32.476658'
+  - - 59
+    - 50
+    - i will offer up my life
+    - I Will Offer Up My Life
+    - '2014-10-24 11:38:32.492135'
+    - '2014-10-24 11:38:32.492135'
+  - - 60
+    - 51
+    - no eye has seen
+    - No Eye Has Seen
+    - '2014-10-24 11:38:32.507588'
+    - '2014-10-24 11:38:32.507588'
+  - - 61
+    - 52
+    - lord i come to you
+    - Lord, I Come to You
+    - '2014-10-24 11:38:32.523038'
+    - '2014-10-24 11:38:32.523038'
+  - - 62
+    - 53
+    - father here i am
+    - Father Here I Am
+    - '2014-10-24 11:38:32.539011'
+    - '2014-10-24 11:38:32.539011'
+  - - 63
+    - 54
+    - change my heart o god
+    - Change My Heart, O God
+    - '2014-10-24 11:38:32.554898'
+    - '2014-10-24 11:38:32.554898'
+  - - 64
+    - 55
+    - guide me o thou great jehovah
+    - Guide Me, O Thou Great Jehovah
+    - '2014-10-24 11:38:32.572540'
+    - '2014-10-24 11:38:32.572540'
+  - - 65
+    - 56
+    - lord of the church
+    - Lord of the Church
+    - '2014-10-24 11:38:32.588798'
+    - '2014-10-24 11:38:32.588798'
+  - - 66
+    - 57
+    - lord reign in me
+    - Lord Reign in Me
+    - '2014-10-24 11:38:32.604789'
+    - '2014-10-24 11:38:32.604789'
+  - - 67
+    - 57
+    - over all the earth
+    - Over all the Earth (Lord Reign in Me)
+    - '2014-10-24 11:38:32.621368'
+    - '2014-10-24 11:38:32.621368'
+  - - 68
+    - 58
+    - a frame so beautifully formed
+    - A Frame So Beautifully... (All My Shame)
+    - '2014-10-24 11:38:32.637698'
+    - '2014-10-24 11:38:32.637698'
+  - - 69
+    - 58
+    - all my shame
+    - All My Shame
+    - '2014-10-24 11:38:32.654050'
+    - '2014-10-24 11:38:32.654050'
+  - - 70
+    - 59
+    - when i survery
+    - When I Survery
+    - '2014-10-24 11:38:32.670656'
+    - '2014-10-24 11:38:32.670656'
+  - - 71
+    - 60
+    - be thou my vision
+    - Be Thou My Vision
+    - '2014-10-24 11:38:32.686827'
+    - '2014-10-24 11:38:32.686827'
+  - - 72
+    - 61
+    - above all powers
+    - Above All Powers
+    - '2014-10-24 11:38:32.703055'
+    - '2014-10-24 11:38:32.703055'
+  - - 73
+    - 62
+    - jesus thank you
+    - Jesus, Thank You
+    - '2014-10-24 11:38:32.719367'
+    - '2014-10-24 11:38:32.719367'
+  - - 74
+    - 63
+    - with a prayer
+    - With a Prayer (You fed the Hungry)
+    - '2014-10-24 11:38:32.736243'
+    - '2014-10-24 11:38:32.736243'
+  - - 75
+    - 64
+    - lord you are the author of my life
+    - Lord, You are the Author of my Life
+    - '2014-10-24 11:38:32.753667'
+    - '2014-10-24 11:38:32.753667'
+  - - 76
+    - 65
+    - be still for the presence of the lord
+    - Be Still (for the presence of the Lord)
+    - '2014-10-24 11:38:32.771190'
+    - '2014-10-24 11:38:32.771190'
+  - - 77
+    - 66
+    - holy spirit living breath of god
+    - Holy Spirit, Living Breath of God
+    - '2014-10-24 11:38:32.787838'
+    - '2014-10-24 11:38:32.787838'
+  - - 78
+    - 67
+    - call the man
+    - Call the Man (Eagles' Wings)
+    - '2014-10-24 11:38:32.804417'
+    - '2014-10-24 11:38:32.804417'
+  - - 79
+    - 67
+    - eagles wings
+    - Eagles' Wings (Call the Man)
+    - '2014-10-24 11:38:32.820993'
+    - '2014-10-24 11:38:32.820993'
+  - - 80
+    - 68
+    - wonderful merciful savior
+    - Wonderful, Merciful Savior
+    - '2014-10-24 11:38:32.837343'
+    - '2014-10-24 11:38:32.837343'
+  - - 81
+    - 69
+    - come people of the risen king
+    - Come People of the Risen King
+    - '2014-10-24 11:38:32.896142'
+    - '2014-10-24 11:38:32.896142'
+  - - 82
+    - 70
+    - i cannot tell
+    - I Cannot Tell
+    - '2014-10-24 11:38:32.911549'
+    - '2014-10-24 11:38:32.911549'
+  - - 83
+    - 71
+    - rock of ages
+    - Rock of Ages
+    - '2014-10-24 11:38:32.928409'
+    - '2014-10-24 11:38:32.928409'
+  - - 84
+    - 72
+    - take my life and let it be
+    - Take My Life and Let it Be
+    - '2014-10-24 11:38:32.943888'
+    - '2014-10-24 11:38:32.943888'
+  - - 85
+    - 73
+    - the whole earth
+    - The Whole Earth
+    - '2014-10-24 11:38:32.959359'
+    - '2014-10-24 11:38:32.959359'
+  - - 86
+    - 74
+    - the precious blood
+    - The Precious Blood
+    - '2014-10-24 11:38:32.976461'
+    - '2014-10-24 11:38:32.976461'
+  - - 87
+    - 75
+    - healing to the nations
+    - Healing To The Nations
+    - '2014-10-24 11:38:32.991885'
+    - '2014-10-24 11:38:32.991885'
+  - - 88
+    - 76
+    - name of all majesty
+    - Name of All Majesty
+    - '2014-10-24 11:38:33.007236'
+    - '2014-10-24 11:38:33.007236'
+  - - 89
+    - 77
+    - there is a higher throne
+    - There is a Higher Throne
+    - '2014-10-24 11:38:33.022856'
+    - '2014-10-24 11:38:33.022856'
+  - - 90
+    - 78
+    - well walk the land
+    - We'll Walk the Land
+    - '2014-10-24 11:38:33.038657'
+    - '2014-10-24 11:38:33.038657'
+  - - 91
+    - 79
+    - bayete nkosi
+    - Bayete Nkosi (Jabulani Africa)
+    - '2014-10-24 11:38:33.054422'
+    - '2014-10-24 13:19:23.766908'
+  - - 92
+    - 79
+    - jabulani africa
+    - Jabulani Africa
+    - '2014-10-24 11:38:33.071117'
+    - '2014-10-24 11:38:33.071117'
+  - - 93
+    - 80
+    - hosanna
+    - Hosanna (Praise Is Rising)
+    - '2014-10-24 11:38:33.087210'
+    - '2014-10-24 11:38:33.087210'
+  - - 94
+    - 80
+    - praise is rising
+    - Praise is Rising (Hosanna)
+    - '2014-10-24 11:38:33.104329'
+    - '2014-10-24 11:38:33.104329'
+  - - 95
+    - 81
+    - by faith we see the hand of god
+    - By Faith (we see the hand of God)
+    - '2014-10-24 11:38:33.118254'
+    - '2014-10-28 09:37:04.888983'
+  - - 96
+    - 82
+    - o church arise
+    - O Church, Arise
+    - '2014-10-24 11:38:33.131834'
+    - '2014-10-24 11:38:33.131834'
+  - - 97
+    - 83
+    - i the lord of sea and sky
+    - I the Lord of sea and sky
+    - '2014-10-24 11:38:33.145612'
+    - '2014-10-24 11:38:33.145612'
+  - - 98
+    - 84
+    - it is the cry of my heart
+    - It is the Cry of My Heart
+    - '2014-10-24 11:38:33.161265'
+    - '2014-10-24 11:38:33.161265'
+  - - 99
+    - 85
+    - jesus what a beautiful name
+    - Jesus, What a Beautiful Name
+    - '2014-10-24 11:38:33.177986'
+    - '2014-10-24 11:38:33.177986'
+  - - 100
+    - 86
+    - thank you for saving me
+    - Thank You for Saving Me
+    - '2014-10-24 11:38:33.194901'
+    - '2014-10-24 11:38:33.194901'
+  - - 101
+    - 87
+    - father let me dedicate
+    - Father, Let Me Dedicate
+    - '2014-10-24 11:38:33.210481'
+    - '2014-10-24 11:38:33.210481'
+  - - 102
+    - 88
+    - thou whose almighty word
+    - Thou, Whose Almighty Word
+    - '2014-10-24 11:38:33.226266'
+    - '2014-10-24 11:38:33.226266'
+  - - 103
+    - 89
+    - god of grace i turn my face
+    - God of Grace (I turn my face)
+    - '2014-10-24 11:38:33.242451'
+    - '2014-10-24 11:38:33.242451'
+  - - 104
+    - 90
+    - all my days i will sing
+    - All My Days (I will sing this song...)
+    - '2014-10-24 11:38:33.258597'
+    - '2014-10-24 11:38:33.258597'
+  - - 105
+    - 91
+    - and can it be
+    - And Can it Be
+    - '2014-10-24 11:38:33.273204'
+    - '2014-10-24 11:38:33.273204'
+  - - 106
+    - 92
+    - i lift my hands to the coming king
+    - I Lift My Hands (To the coming King)
+    - '2014-10-24 11:38:33.286257'
+    - '2014-10-24 11:38:33.286257'
+  - - 107
+    - 93
+    - god forgave my sin
+    - God Forgave My Sin
+    - '2014-10-24 11:38:33.302835'
+    - '2014-10-24 11:38:33.302835'
+  - - 108
+    - 94
+    - set my spirit free
+    - Set My Spirit Free
+    - '2014-10-24 11:38:33.319230'
+    - '2014-10-24 11:38:33.319230'
+  - - 109
+    - 95
+    - oh to see the dawn
+    - Oh, to see the Dawn
+    - '2014-10-24 11:38:33.335773'
+    - '2014-10-24 11:38:33.335773'
+  - - 110
+    - 6
+    - ten thousand reasons
+    - 10,000 Reasons
+    - '2014-10-24 11:40:10.177799'
+    - '2014-10-24 11:40:10.177799'
+  - - 111
+    - 96
+    - draw me close to you
+    - Draw Me Close to You
+    - '2014-10-27 20:01:23.965751'
+    - '2014-10-27 20:12:28.265725'
+  - - 112
+    - 96
+    - youre all i want
+    - You're all I want (Draw me close to you)
+    - '2014-10-27 20:01:23.981819'
+    - '2014-10-27 20:11:37.155841'
+  - - 113
+    - 97
+    - king of kings
+    - King of Kings, Majesty
+    - '2014-10-28 06:59:12.071974'
+    - '2014-10-28 06:59:12.071974'
+  - - 114
+    - 97
+    - majesty
+    - Majesty (King of Kings)
+    - '2014-10-28 06:59:12.086755'
+    - '2014-10-28 06:59:12.086755'
+  - - 115
+    - 98
+    - jesus is king
+    - Jesus is King (and I will extol him)
+    - '2014-10-28 07:03:43.565369'
+    - '2014-10-28 07:03:43.565369'
+  - - 116
+    - 99
+    - come now is the time to worship
+    - Come, Now Is The Time To Worship
+    - '2014-11-14 09:37:11.548219'
+    - '2014-11-14 09:37:11.548219'
+  - - 117
+    - 100
+    - open the eyes of my heart lord i want to see you
+    - Open The Eyes Of My Heart Lord (I Want To See You)
+    - '2014-11-14 09:39:07.492983'
+    - '2014-11-14 09:39:07.492983'
+  - - 119
+    - 102
+    - youre the word of god the father
+    - You're the Word of God the Father (Across The Lands)
+    - '2014-11-14 09:48:27.107018'
+    - '2014-11-14 09:48:27.107018'
+  - - 120
+    - 102
+    - across the lands
+    - Across The Lands (You're The Author Of Creation)
+    - '2014-11-14 09:48:27.124723'
+    - '2014-11-14 09:48:27.124723'
+  - - 121
+    - 102
+    - youre the author of creation
+    - Across The Lands (You're The Author Of Creation)
+    - '2014-11-14 09:48:27.142222'
+    - '2014-11-14 09:48:27.142222'
+  - - 122
+    - 103
+    - there is no other name
+    - There is No Other Name
+    - '2014-11-14 09:50:17.947257'
+    - '2014-11-14 09:50:17.947257'
+  - - 123
+    - 104
+    - at your feet we fall
+    - At Your Feet We Fall (Mighty Risen Lord)
+    - '2014-11-14 09:56:03.100663'
+    - '2014-11-14 09:56:03.100663'
+  - - 124
+    - 105
+    - all hail king jesus
+    - All Hail King Jesus (All Hail King Emmanuel)
+    - '2014-11-14 09:57:24.402971'
+    - '2014-11-14 09:57:24.402971'
+  - - 125
+    - 106
+    - blessed be your name
+    - Blessed Be Your Name (In The Land That Is Plentiful)
+    - '2014-11-14 09:59:28.231417'
+    - '2014-11-14 09:59:28.231417'
+  - - 126
+    - 107
+    - o jesus i have promised
+    - O Jesus, I Have Promised
+    - '2014-11-14 10:00:48.519238'
+    - '2014-11-14 10:00:48.519238'
+  - - 127
+    - 108
+    - all heaven declares
+    - All Heaven Declares (The Glory Of The Risen Lord)
+    - '2014-11-14 10:04:49.359759'
+    - '2014-11-14 10:04:49.359759'
+  - - 128
+    - 108
+    - forever he will be
+    - Forever He Will Be (All Heaven Declares)
+    - '2014-11-14 10:04:49.374807'
+    - '2014-11-14 10:04:49.374807'
+  - - 129
+    - 108
+    - forever you will be
+    - Forever You Will Be (All Heaven Declares)
+    - '2014-11-14 10:04:49.388696'
+    - '2014-11-14 10:04:49.388696'
+  - - 130
+    - 109
+    - all i once held dear
+    - All I Once Held Dear (Knowing You)
+    - '2014-11-14 10:06:56.300258'
+    - '2014-11-14 10:06:56.300258'
+  - - 131
+    - 109
+    - knowing you jesus
+    - Knowing You (All I Once Held Dear)
+    - '2014-11-14 10:06:56.317414'
+    - '2014-11-14 10:06:56.317414'
+  - - 132
+    - 110
+    - we will glorify
+    - We Will Glorify (Jesus Is The Name...)
+    - '2014-11-14 10:09:49.308840'
+    - '2014-11-14 10:09:49.308840'
+  - - 133
+    - 110
+    - jesus is the name we honour
+    - Jesus Is The Name We Honour
+    - '2014-11-14 10:09:49.322593'
+    - '2014-11-14 10:09:49.322593'
+  - - 134
+    - 111
+    - amazing love
+    - Amazing Love (My Lord, What Love Is This)
+    - '2014-11-14 10:11:09.708840'
+    - '2014-11-14 10:11:09.708840'
+  - - 135
+    - 111
+    - My Lord, What Love Is This
+    - my lord what love is this
+    - '2014-11-14 10:11:09.722849'
+    - '2014-11-14 10:11:09.722849'
+  - - 136
+    - 112
+    - thy word is a lamp unto my feet
+    - Thy Word (is a lamp unto my feet)
+    - '2014-11-14 10:13:55.696583'
+    - '2014-11-14 10:13:55.696583'
+  - - 137
+    - 113
+    - my jesus my saviour
+    - My Jesus My Saviour
+    - '2014-11-14 10:16:49.326422'
+    - '2014-11-14 10:16:49.326422'
+  - - 138
+    - 113
+    - shout to the lord
+    - Shout To The Lord (My Jesus My Saviour)
+    - '2014-11-14 10:16:49.340269'
+    - '2014-11-14 10:16:49.340269'
+  - - 139
+    - 114
+    - consider christ
+    - Consider Christ
+    - '2014-11-14 10:20:23.021240'
+    - '2014-11-14 10:20:23.021240'
+  - - 140
+    - 115
+    - jesus lover of my soul
+    - Jesus, Lover Of My Soul (I will never let you go)
+    - '2014-11-14 10:22:25.356346'
+    - '2014-11-14 10:22:25.356346'
+  - - 141
+    - 116
+    - crown him with many crowns
+    - Crown Him With Many Crowns
+    - '2014-11-14 10:25:10.443637'
+    - '2014-11-14 10:25:10.443637'
+  - - 142
+    - 117
+    - purify my heart
+    - Purify My Heart (Refiner's Fire)
+    - '2014-11-14 10:27:51.263466'
+    - '2014-11-14 10:27:51.263466'
+  - - 143
+    - 117
+    - refiners fire
+    - Refiner's Fire (Purify My Heart)
+    - '2014-11-14 10:27:51.281421'
+    - '2014-11-14 10:27:51.281421'
+  - - 144
+    - 118
+    - battle hymn
+    - Battle Hymn (There's A Sound On The Wind)
+    - '2014-11-14 10:31:45.566940'
+    - '2014-11-14 10:31:45.566940'
+  - - 145
+    - 118
+    - come on heavens children
+    - Come on Heaven's Children (There's A Sound On The Wind)
+    - '2014-11-14 10:31:45.584102'
+    - '2014-11-14 10:31:45.584102'
+  - - 146
+    - 118
+    - theres a sound on the wind like a victory song
+    - There's A Sound On The Wind (Like A Victory Song)
+    - '2014-11-14 10:31:45.600318'
+    - '2014-11-14 10:31:45.600318'
+  - - 147
+    - 119
+    - worthy is the lamb
+    - Worthy Is The Lamb (Thank You For The Cross, Lord)
+    - '2014-11-14 10:38:10.363192'
+    - '2014-11-14 10:38:10.363192'
+  - - 148
+    - 119
+    - thank you for the cross lord
+    - Thank You For The Cross, Lord (Worthy Is The Lamb)
+    - '2014-11-14 10:38:10.380277'
+    - '2014-11-14 10:38:10.380277'
+  - - 149
+    - 120
+    - there is a hope
+    - There is a Hope (that burns within my heart)
+    - '2014-11-14 10:39:31.139490'
+    - '2014-11-14 10:39:31.139490'
+  - - 150
+    - 121
+    - the splendor of the king
+    - The Splendour Of The King (How Great Is Our God)
+    - '2014-11-14 10:42:19.003084'
+    - '2014-11-14 10:42:19.003084'
+  - - 151
+    - 121
+    - how great is our god
+    - How Great Is Our God (The Splendour Of The King)
+    - '2014-11-14 10:42:19.019871'
+    - '2014-11-14 10:42:19.019871'
+  - - 152
+    - 122
+    - here i am once again
+    - Here I am once again (Pour Out My Heart)
+    - '2014-11-14 10:44:17.689647'
+    - '2014-11-14 10:44:17.689647'
+  - - 153
+    - 122
+    - pour out my heart
+    - Pour Out My Heart
+    - '2014-11-14 10:44:17.707161'
+    - '2014-11-14 10:44:17.707161'
+  - - 154
+    - 123
+    - i will sing your praises
+    - I Will Sing Your Praises (Father God I Wonder)
+    - '2014-11-14 10:46:35.353700'
+    - '2014-11-14 10:46:35.353700'
+  - - 155
+    - 123
+    - father god i wonder
+    - Father God I Wonder (I Will Sing Your Praises)
+    - '2014-11-14 10:46:35.372111'
+    - '2014-11-14 10:46:35.372111'
+  - - 156
+    - 124
+    - great in power
+    - Great in Power
+    - '2014-11-17 09:22:24.883796'
+    - '2014-11-17 09:22:24.883796'
+  - - 157
+    - 124
+    - praise him you heavens
+    - Praise Him You Heavens (Great in Power)
+    - '2014-11-17 09:22:24.899175'
+    - '2014-11-17 09:22:24.899175'
+  - - 158
+    - 125
+    - lord jesus here i stand before you
+    - Lord Jesus, Here I Stand Before You
+    - '2014-12-02 07:02:56.152415'
+    - '2014-12-02 07:02:56.152415'
+  - - 159
+    - 126
+    - i see the king of glory hosanna
+    - I See The King Of Glory (Hosanna)
+    - '2014-12-02 07:12:46.799741'
+    - '2014-12-02 07:12:46.799741'
+  - - 160
+    - 126
+    - hosanna
+    - Hosanna (I See The King Of Glory)
+    - '2014-12-02 07:12:46.819404'
+    - '2014-12-02 07:12:46.819404'
+  - - 161
+    - 127
+    - hide me now
+    - Hide Me Now (Still)
+    - '2014-12-02 07:14:41.769847'
+    - '2014-12-02 07:14:41.769847'
+  - - 162
+    - 127
+    - still
+    - Still (Hide Me Now)
+    - '2014-12-02 07:14:41.790127'
+    - '2014-12-02 07:14:41.790127'
+  - - 163
+    - 128
+    - i surrender
+    - I Surrender
+    - '2014-12-02 07:17:10.017092'
+    - '2014-12-02 07:17:10.017092'
+  - - 164
+    - 128
+    - to your majesty and your beauty
+    - To Your Majesty ... (I Surrender)
+    - '2014-12-02 07:17:10.032473'
+    - '2014-12-02 07:17:10.032473'
+  - - 165
+    - 129
+    - i know not why gods wondrous grace
+    - I Know Not Why God's Wondrous Grace
+    - '2014-12-02 07:20:12.639679'
+    - '2014-12-02 07:20:12.639679'
+  - - 166
+    - 129
+    - i know whom i have believed
+    - I Know Whom I Have Believed
+    - '2014-12-02 07:20:12.656145'
+    - '2014-12-02 07:20:12.656145'
+  - - 167
+    - 130
+    - majesty and praise
+    - Majesty and Praise (No Other God)
+    - '2014-12-02 07:23:20.102947'
+    - '2014-12-02 07:23:20.102947'
+  - - 168
+    - 130
+    - no other god
+    - No Other God
+    - '2014-12-02 07:23:20.119471'
+    - '2014-12-02 07:23:20.119471'
+  - - 169
+    - 131
+    - faithful one so unchanging
+    - Faithful One (So Unchanging)
+    - '2014-12-02 07:25:14.202277'
+    - '2014-12-02 07:25:14.202277'
+  - - 170
+    - 132
+    - may the grace of christ my saviour
+    - May The Mind Of Christ My Saviour
+    - '2014-12-02 09:08:26.986344'
+    - '2014-12-02 09:08:26.986344'
+  - - 171
+    - 133
+    - look to the skies
+    - Look to the Skies
+    - '2014-12-08 10:39:24.468602'
+    - '2014-12-08 10:39:24.468602'
+  - - 172
+    - 134
+    - behold the lamb
+    - Behold the Lamb
+    - '2014-12-08 10:41:09.213219'
+    - '2014-12-08 10:41:09.213219'
+  - - 173
+    - 135
+    - alleluia praise ye the lord
+    - Alleluia Praise Ye The Lord
+    - '2014-12-15 07:38:10.254565'
+    - '2014-12-15 07:38:10.254565'
+  - - 174
+    - 136
+    - hope was born this night
+    - Hope Was Born This Night
+    - '2014-12-15 07:46:48.612192'
+    - '2014-12-15 07:46:48.612192'
+  - - 175
+    - 137
+    - these are the days of elijah
+    - These are the Days of Elijah
+    - '2014-12-15 07:51:00.685817'
+    - '2014-12-15 07:51:00.685817'
+  - - 176
+    - 137
+    - days of elijah
+    - Days of Elijah
+    - '2014-12-15 07:51:00.699804'
+    - '2014-12-15 07:51:00.699804'
+  - - 177
+    - 138
+    - what can i do
+    - What Can I Do
+    - '2014-12-15 07:52:35.109853'
+    - '2014-12-15 07:52:35.109853'
+  - - 178
+    - 138
+    - when i see the beauty
+    - When I See the Beauty
+    - '2014-12-15 07:52:35.125356'
+    - '2014-12-15 07:52:35.125356'
+  - - 179
+    - 139
+    - let the words of my mouth
+    - Let The Words Of My Mouth (All For You)
+    - '2014-12-15 07:53:58.342119'
+    - '2014-12-15 07:53:58.342119'
+  - - 180
+    - 139
+    - all for you
+    - All For You
+    - '2014-12-15 07:53:58.366993'
+    - '2014-12-15 07:53:58.366993'
+  - - 181
+    - 16
+    - love divine
+    - Love Divine
+    - '2014-12-15 08:37:09.138938'
+    - '2014-12-15 08:38:50.105824'
+  - - 182
+    - 140
+    - meekness and majesty
+    - Meekness And Majesty
+    - '2014-12-15 08:48:00.314089'
+    - '2014-12-15 08:48:00.314089'
+  - - 183
+    - 141
+    - we three kings
+    - We Three Kings
+    - '2014-12-15 09:22:43.711265'
+    - '2014-12-15 09:22:43.711265'
+  - - 184
+    - 142
+    - when the music fades
+    - When the Music Fades
+    - '2014-12-15 09:31:39.051726'
+    - '2014-12-15 09:31:39.051726'
+  - - 185
+    - 142
+    - the heart of worship
+    - The Heart of Worship
+    - '2014-12-15 09:31:39.067313'
+    - '2014-12-15 09:31:39.067313'
+
+---
+churches:
+  columns:
+  - id
+  - church_name
+  - created_at
+  - updated_at
+  records: 
+  - - 1
+    - Christ Church Hilton
+    - '2014-11-18 14:19:07.796005'
+    - '2014-11-18 14:19:07.796005'
+  - - 6
+    - Christ Church Hilton
+    - '2014-12-03 09:55:00.137152'
+    - '2014-12-03 09:55:00.137152'
+
+---
+users:
+  columns:
+  - id
+  - email
+  - encrypted_password
+  - reset_password_token
+  - reset_password_sent_at
+  - remember_created_at
+  - sign_in_count
+  - current_sign_in_at
+  - last_sign_in_at
+  - current_sign_in_ip
+  - last_sign_in_ip
+  - created_at
+  - updated_at
+  - church_id
+  records: 
+  - - 1
+    - j3frea@gmail.com
+    - "$2a$10$JOHXZLB5PtNekykyiT.oluRq/.336Pi2vDjwLhU3VHUzYfDq.MR/W"
+    - 
+    - 
+    - 
+    - 31
+    - '2014-12-08 06:23:49.333024'
+    - '2014-12-02 11:06:09.852471'
+    - 127.0.0.1
+    - 127.0.0.1
+    - '2014-11-18 11:46:10.616561'
+    - '2014-12-08 06:23:49.335801'
+    - 1
+  - - 3
+    - mundy@gmail.com
+    - "$2a$10$zocOw5gGu7Q8AUfLWz8yeexKqf.LD0dRdojAsLczcNde/IfBzEL3W"
+    - 
+    - 
+    - 
+    - 3
+    - '2014-11-30 14:01:46.958222'
+    - '2014-11-27 21:35:00.551021'
+    - 127.0.0.1
+    - 127.0.0.1
+    - '2014-11-27 17:57:07.871072'
+    - '2014-11-30 14:01:46.959500'
+    - 2
+  - - 4
+    - mundyl@gmail.com
+    - "$2a$10$BjWTRzJeReu13zh6rz6INOApRXX1CZs67Zzfafv1cmxFIAAgzhlga"
+    - 
+    - 
+    - 
+    - 1
+    - '2014-11-27 17:57:49.508042'
+    - '2014-11-27 17:57:49.508042'
+    - 127.0.0.1
+    - 127.0.0.1
+    - '2014-11-27 17:57:49.495073'
+    - '2014-11-27 17:57:49.508562'
+    - 3
+  - - 7
+    - j3@j3.com
+    - "$2a$10$Af8/CZFmawiRaQLXBssA3e2gSaA8aGJoeIdthobof2OKVupLIgTVG"
+    - 
+    - 
+    - 
+    - 1
+    - '2014-12-03 09:55:00.155003'
+    - '2014-12-03 09:55:00.155003'
+    - 127.0.0.1
+    - 127.0.0.1
+    - '2014-12-03 09:55:00.141030'
+    - '2014-12-03 09:55:00.156060'
+    - 6
