@@ -22,8 +22,6 @@ test:
 
 production:
    adapter: postgresql
-   encoding: unicode
-   database: HEROKU_POSTGRESQL_PINK
+   database: arcane-cliffs-8366
    pool: 5
-   username: j3frea@gmail.com
-   password: fishandpencils
+   timeout: 5000
