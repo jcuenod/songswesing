@@ -1,0 +1,38 @@
+<div class="container form-signin">
+<h2>Sign up</h2>
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= devise_error_messages! %>
+
+  <div class="field">
+    <%= f.label :email, class: "sr-only" %>
+    <%= f.email_field :email, autofocus: true, class: "form-control", placeholder: "Email address", required:"required" %>
+  </div>
+
+  <%= f.fields_for :church, Church.new do |church| %>
+  <div class="field">
+    <%= church.label :church_name, class: "sr-only" %>
+    <%= church.text_field :church_name, autocomplete: "on", class: "form-control", placeholder: "Church Name", required:"required" %>
+  </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :password, class: "sr-only" %>
+    <% if @validatable %>
+    <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <% end %><br />
+    <%= f.password_field :password, autocomplete: "off", class: "form-control", placeholder: "Password", required:"required" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password_confirmation, class: "sr-only" %>
+    <%= f.password_field :password, autocomplete: "off", class: "form-control", placeholder: "Password Confirmation", required:"required" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Sign up", class: "btn btn-lg btn-primary btn-block" %>
+  </div>
+<% end %>
+
+<%= render "devise/shared/links" %>
+</div>
