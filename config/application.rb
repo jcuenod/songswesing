@@ -20,10 +20,11 @@ module Songswesing
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
-    config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif,
-                                    "fonts/glyphicons-halflings-regular.eot",
-                                    "fonts/glyphicons-halflings-regular.svg",
-                                    "fonts/glyphicons-halflings-regular.ttf",
-                                    "fonts/glyphicons-halflings-regular.woff")
+    # config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif,
+    #                                 "fonts/glyphicons-halflings-regular.eot",
+    #                                 "fonts/glyphicons-halflings-regular.svg",
+    #                                 "fonts/glyphicons-halflings-regular.ttf",
+    #                                 "fonts/glyphicons-halflings-regular.woff")
+    config.assets.precompile << /\.(?:png|svg|eot|woff|ttf)$/ 
   end
 end
