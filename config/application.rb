@@ -6,6 +6,7 @@ require 'rails/all'
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
+
 module Songswesing
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.
@@ -19,5 +20,10 @@ module Songswesing
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
+    config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif,
+                                    "fonts/glyphicons-halflings-regular.eot",
+                                    "fonts/glyphicons-halflings-regular.svg",
+                                    "fonts/glyphicons-halflings-regular.ttf",
+                                    "fonts/glyphicons-halflings-regular.woff")
   end
 end

@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20141114145615) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "akas", force: true do |t|
     t.integer  "song_id"
     t.string   "search_text"
@@ -21,7 +24,7 @@ ActiveRecord::Schema.define(version: 20141114145615) do
     t.datetime "updated_at"
   end
 
-  add_index "akas", ["song_id"], name: "index_akas_on_song_id"
+  add_index "akas", ["song_id"], name: "index_akas_on_song_id", using: :btree
 
   create_table "churches", force: true do |t|
     t.string   "church_name"
@@ -36,7 +39,7 @@ ActiveRecord::Schema.define(version: 20141114145615) do
     t.integer  "church_id"
   end
 
-  add_index "leaders", ["church_id"], name: "index_leaders_on_church_id"
+  add_index "leaders", ["church_id"], name: "index_leaders_on_church_id", using: :btree
 
   create_table "service_types", force: true do |t|
     t.string   "service_type"
@@ -46,7 +49,7 @@ ActiveRecord::Schema.define(version: 20141114145615) do
     t.integer  "church_id"
   end
 
-  add_index "service_types", ["church_id"], name: "index_service_types_on_church_id"
+  add_index "service_types", ["church_id"], name: "index_service_types_on_church_id", using: :btree
 
   create_table "services", force: true do |t|
     t.date     "date"
@@ -57,9 +60,9 @@ ActiveRecord::Schema.define(version: 20141114145615) do
     t.integer  "church_id"
   end
 
-  add_index "services", ["church_id"], name: "index_services_on_church_id"
-  add_index "services", ["leader_id"], name: "index_services_on_leader_id"
-  add_index "services", ["service_type_id"], name: "index_services_on_service_type_id"
+  add_index "services", ["church_id"], name: "index_services_on_church_id", using: :btree
+  add_index "services", ["leader_id"], name: "index_services_on_leader_id", using: :btree
+  add_index "services", ["service_type_id"], name: "index_services_on_service_type_id", using: :btree
 
   create_table "songs", force: true do |t|
     t.string   "song_name"
@@ -80,8 +83,8 @@ ActiveRecord::Schema.define(version: 20141114145615) do
     t.datetime "updated_at"
   end
 
-  add_index "usages", ["service_id"], name: "index_usages_on_service_id"
-  add_index "usages", ["song_id"], name: "index_usages_on_song_id"
+  add_index "usages", ["service_id"], name: "index_usages_on_service_id", using: :btree
+  add_index "usages", ["song_id"], name: "index_usages_on_song_id", using: :btree
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -99,8 +102,8 @@ ActiveRecord::Schema.define(version: 20141114145615) do
     t.integer  "church_id"
   end
 
-  add_index "users", ["church_id"], name: "index_users_on_church_id"
-  add_index "users", ["email"], name: "index_users_on_email", unique: true
-  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  add_index "users", ["church_id"], name: "index_users_on_church_id", using: :btree
+  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
+  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
 end
