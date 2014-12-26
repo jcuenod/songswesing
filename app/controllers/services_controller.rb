@@ -13,7 +13,7 @@ class ServicesController < ApplicationController
 		@service_types = ServiceType.where(church_id: current_user.church_id)
 		@service = Service.new
 		@services = Service.where(church_id: current_user.church_id).limit(8).order([:date => :desc, :service_type_id => :asc]).all
-		flash[:notice] = "Viewing services for " + Church.find_by_id(current_user.church_id).church_name
+		# flash.now[:notice] = "Viewing services for " + Church.find_by_id(current_user.church_id).church_name
 	end
 	def create
 		unless params[:service][:songs].nil?
