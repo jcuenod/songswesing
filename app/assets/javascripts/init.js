@@ -107,6 +107,10 @@ function addnewAnchorClicked(thingToAdd)
             $("#frm_create input[type=submit]").on("click", function(e){
                 myFeatherBox.close();
             })
+            $("#song_ccli_number").on("blur", function(e){
+                if ($("#song_song_name").val() == "")
+                    ccli_loader($("#song_ccli_number").val());
+            })
         })
         .fail(function(e) {
             console.log( "error creating addnew form" );
