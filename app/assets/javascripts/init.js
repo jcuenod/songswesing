@@ -140,7 +140,7 @@ function songAnchorClicked(song_id)
             });
             var tabledata = "";
             for (var key in data.song_details) {
-                tabledata += "<tr><td>" + key + "</td><td>" + data.song_details[key] + "</td></tr>";
+                tabledata += "<tr><td class='tdkey'>" + key + "</td><td class='tddata'>" + data.song_details[key] + "</td></tr>";
             }
             $.featherlight.close();
             $.featherlight("<div class='breakdown_header'>" + data.song_name + " (" + data.tally + ")</div>" +
