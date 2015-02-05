@@ -1,10 +1,7 @@
 function ccli_loader (ccli_number)
 {
-	console.log("CCLI:" + ccli_number);
-
 	var jqxhr = $.get("http://us.songselect.com/songs/" + ccli_number)
 	  .done(function(data) {
-	    console.log(data);
 	    var html = $.parseHTML(data);
 	    $("#song_song_name").val(   $(html).find(".media h2").html() );
 	    $("#song_writers").val(     $(html).find(".details .authors").text().replace(/\n/g, ' ').replace(/\s{2,}/g, ' ').trim() );
