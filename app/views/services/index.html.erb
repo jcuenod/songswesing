@@ -1,1 +1,4 @@
-<%= debug(@services) %>	
+<% @services.each do |s| %>
+<% @service = s %>
+<%= render partial: "service_table_row" %>
+<% end %>
