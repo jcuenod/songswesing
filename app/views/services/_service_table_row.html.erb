@@ -1,16 +1,16 @@
 <tr>
-	<td><%= @service.date %></td>
-	<td>
+	<td class="date"><%= @service.date %></td>
+	<td class="service_type">
 		<% unless @service.service_type.nil? %>
             <%= @service.service_type.service_type %>
         <% end %>
 	</td>
-	<td>
+	<td class="leader">
 		<% unless @service.leader.nil? %>
             <a onclick="leaderAnchorClicked('<%= @service.leader.id %>')" class="unborderedanchor"><%= @service.leader.leader_name %></a>
         <% end %>
 	</td>
-    <td colspan="2">
+    <td colspan="2" class="songs">
         <%= raw @service.songs.map { |song| link_to song.song_name, "#", onclick: "songAnchorClicked(#{song.id})", class: "borderedanchor" }.join() %>
     </td>
 </tr>

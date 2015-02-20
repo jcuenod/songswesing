@@ -131,4 +131,7 @@ span.ui-button-text {
     overflow: hidden;
     max-width: 80px;
 }
+.servicelist td.dat {
+    width: 200px;
+}
 ::-webkit-inner-spin-button { display: none; }

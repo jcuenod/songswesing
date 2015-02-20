@@ -1,4 +1,14 @@
-<% @services.each do |s| %>
-<% @service = s %>
-<%= render partial: "service_table_row" %>
-<% end %>
+<div style="width: 100%; padding: 20px;">
+<table class="table table-condensed table-striped servicelist">
+	<thead>
+		<th class="date">Date</th>
+		<th class="service_type">Service</th>
+		<th class="leader">Leader</th>
+		<th class="songs">Songs</th>
+	</thead>
+	<% @services.each do |s| %>
+		<% @service = s %>
+		<%= render partial: "service_table_row" %>
+	<% end %>
+</table>
+</div>
