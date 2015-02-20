@@ -1,7 +1,7 @@
 class SongsController < ApplicationController
 	def new
 		@song = Song.new
-		render partial: "song_popup"
+		render partial: "create"
 	end
 
 	def create

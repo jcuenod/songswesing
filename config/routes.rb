@@ -9,8 +9,6 @@ Rails.application.routes.draw do
   resources :service_types
   resources :usages
 
-  #post 'services/:offset/:limit' => 'services#index' (for loading older services)
-  #post 'services/:limit' => 'services#index' (for loading older services)
   post 'songs/list' => 'songs#list'
   post 'songs/data/:id' => 'songs#data'
   post 'usages/data/:limit' => 'usages#data'

@@ -1,11 +1,12 @@
 class ServicesController < ApplicationController
 	before_filter :authenticate_user!
-	def index
+	def show
 		useroffset = params[:offset].nil? ? 0 : params[:offset].to_i
-		userlimit = params[:limit].nil? ? 8 : params[:limit].to_i
-		userlimit = userlimit > 100 ? 100 : userlimit
+		userlimit = params[:limit].nil? ? 100 : params[:limit].to_i
+		#userlimit = userlimit > 100 ? 100 : userlimit
 
 	 	@services = Service.limit(userlimit).offset(useroffset).where(church_id: current_user.church_id).order([:date => :desc, :service_type_id => :asc]).all
+	 	@meh = params;
 	 	render "index"
 	end
 	def new
