@@ -1,6 +1,6 @@
 class ServicesController < ApplicationController
 	before_filter :authenticate_user!
-	def show
+	def index
 		useroffset = params[:offset].nil? ? 0 : params[:offset].to_i
 		userlimit = params[:limit].nil? ? 100 : params[:limit].to_i
 		#userlimit = userlimit > 100 ? 100 : userlimit
