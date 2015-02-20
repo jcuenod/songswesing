@@ -2,8 +2,8 @@
 	<td class="song_name"><%= @song.song_name %></td>
 	<td class="license"><%= @song.license %></td>
 	<td class="writers"><%= @song.writers %></td>
-	<td class="lyrics_url"><%= @song.lyrics_url %></td>
+	<td class="lyrics_url"><%= link_to @song.lyrics_url, @song.lyrics_url, target: '_blank' unless @song.lyrics_url.blank? %></td>
 	<td class="sof_number"><%= @song.sof_number %></td>
-	<td class="sample_url"><%= @song.sample_url %></td>
+	<td class="sample_url"><%= link_to @song.sample_url, @song.sample_url, target: '_blank' unless @song.sample_url.blank? %></td>
 	<td class="ccli_number"><%= @song.ccli_number %></td>
 </tr>
