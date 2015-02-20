@@ -1,1 +1,17 @@
-<%= debug(@songs) %>
+<div style="width: 100%; padding: 20px;">
+<table class="table table-condensed table-striped songlist">
+	<thead>
+		<td class="song_name">Song Name</td>
+		<td class="license">License</td>
+		<td class="writers">Writers</td>
+		<td class="lyrics_url">Lyrics URL</td>
+		<td class="sof_number">SOF #</td>
+		<td class="sample_url">Sample URL</td>
+		<td class="ccli_number">CCLI Number</td>
+	</thead>
+	<% @songs.each do |s| %>
+		<% @song = s %>
+		<%= render "song_template" %>
+	<% end %>
+</table>
+</div>

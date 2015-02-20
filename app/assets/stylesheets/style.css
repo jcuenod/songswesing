@@ -121,4 +121,14 @@ span.ui-button-text {
 {
     min-width: 8em;
 }
+.songlist {
+    padding: 20px;
+}
+.songlist thead {
+    font-weight: bold;
+}
+.songlist td {
+    overflow: hidden;
+    max-width: 80px;
+}
 ::-webkit-inner-spin-button { display: none; }
