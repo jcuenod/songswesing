@@ -1,1 +1,16 @@
-<%= debug(@usages) %>
+<div style="width: 350px; margin: auto">
+<table class="table table-condensed table-striped">
+	<thead>
+		<th>Song</th>
+		<th>#</th>
+	</thead>
+	<tbody>
+	<% @usages.each do |s| %>
+		<tr>
+			<td><a class='unborderedanchor' onclick='songAnchorClicked(<%= s[0][0] %>)'><%= s[0][1] %></a></td>
+			<td><%= s[1] %></td>
+		</tr>
+	<% end %>
+	</tbody>
+</table>
+</div>
