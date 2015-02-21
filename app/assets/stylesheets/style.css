@@ -134,4 +134,8 @@ span.ui-button-text {
 .servicelist td.dat {
     width: 200px;
 }
+td[contenteditable="true"]:focus, 
+td[contenteditable="true"]:active {
+    background-color: #f0f0f4 !important;
+}
 ::-webkit-inner-spin-button { display: none; }

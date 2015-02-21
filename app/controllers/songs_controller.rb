@@ -32,6 +32,12 @@ class SongsController < ApplicationController
 		render json: render_to_string(partial: "songdata.json")
 	end
 
+	def update
+		if current_user.admin?
+	    	@r = Song.find(params[:id]).update_attribute(params[:key], params[:value])
+	    end
+	end
+
 	private
 		def song_params
 			params.require(:song).permit(:song_name, :license, :writers, :lyrics_url, :sof_number, :sample_url, :ccli_number)

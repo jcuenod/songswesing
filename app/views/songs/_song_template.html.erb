@@ -1,9 +1,9 @@
-<tr>
-	<td class="song_name"><%= @song.song_name %></td>
-	<td class="license"><%= @song.license %></td>
-	<td class="writers"><%= @song.writers %></td>
-	<td class="lyrics_url"><%= link_to @song.lyrics_url, @song.lyrics_url, target: '_blank' unless @song.lyrics_url.blank? %></td>
-	<td class="sof_number"><%= @song.sof_number %></td>
-	<td class="sample_url"><%= link_to @song.sample_url, @song.sample_url, target: '_blank' unless @song.sample_url.blank? %></td>
-	<td class="ccli_number"><%= @song.ccli_number %></td>
+<tr name="<%= @song.id %>">
+	<td class="song_name"<% if current_user.admin? %> name="song_name" contenteditable="true"<% end %>><%= @song.song_name %></td>
+	<td class="license"<% if current_user.admin? %> name="license" contenteditable="true"<% end %>><%= @song.license %></td>
+	<td class="writers"<% if current_user.admin? %> name="writers" contenteditable="true"<% end %>><%= @song.writers %></td>
+	<td class="lyrics_url"<% if current_user.admin? %> name="lyrics_url" contenteditable="true"<% end %>><%= link_to @song.lyrics_url, @song.lyrics_url, target: '_blank' unless @song.lyrics_url.blank? %></td>
+	<td class="sof_number"<% if current_user.admin? %> name="sof_number" contenteditable="true"<% end %>><%= @song.sof_number %></td>
+	<td class="sample_url"<% if current_user.admin? %> name="sample_url" contenteditable="true"<% end %>><%= link_to @song.sample_url, @song.sample_url, target: '_blank' unless @song.sample_url.blank? %></td>
+	<td class="ccli_number"<% if current_user.admin? %> name="ccli_number" contenteditable="true"<% end %>><%= @song.ccli_number %></td>
 </tr>

@@ -12,7 +12,6 @@
 <% if user_signed_in? %>
     <div class="logout-link"><%= link_to('Logout', destroy_user_session_path, :method => :delete) %></div>
 <% end %>
-<% if !notice.nil? || !alert.nil? %>
 <div class="flash container">
 	<% if !notice.nil? %>
 	<div class="alert alert-success"><%= notice %>
@@ -23,7 +22,6 @@
       <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button></div>
 	<% end %>
 </div>
-<% end %>
 
 <%= yield %>
 
