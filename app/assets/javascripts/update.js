@@ -31,6 +31,20 @@ $(document).ready(function() {
 				        }
 				    });
                 }
+                else {
+                	$(toupdate).text(update_original_var);
+                	console.log("You should check rails logs because something went wrong with that update");
+                	var trueColor = $(toupdate).css("backgroundColor");
+					$(toupdate).animate({ backgroundColor: "#ffe2cc" }, {
+				        duration: 100, 
+				        complete: function() {
+				            // reset
+				            $(toupdate).delay(10).animate(
+				            	{ backgroundColor: trueColor }, { duration: 900 }
+				            );
+				        }
+				    });
+                }
             }
         });
 	});
