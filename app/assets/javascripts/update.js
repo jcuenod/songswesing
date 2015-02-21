@@ -9,8 +9,9 @@ $(document).ready(function() {
 			return;
 		
 		var dataToSend;
-		dataToSend = {key: $(this).attr("name"), value: $(this).html().trim()};
+		dataToSend = {key: $(this).attr("name"), value: $(this).text().trim()};
 
+		var toupdate = this;
 		$.ajax({
             type: 'PUT',
             url:  '/songs/'+$(this).parent("tr").attr("name"),
@@ -19,12 +20,22 @@ $(document).ready(function() {
             success: function(data) {
                 if (data.result)
                 {
-					/*Update the html of the div flash_notice with the new one*/
-					$("#alert-success").html("Field updated");
-					/*Show the flash_notice div*/
-					$("#alert-sucess").show(300).hide(500);
+                	var trueColor = $(toupdate).css("backgroundColor");
+					$(toupdate).animate({ backgroundColor: "#cce2ff" }, {
+				        duration: 100, 
+				        complete: function() {
+				            // reset
+				            $(toupdate).delay(10).animate(
+				            	{ backgroundColor: trueColor }, { duration: 900 }
+				            );
+				        }
+				    });
                 }
             }
         });
+	});
+	$("[contenteditable=true]").bind("paste", function(e) {
+	    var that = this
+	    setTimeout(function(){$(that).html($(that).text())}, 0);
 	});
 });
