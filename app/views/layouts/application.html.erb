@@ -10,8 +10,17 @@
 <body>
 <h1><img src="<%= asset_path 'songswesing.png' %>"></h1>
 <% if user_signed_in? %>
-    <div class="logout-link"><%= link_to('Logout', destroy_user_session_path, :method => :delete) %></div>
+    <div class="top-menu">
+      <ul>
+        <li><%= link_to 'Home', root_path %></li>
+        <li><%= link_to 'Usage Table', usages_path %></li>
+        <li><%= link_to 'Services', services_path %></li>
+        <li><%= link_to 'Songs', songs_path %></li>
+        <li><%= link_to 'Logout', destroy_user_session_path, :method => :delete %></li>
+      </ul>
+    </div>
 <% end %>
+<div class="clearfix"></div>
 <div class="flash container">
 	<% if !notice.nil? %>
 	<div class="alert alert-success"><%= notice %>

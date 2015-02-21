@@ -1,11 +1,28 @@
-.logout-link {
-    position: absolute;
-    right: 35px;
-    top: 20px;
+.top-menu {
+    float: right;
+    margin: 0;
+    padding: 0;
     font-weight: bold;
 }
-.logout-link a:hover {
+.top-menu ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.top-menu li {
+    display: inline-block;
+    margin: 0;
+}
+.top-menu a {
+    display: inline-block;
+    margin: 0;
+    padding: 0.7em 1.5em;
+}
+.top-menu a:hover {
     text-decoration: none;
+    background-color: #f3f3f3;
+    border-bottom: 2px solid #ddd;
 }
 .ui-datepicker-trigger {
     float: left;
@@ -72,6 +89,7 @@ h1 {
     margin: 20px 30px 0px 40px;
     font-family: "Open Sans Condensed";
     font-size: 300%;
+    float: left;
 }
 .alert {
     margin-bottom: 10px;
