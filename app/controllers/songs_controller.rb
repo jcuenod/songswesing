@@ -18,7 +18,7 @@ class SongsController < ApplicationController
 	end
 
 	def index
-		@songs = Song.all
+		@songs = Song.all.order :song_name
 	end
 
 	def list
@@ -34,7 +34,7 @@ class SongsController < ApplicationController
 
 	def update
 		if current_user.admin?
-	    	@r = Song.find(params[:id]).update_attribute(params[:key], params[:value])
+	    	@r = Song.find(params[:id]).update_attributes params[:key] => params[:value]
 	    end
 	end
 

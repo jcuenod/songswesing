@@ -9,7 +9,7 @@ $(document).ready(function() {
 			return;
 		
 		var dataToSend;
-		dataToSend = {key: $(this).attr("name"), value: $(this).html()};
+		dataToSend = {key: $(this).attr("name"), value: $(this).html().trim()};
 
 		$.ajax({
             type: 'PUT',
