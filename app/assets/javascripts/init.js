@@ -2,7 +2,7 @@ var myLightboxChart;
 var myFeatherBox;
 var tagOptions = new Array();
 
-$( document ).ready(function() {
+$( document ).on(function() {
     $(document).on('ajax:success',function(data, status, xhr){
         switch(status.what)
         {
@@ -92,6 +92,20 @@ $( document ).ready(function() {
         },
         fieldName: 'service[songs][]',
     });
+    
+    $(".top-menu ul li > ul").parent().hover(function() { $(this).children("ul").animate({
+                opacity: 'show',      // animate slideUp
+                padding: 'show',
+                marginTop: '-1px'        // animate fadeOut
+            }, 'fast', 'linear');
+        },
+        function() { $(this).children("ul").animate({
+                opacity: 'hide',      // animate slideUp
+                padding: 'hide',
+                marginTop: '5px'        // animate fadeOut
+            }, 'fast', 'linear'); 
+        }
+    );
 });
 
 function addnewAnchorClicked(thingToAdd)

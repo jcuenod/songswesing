@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   resources :leaders
   resources :service_types
   resources :usages
+  resources :akas
 
   post 'songs/list' => 'songs#list'
   post 'songs/data/:id' => 'songs#data'

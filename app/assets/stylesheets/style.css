@@ -17,13 +17,36 @@
 .top-menu a {
     display: inline-block;
     margin: 0;
-    padding: 0.7em 1.5em;
+    padding: 0.7em 1.6em;
+    border-bottom: 2px solid #fff;
 }
 .top-menu a:hover {
     text-decoration: none;
     background-color: #f3f3f3;
     border-bottom: 2px solid #ddd;
 }
+.top-menu ul ul:before {
+    width: 0; 
+    height: 0; 
+    content: "";
+    position: absolute;
+    top: -7px;
+    left: 20%;
+    border-bottom: 7px solid #ddd;     
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+}
+.top-menu ul ul {
+    display: inline;
+    display: none;
+    position: absolute;
+    background-color: #ddd;
+    margin: 0px;
+}
+.top-menu ul ul li {
+    display: block;
+}
+
 .ui-datepicker-trigger {
     float: left;
     padding: 1px;
@@ -32,6 +55,7 @@
 .ui-autocomplete-input {
     min-width: 0 !important;
 }
+
 .tagit-autocomplete.ui-menu {
     border-radius: 4px;
     padding: 2px;
@@ -46,9 +70,11 @@ ul.tagit {
     background-color: #fff;
     cursor: text;
 }
+
 select {
     padding: 1.1em;
 }
+
 a.borderedanchor {
     border: 1px solid #ddd;
 }
@@ -79,17 +105,18 @@ a.songusageanchor {
     font-size: 200%;
     font-weight: bold;
 }
-.flash {
-    position: absolute;
-    z-index: 1;
-    width: 80%;
-    left: 10%;
-}
+
 h1 {
     margin: 20px 30px 0px 40px;
     font-family: "Open Sans Condensed";
     font-size: 300%;
     float: left;
+}
+.flash {
+    position: absolute;
+    z-index: 1;
+    width: 80%;
+    left: 10%;
 }
 .alert {
     margin-bottom: 10px;
@@ -102,6 +129,7 @@ h1 {
 .icontip {
     margin: 2px;
 }
+
 .addnew {
     position: absolute;
     top: 8px;
@@ -111,6 +139,7 @@ h1 {
 .addnew:hover {
     text-decoration: none;
 }
+
 th {
     position: relative;
 }
@@ -135,6 +164,7 @@ span.ui-button-text {
     margin: 1px;
     border-radius: 3px;
 }
+
 #service_date
 {
     min-width: 8em;

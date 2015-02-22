@@ -1,38 +1,46 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Songs We Sing</title>
-  <link rel="icon" href="<%= asset_path 'favicon.png' %>" type="image/png">
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-<h1><img src="<%= asset_path 'songswesing.png' %>"></h1>
-<% if user_signed_in? %>
-    <div class="top-menu">
-      <ul>
-        <li><%= link_to 'Home', root_path %></li>
-        <li><%= link_to 'Usage Table', usages_path %></li>
-        <li><%= link_to 'Services', services_path %></li>
-        <li><%= link_to 'Songs', songs_path %></li>
-        <li><%= link_to 'Logout', destroy_user_session_path, :method => :delete %></li>
-      </ul>
+  <head>
+    <title>Songs We Sing</title>
+    <link rel="icon" href="<%= asset_path 'favicon.png' %>" type="image/png">
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <h1><img src="<%= asset_path 'songswesing.png' %>"></h1>
+    <% if user_signed_in? %>
+      <div class="top-menu">
+        <ul>
+          <li><%= link_to 'Home', root_path %></li>
+          <li><%= link_to 'Usage Table', usages_path %></li>
+          <li><%= link_to 'Services', services_path %></li>
+          <li>
+            <%= link_to 'Songs', songs_path %>
+            <% if true %>
+              <ul>
+                  <li><%= link_to 'Alternate Titles', akas_path %></li>
+              </ul>
+            <% end %>
+          </li>
+          <li><%= link_to 'Logout', destroy_user_session_path, :method => :delete %></li>
+        </ul>
+      </div>
+    <% end %>
+    <div class="clearfix"></div>
+    <div class="flash container">
+    	<% if !notice.nil? %>
+        <div class="alert alert-success"><%= notice %>
+          <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+        </div>
+    	<% end %>
+    	<% if !alert.nil? %>
+        <div class="alert alert-danger"><%= alert %>
+          <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+        </div>
+    	<% end %>
     </div>
-<% end %>
-<div class="clearfix"></div>
-<div class="flash container">
-	<% if !notice.nil? %>
-	<div class="alert alert-success"><%= notice %>
-      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button></div>
-	<% end %>
-	<% if !alert.nil? %>
-	<div class="alert alert-danger"><%= alert %>
-      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button></div>
-	<% end %>
-</div>
 
-<%= yield %>
-
-</body>
+    <%= yield %>
+  </body>
 </html>
