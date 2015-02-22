@@ -2,7 +2,7 @@ var myLightboxChart;
 var myFeatherBox;
 var tagOptions = new Array();
 
-$( document ).on(function() {
+$( document ).on("ready page:load", function() {
     $(document).on('ajax:success',function(data, status, xhr){
         switch(status.what)
         {
