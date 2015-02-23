@@ -31,7 +31,7 @@
     content: "";
     position: absolute;
     top: -7px;
-    left: 20%;
+    left: 1em;
     border-bottom: 7px solid #ddd;     
     border-left: 7px solid transparent;
     border-right: 7px solid transparent;
