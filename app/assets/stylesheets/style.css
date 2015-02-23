@@ -130,7 +130,11 @@ h1 {
     margin: 2px;
 }
 
-.addnew {
+td .addnew {
+    cursor: pointer;
+    margin: 0.2em 0.2em 0 0;
+}
+th .addnew {
     position: absolute;
     top: 8px;
     right:5px;
@@ -138,6 +142,12 @@ h1 {
 }
 .addnew:hover {
     text-decoration: none;
+}
+.deleteme {
+    color: #FE4F45;
+}
+.deleteme:hover {
+    color: #D04942;
 }
 
 th {

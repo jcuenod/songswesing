@@ -1,9 +1,9 @@
-<div style="width: 100%; padding: 20px;">
-<table class="table table-condensed table-striped songlist masteredit" id="akas">
+<div style="padding: 20px;">
+<table class="table table-condensed table-hover songlist masteredit" id="akas">
 	<thead>
-		<td class="song_name">Song Name</td>
-		<td class="display_text">Searchable Title</td>
-		<% if current_user.admin? %><td class="search_text">Search Text</td><% end %>
+		<th class="song_name">Song Name</th>
+		<th class="display_text">Searchable Title</th>
+		<% if current_user.admin? %><th class="search_text">Search Text</th><th></th><% end %>
 	</thead>
 	<% @akas.each do |a| %>
 		<% @aka = a %>

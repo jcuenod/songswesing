@@ -3,28 +3,8 @@ var myFeatherBox;
 var tagOptions = new Array();
 
 $( document ).on("ready page:load", function() {
-    $(document).on('ajax:success',function(data, status, xhr){
-        switch(status.what)
-        {
-            case "created":
-                switch (status.whatCreated)
-                {
-                    case "service":
-                        $('.insertionForm').after(status.htmlOutput);
-                        break;
-                    case "leader":
-                        $("#service_leader_id").append(status.htmlOutput);
-                        break;
-                    case "service_type":
-                        $("#service_service_type_id").append(status.htmlOutput);
-                        break;
-                    case "song":
-                        $("#songList").tagit('createTag', status.tag.id, status.tag.label);
-                        break;
-                }
-                break;
-        }
-    }).on('ajax:error',function(xhr, status, error){
+    $(document).on('ajax:success', handleSuccess)
+    .on('ajax:error',function(xhr, status, error){
       console.log(error);
       alert("failed")
     });
@@ -108,9 +88,64 @@ $( document ).on("ready page:load", function() {
     );
 });
 
-function addnewAnchorClicked(thingToAdd)
+function handleSuccess(data, status, xhr)
 {
-    var jqxhr = $.ajax("/" + thingToAdd + "/new")
+    switch(status.what)
+        {
+            case "created":
+                switch (status.whatCreated)
+                {
+                    case "service":
+                        $('.insertionForm').after(status.htmlOutput);
+                        break;
+                    case "leader":
+                        $("#service_leader_id").append(status.htmlOutput);
+                        break;
+                    case "service_type":
+                        $("#service_service_type_id").append(status.htmlOutput);
+                        break;
+                    case "song":
+                        $("#songList").tagit('createTag', status.tag.id, status.tag.label);
+                        break;
+                    case "aka":
+                        var new_aka_song_id = status.song_id
+                        $.ajax({"url": "/akas/" + status.aka_id,
+                            "success": function (responseText)
+                            {
+                                $("td[tag=" + new_aka_song_id + "]").last().parent("tr").after(responseText)
+                                $("td[tag=" + new_aka_song_id + "]").last().parent("tr").children("td[contenteditable=true]")
+                                    .on("focus", prepAjaxUpdate)
+                                    .on("blur", doAjaxUpdate);
+                            }
+                        });
+                        break;
+                }
+                break;
+            case "destroyed":
+                switch (status.whatDestroyed)
+                {
+                    case "aka":
+                        $("tr#" + status.aka_id).fadeOut("slow", $("tr#" + status.aka_id).remove);
+                        break;
+                }
+        }
+}
+
+function deleteAnchorClicked(thingToDelete, id, dataToSend)
+{
+    //TODO: Are you freaking sure?!?
+    $.ajax({
+        type: 'DELETE',
+        url:  '/' + thingToDelete + '/' + id,
+        data: dataToSend,
+        dataType: "JSON",
+        success: function(data, status, xhr) {handleSuccess("meh", data)}
+    });
+
+}
+function addnewAnchorClicked(thingToAdd, dataToSend)
+{
+    var jqxhr = $.ajax({"url": "/" + thingToAdd + "/new", "data": dataToSend})
         .done(function(data) {
             myFeatherBox = $.featherlight(data, {
                 afterOpen: function() {

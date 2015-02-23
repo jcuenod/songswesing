@@ -1,0 +1,8 @@
+<div><%= form_for @aka, html: {class: "form-horizontal", id: "frm_create"}, remote: true do |f| %>
+	<%= f.hidden_field "song_id", value: @song_id %>
+	<div class="form-group"><%= f.label :display_text, raw("Display&nbsp;Text"), class: "col-sm-4 control-label" %>
+		<div class="col-sm-8"><%= f.text_field :display_text, class: "form-control", required:"required" %></div>
+	</div>
+    <%= f.submit class:"btn btn-primary btn-lg btn-block" %>
+    
+<% end %></div>

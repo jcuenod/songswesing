@@ -1,5 +1,19 @@
 <tr id="<%= @aka.id %>">
-	<td class="song_name"><%= @aka.song.song_name %></td>
-	<td class="display_text"<% if current_user.admin? %> name="display_text" contenteditable="true"<% end %>><%= @aka.display_text %></td>
-	<% if current_user.admin? %><td class="search_text" name="search_text"><%= @aka.search_text %></td><% end %>
+	<td class="song_name" tag="<%= @aka.song.id %>">
+		<% if current_user.admin? %>
+			<a class="glyphicon glyphicon-plus-sign addnew" title="Add alternative title to '<%= @aka.song.song_name %>'" onclick="addnewAnchorClicked('akas', {'song_id':<%= @aka.song.id %>})"></a>
+		<% end %>
+		<%= @aka.song.song_name %>
+	</td>
+	<td class="display_text"<% if current_user.admin? %> name="display_text" contenteditable="true"<% end %>>
+		<%= @aka.display_text %>
+	</td>
+	<% if current_user.admin? %>
+		<td class="search_text" name="search_text">
+			<%= @aka.search_text %>
+		</td>
+		<td>
+			<a class="glyphicon glyphicon-minus-sign addnew deleteme" title="Delete this title (this cannot be undone)" onclick="deleteAnchorClicked('akas', <%= @aka.id %>)"></a>
+		</td>
+	<% end %>
 </tr>
