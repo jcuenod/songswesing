@@ -10,7 +10,7 @@ class ServicesController < ApplicationController
 	 	render "index"
 	end
 	def new
-		@leaders = Leader.where(church_id: current_user.church_id)
+		@leaders = Leader.select(:id, :leader_name).where(church_id: current_user.church_id).order :leader_name
 		@service_types = ServiceType.select(:id, :service_type).where(church_id: current_user.church_id).order :weight
 		@service = Service.new
 		@services = Service.where(church_id: current_user.church_id).limit(8).order([:date => :desc, :service_type_id => :asc]).all
