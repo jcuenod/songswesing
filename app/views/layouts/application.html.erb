@@ -17,12 +17,11 @@
           <li><%= link_to 'Services', services_path %></li>
           <li>
             <%= link_to 'Songs', songs_path %>
-            <% if true %>
-              <ul>
-                  <li><%= link_to 'Alternate Titles', akas_path %></li>
-              </ul>
-            <% end %>
+            <ul>
+                <li><%= link_to 'Alternate Titles', akas_path %></li>
+            </ul>
           </li>
+          <% if current_user.admin? %><li><%= link_to 'Users', users_path %></li><% end %>
           <li><%= link_to 'Logout', destroy_user_session_path, :method => :delete %></li>
         </ul>
       </div>

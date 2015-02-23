@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   resources :service_types
   resources :usages
   resources :akas
+  resources :users, only: [:index]
 
   post 'songs/list' => 'songs#list'
   post 'songs/data/:id' => 'songs#data'
