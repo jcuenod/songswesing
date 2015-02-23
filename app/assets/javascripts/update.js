@@ -4,7 +4,7 @@ $(document).on("ready page:load", function() {
 	$("td[contenteditable=true]").on("focus", prepAjaxUpdate).on("blur", doAjaxUpdate);
 
 	$("[contenteditable=true]").bind("paste", function(e) {
-	    var that = this
+	    var that = this;
 	    setTimeout(function(){$(that).html($(that).text())}, 0);
 	});
 });
@@ -30,12 +30,12 @@ function doAjaxUpdate() {
 	    	console.log (data);
 	        if (data.result)
 	        {
-				markUpdate($(toupdate))
+				markUpdate($(toupdate));
 			    $(toupdate).siblings("td").each(function() {
 			    	if ($(this).text() != data.object[$(this).attr("name")] && typeof(data.object[$(this).attr("name")]) != "undefined")
 			    	{
 			    		$(this).text( data.object[$(this).attr("name")] );
-			    		markUpdate($(this))
+			    		markUpdate($(this));
 			    	}
 
 			    });

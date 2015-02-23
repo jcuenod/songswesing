@@ -6,7 +6,7 @@ $( document ).on("ready page:load", function() {
     $(document).on('ajax:success', handleSuccess)
     .on('ajax:error',function(xhr, status, error){
       console.log(error);
-      alert("failed")
+      alert("failed");
     });
 
     var elem = document.createElement('input');
@@ -108,11 +108,11 @@ function handleSuccess(data, status, xhr)
                         $("#songList").tagit('createTag', status.tag.id, status.tag.label);
                         break;
                     case "aka":
-                        var new_aka_song_id = status.song_id
+                        var new_aka_song_id = status.song_id;
                         $.ajax({"url": "/akas/" + status.aka_id,
                             "success": function (responseText)
                             {
-                                $("td[tag=" + new_aka_song_id + "]").last().parent("tr").after(responseText)
+                                $("td[tag=" + new_aka_song_id + "]").last().parent("tr").after(responseText);
                                 $("td[tag=" + new_aka_song_id + "]").last().parent("tr").children("td[contenteditable=true]")
                                     .on("focus", prepAjaxUpdate)
                                     .on("blur", doAjaxUpdate);
@@ -128,6 +128,7 @@ function handleSuccess(data, status, xhr)
                         $("tr#" + status.aka_id).fadeOut("slow", $("tr#" + status.aka_id).remove);
                         break;
                 }
+                break;
         }
 }
 
