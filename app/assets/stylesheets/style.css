@@ -43,6 +43,9 @@
     background-color: #ddd;
     margin: 0px;
 }
+.top-menu ul li:last-child ul {
+    right: 0;
+}
 .top-menu ul ul li {
     display: block;
 }
