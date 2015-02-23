@@ -1,0 +1,5 @@
+<tr id="<%= @aka.id %>">
+	<td class="song_name"><%= @aka.song.song_name %></td>
+	<td class="display_text"<% if current_user.admin? %> name="display_text" contenteditable="true"<% end %>><%= @aka.display_text %></td>
+	<% if current_user.admin? %><td class="search_text" name="search_text"><%= @aka.search_text %></td><% end %>
+</tr>

@@ -1,0 +1,13 @@
+<div style="width: 100%; padding: 20px;">
+<table class="table table-condensed table-striped songlist masteredit" id="akas">
+	<thead>
+		<td class="song_name">Song Name</td>
+		<td class="display_text">Searchable Title</td>
+		<% if current_user.admin? %><td class="search_text">Search Text</td><% end %>
+	</thead>
+	<% @akas.each do |a| %>
+		<% @aka = a %>
+		<%= render "aka_template" %>
+	<% end %>
+</table>
+</div>

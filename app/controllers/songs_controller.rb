@@ -35,6 +35,7 @@ class SongsController < ApplicationController
 	def update
 		if current_user.admin?
 	    	@result = Song.find(params[:id]).update_attributes params[:key] => params[:value]
+	    	@song = Song.find(params[:id])
 	    end
 	end
 

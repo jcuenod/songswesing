@@ -1,4 +1,4 @@
-<tr name="<%= @song.id %>">
+<tr id="<%= @song.id %>">
 	<td class="song_name"<% if current_user.admin? %> name="song_name" contenteditable="true"<% end %>><%= @song.song_name %></td>
 	<td class="license"<% if current_user.admin? %> name="license" contenteditable="true"<% end %>><%= @song.license %></td>
 	<td class="writers"<% if current_user.admin? %> name="writers" contenteditable="true"<% end %>><%= @song.writers %></td>
