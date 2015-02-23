@@ -1,6 +1,6 @@
 var update_original_var;
 
-$(document).ready(function() {
+$(document).on("ready page:load", function() {
 	$("td[contenteditable=true]").on("focus", function() {
 		update_original_var = $(this).html();
 	})
