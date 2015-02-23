@@ -11,7 +11,7 @@ class ServicesController < ApplicationController
 	end
 	def new
 		@leaders = Leader.where(church_id: current_user.church_id)
-		@service_types = ServiceType.where(church_id: current_user.church_id)
+		@service_types = ServiceType.select(:id, :service_type).where(church_id: current_user.church_id).order :weight
 		@service = Service.new
 		@services = Service.where(church_id: current_user.church_id).limit(8).order([:date => :desc, :service_type_id => :asc]).all
 		# flash.now[:notice] = "Viewing services for " + Church.find_by_id(current_user.church_id).church_name
