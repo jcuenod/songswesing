@@ -4,10 +4,10 @@ var tagOptions = new Array();
 
 $( document ).on("ready page:load", function() {
     $(document).on('ajax:success', handleSuccess)
-    .on('ajax:error',function(xhr, status, error){
-      console.log(error);
-      alert("failed");
-    });
+        .on('ajax:error',function(xhr, status, error){
+            console.log(error);
+            alert("failed");
+        });
 
     var elem = document.createElement('input');
     elem.setAttribute('type', 'date');
@@ -37,29 +37,6 @@ $( document ).on("ready page:load", function() {
         allowNewTags: false,
         onlyAvailableTags : true,
         removeConfirmation: true,
-        /*afterTagAdded: function ()
-        {
-            $(".ui-autocomplete-input").autoGrow(8);
-        },*/
-        // autocomplete: {
-            // minLength: 2
-        //     delay: 0,
-            // source: function(request, response) {
-	           //  var term = $.ui.autocomplete.escapeRegex(request.term);
-	           //  var startsWithMatcher = new RegExp("^" + term, "i");
-	           //  var startsWith = $.grep(source, function(value) {
-	           //      return startsWithMatcher.test(value.label || value.value || value);
-	           //  });
-	           //  var containsMatcher = new RegExp(term, "i");
-	           //  var contains = $.grep(source, function (value) {
-	           //      return $.inArray(value, startsWith) < 0 &&
-	           //          containsMatcher.test(value.label || value.value || value);
-	           //  });
-
-	           //  response(startsWith.concat(contains));
-            // },
-            // sortResults: false
-        // },
         onSubmit: function() {
             $('#songList').tagit('removeAll');
         },
@@ -68,21 +45,22 @@ $( document ).on("ready page:load", function() {
         },
         showAutocompleteOnFocus:false,
         beforeTagAdded: function(event, ui) {
-            return $.isNumeric(ui.tag[0].children[2].defaultValue)
+            return $.isNumeric(ui.tag[0].children[2].defaultValue);
         },
         fieldName: 'service[songs][]',
     });
     
-    $(".top-menu ul li > ul").parent().hover(function() { $(this).children("ul").animate({
-                opacity: 'show',      // animate slideUp
+    $(".top-menu ul li > ul").parent().hover(
+        function() { $(this).children("ul").animate({
+                opacity: 'show',
                 padding: 'show',
-                marginTop: '-1px'        // animate fadeOut
+                marginTop: '-1px',
             }, 'fast', 'linear');
         },
         function() { $(this).children("ul").animate({
-                opacity: 'hide',      // animate slideUp
+                opacity: 'hide',
                 padding: 'hide',
-                marginTop: '5px'        // animate fadeOut
+                marginTop: '5px',
             }, 'fast', 'linear'); 
         }
     );
@@ -108,12 +86,11 @@ function handleSuccess(data, status, xhr)
                     break;
                 case "aka":
                     var new_aka_song_id = status.song_id;
-                    $.ajax({"url": "/akas/" + status.aka_id,
+                    $.ajax({
+                        "url": "/akas/" + status.aka_id,
                         "success": function (responseText) {
                             $("td[tag=" + new_aka_song_id + "]").last().parent("tr").after(responseText);
-                            $("td[tag=" + new_aka_song_id + "]").last().parent("tr").children("td[contenteditable=true]")
-                                .on("focus", prepAjaxUpdate)
-                                .on("blur", doAjaxUpdate);
+                            $("td[tag=" + new_aka_song_id + "]").last().parent("tr").children("td[contenteditable=true]").on("focus", prepAjaxUpdate).on("blur", doAjaxUpdate);
                         }
                     });
                     break;
