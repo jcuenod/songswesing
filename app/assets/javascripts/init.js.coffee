@@ -31,7 +31,7 @@ ceDoUpdate = ->
       if data.result
         ceAfterUpdate $(toupdate)
         $(toupdate).siblings('td').each ->
-          if $(this).text() != ""+data.object[$(this).attr('name')] and !($(this).text() or ""+data.object[$(this).attr('name')]) and typeof data.object[$(this).attr('name')] != 'undefined'
+          if $(this).text() != ""+data.object[$(this).attr('name')] and !!$(this).text() and !!data.object[$(this).attr('name')] and typeof data.object[$(this).attr('name')] != 'undefined'
             $(this).text data.object[$(this).attr('name')]
             ceAfterUpdate $(this)
           return
