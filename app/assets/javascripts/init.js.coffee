@@ -234,3 +234,5 @@ $(document).on 'ready page:load', ->
   $('td[contenteditable=true]').on('focus', ceBeforeUpdate).on 'blur', ceDoUpdate
   $('td[contenteditable=true]').on 'paste', cePaste
   return
+
+Turbolinks.enableProgressBar()
