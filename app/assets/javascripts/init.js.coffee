@@ -149,7 +149,9 @@ handleComplete = (xhr, response, status) ->
       return
   else if $(xhr.target).hasClass "crud_delete"
     #destroy button hit
-    $('tr#' + response.responseJSON.aka_id).fadeOut('slow').remove()
+    $('tr#' + response.responseJSON.aka_id).fadeOut 'slow', ->
+      $(this).remove()
+      return
     return
   else if $(xhr.target).is("form")
     #form submission
@@ -169,8 +171,9 @@ handleComplete = (xhr, response, status) ->
             $.ajax
               'url': '/akas/' + response.responseJSON.aka_id
               'success': (newAkaTemplate) ->
-                $('td[data-song-id=' + new_aka_song_id + ']').last().parent('tr').after newAkaTemplate
-                #$('td[data-song-id=' + new_aka_song_id + ']').last().parent('tr').children('td[contenteditable=true]').on('focus', prepAjaxUpdate).on 'blur', doAjaxUpdate
+                $(newAkaTemplate).insertAfter($('td[data-song-id=' + new_aka_song_id + ']').last().parent('tr'))
+                  .on('focus', ceBeforeUpdate).on('blur', ceDoUpdate)
+                  .on('paste', cePaste)
                 return
 
 $(document).on('ajax:complete', handleComplete)
@@ -234,5 +237,5 @@ $(document).on 'ready page:load', ->
   #$('a.crud_create').click createAnchorClicked #these should now be dealt with in the rails way
   #$('a.crud_delete').click deleteAnchorClicked
   $('td[contenteditable=true]').on('focus', ceBeforeUpdate).on 'blur', ceDoUpdate
-  $('td[contenteditable=true]').on 'paste', ceAfterUpdate
+  $('td[contenteditable=true]').on 'paste', cePaste
   return
