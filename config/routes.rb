@@ -13,7 +13,7 @@ Rails.application.routes.draw do
 
   post 'songs/list' => 'songs#list'
   post 'songs/data/:id' => 'songs#data'
-  post 'usages/data/:limit' => 'usages#data'
+  post 'usages/data/:limit' => 'usages#data', :as => 'usage_data'
   post 'leaders/data/:id' => 'leaders#data'
 
   # The priority is based upon order of creation: first created -> highest priority.
