@@ -3,71 +3,6 @@ myFeatherBox = undefined
 tagOptions = []
 update_original_var = undefined
 
-# handleSuccess = (data, status, xhr) ->
-#   response = status.responseText
-#   switch response.what
-#     when 'created'
-#       switch response.whatCreated
-#         when 'service'
-#           $('.insertionForm').after response.htmlOutput
-#         when 'leader'
-#           $('#service_leader_id').append response.htmlOutput
-#         when 'service_type'
-#           $('#service_service_type_id').append response.htmlOutput
-#         when 'song'
-#           $('#songList').tagit 'createTag', response.tag.id, response.tag.label
-#         when 'aka'
-#           new_aka_song_id = response.song_id
-#           $.ajax
-#             'url': '/akas/' + response.aka_id
-#             'success': (responseText) ->
-#               $('td[data-song-id=' + new_aka_song_id + ']').last().parent('tr').after responseText
-#               #$('td[data-song-id=' + new_aka_song_id + ']').last().parent('tr').children('td[contenteditable=true]').on('focus', prepAjaxUpdate).on 'blur', doAjaxUpdate
-#               return
-#     when 'destroyed'
-#       switch response.whatDestroyed
-#         when 'aka'
-#           $('tr#' + response.aka_id).fadeOut 'slow', $('tr#' + response.aka_id).remove
-#   return
-
-#I don't think we need to support sending data when deleting an object
-# (removed from ajax json) data: $(this).attr 'data-to-send'
-# deleteAnchorClicked = ->
-#   #TODO: Ask "Are you freaking sure?!?"
-#   $.ajax
-#     type: 'DELETE'
-#     url: $(this).attr('data-object') + 's' + '/' + $(this).attr('data-object-id') # 's' for rails plural objects
-#     dataType: 'JSON'
-#     success: (data, status, xhr) ->
-#       #handleSuccess null, data
-#       return
-#   return
-
-# createAnchorClicked = ->
-#   ajaxSettings = url: $(this).attr('data-object') + 's' + '/new' # 's' for rails plural objects
-#   if $(this).attr('data-to-send') != undefined
-#     ajaxSettings.data = JSON.parse $(this).attr 'data-to-send'
-#   jqxhr = $.ajax(ajaxSettings).done((data) ->
-#     myFeatherBox = $.featherlight(data, afterOpen: ->
-#       $('form#frm_create').validate()
-#       $('#frm_create input[type!=hidden]')[0].focus()
-#       return
-#     )
-#     $('#frm_create input[type=submit]').on 'click', (e) ->
-#       myFeatherBox.close()
-#       return
-#     $('#song_ccli_number').on 'blur', (e) ->
-#       if $('#song_song_name').val() == ''
-#         ccli_loader $('#song_ccli_number').val()
-#       return
-#     return
-#   ).fail((e) ->
-#     console.log 'error creating addnew form'
-#     console.dir e
-#     return
-#   )
-#   return
-
 ceAfterUpdate = (el) ->
   trueColor = $(el).css('backgroundColor')
   $(el).animate { backgroundColor: '#cce2ff' },
@@ -199,17 +134,13 @@ leaderAnchorClicked = ->
 
 handleBusy = (xhr) ->
   if $(xhr.target).is("form")
-    #form is being submitted
+    #form is being submitted make things look pretty in the mean time
     myFeatherBox.close()
     myFeatherBox = $.featherlight "<div class='ajaxbusy' />"
   return
 
 handleComplete = (xhr, response, status) ->
   myFeatherBox.close() if myFeatherBox?
-  console.log ("---\nAJAX call complete\n---");
-  console.log (xhr);
-  console.log (response);
-  console.log (status);
   if $(xhr.target).hasClass "crud_create"
     #creation button hit
     myFeatherBox = $.featherlight response.responseText, afterOpen: ->
