@@ -233,6 +233,7 @@ $(document).on 'ready page:load', ->
   $('a.leaderAnchor').click leaderAnchorClicked
   $('td[contenteditable=true]').on('focus', ceBeforeUpdate).on 'blur', ceDoUpdate
   $('td[contenteditable=true]').on 'paste', cePaste
+  $("<div>").addClass("ajaxbusy").css("display", "none").appendTo "body"
   return
 
 Turbolinks.enableProgressBar()

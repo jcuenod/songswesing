@@ -163,7 +163,7 @@ th {
     }
 }
 .ajaxbusy {
-    background: $img_spinner_url 50% 50% no-repeat;
+    background: url($img_spinner_url) 50% 50% no-repeat;
     width: 100%;
     height: 30vh;
 }
