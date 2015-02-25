@@ -1,0 +1,233 @@
+//colors
+$lightest_background: #fff;
+$light_background: #f3f3f3;
+$lowlight: #dde;
+$normal_danger: #fe4f45;
+$active_danger: #d04942;
+
+//fonts
+$font_0: Open Sans Condensed;
+
+//urls
+$url_0: image_path("rails.png");
+
+//@extend-elements
+//original selectors
+//a.borderedanchor, a.unborderedanchor
+%extend_1 {
+    padding: 1px 5px;
+    margin: 1px 2px;
+    //Instead of the line below you could use @includeborder-radius($radius, $vertical-radius)
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+
+.top-menu {
+    float: right;
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    ul {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        ul {
+            display: inline;
+            display: none;
+            position: absolute;
+            background-color: $lowlight;
+            margin: 0;
+            &:before {
+                width: 0;
+                height: 0;
+                content: "";
+                position: absolute;
+                top: -7px;
+                left: 1em;
+                border-bottom: 7px solid $lowlight;
+                border-left: 7px solid transparent;
+                border-right: 7px solid transparent;
+            }
+            li {
+                display: block;
+            }
+        }
+        li:last-child ul {
+            right: 0;
+        }
+    }
+    li {
+        display: inline-block;
+        margin: 0;
+    }
+    a {
+        display: inline-block;
+        margin: 0;
+        padding: 0.7em 1.6em;
+        border-bottom: 2px solid $lightest_background;
+        &:hover {
+            text-decoration: none;
+            background-color: $light_background;
+            border-bottom: 2px solid $lowlight;
+        }
+    }
+}
+.ui-datepicker-trigger {
+    float: left;
+    padding: 1px;
+    margin: 0 2px;
+}
+.ui-autocomplete-input {
+    min-width: 0 !important;
+}
+select {
+    padding: 1.1em;
+}
+a {
+    &:hover {
+        text-decoration: none;
+    }
+    &.borderedanchor {
+        border: 1px solid $lowlight;
+        @extend %extend_1;
+        &:hover {
+            background-color: $lowlight;
+        }
+    }
+    &.unborderedanchor {
+        @extend %extend_1;
+        &:hover {
+            background-color: $lowlight;
+        }
+    }
+}
+.breakdown_header {
+    text-align: center;
+    font-size: 200%;
+    font-weight: bold;
+    &:before {
+        content: "INFO: ";
+        font-size: 70%;
+        font-weight: normal;
+    }
+}
+h1 {
+    margin: 20px 30px 0 40px;
+    font-family: $font_0;
+    font-size: 300%;
+    float: left;
+}
+.flash {
+    position: absolute;
+    z-index: 1;
+    width: 80%;
+    left: 10%;
+}
+.alert {
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.spacer {
+    display: inline-block;
+    width: 4px;
+}
+.icontip {
+    margin: 2px;
+}
+td {
+    .crud_button {
+        cursor: pointer;
+        margin: 0.2em 0.2em 0 0;
+    }
+    &.date {
+        white-space: nowrap;
+    }
+}
+th {
+    position: relative;
+    white-space: nowrap;
+    .crud_button {
+        position: absolute;
+        top: 8px;
+        right: 5px;
+        cursor: pointer;
+    }
+}
+.crud_delete {
+    color: $normal_danger;
+    &:hover {
+        color: $active_danger;
+    }
+}
+.ajaxbusy {
+    background: image_$url_0 50% 50% no-repeat;
+    width: 100%;
+    height: 30vh;
+}
+.tdkey {
+    font-weight: bold;
+}
+.ui-helper-hidden-accessible {
+    display: none;
+}
+.tagit-label {
+    vertical-align: middle;
+}
+#songList {
+    min-height: 32px;
+    margin: 1px;
+    //Instead of the line below you could use @includeborder-radius($radius, $vertical-radius)
+    border-radius: 3px;
+}
+#service_date {
+    min-width: 8em;
+}
+.songlist {
+    padding: 20px;
+    thead {
+        font-weight: bold;
+    }
+    td {
+        overflow: hidden;
+        max-width: 80px;
+    }
+}
+td[contenteditable="true"] {
+    &:focus {
+        background-color: $light_background !important;
+    }
+    &:active {
+        background-color: $light_background !important;
+    }
+}
+.tagit-autocomplete.ui-menu {
+    //Instead of the line below you could use @includeborder-radius($radius, $vertical-radius)
+    border-radius: 4px;
+    padding: 2px;
+    padding-right: 8px;
+    .ui-menu-item {
+        //Instead of the line below you could use @includeborder-radius($radius, $vertical-radius)
+        border-radius: 3px;
+        margin: 1px;
+    }
+}
+ul.tagit {
+    width: 100%;
+    background-color: $lightest_background;
+    cursor: text;
+}
+.crud_button:hover {
+    text-decoration: none;
+}
+span.ui-button-text {
+    white-space: nowrap !important;
+}
+.servicelist td.dat {
+    width: 200px;
+}
+::-webkit-inner-spin-button {
+    display: none;
+}

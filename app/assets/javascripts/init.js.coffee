@@ -57,22 +57,16 @@ cePaste = (el) ->
   setTimeout (->
     $(that).html $(that).text()
     return
-  ), 10
-  return
-
-songUsageAnchorClicked = ->
-  jqxhr = $.post('/usages/data/10').done((data) ->
-    myFeatherBox = $.featherlight('<div class=\'breakdown_header\'>Usage Summary</div><div id=\'feather\'>' + data + '</div>')
-    return
-  ).fail((e) ->
-    console.log 'error'
-    console.dir e
-    return
-  )
+  ), 0
   return
 
 songAnchorClicked = ->
-  song_id = $(this).attr('id')
+  doSongAnchorClicked $(this).attr('id')
+
+tagitSongAnchorClicked = (id) ->
+  doSongAnchorClicked id
+
+doSongAnchorClicked = (song_id) ->
   jqxhr = $.post('/songs/data/' + song_id).done((data) ->
     try
       myLightboxChart.destroy()
@@ -153,6 +147,10 @@ handleComplete = (xhr, response, status) ->
       $(this).remove()
       return
     return
+  if $(xhr.target).hasClass "songUsageAnchor"
+    #songUsageAnchor button hit
+    myFeatherBox = $.featherlight '<div class=\'breakdown_header\'>Usage Summary</div><div id=\'feather\'>' + response.responseText + '</div>'
+    return
   else if $(xhr.target).is("form")
     #form submission
     switch response.responseJSON.what
@@ -211,7 +209,7 @@ $(document).on 'ready page:load', ->
       $('#songList').tagit 'removeAll'
       return
     onTagClicked: (evt, ui) ->
-      songAnchorClicked ui.tagLabel
+      tagitSongAnchorClicked ui.tagLabel
       return
     showAutocompleteOnFocus: false
     beforeTagAdded: (event, ui) ->
@@ -228,14 +226,11 @@ $(document).on 'ready page:load', ->
     $(this).children('ul').animate {
       opacity: 'hide'
       padding: 'hide'
-      marginTop: '5px'
+      marginTop: '7px'
     }, 'fast', 'linear'
     return
-  $('a.songUsageAnchor').click songUsageAnchorClicked
   $('a.songAnchor').click songAnchorClicked
   $('a.leaderAnchor').click leaderAnchorClicked
-  #$('a.crud_create').click createAnchorClicked #these should now be dealt with in the rails way
-  #$('a.crud_delete').click deleteAnchorClicked
   $('td[contenteditable=true]').on('focus', ceBeforeUpdate).on 'blur', ceDoUpdate
   $('td[contenteditable=true]').on 'paste', cePaste
   return
