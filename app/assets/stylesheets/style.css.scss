@@ -6,10 +6,10 @@ $normal_danger: #fe4f45;
 $active_danger: #d04942;
 
 //fonts
-$font_0: Open Sans Condensed;
+$font_header: Open Sans Condensed;
 
 //urls
-$url_0: image_path("rails.png");
+$img_spinner_url: image_path("spinner.gif");
 
 //@extend-elements
 //original selectors
@@ -116,7 +116,7 @@ a {
 }
 h1 {
     margin: 20px 30px 0 40px;
-    font-family: $font_0;
+    font-family: $font_header;
     font-size: 300%;
     float: left;
 }
@@ -163,7 +163,7 @@ th {
     }
 }
 .ajaxbusy {
-    background: image_$url_0 50% 50% no-repeat;
+    background: $img_spinner_url 50% 50% no-repeat;
     width: 100%;
     height: 30vh;
 }
