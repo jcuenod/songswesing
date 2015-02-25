@@ -11,7 +11,8 @@
                                 title:"Add new leader" %></th>
                 <th colspan="2">
                     Songs
-                    <a class="songUsageAnchor">usage summary</a>
+                    <%= link_to "usage summary", usage_data_path(10), method: "POST", remote: true,
+                            class: "songUsageAnchor", tabindex: -1, title:"Add new song" %>
                     <%= link_to "", new_song_path, remote: true, tabindex: -1,
                             class:"glyphicon glyphicon-plus-sign crud_button crud_create",
                             title:"Add new song" %>
@@ -27,7 +28,7 @@
                         </td>
                         <td width=1><%= #f.submit value: "create", class: 'form-control'
                         button_tag raw("<span class='glyphicon glyphicon-ok-circle'></span>"), :class => "btn btn-primary", :type => "submit"
-                        #link_to '', "#", :onclick => "$('#form_id').submit()", class: ' btn btn-primary' 
+                        #link_to '', "#", :onclick => "$('#form_id').submit()", class: ' btn btn-primary'
                         %></td>
                     </tr>
                     <% @services.each do |s| %>
