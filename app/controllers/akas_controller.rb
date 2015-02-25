@@ -16,12 +16,12 @@ class AkasController < ApplicationController
 
 	def create
 		aka = Aka.create(aka_params)
-		aka.search_text = params[:aka][:display_text].gsub(/(?=\S)(\W)/,"").squeeze(" ").downcase
+		#aka.search_text = params[:aka][:display_text].gsub(/(?=\S)(\W)/,"").squeeze(" ").downcase
 		aka.save
 
 		render json: {
-			"what" => "created", 
-			"whatCreated" => "aka", 
+			"what" => "created",
+			"whatCreated" => "aka",
 			"aka_id" => aka.id,
 			"song_id" => aka.song_id,
 		}
@@ -30,9 +30,6 @@ class AkasController < ApplicationController
 	def update
 		if current_user.admin?
 	    	@result = Aka.find(params[:id]).update_attributes params[:key] => params[:value]
-	    	if params[:key] == "display_text"
-	    		@result |= Aka.find(params[:id]).update_attributes :search_text => params[:value].gsub(/(?=\S)(\W)/,"").squeeze(" ").downcase
-	    	end
 	    	@aka = Aka.find(params[:id])
 	    end
 	end
@@ -41,8 +38,8 @@ class AkasController < ApplicationController
 		if Aka.destroy params[:id]
 			render json: {
 				"success" => true,
-				"what" => "destroyed", 
-				"whatDestroyed" => "aka", 
+				"what" => "destroyed",
+				"whatDestroyed" => "aka",
 				"aka_id" => params[:id],
 			}
 		else
