@@ -7,10 +7,10 @@
 	</td>
 	<td class="leader">
 		<% unless @service.leader.nil? %>
-            <a onclick="leaderAnchorClicked('<%= @service.leader.id %>')" class="unborderedanchor"><%= @service.leader.leader_name %></a>
+            <a class="unborderedanchor leaderAnchor" id="<%= @service.leader.id %>"><%= @service.leader.leader_name %></a>
         <% end %>
 	</td>
     <td colspan="2" class="songs">
-        <%= raw @service.songs.map { |song| link_to song.song_name, "#", onclick: "songAnchorClicked(#{song.id})", class: "borderedanchor" }.join() %>
+        <%= raw @service.songs.map { |song| link_to song.song_name, "#", class: "borderedanchor songAnchor", id: song.id }.join() %>
     </td>
 </tr>

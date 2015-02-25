@@ -1,8 +1,8 @@
 <tr id="<%= @aka.id %>">
-	<td class="song_name" tag="<%= @aka.song.id %>">
-		<% if current_user.admin? %>
-			<a class="glyphicon glyphicon-plus-sign addnew" title="Add alternative title to '<%= @aka.song.song_name %>'" onclick="addnewAnchorClicked('akas', {'song_id':<%= @aka.song.id %>})"></a>
-		<% end %>
+	<td class="song_name" data-song-id="<%= @aka.song_id %>">
+			<%= link_to "", new_aka_path(song_id: @aka.song_id), remote: true, tabindex: -1,
+					class:"glyphicon glyphicon-plus-sign crud_create crud_button",
+					title:"Add alternative title to '#{@aka.song.song_name}'" if current_user.admin? %>
 		<%= @aka.song.song_name %>
 	</td>
 	<td class="display_text"<% if current_user.admin? %> name="display_text" contenteditable="true"<% end %>>
@@ -13,7 +13,9 @@
 			<%= @aka.search_text %>
 		</td>
 		<td>
-			<a class="glyphicon glyphicon-minus-sign addnew deleteme" title="Delete this title (this cannot be undone)" onclick="deleteAnchorClicked('akas', <%= @aka.id %>)"></a>
+			<%= link_to "", @aka, method: :delete, remote:true, data: { confirm: "Are you sure?" }, tabindex: -1,
+				class:"glyphicon glyphicon-minus-sign crud_delete crud_button",
+				title:"Delete this title (this cannot be undone)" %>
 		</td>
 	<% end %>
 </tr>

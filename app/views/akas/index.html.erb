@@ -3,7 +3,7 @@
 	<thead>
 		<th class="song_name">Song Name</th>
 		<th class="display_text">Searchable Title</th>
-		<% if current_user.admin? %><th class="search_text">Search Text</th><th></th><% end %>
+		<% if current_user.admin? %><th class="search_text">Search Text</th><th width=1px></th><% end %>
 	</thead>
 	<% @akas.each do |a| %>
 		<% @aka = a %>

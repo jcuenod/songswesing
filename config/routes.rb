@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   resources :leaders
   resources :service_types
   resources :usages
-  resources :akas
+  resources :akas#, :path => "alternate_titles" #TODO
   resources :users, only: [:index]
 
   post 'songs/list' => 'songs#list'

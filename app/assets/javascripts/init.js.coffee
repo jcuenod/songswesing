@@ -1,67 +1,128 @@
 myLightboxChart = undefined
 myFeatherBox = undefined
 tagOptions = []
+update_original_var = undefined
 
-handleSuccess = (data, status, xhr) ->
-  switch status.what
-    when 'created'
-      switch status.whatCreated
-        when 'service'
-          $('.insertionForm').after status.htmlOutput
-        when 'leader'
-          $('#service_leader_id').append status.htmlOutput
-        when 'service_type'
-          $('#service_service_type_id').append status.htmlOutput
-        when 'song'
-          $('#songList').tagit 'createTag', status.tag.id, status.tag.label
-        when 'aka'
-          new_aka_song_id = status.song_id
-          $.ajax
-            'url': '/akas/' + status.aka_id
-            'success': (responseText) ->
-              $('td[tag=' + new_aka_song_id + ']').last().parent('tr').after responseText
-              $('td[tag=' + new_aka_song_id + ']').last().parent('tr').children('td[contenteditable=true]').on('focus', prepAjaxUpdate).on 'blur', doAjaxUpdate
-              return
-    when 'destroyed'
-      switch status.whatDestroyed
-        when 'aka'
-          $('tr#' + status.aka_id).fadeOut 'slow', $('tr#' + status.aka_id).remove
+# handleSuccess = (data, status, xhr) ->
+#   response = status.responseText
+#   switch response.what
+#     when 'created'
+#       switch response.whatCreated
+#         when 'service'
+#           $('.insertionForm').after response.htmlOutput
+#         when 'leader'
+#           $('#service_leader_id').append response.htmlOutput
+#         when 'service_type'
+#           $('#service_service_type_id').append response.htmlOutput
+#         when 'song'
+#           $('#songList').tagit 'createTag', response.tag.id, response.tag.label
+#         when 'aka'
+#           new_aka_song_id = response.song_id
+#           $.ajax
+#             'url': '/akas/' + response.aka_id
+#             'success': (responseText) ->
+#               $('td[data-song-id=' + new_aka_song_id + ']').last().parent('tr').after responseText
+#               #$('td[data-song-id=' + new_aka_song_id + ']').last().parent('tr').children('td[contenteditable=true]').on('focus', prepAjaxUpdate).on 'blur', doAjaxUpdate
+#               return
+#     when 'destroyed'
+#       switch response.whatDestroyed
+#         when 'aka'
+#           $('tr#' + response.aka_id).fadeOut 'slow', $('tr#' + response.aka_id).remove
+#   return
+
+#I don't think we need to support sending data when deleting an object
+# (removed from ajax json) data: $(this).attr 'data-to-send'
+# deleteAnchorClicked = ->
+#   #TODO: Ask "Are you freaking sure?!?"
+#   $.ajax
+#     type: 'DELETE'
+#     url: $(this).attr('data-object') + 's' + '/' + $(this).attr('data-object-id') # 's' for rails plural objects
+#     dataType: 'JSON'
+#     success: (data, status, xhr) ->
+#       #handleSuccess null, data
+#       return
+#   return
+
+# createAnchorClicked = ->
+#   ajaxSettings = url: $(this).attr('data-object') + 's' + '/new' # 's' for rails plural objects
+#   if $(this).attr('data-to-send') != undefined
+#     ajaxSettings.data = JSON.parse $(this).attr 'data-to-send'
+#   jqxhr = $.ajax(ajaxSettings).done((data) ->
+#     myFeatherBox = $.featherlight(data, afterOpen: ->
+#       $('form#frm_create').validate()
+#       $('#frm_create input[type!=hidden]')[0].focus()
+#       return
+#     )
+#     $('#frm_create input[type=submit]').on 'click', (e) ->
+#       myFeatherBox.close()
+#       return
+#     $('#song_ccli_number').on 'blur', (e) ->
+#       if $('#song_song_name').val() == ''
+#         ccli_loader $('#song_ccli_number').val()
+#       return
+#     return
+#   ).fail((e) ->
+#     console.log 'error creating addnew form'
+#     console.dir e
+#     return
+#   )
+#   return
+
+ceAfterUpdate = (el) ->
+  trueColor = $(el).css('backgroundColor')
+  $(el).animate { backgroundColor: '#cce2ff' },
+    duration: 100
+    complete: ->
+      # reset
+      $(el).delay(10).animate { backgroundColor: trueColor }, duration: 900
+      return
   return
 
-deleteAnchorClicked = (thingToDelete, id, dataToSend) ->
-  #TODO: Are you freaking sure?!?
+ceDoUpdate = ->
+  if update_original_var == $(this).html()
+    return
+  dataToSend = undefined
+  dataToSend =
+    key: $(this).attr('name')
+    value: $(this).text().trim()
+  toupdate = this
   $.ajax
-    type: 'DELETE'
-    url: '/' + thingToDelete + '/' + id
+    type: 'PUT'
+    url: '/' + $('table.masteredit').attr('id') + '/' + $(this).parent('tr').attr('id')
     data: dataToSend
     dataType: 'JSON'
-    success: (data, status, xhr) ->
-      handleSuccess 'meh', data
+    success: (data) ->
+      console.log data
+      if data.result
+        ceAfterUpdate $(toupdate)
+        $(toupdate).siblings('td').each ->
+          if $(this).text() != ""+data.object[$(this).attr('name')] and !($(this).text() or ""+data.object[$(this).attr('name')]) and typeof data.object[$(this).attr('name')] != 'undefined'
+            $(this).text data.object[$(this).attr('name')]
+            ceAfterUpdate $(this)
+          return
+      else
+        $(toupdate).text update_original_var
+        console.log 'You should check rails logs because something went wrong with that update'
+        trueColor = $(toupdate).css('backgroundColor')
+        $(toupdate).animate { backgroundColor: '#ffe2cc' },
+          duration: 100
+          complete: ->
+            # reset
+            $(toupdate).delay(10).animate { backgroundColor: trueColor }, duration: 900
+            return
       return
   return
 
-addnewAnchorClicked = (thingToAdd, dataToSend) ->
-  jqxhr = $.ajax(
-    'url': '/' + thingToAdd + '/new'
-    'data': dataToSend).done((data) ->
-    myFeatherBox = $.featherlight(data, afterOpen: ->
-      $('form#frm_create').validate()
-      $('#frm_create input[type!=hidden]')[0].focus()
-      return
-    )
-    $('#frm_create input[type=submit]').on 'click', (e) ->
-      myFeatherBox.close()
-      return
-    $('#song_ccli_number').on 'blur', (e) ->
-      if $('#song_song_name').val() == ''
-        ccli_loader $('#song_ccli_number').val()
-      return
+ceBeforeUpdate = ->
+  update_original_var = $(this).html()
+  return
+
+cePaste = (el) ->
+  that = this
+  setTimeout (->
+    $(that).html $(that).text()
     return
-  ).fail((e) ->
-    console.log 'error creating addnew form'
-    console.dir e
-    return
-  )
+  ), 10
   return
 
 songUsageAnchorClicked = ->
@@ -75,7 +136,8 @@ songUsageAnchorClicked = ->
   )
   return
 
-songAnchorClicked = (song_id) ->
+songAnchorClicked = ->
+  song_id = $(this).attr('id')
   jqxhr = $.post('/songs/data/' + song_id).done((data) ->
     try
       myLightboxChart.destroy()
@@ -99,16 +161,15 @@ songAnchorClicked = (song_id) ->
   )
   return
 
-leaderAnchorClicked = (el) ->
-  leader_name = $(el).html()
-  jqxhr = $.post('/leaders/data/' + el).done((data) ->
+leaderAnchorClicked = ->
+  jqxhr = $.post('/leaders/data/' + $(this).attr("id")).done((data) ->
     arrlabel = []
     arrdata1 = []
     for d of data.chart_data
       if data.chart_data.hasOwnProperty d
         arrlabel.push d
         arrdata1.push data.chart_data[d]
-    completedata = 
+    completedata =
       'labels': arrlabel
       'datasets': [ {
         fillColor: 'rgba(151,187,205,0.5)'
@@ -130,18 +191,65 @@ leaderAnchorClicked = (el) ->
     $('#feather').append data.usage_table
     #$.featherlight("<div>" + data + "</div>");
     return
-  ).fail((e) ->
+  ).fail (e) ->
     console.log 'error'
     console.dir e
     return
-  )
   return
 
-$(document).on 'ready page:load', ->
-  $(document).on('ajax:success', handleSuccess).on 'ajax:error', (xhr, status, error) ->
-    console.log error
-    alert 'failed'
+handleBusy = (xhr) ->
+  if $(xhr.target).is("form")
+    #form is being submitted
+    myFeatherBox.close()
+    myFeatherBox = $.featherlight "<div class='ajaxbusy' />"
+  return
+
+handleComplete = (xhr, response, status) ->
+  myFeatherBox.close() if myFeatherBox?
+  console.log ("---\nAJAX call complete\n---");
+  console.log (xhr);
+  console.log (response);
+  console.log (status);
+  if $(xhr.target).hasClass "crud_create"
+    #creation button hit
+    myFeatherBox = $.featherlight response.responseText, afterOpen: ->
+      $('form#frm_create').validate()
+      $('#frm_create input[type!=hidden]').first().focus()
+      return
+  else if $(xhr.target).hasClass "crud_delete"
+    #destroy button hit
+    $('tr#' + response.responseJSON.aka_id).fadeOut('slow').remove()
     return
+  else if $(xhr.target).is("form")
+    #form submission
+    switch response.responseJSON.what
+      when 'created'
+        switch response.responseJSON.whatCreated
+          when 'service'
+            $('.insertionForm').after response.responseJSON.htmlOutput
+          when 'leader'
+            $('#service_leader_id').append response.responseJSON.htmlOutput
+          when 'service_type'
+            $('#service_service_type_id').append response.responseJSON.htmlOutput
+          when 'song'
+            $('#songList').tagit 'createTag', response.responseJSON.tag.id, response.responseJSON.tag.label
+          when 'aka'
+            new_aka_song_id = response.responseJSON.song_id
+            $.ajax
+              'url': '/akas/' + response.responseJSON.aka_id
+              'success': (newAkaTemplate) ->
+                $('td[data-song-id=' + new_aka_song_id + ']').last().parent('tr').after newAkaTemplate
+                #$('td[data-song-id=' + new_aka_song_id + ']').last().parent('tr').children('td[contenteditable=true]').on('focus', prepAjaxUpdate).on 'blur', doAjaxUpdate
+                return
+
+$(document).on('ajax:complete', handleComplete)
+$(document).on('ajax:send', handleBusy)
+
+$(document).on 'ready page:load', ->
+  # $(document).on('ajax:complete', handleSuccess).on 'ajax:error', (xhr, status, error) ->
+  #   console.log error
+  #   alert 'failed'
+  #   return
   elem = document.createElement('input')
   elem.setAttribute 'type', 'date'
   if elem.type == 'text'
@@ -189,4 +297,11 @@ $(document).on 'ready page:load', ->
       marginTop: '5px'
     }, 'fast', 'linear'
     return
+  $('a.songUsageAnchor').click songUsageAnchorClicked
+  $('a.songAnchor').click songAnchorClicked
+  $('a.leaderAnchor').click leaderAnchorClicked
+  #$('a.crud_create').click createAnchorClicked #these should now be dealt with in the rails way
+  #$('a.crud_delete').click deleteAnchorClicked
+  $('td[contenteditable=true]').on('focus', ceBeforeUpdate).on 'blur', ceDoUpdate
+  $('td[contenteditable=true]').on 'paste', ceAfterUpdate
   return

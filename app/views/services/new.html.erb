@@ -3,12 +3,18 @@
         <table class="table table-bordered table-condensed table-hover table-striped">
             <thead>
                 <th>Date</th>
-                <th>Service<a class="glyphicon glyphicon-plus-sign addnew" onclick="addnewAnchorClicked('service_types')"></a></th>
-                <th>Leader<a class="glyphicon glyphicon-plus-sign addnew" onclick="addnewAnchorClicked('leaders')"></a></th>
+                <th>Service<%= link_to "", new_service_type_path, remote: true, tabindex: -1,
+                                class:"glyphicon glyphicon-plus-sign crud_button crud_create",
+                                title:"Add new service type" %></th>
+                <th>Leader<%= link_to "", new_leader_path, remote: true, tabindex: -1,
+                                class:"glyphicon glyphicon-plus-sign crud_button crud_create",
+                                title:"Add new leader" %></th>
                 <th colspan="2">
                     Songs
-                    <a class="songusageanchor" onclick="songUsageAnchorClicked()">usage summary</a>
-                    <a class="glyphicon glyphicon-plus-sign addnew" onclick="addnewAnchorClicked('songs')"></a>
+                    <a class="songUsageAnchor">usage summary</a>
+                    <%= link_to "", new_song_path, remote: true, tabindex: -1,
+                            class:"glyphicon glyphicon-plus-sign crud_button crud_create",
+                            title:"Add new song" %>
                 </th>
             </thead>
                 <tbody id="servicelist">

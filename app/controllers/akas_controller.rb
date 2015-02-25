@@ -6,12 +6,11 @@ class AkasController < ApplicationController
 	end
 
 	def index
-		@akas = Aka.joins(:song).order "songs.song_name", :display_text
+		@akas = Aka.includes(:song).order "songs.song_name", :display_text
 	end
 
 	def new
-		@aka = Aka.new
-		@song_id = params[:song_id]
+		@aka = Aka.new song_id: params[:song_id]
 		render partial: "new"
 	end
 

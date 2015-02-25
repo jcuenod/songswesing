@@ -26,13 +26,13 @@
     border-bottom: 2px solid #ddd;
 }
 .top-menu ul ul:before {
-    width: 0; 
-    height: 0; 
+    width: 0;
+    height: 0;
     content: "";
     position: absolute;
     top: -7px;
     left: 1em;
-    border-bottom: 7px solid #ddd;     
+    border-bottom: 7px solid #ddd;
     border-left: 7px solid transparent;
     border-right: 7px solid transparent;
 }
@@ -88,13 +88,13 @@ a.borderedanchor, a.unborderedanchor {
     cursor: pointer;
     display: inline-block;
 }
-a.borderedanchor:hover, a.unborderedanchor:hover, a.songusageanchor:hover {
+a.borderedanchor:hover, a.unborderedanchor:hover, a.songUsageAnchor:hover {
     text-decoration: none;
 }
 a.borderedanchor:hover, a.unborderedanchor:hover {
     background-color: #ddf;
 }
-a.songusageanchor {
+a.songUsageAnchor {
     cursor: pointer;
 }
 
@@ -133,24 +133,29 @@ h1 {
     margin: 2px;
 }
 
-td .addnew {
+td .crud_button {
     cursor: pointer;
     margin: 0.2em 0.2em 0 0;
 }
-th .addnew {
+th .crud_button {
     position: absolute;
     top: 8px;
     right:5px;
     cursor: pointer;
 }
-.addnew:hover {
+.crud_button:hover {
     text-decoration: none;
 }
-.deleteme {
+.crud_delete {
     color: #FE4F45;
 }
-.deleteme:hover {
+.crud_delete:hover {
     color: #D04942;
+}
+.ajaxbusy {
+    background: url("/assets/spinner.gif") 50% 50% no-repeat;
+    width: 100%;
+    height: 30vh;
 }
 
 th {
@@ -195,7 +200,7 @@ span.ui-button-text {
 .servicelist td.dat {
     width: 200px;
 }
-td[contenteditable="true"]:focus, 
+td[contenteditable="true"]:focus,
 td[contenteditable="true"]:active {
     background-color: #f0f0f4 !important;
 }

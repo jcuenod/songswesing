@@ -6,7 +6,7 @@
 	<tbody>
 	<% @usage_data.each do |(k,v)| %>
 		<tr>
-			<td><a class='unborderedanchor' onclick='songAnchorClicked(<%= k[0] %>)'><%= k[1] %></a></td>
+			<td><a class="unborderedanchor songAnchor" id="<%= k[0] %>"><%= k[1] %></a></td>
 			<td><%= v %></td>
 		</tr>
 	<% end %>
