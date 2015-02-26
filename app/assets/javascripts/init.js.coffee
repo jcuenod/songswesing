@@ -126,14 +126,14 @@ leaderAnchorClicked = ->
     return
   return
 
-handleBusy = (xhr) ->
+handleAjaxBusy = (xhr) ->
   if $(xhr.target).is("form")
     #form is being submitted make things look pretty in the mean time
     myFeatherBox.close()
     myFeatherBox = $.featherlight "<div class='ajaxbusy' />"
   return
 
-handleComplete = (xhr, response, status) ->
+handleAjaxComplete = (xhr, response, status) ->
   myFeatherBox.close() if myFeatherBox?
   if $(xhr.target).hasClass "crud_create"
     #creation button hit
@@ -143,9 +143,13 @@ handleComplete = (xhr, response, status) ->
       return
   else if $(xhr.target).hasClass "crud_delete"
     #destroy button hit
-    $('tr#' + response.responseJSON.aka_id).fadeOut 'slow', ->
-      $(this).remove()
-      return
+    if (response.responseJSON.success)
+      $('tr#' + response.responseJSON.aka_id).fadeOut 'slow', ->
+        $(this).remove()
+        return
+    else
+      console.log response.responseJSON.message
+      alert response.responseJSON.message
     return
   if $(xhr.target).hasClass "songUsageAnchor"
     #songUsageAnchor button hit
@@ -174,14 +178,7 @@ handleComplete = (xhr, response, status) ->
                   .on('paste', cePaste)
                 return
 
-$(document).on('ajax:complete', handleComplete)
-$(document).on('ajax:send', handleBusy)
-
-$(document).on 'ready page:load', ->
-  # $(document).on('ajax:complete', handleSuccess).on 'ajax:error', (xhr, status, error) ->
-  #   console.log error
-  #   alert 'failed'
-  #   return
+handlePageLoad = ->
   elem = document.createElement('input')
   elem.setAttribute 'type', 'date'
   if elem.type == 'text'
@@ -235,5 +232,10 @@ $(document).on 'ready page:load', ->
   $('td[contenteditable=true]').on 'paste', cePaste
   $("<div>").addClass("ajaxbusy").css("display", "none").appendTo "body"
   return
+
+$(document)
+  .on('ajax:complete', handleAjaxComplete)
+  .on('ajax:send', handleAjaxBusy)
+  .on('ready page:load', handlePageLoad)
 
 Turbolinks.enableProgressBar()

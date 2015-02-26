@@ -15,9 +15,7 @@ class AkasController < ApplicationController
 	end
 
 	def create
-		aka = Aka.create(aka_params)
-		#aka.search_text = params[:aka][:display_text].gsub(/(?=\S)(\W)/,"").squeeze(" ").downcase
-		aka.save
+		aka = Aka.create aka_params
 
 		render json: {
 			"what" => "created",
@@ -44,7 +42,8 @@ class AkasController < ApplicationController
 			}
 		else
 			render json: {
-				"success" => "0",
+				"success" => false,
+				"message" => "You can't delete this record: you would not be able to search for this song",
 			}
 		end
 	end

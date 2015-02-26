@@ -1,9 +1,16 @@
 class Aka < ActiveRecord::Base
   belongs_to :song
   before_save :update_search_text
+  before_destroy :check_if_last_aka
 
   private
   	def update_search_text
   	  self.search_text = self.display_text.gsub(/(?=\S)(\W)/,"").squeeze(" ").downcase if display_text_changed?
+  	end
+
+  	def check_if_last_aka
+  		return true if Song.where(id: self.song_id).count > 1
+  		errors.add :base, "Cannot delete the last aka"
+  		false
   	end
 end

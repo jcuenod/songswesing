@@ -11,8 +11,8 @@ class SongsController < ApplicationController
 		end
 
 		render json: {
-			"what" => "created", 
-			"whatCreated" => "song", 
+			"what" => "created",
+			"whatCreated" => "song",
 			"tag" => {"id" => @song.id, "label" => @song.song_name},
 		}
 	end
