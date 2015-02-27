@@ -3,7 +3,7 @@ class UsagesController < ApplicationController
 		@usages = Usage.group(:song_id, :song_name).joins(:song, :service).where(:services => {church_id: current_user.church_id}).order("count_all DESC").count
 	end
 	def data
-		@usage_data = Usage.limit(params[:limit]).group(:song_id, :song_name).joins(:song, :service).where(:services => {church_id: current_user.church_id}).order("count_all DESC").count
+		@usages = Usage.limit(params[:limit]).group(:song_id, :song_name).joins(:song, :service).where(:services => {church_id: current_user.church_id}).order("count_song_id DESC").count :song_id
 		render :partial => "usage_table"
 	end
 end

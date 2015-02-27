@@ -1,13 +1,15 @@
-<table class="table table-bordered table-condensed table-hover table-striped">
+<table class="table table-condensed table-striped">
 	<thead>
+		<th></th>
 		<th>Song</th>
 		<th>#</th>
 	</thead>
 	<tbody>
-	<% @usage_data.each do |s| %>
+	<% @usages.each_with_index do |usage, index| %>
 		<tr>
-			<td><a class="unborderedanchor songAnchor" id="<%= s[0][0] %>"><%= s[0][1] %></a></td>
-			<td><%= s[1] %></td>
+			<td><%= index+1 %></td>
+			<td><a class="unborderedanchor songAnchor" id="<%= usage[0][0] %>"><%= usage[0][1] %></a></td>
+			<td><%= usage[1] %></td>
 		</tr>
 	<% end %>
 	</tbody>

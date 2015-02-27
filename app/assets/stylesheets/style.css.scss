@@ -228,6 +228,17 @@ span.ui-button-text {
 .servicelist td.dat {
     width: 200px;
 }
+
+.usagetable {
+    table {
+        margin: 1em auto;
+        width: 350px;
+    }
+    td {
+        white-space: nowrap;
+    }
+}
+
 ::-webkit-inner-spin-button {
     display: none;
 }
