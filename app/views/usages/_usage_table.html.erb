@@ -3,13 +3,15 @@
 		<th></th>
 		<th>Song</th>
 		<th>#</th>
+		<th>Last Used</th>
 	</thead>
 	<tbody>
 	<% @usages.each_with_index do |usage, index| %>
 		<tr>
 			<td><%= index+1 %></td>
-			<td><a class="unborderedanchor songAnchor" id="<%= usage[0][0] %>"><%= usage[0][1] %></a></td>
-			<td><%= usage[1] %></td>
+			<td><a class="unborderedanchor songAnchor" id="<%= usage.song_id %>"><%= usage.song_name %></a></td>
+			<td><%= usage.count_song_id %></td>
+			<td><%= usage.date %><%# .strftime "%-d %b %B %Y" %></td>
 		</tr>
 	<% end %>
 	</tbody>
