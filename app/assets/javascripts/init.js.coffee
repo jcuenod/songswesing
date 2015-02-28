@@ -126,6 +126,10 @@ leaderAnchorClicked = ->
     return
   return
 
+connectAnchors = (parentElement) ->
+  $(parentElement).find('a.songAnchor').click songAnchorClicked
+  $(parentElement).find('a.leaderAnchor').click leaderAnchorClicked
+
 handleAjaxBusy = (xhr) ->
   if $(xhr.target).is("form")
     #form is being submitted make things look pretty in the mean time
@@ -226,10 +230,9 @@ handlePageLoad = ->
       marginTop: '7px'
     }, 'fast', 'linear'
     return
-  $('a.songAnchor').click songAnchorClicked
-  $('a.leaderAnchor').click leaderAnchorClicked
   $('td[contenteditable=true]').on('focus', ceBeforeUpdate).on 'blur', ceDoUpdate
   $('td[contenteditable=true]').on 'paste', cePaste
+  connectAnchors document
   $("<div>").addClass("ajaxbusy").css("display", "none").appendTo "body"
   return
 
