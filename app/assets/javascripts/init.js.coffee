@@ -79,9 +79,16 @@ doSongAnchorClicked = (song_id) ->
     tabledata = ''
     for key of data.song_details
       tabledata += '<tr><td class=\'tdkey\'>' + key + '</td><td class=\'tddata\'>' + data.song_details[key] + '</td></tr>' if data.song_details.hasOwnProperty key
+
     $.featherlight.close()
-    $.featherlight '<div class=\'breakdown_header\'>' + data.song_name + ' (' + data.tally + ')</div>' + '<div id=\'feathersac\' style=\'text-align:center; margin: 10px\'></div>' + '<div><table class=\'table table-condensed table-striped\'>' + tabledata + '</table></div>'
-    $('#feathersac').html $(mc)
+    featherContent = $('<div><div class=\'breakdown_header\'>' + data.song_name + ' (' + data.tally + ')</div>' + '<div id=\'feathersac\' style=\'text-align:center; margin: 10px\'></div>' + '<div><table class=\'table table-condensed table-striped\'>' + tabledata + '</table></div><div>')
+    myFeatherBox = $.featherlight featherContent
+    $("#feathersac").html $(mc)
+
+    # $.featherlight.close()
+    # $.featherlight '<div class=\'breakdown_header\'>' + data.song_name + ' (' + data.tally + ')</div>' + '<div id=\'feathersac\' style=\'text-align:center; margin: 10px\'></div>' + '<div><table class=\'table table-condensed table-striped\'>' + tabledata + '</table></div>'
+    # $('#feathersac').html $(mc)
+
     return
   ).fail((e) ->
     console.log 'error'
@@ -115,10 +122,12 @@ leaderAnchorClicked = ->
     mc = $('<canvas width=600 height=300>')
     ctx = mc.get(0).getContext('2d')
     myLightboxChart = new Chart(ctx).Bar(completedata)
-    $.featherlight '<div class=\'breakdown_header\'>' + data.leader_name + '</div><div id=\'feather\'></div>'
+
+    $.featherlight.close()
+    featherContent = $('<div><div class=\'breakdown_header\'>' + data.leader_name + '</div><div id=\'feather\'></div><div id=\'featherlut\'>' + data.usage_table + '</div>')
+    myFeatherBox = $.featherlight featherContent
     $('#feather').html $(mc)
-    $('#feather').append data.usage_table
-    #$.featherlight("<div>" + data + "</div>");
+
     return
   ).fail (e) ->
     console.log 'error'
@@ -127,18 +136,20 @@ leaderAnchorClicked = ->
   return
 
 connectAnchors = (parentElement) ->
+  if !parentElement?
+    parentElement = $(this)
   $(parentElement).find('a.songAnchor').click songAnchorClicked
   $(parentElement).find('a.leaderAnchor').click leaderAnchorClicked
 
 handleAjaxBusy = (xhr) ->
   if $(xhr.target).is("form")
     #form is being submitted make things look pretty in the mean time
-    myFeatherBox.close()
+    $.featherlight.close()
     myFeatherBox = $.featherlight "<div class='ajaxbusy' />"
   return
 
 handleAjaxComplete = (xhr, response, status) ->
-  myFeatherBox.close() if myFeatherBox?
+  $.featherlight.close() if myFeatherBox?
   if $(xhr.target).hasClass "crud_create"
     #creation button hit
     myFeatherBox = $.featherlight response.responseText, afterOpen: ->
@@ -230,9 +241,11 @@ handlePageLoad = ->
       marginTop: '7px'
     }, 'fast', 'linear'
     return
+  connectAnchors document
+  $.featherlight.defaults.afterOpen = ->
+    connectAnchors $(this)[0].$instance
   $('td[contenteditable=true]').on('focus', ceBeforeUpdate).on 'blur', ceDoUpdate
   $('td[contenteditable=true]').on 'paste', cePaste
-  connectAnchors document
   $("<div>").addClass("ajaxbusy").css("display", "none").appendTo "body"
   return
 
