@@ -4,14 +4,17 @@ tagOptions = []
 update_original_var = undefined
 
 ceAfterUpdate = (el) ->
-  $(element).closest('table').removeClass 'table-hover'
+  $(el).closest('table').removeClass 'table-hover'
   trueColor = $(el).css 'backgroundColor'
-  $(element).closest('table').addClass 'table-hover'
+  $(el).closest('table').addClass 'table-hover'
   $(el).animate { backgroundColor: '#cce2ff' },
     duration: 100
     complete: ->
       # reset
-      $(el).delay(10).animate { backgroundColor: trueColor }, duration: 900
+      $(el).delay(10).animate { backgroundColor: trueColor },
+        duration: 900
+        complete: ->
+          $(el).removeAttr "style"
       return
   return
 
