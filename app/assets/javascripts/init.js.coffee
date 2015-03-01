@@ -4,7 +4,9 @@ tagOptions = []
 update_original_var = undefined
 
 ceAfterUpdate = (el) ->
+  $(element).closest('table').removeClass 'table-hover'
   trueColor = $(el).css 'backgroundColor'
+  $(element).closest('table').addClass 'table-hover'
   $(el).animate { backgroundColor: '#cce2ff' },
     duration: 100
     complete: ->
@@ -76,10 +78,10 @@ doSongAnchorClicked = (song_id) ->
       console.log e
     mc = $('<canvas height=250>')
     ctx = mc.get(0).getContext('2d')
-    myLightboxChart = new Chart(ctx).Doughnut data.leader_usage_data, animationSteps: 60
+    myLightboxChart = new Chart(ctx).Doughnut data.leader_usage_data
     moc = $('<canvas height=80>')
     ctx2 = moc.get(0).getContext('2d')
-    myOtherLightboxChart = new Chart(ctx2).Bar data.song_frequency_data, animationSteps: 60
+    myOtherLightboxChart = new Chart(ctx2).Bar data.song_frequency_data, "showTooltips": false, scaleBeginAtZero: true
     tabledata = ''
     for key of data.song_details
       tabledata += '<tr><td class=\'tdkey\'>' + key + '</td><td class=\'tddata\'>' + data.song_details[key] + '</td></tr>' if data.song_details.hasOwnProperty key
@@ -181,6 +183,7 @@ handleAjaxComplete = (xhr, response, status) ->
       when 'created'
         switch response.responseJSON.whatCreated
           when 'service'
+            $('#songList').tagit "removeAll"
             $('.insertionForm').after response.responseJSON.htmlOutput
           when 'leader'
             $('#service_leader_id').append response.responseJSON.htmlOutput
@@ -222,9 +225,6 @@ handlePageLoad = ->
     allowNewTags: false
     onlyAvailableTags: true
     removeConfirmation: true
-    onSubmit: ->
-      $('#songList').tagit 'removeAll'
-      return
     onTagClicked: (evt, ui) ->
       tagitSongAnchorClicked ui.tagLabel
       return
