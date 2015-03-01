@@ -4,7 +4,7 @@ tagOptions = []
 update_original_var = undefined
 
 ceAfterUpdate = (el) ->
-  trueColor = $(el).css('backgroundColor')
+  trueColor = $(el).css 'backgroundColor'
   $(el).animate { backgroundColor: '#cce2ff' },
     duration: 100
     complete: ->
@@ -70,20 +70,25 @@ doSongAnchorClicked = (song_id) ->
   jqxhr = $.post('/songs/data/' + song_id).done((data) ->
     try
       myLightboxChart.destroy()
+      myOtherLightboxChart.destroy()
     catch e
       console.log 'something\'s gone wrong with the chart stuff: '
       console.log e
     mc = $('<canvas height=250>')
     ctx = mc.get(0).getContext('2d')
-    myLightboxChart = new Chart(ctx).Doughnut(data.chart_data, animationSteps: 60)
+    myLightboxChart = new Chart(ctx).Doughnut data.leader_usage_data, animationSteps: 60
+    moc = $('<canvas height=80>')
+    ctx2 = moc.get(0).getContext('2d')
+    myOtherLightboxChart = new Chart(ctx2).Bar data.song_frequency_data, animationSteps: 60
     tabledata = ''
     for key of data.song_details
       tabledata += '<tr><td class=\'tdkey\'>' + key + '</td><td class=\'tddata\'>' + data.song_details[key] + '</td></tr>' if data.song_details.hasOwnProperty key
 
     $.featherlight.close()
-    featherContent = $('<div><div class=\'breakdown_header\'>' + data.song_name + ' (' + data.tally + ')</div>' + '<div id=\'feathersac\' style=\'text-align:center; margin: 10px\'></div>' + '<div><table class=\'table table-condensed table-striped\'>' + tabledata + '</table></div><div>')
+    featherContent = $('<div><div class=\'breakdown_header\'>' + data.song_name + ' (' + data.tally + ')</div>' + '<div id=\'feathersac\' style=\'text-align:center; margin: 10px\'></div><div id=\'feathersac2\' style=\'text-align:center; margin: 10px\'></div>' + '<div><table class=\'table table-condensed table-striped\'>' + tabledata + '</table></div><div>')
     myFeatherBox = $.featherlight featherContent
     $("#feathersac").html $(mc)
+    $("#feathersac2").html $(moc)
 
     # $.featherlight.close()
     # $.featherlight '<div class=\'breakdown_header\'>' + data.song_name + ' (' + data.tally + ')</div>' + '<div id=\'feathersac\' style=\'text-align:center; margin: 10px\'></div>' + '<div><table class=\'table table-condensed table-striped\'>' + tabledata + '</table></div>'

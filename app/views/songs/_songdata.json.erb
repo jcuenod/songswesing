@@ -1,6 +1,6 @@
 {
-	"chart_data": [
-	<% @song_usage.each_with_index do |su, i| %>
+	"leader_usage_data": [
+	<% @leader_usage_data.each_with_index do |su, i| %>
 		<%= "," unless i == 0 %>
 		{"value": <%= su[1] %>,
 		"color": "<%= @colours[i % @colours.size] %>",
@@ -8,6 +8,19 @@
 		"label": "<%= su[0] %>"}
 	<% end %>
 	],
+	"song_frequency_data": {
+		"labels": ["J", "F", "M", "A", "M", "J", "J", "A", "S", "O", "N", "D" ],
+	    "datasets": [
+	        {
+	            "label": "My First dataset",
+	            "fillColor": "rgba(220,220,220,0.5)",
+	            "strokeColor": "rgba(220,220,220,0.8)",
+	            "highlightFill": "rgba(220,220,220,0.75)",
+	            "highlightStroke": "rgba(220,220,220,1)",
+	            "data": <%= @song_frequency_data %>
+	        }
+	    ]
+	},
 	"song_details": {
 		"License": "<%= @song.license %>",
 		"Writers": "<%= @song.writers %>"
@@ -17,5 +30,7 @@
 		<%= raw(",\"CCLI Number\": \"" + @song.ccli_number + "\"") unless @song.ccli_number.blank? %>
 	},
 	"song_name": "<%= @song.song_name %>",
-	"tally": <%= @song_usage.map{|x| x[1]}.sum %>
+	"tally": <%= @leader_usage_data.map{|x| x[1]}.sum %>
 }
+
+<%= debug @song_freq %>
