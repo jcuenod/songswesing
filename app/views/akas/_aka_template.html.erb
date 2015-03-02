@@ -2,7 +2,7 @@
 	<td class="song_name" data-song-id="<%= @aka.song_id %>">
 			<%= link_to "", new_aka_path(song_id: @aka.song_id), remote: true, tabindex: -1,
 					class:"glyphicon glyphicon-plus-sign crud_create crud_button",
-					title:"Add alternative title to '#{@aka.song.song_name}'" if current_user.admin? %>
+					title:"Add alternative title to '#{@aka.song_name}'" if current_user.admin? %>
 		<%= @aka.song.song_name %>
 	</td>
 	<td class="display_text"<% if current_user.admin? %> name="display_text" contenteditable="true"<% end %>>

@@ -7,9 +7,9 @@ class SongsController < ApplicationController
 	def create
 		@song = Song.create(song_params)
 
-		params[:song][:akas_attributes].each do |a|
+		params[:song][:akas_attributes].each_with_index do |a, index|
 			@song.akas.new({:song_id => @song.id, :display_text => a[1][:display_text], :search_text => a[1][:display_text].gsub(/(?=\S)(\W)/,"").squeeze(" ").downcase})
-			@song.save
+			@song.save if index == 0
 		end
 
 		@song.save!
