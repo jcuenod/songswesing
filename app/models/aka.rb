@@ -1,5 +1,5 @@
 class Aka < ActiveRecord::Base
-  belongs_to :song
+  belongs_to :song, :inverse_of => :akas
   before_save :update_search_text
   before_destroy :check_if_last_aka
 

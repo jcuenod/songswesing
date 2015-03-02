@@ -1,5 +1,5 @@
 class Song < ActiveRecord::Base
-  has_many	:akas
+  has_many	:akas, dependent: :delete_all, :inverse_of => :song
   accepts_nested_attributes_for :akas, :reject_if => :all_blank, :allow_destroy => true
   validates_presence_of :akas
 

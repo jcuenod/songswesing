@@ -5,11 +5,14 @@ class SongsController < ApplicationController
 	end
 
 	def create
-		@song = Song.create!(song_params)
+		@song = Song.create(song_params)
 
 		params[:song][:akas_attributes].each do |a|
-			Aka.create({:song_id => @song.id, :display_text => a[1][:display_text], :search_text => a[1][:display_text].gsub(/(?=\S)(\W)/,"").squeeze(" ").downcase})
+			@song.akas.new({:song_id => @song.id, :display_text => a[1][:display_text], :search_text => a[1][:display_text].gsub(/(?=\S)(\W)/,"").squeeze(" ").downcase})
+			@song.save
 		end
+
+		@song.save!
 
 		render json: {
 			"what" => "created",
