@@ -1,37 +1,27 @@
-function ccli_loader (ccli_number)
+function ccli_loader ()
 {
-	var jqxhr = $.get("http://us.songselect.com/songs/" + ccli_number)
-	  .done(function(data) {
-	    var html = $.parseHTML(data);
-	    $("#song_song_name").val(   $(html).find(".media h2").html() );
-	    $("#song_writers").val(     $(html).find(".details .authors").text().replace(/\n/g, ' ').replace(/\s{2,}/g, ' ').trim() );
-	    $("#song_license").val(     $(html).find(".details .copyright li").first().text().trim() );
+	$(".ccli_populate").removeClass("glyphicon-cloud-download").addClass("glyphicon-refresh glyphicon-spin")
+	var jqxhr = $.ajax({
+		'url': "/songassist",
+		"type": 'POST',
+		"data": $("#song_ccli_number").serialize()
+    })
+	.done(function(data) {
+	  	$(".ccli_populate").removeClass("glyphicon-refresh glyphicon-spin").addClass("glyphicon-cloud-download")
 
-	    $(html).find("h3").each( function () {
-	    	if ($(this).text() != "AKA")
-	    		return;
+	    $("#song_song_name").val( data.title );
+	    $("#song_writers").val(   data.authors );
+	    $("#song_license").val(   data.copyright );
 
-	    	$(this).next().find("li").each(function () {
-	    		$(".add_fields").click()
-	    		$(".nested-fields").last().find("input[id$='display_text']").val( $(this).text() );
-	    		$(".nested-fields").last().find("input[id$='search_text']").val(
-    				$(this).text()
-    					.replace(/(?=\S)(\W)/, "")	//remove non-word stuff (like apostrophes) - from the aka search side
-    					.replace(/\s{2,}/g, ' ')	//remove duplicated spaces
-    					.trim()						//remove whitespace around the edges
-    					.toLowerCase()				//figure it out bro
-	    		);
-
-	    	})
-	    })
-	  })
-	  .fail(function(e) {
-	    console.log( "Something appears to have gone wrong:" );
-	    console.log( "(honestly, this is an XSS disaster so you better know what you're doing)" );
-	    console.log( "Here's the error though:" );
-	    console.log( e );
-	  })
-	  /*.always(function() {
-	    console.log( "finished" );
-	  })*/;
+	    for (st in data.search_terms) {
+	    	$(".add_fields").click()
+	    	$(".nested-fields").last().find("input[id$='display_text']").val( data.search_terms[st] );
+	    }
+	})
+	.fail(function(e) {
+		alert ("Sorry, either the server was too slow or your song can't be found, try looking up this url:\n" + "https://us.songselect.com/songs/" + $("#song_ccli_number").val());
+		$.featherlight.close();
+		console.log("Here's the real error:");
+		console.log(e);
+	});
 }

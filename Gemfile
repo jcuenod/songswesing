@@ -43,5 +43,6 @@ gem 'devise'
 gem 'rails_12factor', group: :production
 
 gem 'pg'
+gem 'nokogiri'
 
 ruby "2.1.5"

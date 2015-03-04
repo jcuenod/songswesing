@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'song_assist/show'
+
   devise_for :users, controllers: {
     registrations: "users/registrations"
   }
@@ -15,6 +17,7 @@ Rails.application.routes.draw do
   post 'songs/data/:id' => 'songs#data'
   post 'usages/data/:limit' => 'usages#data', :as => 'usage_data'
   post 'leaders/data/:id' => 'leaders#data'
+  post 'songassist' => 'song_assist#show'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

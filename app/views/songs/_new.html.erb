@@ -18,7 +18,11 @@
 		<div class="col-sm-8"><%= f.text_field :sample_url, class: "form-control" %></div>
 	</div>
 	<div class="form-group"><%= f.label :ccli_number, raw("CCLI&nbsp;Number"), class: "col-sm-4 control-label" %>
-		<div class="col-sm-8"><%= f.text_field :ccli_number, class: "form-control" %></div>
+		<div class="col-sm-7"><%= f.text_field :ccli_number, class: "form-control" %></div>
+		<div class="col-sm-1"><%= link_to "", "javascript:;",
+			class: "glyphicon glyphicon-cloud-download crud_button ccli_populate",
+			tabindex: -1,
+			title: "Load data by CCLI Number" %></div>
 	</div>
 	<div style="border-top: 1px solid #ccc; margin: 5px 0"></div>
 	<div class="akas">

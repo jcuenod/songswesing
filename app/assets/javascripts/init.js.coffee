@@ -158,28 +158,34 @@ handleAjaxBusy = (xhr) ->
     myFeatherBox = $.featherlight "<div class='ajaxbusy' />"
   return
 
+
 handleAjaxComplete = (xhr, response, status) ->
   $.featherlight.close() if myFeatherBox?
   if $(xhr.target).hasClass "crud_create"
     #creation button hit
     myFeatherBox = $.featherlight response.responseText, afterOpen: ->
       $('form#frm_create').validate()
-      $('#frm_create input[type!=hidden]').first().focus()
+      $('form#frm_create input[type!=hidden]').first().focus()
+      $('form#frm_create .ccli_populate').click ccli_loader
       return
+
   else if $(xhr.target).hasClass "crud_delete"
     #destroy button hit
     if (response.responseJSON.success)
       $('tr#' + response.responseJSON.aka_id).fadeOut 'slow', ->
         $(this).remove()
         return
+
     else
       console.log response.responseJSON.message
       alert response.responseJSON.message
     return
+
   if $(xhr.target).hasClass "songUsageAnchor"
     #songUsageAnchor button hit
     myFeatherBox = $.featherlight '<div class=\'breakdown_header\'>Usage Summary</div><div id=\'feather\'>' + response.responseText + '</div>'
     return
+
   else if $(xhr.target).is("form")
     #form submission
     switch response.responseJSON.what

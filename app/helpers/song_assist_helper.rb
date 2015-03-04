@@ -1,0 +1,2 @@
+module SongAssistHelper
+end

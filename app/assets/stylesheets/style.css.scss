@@ -162,6 +162,14 @@ th {
         color: $active_danger;
     }
 }
+.ccli_populate {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    left: -5px;
+    font-size: 170%;
+    top: 3px;
+}
 .ajaxbusy {
     background: url($img_spinner_url) 50% 50% no-repeat;
     width: 100%;
@@ -222,6 +230,9 @@ ul.tagit {
 .crud_button:hover {
     text-decoration: none;
 }
+a:focus {
+     outline: none;
+}
 span.ui-button-text {
     white-space: nowrap !important;
 }
@@ -238,6 +249,33 @@ span.ui-button-text {
         white-space: nowrap;
     }
 }
+
+
+.glyphicon-spin {
+    -webkit-animation: spin 1000ms infinite linear;
+    animation: spin 1000ms infinite linear;
+}
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(359deg);
+        transform: rotate(359deg);
+    }
+}
+@keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(359deg);
+        transform: rotate(359deg);
+    }
+}
+
 
 ::-webkit-inner-spin-button {
     display: none;
