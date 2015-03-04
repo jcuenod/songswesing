@@ -9,7 +9,7 @@ class Aka < ActiveRecord::Base
   	end
 
   	def check_if_last_aka
-  		return true if Song.where(id: self.song_id).count > 1
+  		return true if Aka.where(song_id: self.song_id).count > 1
   		errors.add :base, "Cannot delete the last aka"
   		false
   	end
