@@ -230,8 +230,10 @@ ul.tagit {
 .crud_button:hover {
     text-decoration: none;
 }
+a:active,
 a:focus {
-     outline: none;
+    outline: none;
+    text-decoration: none;
 }
 span.ui-button-text {
     white-space: nowrap !important;
