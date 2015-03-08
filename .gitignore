@@ -23,3 +23,5 @@ app/views/devise/passwords/
 app/views/devise/shared/
 app/views/devise/unlocks/
 public/assets/
+
+vendor/bundle/ruby
