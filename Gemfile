@@ -45,4 +45,10 @@ gem 'rails_12factor', group: :production
 gem 'pg'
 gem 'nokogiri'
 
+group :development do
+	gem "better_errors"
+	gem 'quiet_assets'
+	gem "binding_of_caller"
+end
+
 ruby "2.1.5"
