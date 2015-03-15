@@ -1,4 +1,5 @@
 class AkasController < ApplicationController
+	skip_after_action :verify_policy_scoped
 
 	def show
 		@aka = Aka.find params[:id]
@@ -11,11 +12,13 @@ class AkasController < ApplicationController
 
 	def new
 		@aka = Aka.new song_id: params[:song_id]
+		authorize @aka
 		render partial: "new"
 	end
 
 	def create
 		aka = Aka.create aka_params
+		authorize aka
 
 		render json: {
 			"what" => "created",
@@ -26,10 +29,9 @@ class AkasController < ApplicationController
 	end
 
 	def update
-		if current_user.admin?
-	    	@result = Aka.find(params[:id]).update_attributes params[:key] => params[:value]
-	    	@aka = Aka.find(params[:id])
-	    end
+		@aka = Aka.find(params[:id])
+		authorize @aka
+		@result = @aka.update_attributes params[:key] => params[:value]
 	end
 
 	def destroy

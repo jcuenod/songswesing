@@ -1,18 +1,20 @@
 class LeadersController < ApplicationController
 	def index
-		@leaders = Leader.all
+		@leaders = policy_scope Leader.all
 	end
 	def new
 		@leader = Leader.new
+		authorize @leader
 		render partial: "leader_popup"
 	end
 	def create
 		new_leader_params = leader_params
 		new_leader_params[:church_id] = current_user.church_id
 		@leader = Leader.create(new_leader_params)
+		authorize @leader
 		render json: {
-			"what" => "created", 
-			"whatCreated" => "leader", 
+			"what" => "created",
+			"whatCreated" => "leader",
 			"htmlOutput" => render_to_string(partial: "options_for_leader")
 		}
 	end

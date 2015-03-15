@@ -44,11 +44,13 @@ gem 'rails_12factor', group: :production
 
 gem 'pg'
 gem 'nokogiri'
+gem 'pundit'
 
 group :development do
-	gem "better_errors"
+	gem 'better_errors'
 	gem 'quiet_assets'
-	gem "binding_of_caller"
+	gem 'binding_of_caller'
+	gem 'rb-readline'
 end
 
 ruby "2.1.5"

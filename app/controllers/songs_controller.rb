@@ -1,11 +1,16 @@
 class SongsController < ApplicationController
+	skip_after_action :verify_policy_scoped
+	skip_after_action :verify_authorized, :only => :list
+
 	def new
 		@song = Song.new
+		authorize @song, :create?
 		render partial: "new"
 	end
 
 	def create
 		@song = Song.create(song_params)
+		authorize @song
 
 		params[:song][:akas_attributes].each_with_index do |a, index|
 			@song.akas.new({:song_id => @song.id, :display_text => a[1][:display_text], :search_text => a[1][:display_text].gsub(/(?=\S)(\W)/,"").squeeze(" ").downcase})
@@ -40,10 +45,9 @@ class SongsController < ApplicationController
 	end
 
 	def update
-		if current_user.admin?
-	    	@result = Song.find(params[:id]).update_attributes params[:key] => params[:value]
-	    	@song = Song.find(params[:id])
-	    end
+		@song = Song.find(params[:id])
+		authorize @song
+    	@result = @song.update_attributes params[:key] => params[:value]
 	end
 
 	private
