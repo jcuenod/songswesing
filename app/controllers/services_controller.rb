@@ -5,16 +5,16 @@ class ServicesController < ApplicationController
 		userlimit = params[:limit].nil? ? 100 : params[:limit].to_i
 		#userlimit = userlimit > 100 ? 100 : userlimit
 
-	 	@services = policy_scope Service.limit(userlimit).offset(useroffset).order([:date => :desc, :service_type_id => :asc]).all
+	 	@services = policy_scope(Service).limit(userlimit).offset(useroffset).order([:date => :desc, :service_type_id => :asc]).all
 	 	@meh = params;
 	 	render "index"
 	end
 	def new
-		@leaders = policy_scope Leader.select(:id, :leader_name).order :leader_name
-		@service_types = policy_scope ServiceType.select(:id, :service_type).order :weight
+		@leaders = policy_scope(Leader).select(:id, :leader_name).order :leader_name
+		@service_types = policy_scope(ServiceType).select(:id, :service_type).order :weight
 		@service = Service.new
 		authorize @service, :create?
-		@services = policy_scope Service.limit(8).order([:date => :desc, :service_type_id => :asc]).all
+		@services = policy_scope(Service).limit(8).order([:date => :desc, :service_type_id => :asc]).all
 		# flash.now[:notice] = "Viewing services for " + Church.find_by_id(current_user.church_id).church_name
 	end
 	def create
