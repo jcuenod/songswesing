@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   #suggested pundit stuff
-  after_action :verify_authorized, except: [:index, :data, :show], unless: :devise_controller?
+  after_action :verify_authorized, except: [:index, :data, :show, :authindex], unless: :devise_controller?
   after_action :verify_policy_scoped, only: [:index, :data, :show]
 
 

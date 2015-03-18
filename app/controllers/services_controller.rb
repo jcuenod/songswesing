@@ -1,5 +1,12 @@
 class ServicesController < ApplicationController
 	before_filter :authenticate_user!
+	def authindex
+		if current_user.church_leader? || current_user.church_admin || current_user.admin?
+			redirect_to action: "new"
+		else
+			redirect_to action: "index"
+		end
+	end
 	def index
 		#redirect_to action: "new" if current_user.church_leader? || current_user.church_admin? || current_user.admin?
 		useroffset = params[:offset].nil? ? 0 : params[:offset].to_i
