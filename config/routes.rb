@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   devise_for :users, controllers: {
     registrations: "users/registrations"
   }
-  root 'services#new'
+  root 'services#index'
   resources :songs
   resources :services
   resources :leaders

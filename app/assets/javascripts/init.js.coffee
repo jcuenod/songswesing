@@ -84,7 +84,14 @@ doSongAnchorClicked = (song_id) ->
     myLightboxChart = new Chart(ctx).Doughnut data.leader_usage_data
     moc = $('<canvas height=80>')
     ctx2 = moc.get(0).getContext('2d')
-    myOtherLightboxChart = new Chart(ctx2).Bar data.song_frequency_data, "showTooltips": false, scaleBeginAtZero: true
+    myOtherLightboxChart = new Chart(ctx2).Bar(data.song_frequency_data, {
+      "showTooltips": false,
+      scaleIntegersOnly: true
+      # scaleOverride: true,
+      # scaleSteps: steps,
+      # scaleStepWidth: Math.ceil(max / steps),
+      # scaleStartValue: 0
+    })
     tabledata = ''
     for key of data.song_details
       tabledata += '<tr><td class=\'tdkey\'>' + key + '</td><td class=\'tddata\'>' + data.song_details[key] + '</td></tr>' if data.song_details.hasOwnProperty key
@@ -160,31 +167,28 @@ handleAjaxBusy = (xhr) ->
 
 
 handleAjaxComplete = (xhr, response, status) ->
-  $.featherlight.close() if myFeatherBox?
+  $.featherlight.close()
   if $(xhr.target).hasClass "crud_create"
     #creation button hit
     myFeatherBox = $.featherlight response.responseText, afterOpen: ->
       $('form#frm_create').validate()
       $('form#frm_create input[type!=hidden]').first().focus()
       $('form#frm_create .ccli_populate').click ccli_loader
-      return
+      $(document).on('ajax:complete', handleAjaxComplete)
 
   else if $(xhr.target).hasClass "crud_delete"
     #destroy button hit
     if (response.responseJSON.success)
       $('tr#' + response.responseJSON.aka_id).fadeOut 'slow', ->
         $(this).remove()
-        return
 
     else
       console.log response.responseJSON.message
       alert response.responseJSON.message
-    return
 
-  if $(xhr.target).hasClass "songUsageAnchor"
+  else if $(xhr.target).hasClass "songUsageAnchor"
     #songUsageAnchor button hit
     myFeatherBox = $.featherlight '<div class=\'breakdown_header\'>Usage Summary</div><div id=\'feather\'>' + response.responseText + '</div>'
-    return
 
   else if $(xhr.target).is("form")
     #form submission
@@ -208,7 +212,8 @@ handleAjaxComplete = (xhr, response, status) ->
                 $(newAkaTemplate).insertAfter($('td[data-song-id=' + new_aka_song_id + ']').last().parent('tr'))
                   .on('focus', ceBeforeUpdate).on('blur', ceDoUpdate)
                   .on('paste', cePaste)
-                return
+
+  return
 
 handlePageLoad = ->
   elem = document.createElement('input')
