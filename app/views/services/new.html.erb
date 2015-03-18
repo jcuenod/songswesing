@@ -1,3 +1,4 @@
+
 <%= form_for @service, :remote => true do |f| %>
     <div style="margin:20px">
         <table class="table table-bordered table-condensed table-hover table-striped">
@@ -20,7 +21,7 @@
             </thead>
                 <tbody id="servicelist">
                     <tr class="insertionForm">
-                    	<td width=1><%= f.date_field :date, class: 'form-control' %></td>
+                    	<td width=1><%= f.date_field :date, class: 'form-control', value: Date.today.beginning_of_week(:sunday).strftime("%Y-%m-%d") %></td>
                     	<td width=*><%= f.select :service_type_id, options_for_select(@service_types.map{ |s| [s.service_type, s.id] }), {}, class: 'form-control' %></td>
                         <td width=*><%= f.select :leader_id, options_for_select(@leaders.map{ |l| [l.leader_name, l.id] }), {}, class: 'form-control' %></td>
                         <td width=60%>
