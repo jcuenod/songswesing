@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
 
   #suggested pundit stuff
   after_action :verify_authorized, except: [:index, :data, :show, :authindex], unless: :devise_controller?
-  after_action :verify_policy_scoped, only: [:index, :data, :show]
+  after_action :verify_policy_scoped, only: [:index, :data, :show], unless: :song_assist_controller?
 
 
   #rescue_from Pundit::NotAuthorizedError, with: :user_not_authorized
@@ -16,5 +16,10 @@ class ApplicationController < ActionController::Base
   def user_not_authorized
     flash[:alert] = "Sorry, it appears that you are not yet signed in"
     redirect_to(request.referrer || root_path)
+  end
+
+  def song_assist_controller?
+    Rails.logger.info "hi there: " + params[:controller]
+    params[:controller] == 'song_assist'
   end
 end
