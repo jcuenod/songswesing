@@ -19,7 +19,6 @@ class ApplicationController < ActionController::Base
   end
 
   def song_assist_controller?
-    Rails.logger.info "hi there: " + params[:controller]
     params[:controller] == 'song_assist'
   end
 end

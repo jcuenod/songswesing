@@ -19,7 +19,7 @@ class LeadersController < ApplicationController
 		}
 	end
 	def data
-		usage_stats = Usage.group(:song_id).joins(:service).where(:services => {leader_id: params[:id]}).count
+		usage_stats = policy_scope(Usage.group(:song_id).joins(:service)).where(:services => {leader_id: params[:id]}).count
 		times_used = usage_stats.inject({}) do |used, (k,v)|
 			title = "Used " + v.to_s + " " + (v > 1 ? "time".pluralize : "time")
 			if used[title].nil?
