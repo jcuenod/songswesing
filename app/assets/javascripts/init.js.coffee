@@ -156,12 +156,6 @@ leaderAnchorClicked = ->
     return
   return
 
-connectAnchors = (parentElement) ->
-  if !parentElement?
-    parentElement = $(this)
-  $(parentElement).find('a.songAnchor').click songAnchorClicked
-  $(parentElement).find('a.leaderAnchor').click leaderAnchorClicked
-
 handleAjaxBusy = (xhr) ->
   if $(xhr.target).is("form")
     #form is being submitted make things look pretty in the mean time
@@ -261,19 +255,22 @@ handlePageLoad = ->
       marginTop: '7px'
     }, 'fast', 'linear'
     return
-  connectAnchors document
-  $.featherlight.defaults.afterOpen = ->
-    connectAnchors $(this)[0].$instance
-
-  $('table')
-    .on('focus', 'td[contenteditable=true]', ceBeforeUpdate)
-    .on('blur', 'td[contenteditable=true]', ceDoUpdate)
-    .on('paste', 'td[contenteditable=true]', cePaste)
 
   $("<div>").addClass("ajaxbusy").css("display", "none").appendTo "body"
   return
 
+
 $(document)
+  # Various Anchors
+  .on('click', 'a.songAnchor', songAnchorClicked)
+  .on('click', 'a.leaderAnchor', leaderAnchorClicked)
+
+  # TD Elements
+  .on('focus', 'td[contenteditable=true]', ceBeforeUpdate)
+  .on('blur', 'td[contenteditable=true]', ceDoUpdate)
+  .on('paste', 'td[contenteditable=true]', cePaste)
+
+  # Ajax and Turbolinks
   .on('ajax:complete', handleAjaxComplete)
   .on('ajax:send', handleAjaxBusy)
   .on('ready page:load', handlePageLoad)
