@@ -84,13 +84,17 @@ doSongAnchorClicked = (song_id) ->
     myLightboxChart = new Chart(ctx).Doughnut data.leader_usage_data
     moc = $('<canvas height=80>')
     ctx2 = moc.get(0).getContext('2d')
+    if data.song_frequency_data.datasets.length > 1
+      console.error "only handling one dataset when there are " + data.song_frequency_data.datasets.length
+      console.console.log "(must fix highestValue)"
+    highestValue = Math.max.apply(null, data.song_frequency_data.datasets[0].data)
     myOtherLightboxChart = new Chart(ctx2).Bar(data.song_frequency_data, {
       "showTooltips": false,
-      scaleIntegersOnly: true
-      # scaleOverride: true,
-      # scaleSteps: steps,
-      # scaleStepWidth: Math.ceil(max / steps),
-      # scaleStartValue: 0
+      scaleIntegersOnly: true,
+      scaleOverride: true,
+      scaleSteps: highestValue,
+      scaleStepWidth: 1,
+      scaleStartValue: 0
     })
     tabledata = ''
     for key of data.song_details
