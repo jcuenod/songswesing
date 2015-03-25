@@ -35,6 +35,7 @@ class AkasController < ApplicationController
 	end
 
 	def destroy
+		authorize :aka
 		if Aka.destroy params[:id]
 			render json: {
 				"success" => true,
