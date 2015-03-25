@@ -178,7 +178,6 @@ handleAjaxComplete = (xhr, response, status) ->
       $('form#frm_create').validate()
       $('form#frm_create input[type!=hidden]').first().focus()
       $('form#frm_create .ccli_populate').click ccli_loader
-      $(document).on('ajax:complete', handleAjaxComplete)
 
   else if $(xhr.target).hasClass "crud_delete"
     #destroy button hit
@@ -213,9 +212,7 @@ handleAjaxComplete = (xhr, response, status) ->
             $.ajax
               'url': '/akas/' + response.responseJSON.aka_id
               'success': (newAkaTemplate) ->
-                $(newAkaTemplate).insertAfter($('td[data-song-id=' + new_aka_song_id + ']').last().parent('tr'))
-                  .on('focus', ceBeforeUpdate).on('blur', ceDoUpdate)
-                  .on('paste', cePaste)
+                $(newAkaTemplate).insertAfter $('td[data-song-id=' + new_aka_song_id + ']').last().parent('tr')
 
   return
 
@@ -267,8 +264,12 @@ handlePageLoad = ->
   connectAnchors document
   $.featherlight.defaults.afterOpen = ->
     connectAnchors $(this)[0].$instance
-  $('td[contenteditable=true]').on('focus', ceBeforeUpdate).on 'blur', ceDoUpdate
-  $('td[contenteditable=true]').on 'paste', cePaste
+
+  $('table')
+    .on('focus', 'td[contenteditable=true]', ceBeforeUpdate)
+    .on('blur', 'td[contenteditable=true]', ceDoUpdate)
+    .on('paste', 'td[contenteditable=true]', cePaste)
+
   $("<div>").addClass("ajaxbusy").css("display", "none").appendTo "body"
   return
 
