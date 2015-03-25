@@ -10,7 +10,7 @@ class Song < ActiveRecord::Base
     three = Aka.where("search_text LIKE ?", "% #{q}%").distinct(:song_id).order(:display_text)
     two = Aka.where("search_text LIKE ?", "% #{q}% ").distinct(:song_id).order(:display_text)
     one = Aka.where("search_text LIKE ?", "#{q}%").distinct(:song_id).order(:display_text)
-    (one + two + three + four).uniq.first(10)
+    (one + two + three + four).uniq(&:song_id).first(10)
   end
 
   def self.autocomplete_data(q)
