@@ -45,6 +45,7 @@ gem 'rails_12factor', group: :production
 gem 'pg'
 gem 'nokogiri'
 gem 'pundit'
+gem 'icheck-rails'
 
 group :production do
   gem 'thin'

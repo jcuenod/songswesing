@@ -59,6 +59,10 @@ GEM
     execjs (2.4.0)
     hike (1.2.3)
     i18n (0.7.0)
+    icheck-rails (1.0.2.1)
+      jquery-rails
+      rails (>= 3.1.0)
+      sass-rails
     jbuilder (2.2.11)
       activesupport (>= 3.0.0, < 5)
       multi_json (~> 1.2)
@@ -154,6 +158,7 @@ DEPENDENCIES
   cocoon
   coffee-rails (~> 4.0.0)
   devise
+  icheck-rails
   jbuilder (~> 2.0)
   jquery-rails
   nokogiri

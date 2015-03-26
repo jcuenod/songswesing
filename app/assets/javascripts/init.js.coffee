@@ -230,6 +230,11 @@ handlePageLoad = ->
     }, 'fast', 'linear'
     return
 
+  $("input[type=radio]").iCheck {
+    checkboxClass: 'icheckbox_square-blue',
+    radioClass: 'iradio_square-blue',
+    increaseArea: '20%'
+  }
   $("<div>").addClass("ajaxbusy").css("display", "none").appendTo("body").append $("<div>").addClass("glyphicon glyphicon-refresh glyphicon-spin")
   return
 
