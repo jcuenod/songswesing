@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   resources :service_types
   resources :usages
   resources :akas#, :path => "alternate_titles" #TODO
-  resources :users, only: [:index]
+  resources :users
 
   post 'songs/list' => 'songs#list'
   post 'songs/data/:id' => 'songs#data'
