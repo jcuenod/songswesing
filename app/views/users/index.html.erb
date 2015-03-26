@@ -1,1 +1,27 @@
-<%= debug @users %>
+<table class="table table-bordered table-condensed" style="width: 90%; margin: auto; margin-top: 2%">
+  <tr class="user_heading">
+    <td>Email Address</td>
+    <td>Sign Ins</td>
+    <td>Super User</td>
+    <td>Admin</td>
+    <td>Leader</td>
+    <td>Guest</td>
+  </tr>
+  <% current_church = nil %>
+  <% @users.each do |user| %>
+    <% if user.church_id != current_church %>
+      <% current_church = user.church_id %>
+      <tr class="church_heading"><td colspan="6"><%= user.church.church_name %></td></tr>
+    <% end %>
+    <tr>
+      <td><%= user.email %></td>
+      <td><%= user.sign_in_count %></td>
+      <fieldset>
+      <td><input name="<%= user.id %>" type="radio"<%= user.admin ? " checked=checked" : "" %>></td>
+      <td><input name="<%= user.id %>" type="radio"<%= user.church_admin ? " checked=checked" : "" %>></td>
+      <td><input name="<%= user.id %>" type="radio"<%= user.church_leader ? " checked=checked" : "" %>></td>
+      <td><input name="<%= user.id %>" type="radio"<%= user.church_leader || user.church_admin || user.admin  ? "" : " checked=checked" %>></td>
+      </fieldset>
+    </tr>
+  <% end %>
+</table>

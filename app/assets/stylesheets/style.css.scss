@@ -5,6 +5,9 @@ $lowlight: #dde;
 $normal_danger: #fe4f45;
 $active_danger: #d04942;
 
+$light_accent: #428bca;
+$dark_accent: #2a6496;
+
 //fonts
 $font_header: Open Sans Condensed;
 
@@ -183,7 +186,7 @@ th {
     text-align: center;
 
     div {
-        color: #428bca;
+        color: $light_accent;
         margin: auto;
         top: 30vh;
         font-size: 100px;
@@ -266,6 +269,16 @@ span.ui-button-text {
     }
 }
 
+.user_heading {
+    background-color: $light_accent;
+    color: $lightest_background;
+    font-weight: bold;
+}
+.church_heading {
+    background-color: $dark_accent;
+    color: $lowlight;
+    font-weight: bold;
+}
 
 .glyphicon-spin {
     -webkit-animation: spin 2000ms infinite linear;
