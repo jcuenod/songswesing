@@ -46,6 +46,10 @@ gem 'pg'
 gem 'nokogiri'
 gem 'pundit'
 
+group :production do
+  gem 'thin'
+end
+
 group :development do
 	gem 'better_errors'
 	gem 'quiet_assets'
