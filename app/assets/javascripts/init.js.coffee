@@ -31,7 +31,6 @@ ceDoUpdate = ->
     data: dataToSend
     dataType: 'JSON'
     success: (data) ->
-      console.log data
       if data.result
         ceAfterUpdate $(toupdate)
         $(toupdate).siblings('td').each ->
@@ -98,9 +97,9 @@ doSongAnchorClicked = (song_id) ->
     $("#feathersac").html $(mc)
     $("#feathersac2").html $(moc)
 
-  ).fail(e) ->
-    console.log 'Oh Deary me...'
-    console.dir e
+  ).fail ->
+    console.log 'doSongAnchorClicked Error'
+    console.dir this
 
 leaderAnchorClicked = ->
   jqxhr = $.post('/leaders/data/' + $(this).attr("id")).done((data) ->
@@ -127,12 +126,9 @@ leaderAnchorClicked = ->
     $.featherlight $('<div><div class=\'breakdown_header\'>' + data.leader_name + '</div><div id=\'feather\'></div><div id=\'featherlut\'>' + data.usage_table + '</div>')
     $('#feather').html $(mc)
 
-    return
-  ).fail (e) ->
-    console.log 'error'
-    console.dir e
-    return
-  return
+  ).fail ->
+    console.log 'leaderAnchorClicked Error'
+    console.dir this
 
 songUsageAnchorClicked = (response) ->
   $.featherlight '<div class=\'breakdown_header\'>Usage Summary</div><div id=\'feather\'>' + response.responseText + '</div>'
@@ -159,7 +155,6 @@ handleAjaxComplete = (xhr, response, status) ->
         $(this).remove()
 
     else
-      console.log response.responseJSON.message
       alert response.responseJSON.message
 
   else if $(xhr.target).hasClass "songUsageAnchor"
@@ -205,7 +200,7 @@ handlePageLoad = ->
           showChoices choices
           return
         error: (e) ->
-          console.log 'something\'s wrong with fetching sons'
+          console.log 'tagSource Error'
           console.log e
           return
       return
