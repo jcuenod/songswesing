@@ -12,7 +12,7 @@
                 <th colspan="2">
                     Songs
                     <%= link_to "usage summary", usage_data_path(10), method: "POST", remote: true,
-                            class: "songUsageAnchor", tabindex: -1, title:"Add new song" %>
+                            class: "songUsageAnchor", tabindex: -1 %>
                     <%= link_to "", new_song_path, remote: true, tabindex: -1,
                             class:"glyphicon glyphicon-plus-sign crud_button crud_create",
                             title:"Add new song" %>

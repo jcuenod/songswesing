@@ -8,9 +8,6 @@ $active_danger: #d04942;
 //fonts
 $font_header: Open Sans Condensed;
 
-//urls
-$img_spinner_url: image_path("spinner.gif");
-
 //@extend-elements
 //original selectors
 //a.borderedanchor, a.unborderedanchor
@@ -175,9 +172,22 @@ th {
     top: 3px;
 }
 .ajaxbusy {
-    background: url($img_spinner_url) 50% 50% no-repeat;
-    width: 100%;
-    height: 30vh;
+    position: fixed;
+    display: table-cell;
+    background: rgba($light_background, 0.6);
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 10000;
+    text-align: center;
+
+    div {
+        color: #428bca;
+        margin: auto;
+        top: 30vh;
+        font-size: 100px;
+    }
 }
 .tdkey {
     font-weight: bold;
@@ -258,8 +268,8 @@ span.ui-button-text {
 
 
 .glyphicon-spin {
-    -webkit-animation: spin 1000ms infinite linear;
-    animation: spin 1000ms infinite linear;
+    -webkit-animation: spin 2000ms infinite linear;
+    animation: spin 2000ms infinite linear;
 }
 @-webkit-keyframes spin {
     0% {

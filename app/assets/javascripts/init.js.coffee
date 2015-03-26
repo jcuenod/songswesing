@@ -1,4 +1,3 @@
-myLightboxChart = undefined
 myFeatherBox = undefined
 tagOptions = []
 update_original_var = undefined
@@ -73,24 +72,19 @@ tagitSongAnchorClicked = (id) ->
 
 doSongAnchorClicked = (song_id) ->
   jqxhr = $.post('/songs/data/' + song_id).done((data) ->
-    try
-      myLightboxChart.destroy()
-      myOtherLightboxChart.destroy()
-    catch e
-      console.log 'something\'s gone wrong with the chart stuff: '
-      console.log e
     mc = $('<canvas height=250>')
     ctx = mc.get(0).getContext('2d')
     myLightboxChart = new Chart(ctx).Doughnut data.leader_usage_data
     moc = $('<canvas height=80>')
     ctx2 = moc.get(0).getContext('2d')
+
     if data.song_frequency_data.datasets.length > 1
       console.error "only handling one dataset when there are " + data.song_frequency_data.datasets.length
       console.console.log "(must fix highestValue)"
     highestValue = Math.max.apply(null, data.song_frequency_data.datasets[0].data)
+
     myOtherLightboxChart = new Chart(ctx2).Bar(data.song_frequency_data, {
       "showTooltips": false,
-      scaleIntegersOnly: true,
       scaleOverride: true,
       scaleSteps: highestValue,
       scaleStepWidth: 1,
@@ -100,23 +94,13 @@ doSongAnchorClicked = (song_id) ->
     for key of data.song_details
       tabledata += '<tr><td class=\'tdkey\'>' + key + '</td><td class=\'tddata\'>' + data.song_details[key] + '</td></tr>' if data.song_details.hasOwnProperty key
 
-    $.featherlight.close()
-    featherContent = $('<div><div class=\'breakdown_header\'>' + data.song_name + ' (' + data.tally + ')</div>' + '<div id=\'feathersac\' style=\'text-align:center; margin: 10px\'></div><div id=\'feathersac2\' style=\'text-align:center; margin: 10px\'></div>' + '<div><table class=\'table table-condensed table-striped\'>' + tabledata + '</table></div><div>')
-    myFeatherBox = $.featherlight featherContent
+    $.featherlight $('<div><div class=\'breakdown_header\'>' + data.song_name + ' (' + data.tally + ')</div>' + '<div id=\'feathersac\' style=\'text-align:center; margin: 10px\'></div><div id=\'feathersac2\' style=\'text-align:center; margin: 10px\'></div>' + '<div><table class=\'table table-condensed table-striped\'>' + tabledata + '</table></div><div>')
     $("#feathersac").html $(mc)
     $("#feathersac2").html $(moc)
 
-    # $.featherlight.close()
-    # $.featherlight '<div class=\'breakdown_header\'>' + data.song_name + ' (' + data.tally + ')</div>' + '<div id=\'feathersac\' style=\'text-align:center; margin: 10px\'></div>' + '<div><table class=\'table table-condensed table-striped\'>' + tabledata + '</table></div>'
-    # $('#feathersac').html $(mc)
-
-    return
-  ).fail((e) ->
-    console.log 'error'
+  ).fail(e) ->
+    console.log 'Oh Deary me...'
     console.dir e
-    return
-  )
-  return
 
 leaderAnchorClicked = ->
   jqxhr = $.post('/leaders/data/' + $(this).attr("id")).done((data) ->
@@ -135,18 +119,12 @@ leaderAnchorClicked = ->
         highlightStroke: 'rgba(151,187,205,1)'
         data: arrdata1
       } ]
-    try
-      myLightboxChart.destroy()
-    catch e
-      console.log 'something\'s gone wrong with the chart stuff: '
-      console.log e
     mc = $('<canvas width=600 height=300>')
     ctx = mc.get(0).getContext('2d')
     myLightboxChart = new Chart(ctx).Bar(completedata)
 
     $.featherlight.close()
-    featherContent = $('<div><div class=\'breakdown_header\'>' + data.leader_name + '</div><div id=\'feather\'></div><div id=\'featherlut\'>' + data.usage_table + '</div>')
-    myFeatherBox = $.featherlight featherContent
+    $.featherlight $('<div><div class=\'breakdown_header\'>' + data.leader_name + '</div><div id=\'feather\'></div><div id=\'featherlut\'>' + data.usage_table + '</div>')
     $('#feather').html $(mc)
 
     return
@@ -156,19 +134,20 @@ leaderAnchorClicked = ->
     return
   return
 
+songUsageAnchorClicked = (response) ->
+  $.featherlight '<div class=\'breakdown_header\'>Usage Summary</div><div id=\'feather\'>' + response.responseText + '</div>'
+
 handleAjaxBusy = (xhr) ->
   if $(xhr.target).is("form")
     #form is being submitted make things look pretty in the mean time
-    $.featherlight.close()
-    myFeatherBox = $.featherlight "<div class='ajaxbusy' />"
+    $(".ajaxbusy").show()
   return
 
 
 handleAjaxComplete = (xhr, response, status) ->
-  $.featherlight.close()
   if $(xhr.target).hasClass "crud_create"
     #creation button hit
-    myFeatherBox = $.featherlight response.responseText, afterOpen: ->
+    $.featherlight response.responseText, afterOpen: ->
       $('form#frm_create').validate()
       $('form#frm_create input[type!=hidden]').first().focus()
       $('form#frm_create .ccli_populate').click ccli_loader
@@ -184,8 +163,7 @@ handleAjaxComplete = (xhr, response, status) ->
       alert response.responseJSON.message
 
   else if $(xhr.target).hasClass "songUsageAnchor"
-    #songUsageAnchor button hit
-    myFeatherBox = $.featherlight '<div class=\'breakdown_header\'>Usage Summary</div><div id=\'feather\'>' + response.responseText + '</div>'
+    songUsageAnchorClicked response
 
   else if $(xhr.target).is("form")
     #form submission
@@ -207,7 +185,8 @@ handleAjaxComplete = (xhr, response, status) ->
               'url': '/akas/' + response.responseJSON.aka_id
               'success': (newAkaTemplate) ->
                 $(newAkaTemplate).insertAfter $('td[data-song-id=' + new_aka_song_id + ']').last().parent('tr')
-
+    $.featherlight.close()
+    $(".ajaxbusy").hide()
   return
 
 handlePageLoad = ->
@@ -256,7 +235,7 @@ handlePageLoad = ->
     }, 'fast', 'linear'
     return
 
-  $("<div>").addClass("ajaxbusy").css("display", "none").appendTo "body"
+  $("<div>").addClass("ajaxbusy").css("display", "none").appendTo("body").append $("<div>").addClass("glyphicon glyphicon-refresh glyphicon-spin")
   return
 
 
