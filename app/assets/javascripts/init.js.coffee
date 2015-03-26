@@ -230,8 +230,8 @@ handlePageLoad = ->
     }, 'fast', 'linear'
     return
 
-  $("input[type=radio]").iCheck {
-    checkboxClass: 'icheckbox_square-blue',
+  $("input[type=radio], input[type=checkbox]").iCheck {
+    checkboxClass: 'icheckbox_square-green',
     radioClass: 'iradio_square-blue',
     increaseArea: '20%'
   }
