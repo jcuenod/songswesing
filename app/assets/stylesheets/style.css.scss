@@ -261,23 +261,23 @@ span.ui-button-text {
     width: 200px;
 }
 
-.usagetable {
-    table {
-        margin: 1em auto;
-        width: 350px;
-    }
+table.tableindex {
+    margin: 1em auto;
+    width: 90%;
     td {
         white-space: nowrap;
     }
 }
 
-.user_heading {
-    background-color: $light_accent;
+tr.user_heading td,
+tr.user_heading:hover td {
+    background-color: $light_accent !important;
     color: $lightest_background;
     font-weight: bold;
 }
-.church_heading {
-    background-color: $dark_accent;
+tr.church_heading td,
+tr.church_heading:hover td {
+    background-color: $dark_accent !important;
     color: $lowlight;
     font-weight: bold;
 }
