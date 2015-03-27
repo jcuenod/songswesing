@@ -10,7 +10,8 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require 'icheck/square/_all'
+ *= require 'icheck/square/blue'
+ *= require 'icheck/flat/green'
  *= require_tree ../../../vendor/assets/stylesheets/
  *= require_tree .
  *= require_self

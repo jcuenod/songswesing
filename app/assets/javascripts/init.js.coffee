@@ -73,7 +73,13 @@ doSongAnchorClicked = (song_id) ->
   jqxhr = $.post('/songs/data/' + song_id).done((data) ->
     mc = $('<canvas height=250>')
     ctx = mc.get(0).getContext('2d')
-    myLightboxChart = new Chart(ctx).Doughnut data.leader_usage_data
+    myLightboxChart = new Chart(ctx).Doughnut data.leader_usage_data#, {
+    #   tooltipEvents: [],
+    #   tooltipTemplate: "<%if (label){%><%=label%>: <%}%><%= value %>",
+    #   onAnimationComplete: ->
+    #     this.showTooltip this.segments, true
+    # }
+    # This stuff ^^ allows persistent tooltips but they overlap so we need some solution to that first
     moc = $('<canvas height=80>')
     ctx2 = moc.get(0).getContext('2d')
 
@@ -231,7 +237,7 @@ handlePageLoad = ->
     return
 
   $("input[type=radio], input[type=checkbox]").iCheck {
-    checkboxClass: 'icheckbox_square-green',
+    checkboxClass: 'icheckbox_flat-green',
     radioClass: 'iradio_square-blue',
     increaseArea: '20%'
   }
