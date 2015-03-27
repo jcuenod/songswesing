@@ -9,13 +9,15 @@
     <td>Leader</td>
     <td>Guest</td>
     <td>Enabled</td>
-    <td></td>
+    <% if current_user.admin? %>
+      <td></td>
+    <% end %>
   </tr>
   <% current_church = nil %>
   <% @users.each do |user| %>
     <% if current_church != user.church_id %>
       <% current_church = user.church_id %>
-      <tr class="church_heading"><td colspan="<%= current_user.admin ? 8 : 7 %>"><%= user.church.church_name %></td></tr>
+      <tr class="church_heading"><td colspan="<%= current_user.admin ? 9 : 7 %>"><%= user.church.church_name %></td></tr>
     <% end %>
     <tr>
       <td><%= user.email %></td>
@@ -24,15 +26,17 @@
       <% if current_user.admin? %>
         <td><input name="<%= user.id %>" type="radio"<%= user.admin? ? " checked=checked" : "" %>></td>
       <% end %>
-      <td><input name="<%= user.id %>" type="radio"<%= user.church_admin? ? " checked=checked" : "" %>></td>
-      <td><input name="<%= user.id %>" type="radio"<%= user.church_leader? ? " checked=checked" : "" %>></td>
-      <td><input name="<%= user.id %>" type="radio"<%= user.church_leader? || user.church_admin? || user.admin?  ? "" : " checked=checked" %>></td>
+      <td><input name="<%= user.id %>" type="radio"<%= user.church_admin? ? " checked=checked" : "" %><%= current_user.admin? || current_user.church_admin ? "" : " disabled" %>></td>
+      <td><input name="<%= user.id %>" type="radio"<%= user.church_leader? ? " checked=checked" : "" %><%= current_user.admin? || current_user.church_admin ? "" : " disabled" %>></td>
+      <td><input name="<%= user.id %>" type="radio"<%= user.church_leader? || user.church_admin? || user.admin?  ? "" : " checked=checked" %><%= current_user.admin? || current_user.church_admin ? "" : " disabled" %>></td>
       </fieldset>
-      <td><input type="checkbox"<%= user.enabled? ? " checked=\"checked\"" : "" %>></td>
-      <td>
-      <%= link_to "", user, method: :delete, remote:true, data: { confirm: "Are you sure?" }, tabindex: -1,
-        class:"glyphicon glyphicon-minus-sign crud_delete crud_button",
-        title:"Delete this user (this cannot be undone)" %></td>
+      <td><input type="checkbox"<%= user.enabled? ? " checked=\"checked\"" : "" %><%= current_user.admin? || current_user.church_admin ? "" : " disabled" %>></td>
+      <% if current_user.admin? %>
+        <td>
+        <%= link_to "", user, method: :delete, remote:true, data: { confirm: "Are you sure?" }, tabindex: -1,
+          class:"glyphicon glyphicon-minus-sign crud_delete crud_button", title:"Delete this user (this cannot be undone)" %>
+        </td>
+      <% end %>
     </tr>
   <% end %>
 </table>
