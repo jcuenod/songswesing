@@ -21,7 +21,7 @@
       <tr class="church_heading"><td colspan="<%= current_user.admin ? 9 : 7 %>"><%= user.church.church_name %></td></tr>
     <% end %>
     <tr data-user-id="<%= user.id %>">
-      <td><%= user.email %></td>
+      <td><%= user.email %><%= user.id == current_user.id ? " (you)" : "" %></td>
       <td><%= user.sign_in_count %></td>
       <fieldset>
       <% if current_user.admin? %>
