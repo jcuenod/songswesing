@@ -197,6 +197,39 @@ th {
 .tdkey {
     font-weight: bold;
 }
+.song_tag {
+    background-color: $light_accent;
+    color: $lowlight;
+    border-radius: 3px;
+    margin-right: 5px;
+    padding: 3px 8px;
+    font-weight: bolder;
+    border: 2px solid $dark_accent;
+    cursor: pointer;
+    &:after {
+        font-family: "Glyphicons Halflings";
+        content:"\e041";
+        vertical-align: middle;
+        padding-left: 5px;
+    }
+    &:hover {
+        border-color: $light_accent;
+        background-color: lighten($light_accent, 20%);
+        &:after {
+        }
+        .tipster &:after {
+            content:"\e013";
+            color: $dark_accent;
+        }
+        .song_tags &:after {
+            content:"\e014";
+            color: $normal_danger;
+        }
+    }
+    .tipster &:last-of-type {
+        margin-right: 0;
+    }
+}
 .ui-helper-hidden-accessible {
     display: none;
 }

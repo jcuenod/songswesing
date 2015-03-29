@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150326210144) do
+ActiveRecord::Schema.define(version: 20150328153815) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -64,6 +64,18 @@ ActiveRecord::Schema.define(version: 20150326210144) do
   add_index "services", ["leader_id"], name: "index_services_on_leader_id", using: :btree
   add_index "services", ["service_type_id"], name: "index_services_on_service_type_id", using: :btree
 
+  create_table "song_tags", force: true do |t|
+    t.integer  "song_id"
+    t.integer  "tag_id"
+    t.integer  "church_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "song_tags", ["church_id"], name: "index_song_tags_on_church_id", using: :btree
+  add_index "song_tags", ["song_id"], name: "index_song_tags_on_song_id", using: :btree
+  add_index "song_tags", ["tag_id"], name: "index_song_tags_on_tag_id", using: :btree
+
   create_table "songs", force: true do |t|
     t.string   "song_name"
     t.string   "license"
@@ -74,6 +86,12 @@ ActiveRecord::Schema.define(version: 20150326210144) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "ccli_number"
+  end
+
+  create_table "tags", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "usages", force: true do |t|

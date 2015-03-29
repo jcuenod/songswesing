@@ -2,10 +2,12 @@
 	"leader_usage_data": [
 	<% @leader_usage_data.each_with_index do |su, i| %>
 		<%= "," unless i == 0 %>
-		{"value": <%= su[1] %>,
-		"color": "<%= @colours[i % @colours.size] %>",
-		"highlight": "#FFC870",
-		"label": "<%= su[0] %>"}
+		{
+      "value": <%= su[1] %>,
+  		"color": "<%= @colours[i % @colours.size] %>",
+  		"highlight": "#FFC870",
+  		"label": "<%= su[0] %>"
+    }
 	<% end %>
 	],
 	"song_frequency_data": {
@@ -21,6 +23,10 @@
       }
 	  ]
 	},
+  "tag_data": {
+    "can_tag": true<%# policy(songtag).update %>,
+    "tags": <%= raw @song_tags.to_json %>
+  },
 	"song_details": {
 		"License": "<%= @song.license %>",
 		"Writers": "<%= @song.writers %>"

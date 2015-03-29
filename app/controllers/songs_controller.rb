@@ -38,6 +38,14 @@ class SongsController < ApplicationController
 		@song_frequency_data = Array.new(11, 0)
 		@song_freq = Usage.joins(:service).where("date > ?", 1.year.ago).where(song_id: params[:id], :services => {church_id: current_user.church_id}).group("DATE_TRUNC('month', services.date)").count()
 		@song_freq.map {|k, v| @song_frequency_data[k.strftime("%-m").to_i - 1] = v}
+		@song_tags = Tag.all.map do |tag|
+			st = SongTag.where(song_id: params[:id], tag_id: tag.id, church_id: current_user.church_id).limit 1
+			{
+				"id" => tag.id,
+				"name" => tag.name,
+				"value" => !st.blank?
+			}
+		end
 		@song = Song.find_by_id(params[:id])
 		@colours = ["#E8D0A9", "#B7AFA3", "#C1DAD6", "#D5DAFA", "#ACD1E9", "#6D929B"]
 

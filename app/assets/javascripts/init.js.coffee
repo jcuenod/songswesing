@@ -2,6 +2,43 @@ myFeatherBox = undefined
 tagOptions = []
 update_original_var = undefined
 
+addTagToSong = (el) ->
+  #Allow passing in either a jQuery object or selector
+  tagElement = $(el.target)
+  tagAddCRUDButton = $("#songtagger")
+  oldOffset = tagElement.offset()
+  tagElement.insertBefore tagAddCRUDButton
+  newOffset = tagElement.offset()
+  temp = tagElement.clone().appendTo('body')
+  temp.css
+    'position': 'absolute'
+    'left': oldOffset.left
+    'top': oldOffset.top
+    'z-index': 1000
+  tagElement.hide()
+  temp.animate {
+    'top': newOffset.top
+    'left': newOffset.left
+  }, 'slow', ->
+    tagElement.show
+    tagElement.removeAttr "style"
+    temp.remove()
+    if tagAddCRUDButton.tooltipster('content').find(".song_tag").length > 0
+      tagAddCRUDButton.tooltipster 'reposition'#, tagAddCRUDButton.tooltipster('content')
+    else
+      tagAddCRUDButton.tooltipster 'hide'
+
+removeTagFromSong = (el) ->
+  tagElement = $(el.target)
+  tagAddCRUDButton = $("#songtagger")
+  console.log tagElement
+  tagElement.removeAttr "style"
+  temp = tagElement.clone().insertAfter tagElement
+  tagElement.appendTo(tagAddCRUDButton.tooltipster('content')).removeAttr "style"
+  temp.css("max-height", temp.height()).animate {'opacity':0,'width':0}, ->
+    tagAddCRUDButton.tooltipster 'content', tagAddCRUDButton.tooltipster('content')
+    $(this).remove()
+
 ceAfterUpdate = (el) ->
   $(el).closest('table').removeClass 'table-hover'
   trueColor = $(el).css 'backgroundColor'
@@ -96,12 +133,28 @@ doSongAnchorClicked = (song_id) ->
       scaleStartValue: 0
     })
     tabledata = ''
+    tooltip_content = ''
+    for key of data.tag_data.tags
+      if data.tag_data.tags[key].value
+        tabledata += '<span data-tag-id=\'' + data.tag_data.tags[key].id + '\' class=\'song_tag\'>' +
+          data.tag_data.tags[key].name + '</span>'
+      else
+        tooltip_content += '<span data-tag-id=\'' + data.tag_data.tags[key].id + '\' class=\'song_tag\'>' +
+          data.tag_data.tags[key].name + '</span>'
+    tabledata = '<tr><td class=\'tdkey\'>Tags</td><td class=\'tddata song_tags\'>' + tabledata + (if data.tag_data.can_tag then '<a id=\'songtagger\' class=\'glyphicon glyphicon-plus-sign crud_button\'></a>' else "") + '</td></tr>'
+
     for key of data.song_details
       tabledata += '<tr><td class=\'tdkey\'>' + key + '</td><td class=\'tddata\'>' + data.song_details[key] + '</td></tr>' if data.song_details.hasOwnProperty key
 
     $.featherlight $('<div><div class=\'breakdown_header\'>' + data.song_name + ' (' + data.tally + ')</div>' + '<div id=\'feathersac\' style=\'text-align:center; margin: 10px\'></div><div id=\'feathersac2\' style=\'text-align:center; margin: 10px\'></div>' + '<div><table class=\'table table-condensed table-striped\'>' + tabledata + '</table></div><div>')
     $("#feathersac").html $(mc)
     $("#feathersac2").html $(moc)
+    if data.tag_data.can_tag
+      $("#songtagger").tooltipster {
+        content: $("<div class='tipster'>" + tooltip_content + "</div>"),
+        interactive: true,
+        theme: 'tooltipster-light'
+      }
 
   ).fail ->
     console.log 'doSongAnchorClicked Error'
@@ -242,6 +295,7 @@ handlePageLoad = ->
     increaseArea: '20%'
   }
   $("<div>").addClass("ajaxbusy").css("display", "none").appendTo("body").append $("<div>").addClass("glyphicon glyphicon-refresh glyphicon-spin")
+  $.featherlight.defaults.root = $(".featherlight-holder")
   return
 
 
@@ -249,6 +303,8 @@ $(document)
   # Various Anchors
   .on('click', 'a.songAnchor', songAnchorClicked)
   .on('click', 'a.leaderAnchor', leaderAnchorClicked)
+  .on('click', '.tipster .song_tag', addTagToSong)
+  .on('click', '.song_tags .song_tag', removeTagFromSong)
 
   # TD Elements
   .on('focus', 'td[contenteditable=true]', ceBeforeUpdate)
