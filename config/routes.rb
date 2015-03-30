@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   resources :usages
   resources :akas#, :path => "alternate_titles" #TODO
   resources :users
+  resources :song_tags, only: [:create, :destroy]
 
   post 'songs/list' => 'songs#list'
   post 'songs/data/:id' => 'songs#data'

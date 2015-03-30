@@ -24,9 +24,14 @@ addTagToSong = (el) ->
     tagElement.removeAttr "style"
     temp.remove()
     if tagAddCRUDButton.tooltipster('content').find(".song_tag").length > 0
-      tagAddCRUDButton.tooltipster 'reposition'#, tagAddCRUDButton.tooltipster('content')
+      tagAddCRUDButton.tooltipster 'content', tagAddCRUDButton.tooltipster('content')
     else
       tagAddCRUDButton.tooltipster 'hide'
+    $.ajax
+      type: 'POST'
+      url: '/song_tags/'
+      data: {"tag_id": tagElement.attr("data-tag-id"),"song_id": $(".song_tags").attr("data-song-id")},
+      dataType: 'JSON'
 
 removeTagFromSong = (el) ->
   tagElement = $(el.target)
@@ -38,6 +43,11 @@ removeTagFromSong = (el) ->
   temp.css("max-height", temp.height()).animate {'opacity':0,'width':0}, ->
     tagAddCRUDButton.tooltipster 'content', tagAddCRUDButton.tooltipster('content')
     $(this).remove()
+    $.ajax
+      type: 'DELETE'
+      url: '/song_tags/-1'
+      data: {"tag_id": tagElement.attr("data-tag-id"),"song_id": $(".song_tags").attr("data-song-id")},
+      dataType: 'JSON'
 
 ceAfterUpdate = (el) ->
   $(el).closest('table').removeClass 'table-hover'
@@ -141,7 +151,7 @@ doSongAnchorClicked = (song_id) ->
       else
         tooltip_content += '<span data-tag-id=\'' + data.tag_data.tags[key].id + '\' class=\'song_tag\'>' +
           data.tag_data.tags[key].name + '</span>'
-    tabledata = '<tr><td class=\'tdkey\'>Tags</td><td class=\'tddata song_tags\'>' + tabledata + (if data.tag_data.can_tag then '<a id=\'songtagger\' class=\'glyphicon glyphicon-plus-sign crud_button\'></a>' else "") + '</td></tr>'
+    tabledata = '<tr><td class=\'tdkey\'>Tags</td><td class=\'tddata song_tags\' data-song-id="' + song_id + '">' + tabledata + (if data.tag_data.can_tag then '<a id=\'songtagger\' class=\'glyphicon glyphicon-plus-sign crud_button\'></a>' else "") + '</td></tr>'
 
     for key of data.song_details
       tabledata += '<tr><td class=\'tdkey\'>' + key + '</td><td class=\'tddata\'>' + data.song_details[key] + '</td></tr>' if data.song_details.hasOwnProperty key
@@ -296,8 +306,6 @@ handlePageLoad = ->
   }
   $("<div>").addClass("ajaxbusy").css("display", "none").appendTo("body").append $("<div>").addClass("glyphicon glyphicon-refresh glyphicon-spin")
   $.featherlight.defaults.root = $(".featherlight-holder")
-  return
-
 
 $(document)
   # Various Anchors
