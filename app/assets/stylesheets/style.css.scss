@@ -209,7 +209,6 @@ th {
     padding: 3px 8px;
     font-weight: bolder;
     border: 2px solid $dark_accent;
-    cursor: pointer;
     &:after {
         font-family: "Glyphicons Halflings";
         content:"\e041";
@@ -217,6 +216,7 @@ th {
         padding-left: 5px;
     }
     &:hover {
+        cursor: pointer;
         border-color: $light_accent;
         background-color: lighten($light_accent, 20%);
         &:after {
@@ -249,6 +249,15 @@ th {
                 background-color: lighten($light_accent, 10%);
             }
         }
+    }
+
+    &.stateless {
+        cursor: auto;
+        background-color: $lowlight;
+        color: $light_accent;
+        font-weight: normal;
+        border: none;
+        font-size: 80%;
     }
 }
 .ui-helper-hidden-accessible {
