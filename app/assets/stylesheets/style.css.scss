@@ -197,6 +197,10 @@ th {
 .tdkey {
     font-weight: bold;
 }
+.song_tag_filter {
+    margin: 2em;
+    text-align: center;
+}
 .song_tag {
     background-color: $light_accent;
     color: $lowlight;
@@ -228,6 +232,23 @@ th {
     }
     .tipster &:last-of-type {
         margin-right: 0;
+    }
+
+    .song_tag_filter & {
+        border-color: $light_accent;
+        background-color: lighten($light_accent, 20%);
+        &:hover {
+            border-color: $dark_accent;
+            color: $dark_accent;
+        }
+        &.active {
+            background-color: $light_accent;
+            border-color: $dark_accent;
+            &:hover {
+                border-color: $light_accent;
+                background-color: lighten($light_accent, 10%);
+            }
+        }
     }
 }
 .ui-helper-hidden-accessible {

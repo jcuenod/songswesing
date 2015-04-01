@@ -1,3 +1,8 @@
+<div class="song_tag_filter">
+<% @song_tags.flatten.uniq.each do |t| %>
+<span class="song_tag" data-tag-name="<%= t %>"><%= t %></span>
+<% end %>
+</div>
 <table class="table table-condensed table-striped tableindex">
 	<thead>
 		<th></th>
@@ -7,7 +12,7 @@
 	</thead>
 	<tbody>
 	<% @usages.each_with_index do |usage, index| %>
-		<tr>
+		<tr class='<%= @song_tags[index].blank? ? "" : @song_tags[index].join(" ") %>'>
 			<td><%= index+1 %></td>
 			<td><a class="unborderedanchor songAnchor" id="<%= usage.song_id %>"><%= usage.song_name %></a></td>
 			<td><%= usage.count_song_id %></td>
