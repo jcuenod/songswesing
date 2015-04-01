@@ -1,6 +1,6 @@
 <div class="song_tag_filter">
 <% @song_tags.flatten.uniq.each do |t| %>
-<span class="song_tag" data-tag-name="<%= t %>"><%= t %></span>
+<span class="song_tag" data-tag-name="<%= t.squish.downcase.tr(" ","_") %>"><%= t %></span>
 <% end %>
 </div>
 
@@ -14,7 +14,7 @@
 	</thead>
 	<tbody>
 	<% @usages.each_with_index do |usage, index| %>
-		<tr class='<%= @song_tags[index].blank? ? "" : @song_tags[index].join(" ") %>'>
+		<tr class='<%= @song_tags[index].blank? ? "" : @song_tags[index].map {|st| st.squish.downcase.tr(" ","_") }.join(" ") %>'>
 			<td><%= index+1 %></td>
 			<td><a class="unborderedanchor songAnchor" id="<%= usage.song_id %>"><%= usage.song_name %></a></td>
 			<td>
