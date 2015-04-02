@@ -1,27 +1,36 @@
-<div class="song_tag_filter">
-<% @song_tags.flatten.uniq.each do |t| %>
-<span class="song_tag" data-tag-name="<%= t.squish.downcase.tr(" ","_") %>"><%= t %></span>
+<% unless @song_tags.blank? %>
+	<div class="song_tag_filter">
+		<% @song_tags.flatten.uniq.each do |t| %>
+			<span class="song_tag" data-tag-name="<%= t.squish.downcase.tr(" ","_") %>"><%= t %></span>
+		<% end %>
+	</div>
 <% end %>
-</div>
-
 <table class="table table-condensed table-striped tableindex">
 	<thead>
 		<th></th>
 		<th>Song</th>
-		<th></th>
+		<% unless @song_tags.blank? %>
+			<th></th>
+		<% end %>
 		<th>#</th>
 		<th>Last Used</th>
 	</thead>
 	<tbody>
 	<% @usages.each_with_index do |usage, index| %>
-		<tr class='<%= @song_tags[index].blank? ? "" : @song_tags[index].map {|st| st.squish.downcase.tr(" ","_") }.join(" ") %>'>
+		<tr<% unless @song_tags.blank? %>
+			class='<%= @song_tags[index].blank? ? "" : @song_tags[index].map {|st| st.squish.downcase.tr(" ","_") }.join(" ") %>'
+		<% end %>>
 			<td><%= index+1 %></td>
-			<td><a class="unborderedanchor songAnchor" id="<%= usage.song_id %>"><%= usage.song_name %></a></td>
 			<td>
-				<% @song_tags[index].each do |t| %>
-					<span class="song_tag stateless"><%= t %></span>
-				<% end %>
+				<a class="unborderedanchor songAnchor" id="<%= usage.song_id %>"><%= usage.song_name %></a>
 			</td>
+			<% unless @song_tags.blank? %>
+				<td>
+					<% @song_tags[index].each do |t| %>
+						<span class="song_tag stateless"><%= t %></span>
+					<% end %>
+				</td>
+			<% end %>
 			<td><%= usage.count_song_id %></td>
 			<td><%= usage.date %><%# .strftime "%-d %b %B %Y" %></td>
 		</tr>
