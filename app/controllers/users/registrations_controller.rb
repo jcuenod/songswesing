@@ -6,6 +6,10 @@ class Users::RegistrationsController < Devise::RegistrationsController
     super do |resource|
       resource.church = Church.find_or_create_by(:church_name => params[:user][:church_attributes][:church_name])
     end
+
+    if @user.persisted?
+      UserMailer.send_notify_admin_of_new_users(@user).deliver_later
+    end
   end
 
   protected

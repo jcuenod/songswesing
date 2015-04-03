@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Congratulations! <%= @user.email %> has just signed up</h1>
+    <p>
+      <%= @user.email %> is part of <%= @user.church.church_name %> so please be nice :)
+    </p>
+    <p>
+      I know you're dying to say hello so here is a fast link: <a href="mailto:<%= @user.email %>?subject=Welcome to Songs We Sing!"><%= @user.email %></a>
+    </p>
+    <p>I know how exciting this is for you so have a great day!</p>
+  </body>
+</html>

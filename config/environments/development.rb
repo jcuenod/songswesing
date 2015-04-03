@@ -35,7 +35,10 @@ Rails.application.configure do
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
 
-  #added for Devise mailer
+  # Added so that foreman gives me output
+  $stdout.sync = true
+
+  # Added for Devise mailer
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.delivery_method = :smtp
