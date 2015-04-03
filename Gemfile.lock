@@ -57,6 +57,8 @@ GEM
     erubis (2.7.0)
     eventmachine (1.0.7)
     execjs (2.4.0)
+    foreman (0.78.0)
+      thor (~> 0.19.1)
     hike (1.2.3)
     i18n (0.7.0)
     icheck-rails (1.0.2.1)
@@ -158,6 +160,7 @@ DEPENDENCIES
   cocoon
   coffee-rails (~> 4.0.0)
   devise
+  foreman
   icheck-rails
   jbuilder (~> 2.0)
   jquery-rails

@@ -58,4 +58,8 @@ group :development do
 	gem 'rb-readline'
 end
 
+group :development, :test do
+  gem 'foreman'
+end
+
 ruby "2.1.5"
