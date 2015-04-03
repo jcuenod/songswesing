@@ -8,7 +8,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
     end
 
     if @user.persisted?
-      UserMailer.send_notify_admin_of_new_users(@user).deliver_later
+      UserMailer.send_notify_admin_of_new_users(@user).deliver
     end
   end
 
