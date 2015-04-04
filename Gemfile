@@ -43,6 +43,7 @@ gem 'devise'
 gem 'rails_12factor', group: :production
 
 gem 'pg'
+gem 'delayed_job_active_record'
 gem 'nokogiri'
 gem 'pundit'
 gem 'icheck-rails'
