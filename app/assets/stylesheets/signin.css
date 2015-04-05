@@ -1,16 +1,16 @@
-.form-signin {
+.devise-form {
   max-width: 330px;
   padding: 15px;
   margin: 0 auto;
 }
-.form-signin .form-signin-heading,
-.form-signin .checkbox {
+.devise-form .devise-form-heading,
+.devise-form .checkbox {
   margin-bottom: 10px;
 }
-.form-signin .checkbox {
+.devise-form .checkbox {
   font-weight: normal;
 }
-.form-signin .form-control {
+.devise-form .form-control {
   position: relative;
   height: auto;
   -webkit-box-sizing: border-box;
@@ -20,9 +20,9 @@
   font-size: 16px;
   margin: 5px 0;
 }
-.form-signin .form-control:focus {
+.devise-form .form-control:focus {
   z-index: 2;
 }
-.form-signin h2 {
+.devise-form h2 {
   margin-top: 10px;
 }
