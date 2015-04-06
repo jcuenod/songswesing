@@ -229,7 +229,7 @@ handleAjaxComplete = (xhr, response, status) ->
 
   else if $(xhr.target).hasClass "crud_delete"
     #destroy button hit
-    if (response.responseJSON.success)
+    if response.responseJSON.success
       $('tr#' + response.responseJSON.aka_id).fadeOut 'slow', ->
         $(this).remove()
 
