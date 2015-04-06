@@ -47,6 +47,7 @@ gem 'delayed_job_active_record'
 gem 'nokogiri'
 gem 'pundit'
 gem 'icheck-rails'
+gem 'jquery-datatables-rails', '~> 3.2.0'
 
 group :production do
   gem 'thin'

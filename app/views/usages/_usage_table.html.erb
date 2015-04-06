@@ -5,35 +5,70 @@
 		<% end %>
 	</div>
 <% end %>
-<table class="table table-condensed table-striped tableindex">
-	<thead>
-		<th></th>
-		<th>Song</th>
-		<% unless @song_tags.blank? %>
+<div class="content">
+	<table class="table table-condensed table-striped tableindex">
+		<thead>
 			<th></th>
-		<% end %>
-		<th>#</th>
-		<th>Last Used</th>
-	</thead>
-	<tbody>
-	<% @usages.each_with_index do |usage, index| %>
-		<tr<% unless @song_tags.blank? %>
-			class='<%= @song_tags[index].blank? ? "" : @song_tags[index].map {|st| st.squish.downcase.tr(" ","_") }.join(" ") %>'
-		<% end %>>
-			<td><%= index+1 %></td>
-			<td>
-				<a class="unborderedanchor songAnchor" id="<%= usage.song_id %>"><%= usage.song_name %></a>
-			</td>
+			<th>Song</th>
 			<% unless @song_tags.blank? %>
-				<td>
-					<% @song_tags[index].each do |t| %>
-						<span class="song_tag stateless"><%= t %></span>
-					<% end %>
-				</td>
+				<th></th>
 			<% end %>
-			<td><%= usage.count_song_id %></td>
-			<td><%= usage.date %><%# .strftime "%-d %b %B %Y" %></td>
-		</tr>
-	<% end %>
-	</tbody>
-</table>
+			<th>#</th>
+			<th>Last Used</th>
+		</thead>
+		<tbody>
+		<% @usages.each_with_index do |usage, index| %>
+			<tr>
+				<td><%= index+1 %></td>
+				<td>
+					<a class="unborderedanchor songAnchor" id="<%= usage.song_id %>"><%= usage.song_name %></a>
+				</td>
+				<% unless @song_tags.blank? %>
+					<td data-filter='<%= @song_tags[index].blank? ? "" : @song_tags[index].map {|st| st.squish.downcase.tr(" ","_") }.join(" ") %>'>
+						<% @song_tags[index].each do |t| %>
+							<span class="song_tag stateless"><%= t %></span>
+						<% end %>
+					</td>
+				<% end %>
+				<td><%= usage.count_song_id %></td>
+				<td><%= usage.date %><%# .strftime "%-d %b %B %Y" %></td>
+			</tr>
+		<% end %>
+		</tbody>
+	</table>
+</div>
+<script>
+	var dt
+	var active_filters = {};
+	var active_filter_count = 0;
+	function toggle_tag_filter(tag_name)
+	{
+		active_filters[tag_name] = 1 - (active_filters[tag_name]|0); //toggles on or off
+		active_filter_count = Object.keys(active_filters).reduce(function (previous, key) {
+	    return previous + active_filters[key];
+		}, 0);
+	}
+
+	$(document).ready(function(){
+		$(".song_tag").click(function(){
+			toggle_tag_filter($(this).attr("data-tag-name"));
+			$(this).toggleClass("active");
+			dt.draw();
+		});
+		dt = $(".tableindex").DataTable();
+	});
+	$.fn.dataTable.ext.search.push(
+    function(settings, data, dataIndex) {
+    	if (active_filter_count == 0)
+    		return true
+
+    	var keys = data[2].split(" ")
+      for (i in keys)
+      {
+      	if (active_filters[keys[i]] == 1)
+      		return true
+      }
+      return false
+    }
+	);
+</script>

@@ -49,15 +49,15 @@ removeTagFromSong = (el) ->
       data: {"tag_id": tagElement.attr("data-tag-id"),"song_id": $(".song_tags").attr("data-song-id")},
       dataType: 'JSON'
 
-filterBySongTag = (el) ->
-  $(el.target).toggleClass "active"
-  if $(".song_tag.active").length > 0
-    $("tr").hide()
-    $($(".song_tag.active").map( ->
-      "." + $(this).attr "data-tag-name"
-    ).get().join(",")).show()
-  else
-    $("tr").show()
+# filterBySongTag = (el) ->
+  # $(el.target).toggleClass "active"
+  # if $(".song_tag.active").length > 0
+  #   $("tr").hide()
+  #   $($(".song_tag.active").map( ->
+  #     "." + $(this).attr "data-tag-name"
+  #   ).get().join(",")).show()
+  # else
+  #   $("tr").show()
 
 ceAfterUpdate = (el) ->
   $(el).closest('table').removeClass 'table-hover'
@@ -323,7 +323,7 @@ $(document)
   .on('click', 'a.leaderAnchor', leaderAnchorClicked)
   .on('click', '.tipster .song_tag', addTagToSong)
   .on('click', '.song_tags .song_tag', removeTagFromSong)
-  .on('click', '.song_tag_filter .song_tag', filterBySongTag)
+  # .on('click', '.song_tag_filter .song_tag', filterBySongTag)
 
   # TD Elements
   .on('focus', 'td[contenteditable=true]', ceBeforeUpdate)

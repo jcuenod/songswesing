@@ -324,9 +324,13 @@ span.ui-button-text {
     width: 200px;
 }
 
-table.tableindex {
+.content {
     margin: 1em auto;
     width: 90%;
+}
+
+table.tableindex {
+    width: 100%;
     td {
         white-space: nowrap;
     }

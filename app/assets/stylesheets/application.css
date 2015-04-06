@@ -14,5 +14,6 @@
  *= require 'icheck/flat/green'
  *= require_tree ../../../vendor/assets/stylesheets/
  *= require_tree .
+ *= require dataTables/bootstrap/3/jquery.dataTables.bootstrap
  *= require_self
  */
