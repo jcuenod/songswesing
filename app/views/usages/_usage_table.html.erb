@@ -23,11 +23,9 @@
 				<td>
 					<a class="unborderedanchor songAnchor" id="<%= usage.song_id %>"><%= usage.song_name %></a>
 				</td>
-				<td data-filter='<%= @song_tags[index].blank? ? "" : @song_tags[index].map {|st| st.squish.downcase.tr(" ","_") }.join(" ") unless @song_tags.blank? %>'>
+				<td data-filter='<%= @song_tags[index].blank? ? "0" : @song_tags[index].map {|st| st.squish.downcase.tr(" ","_") }.join(" ") unless @song_tags.blank? %>'>
 					<% unless @song_tags.blank? %>
-						<% @song_tags[index].each do |t| %>
-							<span class="song_tag stateless"><%= t %></span>
-						<% end %>
+						<%= raw @song_tags[index].map {|tag| "<span class='song_tag stateless'>#{tag}</span>" }.join %>
 					<% end %>
 				</td>
 				<td><%= usage.count_song_id %></td>
