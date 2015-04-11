@@ -6,4 +6,21 @@ class UsersController < ApplicationController
 			redirect_to root_path
 		end
 	end
+  def destroy
+    doomed_user = User.find params[:id]
+    authorize doomed_user
+    if doomed_user.destroy
+      render json: {
+        "success" => true,
+        "what" => "destroyed",
+        "whatDestroyed" => "user",
+        "user_id" => params[:id],
+      }
+    else
+      render json: {
+        "success" => false,
+        "message" => "You can't delete this record but you seem to have permission, so check the logs.",
+      }
+    end
+  end
 end

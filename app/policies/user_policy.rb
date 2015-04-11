@@ -12,4 +12,7 @@ class UserPolicy < ApplicationPolicy
   def update?
     user.admin? || (user.church_admin? && (record.church_id == user.church_id))
   end
+  def destroy?
+    user.admin?
+  end
 end

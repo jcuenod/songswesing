@@ -229,9 +229,14 @@ handleAjaxComplete = (xhr, response, status) ->
 
   else if $(xhr.target).hasClass "crud_delete"
     #destroy button hit
-    if response.responseJSON.success
-      $('tr#' + response.responseJSON.aka_id).fadeOut 'slow', ->
-        $(this).remove()
+    if response.responseJSON.success && response.responseJSON.what == "destroyed"
+      switch response.responseJSON.whatDestroyed
+        when 'aka'
+          $('tr#' + response.responseJSON.aka_id).fadeOut 'slow', ->
+            $(this).remove()
+        when 'user'
+          $('tr[data-user-id=' + response.responseJSON.user_id + ']').fadeOut 'slow', ->
+            $(this).remove()
 
     else
       alert response.responseJSON.message
@@ -241,24 +246,23 @@ handleAjaxComplete = (xhr, response, status) ->
 
   else if $(xhr.target).is("form")
     #form submission
-    switch response.responseJSON.what
-      when 'created'
-        switch response.responseJSON.whatCreated
-          when 'service'
-            $('#songList').tagit "removeAll"
-            $('.insertionForm').after response.responseJSON.htmlOutput
-          when 'leader'
-            $('#service_leader_id').append response.responseJSON.htmlOutput
-          when 'service_type'
-            $('#service_service_type_id').append response.responseJSON.htmlOutput
-          when 'song'
-            $('#songList').tagit 'createTag', response.responseJSON.tag.id, response.responseJSON.tag.label
-          when 'aka'
-            new_aka_song_id = response.responseJSON.song_id
-            $.ajax
-              'url': '/akas/' + response.responseJSON.aka_id
-              'success': (newAkaTemplate) ->
-                $(newAkaTemplate).insertAfter $('td[data-song-id=' + new_aka_song_id + ']').last().parent('tr')
+    if response.responseJSON.success && response.responseJSON.what == "created"
+      switch response.responseJSON.whatCreated
+        when 'service'
+          $('#songList').tagit "removeAll"
+          $('.insertionForm').after response.responseJSON.htmlOutput
+        when 'leader'
+          $('#service_leader_id').append response.responseJSON.htmlOutput
+        when 'service_type'
+          $('#service_service_type_id').append response.responseJSON.htmlOutput
+        when 'song'
+          $('#songList').tagit 'createTag', response.responseJSON.tag.id, response.responseJSON.tag.label
+        when 'aka'
+          new_aka_song_id = response.responseJSON.song_id
+          $.ajax
+            'url': '/akas/' + response.responseJSON.aka_id
+            'success': (newAkaTemplate) ->
+              $(newAkaTemplate).insertAfter $('td[data-song-id=' + new_aka_song_id + ']').last().parent('tr')
     $.featherlight.close()
     $(".ajaxbusy").hide()
   return
