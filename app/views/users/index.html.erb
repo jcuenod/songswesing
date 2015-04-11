@@ -1,5 +1,5 @@
 <div class="content">
-  <table class="table table-bordered table-condensed table-hover tableindex">
+  <table class="table table-bordered table-condensed table-hover usertable">
     <tr class="user_heading">
       <td>Email Address</td>
       <td>Sign Ins</td>
@@ -21,16 +21,16 @@
         <% current_church = user.church_id %>
         <tr class="church_heading"><td colspan="<%= current_user.admin ? 9 : 7 %>"><%= user.church.church_name %></td></tr>
       <% end %>
-      <tr data-user-id="<%= user.id %>">
+      <tr data-user-id="<%= user.id %>" class="<%= user.id == current_user.id ? "tr_current_user" : "" %>">
         <td><%= user.email %><%= user.id == current_user.id ? " (you)" : "" %></td>
         <td><%= user.sign_in_count %></td>
         <fieldset>
         <% if current_user.admin? %>
-          <td><input name="<%= user.id %>" type="radio"<%= user.admin? ? " checked=checked" : "" %><%= disabled_row ? " disabled" : "" %>></td>
+          <td><input data-user-role="admin" name="user_<%= user.id %>" type="radio"<%= user.admin? ? " checked=checked" : "" %><%= disabled_row ? " disabled" : "" %>></td>
         <% end %>
-        <td><input name="<%= user.id %>" type="radio"<%= user.church_admin? ? " checked=checked" : "" %><%= disabled_row ? " disabled" : "" %>></td>
-        <td><input name="<%= user.id %>" type="radio"<%= user.church_leader? ? " checked=checked" : "" %><%= disabled_row ? " disabled" : "" %>></td>
-        <td><input name="<%= user.id %>" type="radio"<%= user.church_leader? || user.church_admin? || user.admin?  ? "" : " checked=checked" %><%= disabled_row ? " disabled" : ""%>></td>
+        <td><input data-user-role="church_admin" name="user_<%= user.id %>" type="radio"<%= user.church_admin? ? " checked=checked" : "" %><%= disabled_row ? " disabled" : "" %>></td>
+        <td><input data-user-role="church_leader" name="user_<%= user.id %>" type="radio"<%= user.church_leader? ? " checked=checked" : "" %><%= disabled_row ? " disabled" : "" %>></td>
+        <td><input data-user-role="guest" name="user_<%= user.id %>" type="radio"<%= user.church_leader? || user.church_admin? || user.admin?  ? "" : " checked=checked" %><%= disabled_row ? " disabled" : ""%>></td>
         </fieldset>
         <td><input type="checkbox"<%= user.enabled? ? " checked=\"checked\"" : "" %><%= disabled_row ? " disabled" : "" %>></td>
         <% if current_user.admin? %>

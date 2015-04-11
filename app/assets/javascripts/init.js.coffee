@@ -109,6 +109,29 @@ cePaste = (el) ->
   ), 0
   return
 
+optChange = ->
+  dataToSend =
+    key: "new_role"
+    value: $(this).data("user-role")
+  doUpdateUser $(this).parents('tr').data('user-id'), dataToSend
+
+
+chkChange = (event) ->
+  dataToSend =
+    key: "enabled"
+    value: event.type == "ifChecked" ? true : false
+  doUpdateUser $(this).parents('tr').data('user-id'), dataToSend
+
+doUpdateUser = (user_id, dataToSend) ->
+  $.ajax
+    type: 'PUT'
+    url: '/users/' + user_id
+    data: dataToSend
+    dataType: 'JSON'
+    success: (response) ->
+      if !response.success
+        alert "Oh dear, I hoped never to see this message but something has gone wrong with saving user data"
+
 songAnchorClicked = ->
   doSongAnchorClicked $(this).attr('id')
 
@@ -310,12 +333,19 @@ handlePageLoad = ->
   $("<div>").addClass("ajaxbusy").css("display", "none").appendTo("body").append $("<div>").addClass("glyphicon glyphicon-refresh glyphicon-spin")
   $.featherlight.defaults.root = $(".featherlight-holder")
 
+
+  # $('usertable input').on('ifChecked', function(event){
+  #     alert('xx');
+  # });
+
 $(document)
   # Various Anchors
   .on('click', 'a.songAnchor', songAnchorClicked)
   .on('click', 'a.leaderAnchor', leaderAnchorClicked)
   .on('click', '.tipster .song_tag', addTagToSong)
   .on('click', '.song_tags .song_tag', removeTagFromSong)
+  .on('ifChecked', '.usertable input[type=radio]', optChange)
+  .on('ifChecked ifUnchecked', '.usertable input[type=checkbox]', chkChange)
   # .on('click', '.song_tag_filter .song_tag', filterBySongTag)
 
   # TD Elements

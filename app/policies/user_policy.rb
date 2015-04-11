@@ -9,6 +9,9 @@ class UserPolicy < ApplicationPolicy
     end
   end
 
+  def can_grant_admin?
+    user.admin?
+  end
   def update?
     user.admin? || (user.church_admin? && (record.church_id == user.church_id))
   end

@@ -348,6 +348,10 @@ tr.church_heading:hover td {
     color: $lowlight;
     font-weight: bold;
 }
+tr.tr_current_user td,
+tr.tr_current_user:hover td {
+    background-color: lighten($dark_accent, 55%);
+}
 
 .glyphicon-spin {
     -webkit-animation: spin 2000ms infinite linear;
