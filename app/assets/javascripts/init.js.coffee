@@ -30,7 +30,7 @@ addTagToSong = (el) ->
     $.ajax
       type: 'POST'
       url: '/song_tags/'
-      data: {"tag_id": tagElement.attr("data-tag-id"),"song_id": $(".song_tags").attr("data-song-id")},
+      data: {"tag_id": tagElement.data("tag-id"),"song_id": $(".song_tags").data("song-id")},
       dataType: 'JSON'
 
 removeTagFromSong = (el) ->
@@ -46,7 +46,7 @@ removeTagFromSong = (el) ->
     $.ajax
       type: 'DELETE'
       url: '/song_tags/-1'
-      data: {"tag_id": tagElement.attr("data-tag-id"),"song_id": $(".song_tags").attr("data-song-id")},
+      data: {"tag_id": tagElement.data("tag-id"),"song_id": $(".song_tags").data("song-id")},
       dataType: 'JSON'
 
 ceAfterUpdate = (el) ->
@@ -67,7 +67,6 @@ ceAfterUpdate = (el) ->
 ceDoUpdate = ->
   if update_original_var == $(this).html()
     return
-  dataToSend = undefined
   dataToSend =
     key: $(this).attr('name')
     value: $(this).text().trim()
