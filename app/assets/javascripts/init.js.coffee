@@ -224,55 +224,55 @@ leaderAnchorClicked = ->
 songUsageAnchorClicked = (response) ->
   $.featherlight '<div class=\'breakdown_header\'>Usage Summary</div><div id=\'feather\'>' + response.responseText + '</div>'
 
-handleAjaxBusy = (xhr) ->
-  if $(xhr.target).is("form")
+handleAjaxBusy = (event) ->
+  if $(event.target).is("form")
     #form is being submitted make things look pretty in the mean time
     $(".ajaxbusy").show()
   return
 
 
-handleAjaxComplete = (xhr, response, status) ->
-  if $(xhr.target).hasClass "crud_create"
+handleAjaxComplete = (event, xhr) ->
+  if $(event.target).hasClass "crud_create"
     #creation button hit
-    $.featherlight response.responseText, afterOpen: ->
+    $.featherlight xhr.responseText, afterOpen: ->
       $('form#frm_create').validate()
       $('form#frm_create input[type!=hidden]').first().focus()
       $('form#frm_create .ccli_populate').click ccli_loader
 
-  else if $(xhr.target).hasClass "crud_delete"
+  else if $(event.target).hasClass "crud_delete"
     #destroy button hit
-    if response.responseJSON.success && response.responseJSON.what == "destroyed"
-      switch response.responseJSON.whatDestroyed
+    if xhr.responseJSON.success && xhr.responseJSON.what == "destroyed"
+      switch xhr.responseJSON.whatDestroyed
         when 'aka'
-          $('tr#' + response.responseJSON.aka_id).fadeOut 'slow', ->
+          $('tr#' + xhr.responseJSON.aka_id).fadeOut 'slow', ->
             $(this).remove()
         when 'user'
-          $('tr[data-user-id=' + response.responseJSON.user_id + ']').fadeOut 'slow', ->
+          $('tr[data-user-id=' + xhr.responseJSON.user_id + ']').fadeOut 'slow', ->
             $(this).remove()
 
     else
-      alert response.responseJSON.message
+      alert xhr.responseJSON.message
 
-  else if $(xhr.target).hasClass "songUsageAnchor"
+  else if $(event.target).hasClass "songUsageAnchor"
     songUsageAnchorClicked response
 
-  else if $(xhr.target).is("form")
+  else if $(event.target).is("form")
     #form submission
-    if response.responseJSON.success && response.responseJSON.what == "created"
-      switch response.responseJSON.whatCreated
+    if xhr.responseJSON.success && xhr.responseJSON.what == "created"
+      switch xhr.responseJSON.whatCreated
         when 'service'
           $('#songList').tagit "removeAll"
-          $('.insertionForm').after response.responseJSON.htmlOutput
+          $('.insertionForm').after xhr.responseJSON.htmlOutput
         when 'leader'
-          $('#service_leader_id').append response.responseJSON.htmlOutput
+          $('#service_leader_id').append xhr.responseJSON.htmlOutput
         when 'service_type'
-          $('#service_service_type_id').append response.responseJSON.htmlOutput
+          $('#service_service_type_id').append xhr.responseJSON.htmlOutput
         when 'song'
-          $('#songList').tagit 'createTag', response.responseJSON.tag.id, response.responseJSON.tag.label
+          $('#songList').tagit 'createTag', xhr.responseJSON.tag.id, xhr.responseJSON.tag.label
         when 'aka'
-          new_aka_song_id = response.responseJSON.song_id
+          new_aka_song_id = xhr.responseJSON.song_id
           $.ajax
-            'url': '/akas/' + response.responseJSON.aka_id
+            'url': '/akas/' + xhr.responseJSON.aka_id
             'success': (newAkaTemplate) ->
               $(newAkaTemplate).insertAfter $('td[data-song-id=' + new_aka_song_id + ']').last().parent('tr')
     $.featherlight.close()
