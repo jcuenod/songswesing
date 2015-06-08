@@ -310,20 +310,6 @@ handlePageLoad = ->
     beforeTagAdded: (event, ui) ->
       $.isNumeric ui.tag[0].children[2].defaultValue
     fieldName: 'service[songs][]'
-  $('.top-menu ul li > ul').parent().hover (->
-    $(this).children('ul').animate {
-      opacity: 'show'
-      padding: 'show'
-      marginTop: '-1px'
-    }, 'fast', 'linear'
-    return
-  ), ->
-    $(this).children('ul').animate {
-      opacity: 'hide'
-      padding: 'hide'
-      marginTop: '7px'
-    }, 'fast', 'linear'
-    return
 
   $("input[type=radio], input[type=checkbox]").iCheck {
     checkboxClass: 'icheckbox_flat-green',
