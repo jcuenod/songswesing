@@ -7,7 +7,7 @@ class AkasController < ApplicationController
 	end
 
 	def index
-		@akas = Aka.select("songs.song_name", :id, :song_id, :display_text, :search_text).joins(:song).order "songs.song_name", :display_text
+		@akas = Aka.select([:id, :song_id, 'songs.song_name', :display_text, :search_text]).includes(:song).order 'songs.song_name', :display_text
 	end
 
 	def new
