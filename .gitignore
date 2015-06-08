@@ -28,5 +28,6 @@ vendor/bundle/ruby
 
 songswesing.sublime-workspace
 
+.idea/
 .env
 Procfile
