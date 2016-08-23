@@ -1,7 +1,7 @@
 class SongAssistController < ApplicationController
   def show
   	require 'open-uri'
-  	@doc = Nokogiri::HTML(open("https://us.songselect.com/songs/" + params[:song][:ccli_number]))
+  	@doc = Nokogiri::HTML(open("https://us.classic.songselect.com/songs/" + params[:song][:ccli_number]))
 
 		title = @doc.css(".media h2")[0].text
 		authors = @doc.css(".details .authors")[0].text().squish

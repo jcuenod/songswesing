@@ -18,7 +18,7 @@ function ccli_loader ()
 		    }
 		},
 		"error": function(a,b,c) {
-			alert ("Sorry, either the server was too slow or your song can't be found, try looking up this url:\n" + "https://us.songselect.com/songs/" + $("#song_ccli_number").val());
+			alert ("Sorry, either the server was too slow or your song can't be found, try looking up this url:\n" + "https://us.classic.songselect.com/songs/" + $("#song_ccli_number").val());
 			$.featherlight.close();
 			console.log("Here's the real error:");
 			console.log(a);
