@@ -1,5 +1,7 @@
 # ![alt text](https://github.com/jcuenod/songswesing-rails/blob/master/app/assets/images/songswesing.png "Songs We Sing")
 
+**Warning: This project is no longer maintained and, by this point, certainly contains security vulnerabilities.**
+
 Documents song usage - the idea is to keep track of songs that are being overused and songs that are being underused (as well as to suggest songs or keep track of planned songs such as a "song of the month" idea). Eventually this could conceivably be linked to presentation software (and lyrics) and automatically submit to ccli.
 
 ## The general service overview
